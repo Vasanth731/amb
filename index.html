@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,5 +13,30 @@
     <button onclick="sayHello()">Click me</button>
 
     <script src="script.js"></script>
+</body>
+</html> 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zettelkasten Media Collection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <div class="node" onclick="showContent('movies')">Movies</div>
+    <div class="node" onclick="showContent('series')">Series</div>
+    <div class="node" onclick="showContent('anime')">Anime</div>
+  </div>
+
+  <div class="content" id="content-area">
+    <h2>Welcome</h2>
+    <p>Select a category from the left to view media suggestions.</p>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
