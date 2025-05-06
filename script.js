@@ -3,17 +3,21 @@ function sayHello() {
     alert("Welcome to your GitHub-hosted site!");
 }
 */
+const menuIcon = document.getElementById("menuIcon");
+const dropdownMenu = document.getElementById("dropdownMenu");
 
-document.querySelector('.dropbtn').addEventListener('click', function () {
-  document.querySelector('.dropdown').classList.toggle('show');
+menuIcon.addEventListener("click", () => {
+  dropdownMenu.style.display =
+    dropdownMenu.style.display === "block" ? "none" : "block";
 });
 
-// Optional: close dropdown when clicking outside
-window.addEventListener('click', function (e) {
-  if (!e.target.matches('.dropbtn')) {
-    document.querySelector('.dropdown')?.classList.remove('show');
+// Close dropdown if clicked outside
+window.addEventListener("click", function (e) {
+  if (!menuIcon.contains(e.target) && !dropdownMenu.contains(e.target)) {
+    dropdownMenu.style.display = "none";
   }
 });
+
 
 
 
