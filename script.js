@@ -18,6 +18,14 @@ window.addEventListener("click", function (e) {
   }
 });
 
+// === Dropdown list functionality ===
+const dropdownTitles = document.querySelectorAll(".dropdown-title");
 
+dropdownTitles.forEach(title => {
+  title.addEventListener("click", () => {
+    const item = title.parentElement;
+    item.classList.toggle("active");
+  });
+});
 
 
