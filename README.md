@@ -1,2 +1,2 @@
-hosting through github pages
+hosting amb through github pages
 
