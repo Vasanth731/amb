@@ -88,4 +88,47 @@ body, html {
   margin: 0 auto;
 }
 
+/* Dropdown Lists inside Hero Sections */
+.dropdown-list {
+  width: 80%;
+  max-width: 600px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.dropdown-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: white;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.dropdown-title {
+  padding: 15px;
+  background-color: #e6f7ff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-title:hover {
+  background-color: #d0efff;
+}
+
+.dropdown-content {
+  display: none;
+  padding: 15px;
+  background-color: #fff;
+  font-size: 1em;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+
+.dropdown-item.active .dropdown-content {
+  display: block;
+}
+
+
 
