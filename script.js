@@ -21,33 +21,67 @@ function sayHello() {
 // });
 
 
+// // Navbar dropdown
+// const menuIcon = document.getElementById("menuIcon");
+// const dropdownMenu = document.getElementById("dropdownMenu");
+
+// menuIcon.addEventListener("click", (e) => {
+//   e.stopPropagation(); // Prevent triggering window click
+//   dropdownMenu.style.display =
+//     dropdownMenu.style.display === "block" ? "none" : "block";
+// });
+
+// // Close navbar dropdown if clicked outside
+// window.addEventListener("click", function (e) {
+//   if (!menuIcon.contains(e.target) && !dropdownMenu.contains(e.target)) {
+//     dropdownMenu.style.display = "none";
+//   }
+// });
+
+// // === Hero section dropdowns ===
+// const dropdownTitles = document.querySelectorAll(".dropdown-title");
+
+// dropdownTitles.forEach(title => {
+//   title.addEventListener("click", (e) => {
+//     e.stopPropagation(); // Prevent closing by other window click handlers
+//     const item = title.parentElement;
+//     item.classList.toggle("active");
+//   });
+// });
+
+
 // Navbar dropdown
 const menuIcon = document.getElementById("menuIcon");
 const dropdownMenu = document.getElementById("dropdownMenu");
 
 menuIcon.addEventListener("click", (e) => {
-  e.stopPropagation(); // Prevent triggering window click
+  e.stopPropagation();
   dropdownMenu.style.display =
     dropdownMenu.style.display === "block" ? "none" : "block";
 });
 
-// Close navbar dropdown if clicked outside
 window.addEventListener("click", function (e) {
   if (!menuIcon.contains(e.target) && !dropdownMenu.contains(e.target)) {
     dropdownMenu.style.display = "none";
   }
 });
 
-// === Hero section dropdowns ===
+// Hero section dropdowns
 const dropdownTitles = document.querySelectorAll(".dropdown-title");
 
 dropdownTitles.forEach(title => {
   title.addEventListener("click", (e) => {
-    e.stopPropagation(); // Prevent closing by other window click handlers
+    e.stopPropagation();
     const item = title.parentElement;
     item.classList.toggle("active");
+
+    // Optional: scroll into view when opened
+    if(item.classList.contains("active")){
+      item.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   });
 });
+
 
 
 
