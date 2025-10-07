@@ -97,38 +97,42 @@ body, html {
 }
 
 .dropdown-item {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  background-color: white;
+  /* Remove these: border, border-radius, background-color */
+  /* border: 1px solid #ccc; */
+  /* border-radius: 8px; */
+  /* background-color: white; */
+  margin-bottom: 10px; /* keep spacing between items */
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .dropdown-title {
-  padding: 15px;
-  background-color: #e6f7ff;
+  padding: 10px 0;      /* reduce padding */
+  background-color: inherit; /* no colored background */
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .dropdown-title:hover {
-  background-color: #d0efff;
+  color: #007acc;       /* subtle hover effect */
+  background-color: inherit; /* remove hover bg */
 }
 
+
 .dropdown-content {
-  display: none;
-  padding: 15px;
-  background-color: #fff;
-  font-size: 1em;
-  color: #333;
-  border-top: 1px solid #ddd;
+  max-height: 0;         /* hidden initially */
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  padding-left: 10px;    /* optional indent for content */
 }
 
 .dropdown-item.active .dropdown-content {
-  display: block;
+  max-height: 500px;     /* enough for paragraph */
+  opacity: 1;
 }
+
 
 
 
