@@ -34,6 +34,8 @@ body, html {
   font-size: 30px;
   cursor: pointer;
 }
+
+
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -93,45 +95,43 @@ body, html {
   width: 80%;
   max-width: 600px;
   margin-top: 20px;
-  text-align: left;
+  text-align: center;   /* center everything inside */
 }
 
 .dropdown-item {
-  /* Remove these: border, border-radius, background-color */
-  /* border: 1px solid #ccc; */
-  /* border-radius: 8px; */
-  /* background-color: white; */
-  margin-bottom: 10px; /* keep spacing between items */
+  margin-bottom: 10px; /* spacing between items */
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .dropdown-title {
-  padding: 10px 0;      /* reduce padding */
-  background-color: inherit; /* no colored background */
+  padding: 10px 0;      
+  background-color: inherit;
   font-weight: bold;
   cursor: pointer;
   transition: color 0.2s ease;
+  text-align: center;   /* center the heading */
 }
 
 .dropdown-title:hover {
-  color: #007acc;       /* subtle hover effect */
-  background-color: inherit; /* remove hover bg */
+  color: #007acc;
+  background-color: inherit;
 }
 
-
 .dropdown-content {
-  max-height: 0;         /* hidden initially */
+  max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease, opacity 0.4s ease;
   opacity: 0;
-  padding-left: 10px;    /* optional indent for content */
+  padding: 10px 0;     /* vertical padding only, no left indent */
+  text-align: center;   /* center the paragraph text */
 }
 
 .dropdown-item.active .dropdown-content {
-  max-height: 500px;     /* enough for paragraph */
+  max-height: 500px;
   opacity: 1;
 }
+
 
 
 
