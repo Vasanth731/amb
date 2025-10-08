@@ -1,4 +1,4 @@
-/* .navbar {
+.navbar {
   position: fixed;
   top: 0;
   right: 0;
@@ -104,63 +104,11 @@
 .dropdown-item.active .dropdown-content {
   max-height: 500px;
   opacity: 1;
-} */ */
+} */
 
 
 
 
-:root{
-  --bg:#0f0f10;
-  --card:#1a1a1c;
-  --muted:#9aa0a6;
-  --accent:#d9dbe0;
-  --accent-2:#6aa6ff;
-  --container:1100px;
-}
 
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
-body{background:var(--bg);color:var(--accent);line-height:1.35}
-
-/* layout container */
-.container{max-width:var(--container);margin:0 auto;padding:28px}
-
-/* header */
-.site-header{position:sticky;top:0;background:rgba(12,12,13,0.6);backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,0.03)}
-.header-inner{display:flex;align-items:center;justify-content:space-between}
-.brand{font-weight:700}
-.main-nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:0.95rem}
-.menu-toggle{display:none;background:none;border:0;color:var(--muted);font-size:1.2rem}
-
-/* hero */
-.hero{padding:56px 0 32px;border-bottom:1px solid rgba(255,255,255,0.02)}
-.hero-title{margin:0;font-size:2rem}
-.hero-sub{color:var(--muted)}
-
-/* projects grid */
-.projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;padding:32px 0}
-.project-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.02)}
-.project-media{
-  height:160px;
-  border-radius:8px;
-  margin-bottom:12px;
-  /* solid-color replacements for images (use different classes or inline style to vary) */
-  background:linear-gradient(135deg,#2b2d30,#111215);
-  display:block;
-}
-
-/* small client text */
-.project-client{color:var(--muted);font-size:0.85rem;margin:6px 0 0}
-
-/* footer */
-.site-footer{padding:24px 0;border-top:1px solid rgba(255,255,255,0.02);text-align:center;color:var(--muted);font-size:0.9rem}
-
-/* Responsive tweaks */
-@media (max-width:720px){
-  .main-nav{display:none}
-  .menu-toggle{display:block}
-  .container{padding:16px}
-  .hero{padding:36px 0}
-}
 
 
