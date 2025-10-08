@@ -1,40 +1,15 @@
-/*
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    padding: 2rem;
-    text-align: center;
-}
-
-h1 {
-    color: #007acc;
-}
-*/
-/* Reset & Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body, html {
-  height: 100%;
-  font-family: Arial, sans-serif;
-  scroll-behavior: smooth;
-}
-
-/* Navbar */
-.navbar {
+/* .navbar {
   position: fixed;
   top: 0;
   right: 0;
   padding: 20px;
   z-index: 100;
 }
+
 .menu-icon {
   font-size: 30px;
   cursor: pointer;
 }
-
 
 .dropdown-menu {
   display: none;
@@ -55,7 +30,7 @@ body, html {
   background-color: #eee;
 }
 
-/* Hero Section */
+
 .hero {
   height: 100vh;
   background-color: cyan;
@@ -74,7 +49,7 @@ body, html {
   font-size: 1.2em;
 }
 
-/* About Section */
+
 .about {
   background-color: #f9f9f9;
   padding: 100px 20px;
@@ -90,16 +65,15 @@ body, html {
   margin: 0 auto;
 }
 
-/* Dropdown Lists inside Hero Sections */
 .dropdown-list {
   width: 80%;
   max-width: 600px;
   margin-top: 20px;
-  text-align: center;   /* center everything inside */
+  text-align: center;   
 }
 
 .dropdown-item {
-  margin-bottom: 10px; /* spacing between items */
+  margin-bottom: 10px; 
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -110,7 +84,7 @@ body, html {
   font-weight: bold;
   cursor: pointer;
   transition: color 0.2s ease;
-  text-align: center;   /* center the heading */
+  text-align: center;   
 }
 
 .dropdown-title:hover {
@@ -123,16 +97,70 @@ body, html {
   overflow: hidden;
   transition: max-height 0.4s ease, opacity 0.4s ease;
   opacity: 0;
-  padding: 10px 0;     /* vertical padding only, no left indent */
-  text-align: center;   /* center the paragraph text */
+  padding: 10px 0;    
+  text-align: center;   
 }
 
 .dropdown-item.active .dropdown-content {
   max-height: 500px;
   opacity: 1;
+} */ */
+
+
+
+
+:root{
+  --bg:#0f0f10;
+  --card:#1a1a1c;
+  --muted:#9aa0a6;
+  --accent:#d9dbe0;
+  --accent-2:#6aa6ff;
+  --container:1100px;
 }
 
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+body{background:var(--bg);color:var(--accent);line-height:1.35}
 
+/* layout container */
+.container{max-width:var(--container);margin:0 auto;padding:28px}
 
+/* header */
+.site-header{position:sticky;top:0;background:rgba(12,12,13,0.6);backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,0.03)}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700}
+.main-nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:0.95rem}
+.menu-toggle{display:none;background:none;border:0;color:var(--muted);font-size:1.2rem}
+
+/* hero */
+.hero{padding:56px 0 32px;border-bottom:1px solid rgba(255,255,255,0.02)}
+.hero-title{margin:0;font-size:2rem}
+.hero-sub{color:var(--muted)}
+
+/* projects grid */
+.projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;padding:32px 0}
+.project-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.02)}
+.project-media{
+  height:160px;
+  border-radius:8px;
+  margin-bottom:12px;
+  /* solid-color replacements for images (use different classes or inline style to vary) */
+  background:linear-gradient(135deg,#2b2d30,#111215);
+  display:block;
+}
+
+/* small client text */
+.project-client{color:var(--muted);font-size:0.85rem;margin:6px 0 0}
+
+/* footer */
+.site-footer{padding:24px 0;border-top:1px solid rgba(255,255,255,0.02);text-align:center;color:var(--muted);font-size:0.9rem}
+
+/* Responsive tweaks */
+@media (max-width:720px){
+  .main-nav{display:none}
+  .menu-toggle{display:block}
+  .container{padding:16px}
+  .hero{padding:36px 0}
+}
 
 
