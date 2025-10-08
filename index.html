@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- Navigation Icon -->
+  
   <nav class="navbar">
     <div class="menu-icon" id="menuIcon">&#9776;</div>
     <div class="dropdown-menu" id="dropdownMenu">
@@ -17,7 +17,7 @@
     </div>
   </nav>
 
-    <!-- What's New Section -->
+  
   <section class="hero" id="whatsnew">
     <h1>What's New</h1>
     <p>
@@ -25,7 +25,7 @@
     </p>
   </section>
 
-  <!-- Hero Section -->
+
   <section class="hero" id="home">
     <h1>
       <a href="scire.html" style="text-decoration: none; color: inherit;">scire</a>
@@ -33,7 +33,7 @@
     <p>Originates from Latin, meaning "to know". Everything we see around is made up of smaller units intertwined to form bigger units. Scire is a digital garden explaining this, embedded with the projects from the studio.</p>
   </section>
 
-  <!-- About Section -->
+
   <section class="about" id="about">
     <h2>Experience Reality</h2>
     <p>
@@ -43,4 +43,73 @@
 
   <script src="script.js"></script>
 </body>
+</html> -->
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blur — Skeleton</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Blur Studio</div>
+      <nav class="main-nav">
+        <a href="#">Home</a>
+        <a href="#">Feed</a>
+        <a href="#">Careers</a>
+        <a href="#">About</a>
+      </nav>
+      <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">Projects</h1>
+        <p class="hero-sub">Selected work & latest reel</p>
+      </div>
+    </section>
+
+    <!-- Projects grid -->
+    <section class="projects container" id="projects">
+      <!-- Example project card. Replace or loop to add more -->
+      <article class="project-card" data-client="NETFLIX">
+        <div class="project-media" aria-hidden="true"></div>
+        <h3 class="project-title">Love Death & Robots Volume 4</h3>
+        <p class="project-client">NETFLIX</p>
+      </article>
+
+      <article class="project-card" data-client="amazon prime">
+        <div class="project-media"></div>
+        <h3 class="project-title">secret level</h3>
+        <p class="project-client">amazon prime</p>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media"></div>
+        <h3 class="project-title">Gears Of War</h3>
+        <p class="project-client">The Coalition</p>
+      </article>
+
+      <!-- add more cards as needed -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 / Blur Studio All Rights Reserved</small>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
 </html>
+
