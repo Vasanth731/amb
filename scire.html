@@ -1,68 +1,13 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>scire</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-<nav class="navbar">
-  <div class="menu-icon" id="menuIcon">&#9776;</div>
-  <div class="dropdown-menu" id="dropdownMenu">
-    <a href="index.html#home">Home</a>
-    <hr>
-    <a href="index.html#about">About</a>
-  </div>
-</nav>
-
-
-  <section class="hero hero1" id="home1">
-    <h1>Formal Science</h1>
-    <p>Math (Algebra - Calculus - Geometry)</p>
-  </section>
-
-  <section class="hero hero2" id="home2">
-    <h1>Natural Science</h1>
-    <ul>
-      <li>Physical (Quantum - Classical - Chemistry)</li>
-      <li>Life (Biology)</li>
-      <li>Planetary (Earth - Astronomy - Cosmology)</li>
-    </ul>
-  </section>
-
-  <section class="hero hero3" id="home3">
-    <h1>Social Science</h1>
-    <ul>
-      <li>Linguistics</li>
-      <li>History</li>
-      <li>Geography</li>
-      <li>Civics</li>
-      <li>Economics</li>
-      <li>Sociology</li>
-      <li>Anthropology</li>
-      <li>Psychology</li>
-      <li>Philosophy</li>
-      <li>Theology</li>
-    </ul>
-  </section>
-
-  <script src="script.js"></script>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>scire</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>scire - Knowledge Graph</title>
+  <link rel="stylesheet" href="graph-style.css" />
 </head>
 <body>
 
-  <!-- Navigation Icon -->
   <nav class="navbar">
     <div class="menu-icon" id="menuIcon">&#9776;</div>
     <div class="dropdown-menu" id="dropdownMenu">
@@ -72,120 +17,80 @@
     </div>
   </nav>
 
-  <!-- Hero Sections -->
-  <section class="hero hero1" id="home1">
-    <h1>Formal Science</h1>
-    <div class="dropdown-list">
-      <div class="dropdown-item">
-        <div class="dropdown-title">Math (Algebra - Calculus - Geometry)</div>
-        <div class="dropdown-content">
-          <p>Mathematics is the language of the universe, and it beautifully explains the physical phenomena of the universe.</p>
-        </div>
-      </div>
-  </section>
+  <div class="graph-container">
+    <svg class="connections" id="connections"></svg>
 
-  <section class="hero hero2" id="home2">
-    <h1>Natural Science</h1>
-    <div class="dropdown-list">
-      <div class="dropdown-item">
-        <div class="dropdown-title">Physical (Quantum - Classical - Chemistry)</div>
-        <div class="dropdown-content">
-          <p>The physical sciences study non-living systems through experimentation, measurement, and theoretical modeling.</p>
-        </div>
-      </div>
-
-      <div class="dropdown-item">
-        <div class="dropdown-title">Life (Biology)</div>
-        <div class="dropdown-content">
-          <p>Life sciences explore living organisms, from cells and genetics to ecosystems and evolution.</p>
-        </div>
-      </div>
-
-      <div class="dropdown-item">
-        <div class="dropdown-title">Planetary (Earth - Astronomy - Cosmology)</div>
-        <div class="dropdown-content">
-          <p>Planetary sciences examine our planet and the universe, studying their origin, structure, and the laws governing them.</p>
-        </div>
-      </div>
+    <!-- Central Node -->
+    <div class="node central-node" id="scire" style="left: 50%; top: 50%;">
+      scire
     </div>
-  </section>
 
-  <section class="hero hero3" id="home3">
-    <h1>Social Science</h1>
-    <div class="dropdown-list">
-      <div class="dropdown-item">
-        <div class="dropdown-title">Linguistics</div>
-        <div class="dropdown-content">
-          <p>The study of language, its structure, and how it shapes communication and culture.</p>
-        </div>
-      </div>
-
-      <div class="dropdown-item">
-        <div class="dropdown-title">History</div>
-        <div class="dropdown-content">
-          <p>History investigates past human events and civilizations to understand the present.</p>
-        </div>
-      </div>
-
-      <div class="dropdown-item">
-        <div class="dropdown-title">Geography</div>
-        <div class="dropdown-content">
-          <p> -------------------------------------------------------------------------------------------------------------------------------------------------- </p>
-        </div>
-      </div>
-
-      <div class="dropdown-item">
-        <div class="dropdown-title">Civics</div>
-        <div class="dropdown-content">
-          <p> -------- </p>
-        </div>
-      </div>
-
-      <div class="dropdown-item">
-        <div class="dropdown-title">Economics</div>
-        <div class="dropdown-content">
-          <p> -------- </p>
-        </div>
-      </div>
-
-      <div class="dropdown-item">
-        <div class="dropdown-title">Sociology</div>
-        <div class="dropdown-content">
-          <p> -------- </p>
-        </div>
-      </div>
-
-      <div class="dropdown-item">
-        <div class="dropdown-title">Anthropology</div>
-        <div class="dropdown-content">
-          <p> -------- </p>
-        </div>
-      </div>
-
-      <div class="dropdown-item">
-        <div class="dropdown-title">Psychology</div>
-        <div class="dropdown-content">
-          <p> -------- </p>
-        </div>
-      </div>
-
-      <div class="dropdown-item">
-        <div class="dropdown-title">Philosophy</div>
-        <div class="dropdown-content">
-          <p>Philosophy asks fundamental questions about existence, knowledge, ethics, and reality.</p>
-        </div>
-      </div>
-
-      <div class="dropdown-item">
-        <div class="dropdown-title">Theology</div>
-        <div class="dropdown-content">
-          <p>Theology explores the nature of the divine and humanity’s relationship with the sacred.</p>
-        </div>
-      </div>
+    <!-- First Level Nodes -->
+    <div class="node level1-node" data-page="formal" style="left: 50%; top: 20%;">
+      formal
     </div>
-  </section>
+    <div class="node level1-node" data-page="natural" style="left: 25%; top: 65%;">
+      natural
+    </div>
+    <div class="node level1-node" data-page="social" style="left: 75%; top: 65%;">
+      social
+    </div>
 
-  <script src="script.js"></script>
+    <!-- Formal Science Nodes -->
+    <div class="node level2-node" data-page="calculus" style="left: 40%; top: 5%;">
+      calculus
+    </div>
+    <div class="node level2-node" data-page="geometry" style="left: 50%; top: 2%;">
+      geometry
+    </div>
+    <div class="node level2-node" data-page="algebra" style="left: 60%; top: 5%;">
+      algebra
+    </div>
+
+    <!-- Natural Science Nodes -->
+    <div class="node level2-node" data-page="life" style="left: 15%; top: 55%;">
+      life
+    </div>
+    <div class="node level2-node" data-page="physical" style="left: 20%; top: 70%;">
+      physical
+    </div>
+    <div class="node level2-node" data-page="planetary" style="left: 25%; top: 80%;">
+      planetary
+    </div>
+
+    <!-- Social Science Nodes -->
+    <div class="node level2-node" data-page="history" style="left: 70%; top: 55%;">
+      history
+    </div>
+    <div class="node level2-node" data-page="geography" style="left: 75%; top: 75%;">
+      geography
+    </div>
+    <div class="node level2-node" data-page="civics" style="left: 80%; top: 60%;">
+      civics
+    </div>
+    <div class="node level2-node" data-page="economics" style="left: 85%; top: 70%;">
+      economics
+    </div>
+    <div class="node level2-node" data-page="anthropology" style="left: 82%; top: 80%;">
+      anthropology
+    </div>
+    <div class="node level2-node" data-page="sociology" style="left: 68%; top: 80%;">
+      sociology
+    </div>
+    <div class="node level2-node" data-page="psychology" style="left: 72%; top: 85%;">
+      psychology
+    </div>
+    <div class="node level2-node" data-page="linguistics" style="left: 65%; top: 70%;">
+      linguistics
+    </div>
+    <div class="node level2-node" data-page="theology" style="left: 78%; top: 90%;">
+      theology
+    </div>
+    <div class="node level2-node" data-page="philosophy" style="left: 85%; top: 85%;">
+      philosophy
+    </div>
+  </div>
+
+  <script src="graph-script.js"></script>
 </body>
 </html>
-
