@@ -100,12 +100,70 @@ drawConnections();
 // Redraw on window resize
 window.addEventListener("resize", drawConnections);
 
-// Node click handlers
+// Drag functionality
+let isDragging = false;
+let currentNode = null;
+let offsetX = 0;
+let offsetY = 0;
+
 nodes.forEach(node => {
-  node.addEventListener("click", function() {
-    const page = this.getAttribute("data-page");
-    if (page) {
-      window.location.href = `${page}.html`;
-    }
+  node.addEventListener("mousedown", function(e) {
+    isDragging = true;
+    currentNode = this;
+
+    // Get the current position
+    const rect = this.getBoundingClientRect();
+    const container = document.querySelector('.graph-container');
+    const containerRect = container.getBoundingClientRect();
+
+    // Calculate offset from mouse position to node center
+    offsetX = e.clientX - rect.left - rect.width / 2;
+    offsetY = e.clientY - rect.top - rect.height / 2;
+
+    // Prevent text selection while dragging
+    e.preventDefault();
   });
+});
+
+document.addEventListener("mousemove", function(e) {
+  if (isDragging && currentNode) {
+    const container = document.querySelector('.graph-container');
+    const containerRect = container.getBoundingClientRect();
+
+    // Calculate new position as percentage
+    const newLeft = ((e.clientX - containerRect.left - offsetX) / containerRect.width) * 100;
+    const newTop = ((e.clientY - containerRect.top - offsetY) / containerRect.height) * 100;
+
+    // Constrain to container bounds
+    const clampedLeft = Math.max(0, Math.min(100, newLeft));
+    const clampedTop = Math.max(0, Math.min(100, newTop));
+
+    // Update node position
+    currentNode.style.left = clampedLeft + '%';
+    currentNode.style.top = clampedTop + '%';
+
+    // Redraw connections in real-time
+    drawConnections();
+  }
+});
+
+document.addEventListener("mouseup", function(e) {
+  if (isDragging && currentNode) {
+    // Check if this was a drag or a click
+    const dragDistance = Math.sqrt(
+      Math.pow(e.clientX - (currentNode.getBoundingClientRect().left + currentNode.getBoundingClientRect().width / 2), 2) +
+      Math.pow(e.clientY - (currentNode.getBoundingClientRect().top + currentNode.getBoundingClientRect().height / 2), 2)
+    );
+
+    // If drag distance is small, treat as click
+    if (dragDistance < 5) {
+      const page = currentNode.getAttribute("data-page");
+      if (page) {
+        window.location.href = `${page}.html`;
+      }
+    }
+  }
+
+  isDragging = false;
+  currentNode = null;
 });
