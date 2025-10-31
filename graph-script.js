@@ -66,7 +66,7 @@ function getNodeCenter(nodeId) {
   };
 }
 
-// Function to draw a line between two nodes
+// Function to draw a line between two nodes - org-roam UI inspired
 function drawLine(from, to) {
   const fromCoords = getNodeCenter(from);
   const toCoords = getNodeCenter(to);
@@ -76,8 +76,12 @@ function drawLine(from, to) {
   line.setAttribute("y1", fromCoords.y);
   line.setAttribute("x2", toCoords.x);
   line.setAttribute("y2", toCoords.y);
-  line.setAttribute("stroke", "rgba(255, 255, 255, 0.4)");
-  line.setAttribute("stroke-width", "2");
+  line.setAttribute("stroke", "rgba(139, 233, 253, 0.15)");
+  line.setAttribute("stroke-width", "1.5");
+  line.setAttribute("stroke-linecap", "round");
+
+  // Add subtle animation
+  line.style.transition = "all 0.3s ease";
 
   svg.appendChild(line);
 }
