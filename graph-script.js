@@ -25,10 +25,11 @@ const connections = [
   { from: "scire", to: "natural" },
   { from: "scire", to: "social" },
 
-  // Formal to Level 2
-  { from: "formal", to: "calculus" },
-  { from: "formal", to: "geometry" },
-  { from: "formal", to: "algebra" },
+  // Formal to Math and Math to Level 2
+  { from: "formal", to: "math" },
+  { from: "math", to: "calculus" },
+  { from: "math", to: "geometry" },
+  { from: "math", to: "algebra" },
 
   // Natural to Level 2
   { from: "natural", to: "life" },
@@ -53,6 +54,16 @@ function getNodeCenter(nodeId) {
   let node;
   if (nodeId === "scire") {
     node = document.getElementById(nodeId);
+  } else if (nodeId === "math") {
+    // Find the math node by its label
+    const allNodes = document.querySelectorAll('.node');
+    for (let n of allNodes) {
+      const label = n.querySelector('.node-label');
+      if (label && label.textContent.trim() === 'math') {
+        node = n;
+        break;
+      }
+    }
   } else {
     node = document.querySelector(`[data-page="${nodeId}"]`);
   }
@@ -103,22 +114,23 @@ window.addEventListener("resize", drawConnections);
 // Drag functionality
 let isDragging = false;
 let currentNode = null;
-let offsetX = 0;
-let offsetY = 0;
+let startX = 0;
+let startY = 0;
+let hasMoved = false;
 
 nodes.forEach(node => {
   node.addEventListener("mousedown", function(e) {
     isDragging = true;
     currentNode = this;
+    hasMoved = false;
 
-    // Get the current position
-    const rect = this.getBoundingClientRect();
-    const container = document.querySelector('.graph-container');
-    const containerRect = container.getBoundingClientRect();
+    // Store initial mouse position
+    startX = e.clientX;
+    startY = e.clientY;
 
-    // Calculate offset from mouse position to node center
-    offsetX = e.clientX - rect.left - rect.width / 2;
-    offsetY = e.clientY - rect.top - rect.height / 2;
+    // Add dragging class for visual feedback
+    this.style.cursor = 'grabbing';
+    this.style.transition = 'none';
 
     // Prevent text selection while dragging
     e.preventDefault();
@@ -127,36 +139,55 @@ nodes.forEach(node => {
 
 document.addEventListener("mousemove", function(e) {
   if (isDragging && currentNode) {
+    const deltaX = e.clientX - startX;
+    const deltaY = e.clientY - startY;
+
+    // Check if mouse has moved significantly
+    if (Math.abs(deltaX) > 3 || Math.abs(deltaY) > 3) {
+      hasMoved = true;
+    }
+
     const container = document.querySelector('.graph-container');
     const containerRect = container.getBoundingClientRect();
+    const rect = currentNode.getBoundingClientRect();
+
+    // Calculate current center position as percentage
+    const currentLeft = parseFloat(currentNode.style.left);
+    const currentTop = parseFloat(currentNode.style.top);
+
+    // Calculate movement in percentage
+    const deltaLeftPercent = (deltaX / containerRect.width) * 100;
+    const deltaTopPercent = (deltaY / containerRect.height) * 100;
 
     // Calculate new position as percentage
-    const newLeft = ((e.clientX - containerRect.left - offsetX) / containerRect.width) * 100;
-    const newTop = ((e.clientY - containerRect.top - offsetY) / containerRect.height) * 100;
+    const newLeft = currentLeft + deltaLeftPercent;
+    const newTop = currentTop + deltaTopPercent;
 
-    // Constrain to container bounds
-    const clampedLeft = Math.max(0, Math.min(100, newLeft));
-    const clampedTop = Math.max(0, Math.min(100, newTop));
+    // Constrain to container bounds (with some padding)
+    const clampedLeft = Math.max(2, Math.min(98, newLeft));
+    const clampedTop = Math.max(2, Math.min(98, newTop));
 
     // Update node position
     currentNode.style.left = clampedLeft + '%';
     currentNode.style.top = clampedTop + '%';
 
+    // Update start position for next movement
+    startX = e.clientX;
+    startY = e.clientY;
+
     // Redraw connections in real-time
-    drawConnections();
+    requestAnimationFrame(drawConnections);
   }
 });
 
 document.addEventListener("mouseup", function(e) {
   if (isDragging && currentNode) {
-    // Check if this was a drag or a click
-    const dragDistance = Math.sqrt(
-      Math.pow(e.clientX - (currentNode.getBoundingClientRect().left + currentNode.getBoundingClientRect().width / 2), 2) +
-      Math.pow(e.clientY - (currentNode.getBoundingClientRect().top + currentNode.getBoundingClientRect().height / 2), 2)
-    );
+    // Restore cursor and transition
+    currentNode.style.cursor = 'move';
+    currentNode.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
 
-    // If drag distance is small, treat as click
-    if (dragDistance < 5) {
+    // If node wasn't moved significantly, treat as click
+    if (!hasMoved) {
       const page = currentNode.getAttribute("data-page");
       if (page) {
         window.location.href = `${page}.html`;
@@ -166,4 +197,5 @@ document.addEventListener("mouseup", function(e) {
 
   isDragging = false;
   currentNode = null;
+  hasMoved = false;
 });

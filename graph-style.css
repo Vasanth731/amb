@@ -188,6 +188,67 @@ body {
   transform: translate(-50%, calc(-50% + 20px));
 }
 
+/* Color-specific node styles */
+.green-node {
+  background-color: rgba(80, 250, 123, 0.2);
+  border-color: #50fa7b;
+  box-shadow: 0 6px 18px rgba(80, 250, 123, 0.3);
+}
+
+.green-node:hover {
+  background-color: rgba(80, 250, 123, 0.3);
+  box-shadow: 0 8px 24px rgba(80, 250, 123, 0.4), 0 0 30px rgba(80, 250, 123, 0.2);
+}
+
+.green-node .node-label {
+  color: #50fa7b;
+}
+
+.orange-node {
+  background-color: rgba(255, 184, 108, 0.2);
+  border-color: #ffb86c;
+  box-shadow: 0 6px 18px rgba(255, 184, 108, 0.3);
+}
+
+.orange-node:hover {
+  background-color: rgba(255, 184, 108, 0.3);
+  box-shadow: 0 8px 24px rgba(255, 184, 108, 0.4), 0 0 30px rgba(255, 184, 108, 0.2);
+}
+
+.orange-node .node-label {
+  color: #ffb86c;
+}
+
+.cyan-node {
+  background-color: rgba(139, 233, 253, 0.2);
+  border-color: #8be9fd;
+  box-shadow: 0 6px 18px rgba(139, 233, 253, 0.3);
+}
+
+.cyan-node:hover {
+  background-color: rgba(139, 233, 253, 0.3);
+  box-shadow: 0 8px 24px rgba(139, 233, 253, 0.4), 0 0 30px rgba(139, 233, 253, 0.2);
+}
+
+.cyan-node .node-label {
+  color: #8be9fd;
+}
+
+.gray-node {
+  background-color: rgba(98, 114, 164, 0.2);
+  border-color: #6272a4;
+  box-shadow: 0 4px 12px rgba(98, 114, 164, 0.3);
+}
+
+.gray-node:hover {
+  background-color: rgba(98, 114, 164, 0.3);
+  box-shadow: 0 6px 18px rgba(98, 114, 164, 0.4), 0 0 25px rgba(98, 114, 164, 0.2);
+}
+
+.gray-node .node-label {
+  color: #6272a4;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .node {
