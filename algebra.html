@@ -18,17 +18,185 @@
   </nav>
 
   <section class="hero" style="background-color: #667eea;">
-    <h1>Algebra</h1>
+    <h2>Algebra</h2>
+
     <p>
-      Algebra is the study of mathematical symbols and the rules for manipulating these symbols. It unifies
-      all of mathematics by providing a common language for expressing mathematical relationships and solving
-      equations across different domains.
+    Algebra serves as a gateway to mathematics. Patterns and problems can be written symbolically and solved using 
+    different algebraic concepts. Natural patterns such as flower petals are often described through sequences and series.
     </p>
-    <p style="margin-top: 20px;">
-      From elementary algebra solving simple equations to abstract algebra studying algebraic structures
-      like groups, rings, and fields, algebra provides powerful tools for pattern recognition, problem-solving,
-      and understanding fundamental mathematical structures underlying all of mathematics and science.
+
+    <p>
+    Arithmetic progression:
+    \[
+    a_n = a + (n-1)d
+    \]
+
+    \[
+    S_n = \frac{n}{2}[2a + (n-1)d]
+    \]
     </p>
+
+    <p>
+    Geometric progression:
+    \[
+    a_n = ar^{n-1}
+    \]
+
+    \[
+    S_n = a\left(\frac{1-r^n}{1-r}\right)
+    \]
+    </p>
+
+    <p>
+    Harmonic progression is the reciprocal of an arithmetic progression.
+    </p>
+
+    <p>
+    Permutations and combinations:
+    \[
+    nP_r = \frac{n!}{(n-r)!}
+    \]
+
+    \[
+    nP_r = r! \times nC_r
+    \]
+    </p>
+
+    <p>
+    Probability and statistics describe uncertainty in events.
+    </p>
+
+    <p>
+    \[
+    P(A|B) = \frac{P(A \cap B)}{P(B)}
+    \]
+
+    where
+
+    \[
+    P(A) = \frac{n(A)}{n(S)}
+    \]
+    </p>
+
+    <p>
+    Standard deviation:
+    \[
+    \sigma = \sqrt{\frac{\sum x^2}{n} - \left(\frac{\sum x}{n}\right)^2}
+    \]
+
+    or
+
+    \[
+    \sigma = \sqrt{\frac{\sum d^2}{n}}
+    \]
+
+    where
+
+    \[
+    d = x - \bar{x}, \quad \bar{x} = \frac{\sum x}{n}
+    \]
+
+    and variance \(= \sigma^2\).
+    </p>
+
+    <p>
+    Logarithms and the Binomial Theorem introduce functions.
+    </p>
+
+    <p>
+    \[
+    (x+y)^n = {n \choose r} x^{n-r}y^r
+    \]
+
+    \[
+    \log_a b = \frac{\log_c b}{\log_c a}
+    \]
+    </p>
+
+    <p>
+    Quadratic equations:
+    </p>
+
+    \[
+    x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+    \]
+
+    <p>
+    Discriminant conditions:
+    </p>
+
+    \[
+    D = 0 \text{ (real and equal roots)}
+    \]
+
+    \[
+    D > 0 \text{ (real and distinct roots)}
+    \]
+
+    \[
+    D < 0 \text{ (complex roots)}
+    \]
+
+    <p>
+    Complex numbers:
+    </p>
+
+    \[
+    z = a + ib
+    \]
+
+    \[
+    \bar{z} = a - ib
+    \]
+
+    \[
+    |z| = \sqrt{a^2 + b^2}
+    \]
+
+    \[
+    z = re^{i\theta}
+    \]
+
+    where
+
+    \[
+    \theta = \arg z = \tan^{-1}\left(\frac{b}{a}\right)
+    \]
+
+    \[
+    z = r(\cos\theta + i\sin\theta)
+    \]
+
+    <p>
+    Trigonometry describes the relationships in triangles and pyramidal structures.
+    </p>
+
+    \[
+    \sin\theta = \frac{O}{H}, \quad
+    \cos\theta = \frac{A}{H}, \quad
+    \tan\theta = \frac{O}{A}
+    \]
+
+    <p>
+    Matrices and determinants:
+    </p>
+
+    \[
+    A^{-1} = \frac{1}{|A|}\,\mathrm{adj}\,A
+    \]
+
+    \[
+    \mathrm{adj}\,A = (\mathrm{cof}\,A)^T
+    \]
+
+    \[
+    AX = B
+    \]
+
+    \[
+    X = A^{-1}B
+    \]
+
   </section>
 
   <script src="script.js"></script>
