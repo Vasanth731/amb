@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Physical Sciences</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    .hero {
+      height: auto;
+      min-height: 100vh;
+      align-items: flex-start;
+      text-align: left;
+    }
+    .hero h2 {
+      font-size: 1.6em;
+      color: #ffffff;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
 
@@ -19,15 +34,121 @@
 
   <section class="hero" style="background-color: #38ef7d;">
     <h1>Physical Sciences</h1>
-    <p>
-      Physical sciences study non-living systems and the fundamental laws governing matter and energy.
-      Physics explores the basic principles of the universe from quantum mechanics to classical mechanics,
-      while chemistry examines the composition, structure, and transformations of matter.
-    </p>
-    <p style="margin-top: 20px;">
-      From the smallest subatomic particles to the forces that bind atoms into molecules, physical sciences
-      reveal the underlying order and beauty of nature. They provide the foundation for technology, engineering,
-      and our understanding of how the physical universe operates.
+    $s(t) = 5t^{2} + 2t + 1$
+
+    $v(t) = 10t + 2$
+
+    $a(t) = 10$
+
+    $\frac{ds}{dt} = v$
+
+    $\frac{dv}{dt} = \frac{d^{2}s}{dt^{2}} = a$
+
+    1st law states that the object remains in constant motion until acted upon by external force.
+
+    $p = mv$, \quad $\frac{dp}{dt} = m\frac{dv}{dt}$
+
+    $a =$ constant then $\frac{dv}{dt} = 0$ $\therefore F = 0$. This is the law of inertia.
+
+    2nd law is law of acceleration.
+
+    $p = mv$, \quad $\frac{dp}{dt} = m\frac{dv}{dt}$
+
+    $a = \frac{F}{m}$
+
+    The 3rd law is law of action reaction.
+
+    $p_{AB} + p_{BA} = m_A v_A + m_B v_B 
+    \rightarrow \frac{dp_{AB}}{dt} + \frac{dp_{BA}}{dt} 
+    = m_A \frac{dv_A}{dt} + m_B \frac{dv_B}{dt}$
+
+    $F_{AB} = -F_{BA}$
+
+    The equations of motion are as follows
+
+    $a = \frac{dv}{dt}$
+
+    $\int_{v_0}^{v} dv = \int a\,dt$
+
+    $v - v_0 = at \rightarrow v = v_0 + at$
+
+    $v = \frac{ds}{dt}$
+
+    $v_0 + at = \frac{ds}{dt} \rightarrow \int v_0 dt + \int at\,dt = \int ds$
+
+    $s = v_0 t + \frac{at^2}{2}$
+
+    $a = \frac{dv}{dt} = \frac{dv}{ds}\frac{ds}{dt} = v\frac{dv}{ds}$
+
+    $\int a\,ds = \int v\,dv \rightarrow as = \frac{v^2}{2} - \frac{v_0^2}{2}$
+
+    $v_0^2 + 2as = v^2$
+
+    These concepts get extended to rotational mechanics as well. And then comes work, energy & power.
+
+    $W = \int_A^B F \cdot ds$
+
+    $P = F \times V$
+
+    $E_{KE} = \frac{1}{2}mv^2$
+
+    $E_{PE} = mgh$
+
+    Kinetic theory of gases explain
+
+    $PV = nRT$
+
+    Fluid dynamics explain
+
+    $P = \frac{F}{A}$
+
+    $P_1A_1V_1 = P_2A_2V_2$
+
+    Then comes waves & oscillations
+
+    $p(x,t) = A \sin(kx - \omega t + \phi)$
+
+    and optics
+
+    $\frac{1}{u} + \frac{1}{v} = \frac{1}{f}$
+
+    & gravitation
+
+    $F = \frac{G M m}{r^2}$
+
+    and we move into thermodynamics
+
+    $dQ = dU + dW$
+
+    (heat) \quad (internal energy) \quad (work done by system)
+
+    Now comes the most used concept in our regular life, the electromagnetism. The four equations beautifully describe light.
+
+    $\nabla \cdot \mathbf{B} = 0$ ; $\nabla \cdot \mathbf{D} = \rho_v$ ; $\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$
+
+    $\nabla \times \mathbf{H} = \mathbf{J} + \frac{\partial \mathbf{D}}{\partial t}$
+
+    Then comes the modern physics which unlock the quantum realm. Atoms break further into hadrons (baryons & mesons) and leptons.
+
+    $u, c, t$ \qquad $\bar{u}, \bar{c}, \bar{t}$
+
+    $d, s, b$ \qquad $\bar{d}, \bar{s}, \bar{b}$
+
+    quarks & its antiparticles.
+
+    $e^{-}, \mu^{-}, \tau^{-}$ \qquad $e^{+}, \mu^{+}, \tau^{+}$
+
+    $\nu_e, \nu_\mu, \nu_\tau$ \qquad $\bar{\nu}e, \bar{\nu}\mu, \bar{\nu}_\tau$
+
+    leptons & its antiparticles.
+
+    $\gamma, W^{+}, W^{-}, Z^{0}, g, H^{0}$
+
+    Bosons.
+
+    Feynman diagram.
+
+    Proton & neutron form the nucleus and surrounded by electron gives rise to all forms of creation in this universe.
     </p>
   </section>
 
