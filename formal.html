@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Formal Science</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 <body>
 
@@ -18,17 +20,257 @@
   </nav>
 
   <section class="hero" style="background-color: #4facfe;">
-    <h1>Formal Science</h1>
+    
     <p>
-      Formal sciences are branches of knowledge concerned with formal systems, such as logic, mathematics,
-      theoretical computer science, information theory, and statistics. Unlike other sciences, formal sciences
-      are not concerned with the validity of theories based on observations in the physical world, but instead
-      with the properties of formal systems based on definitions and rules.
+    The things we see around in nature have beautifully enfolded the mastery of proportions which add beauty to creation. 
+    People in the past and even today have tried to understand this intricacy in planetary orbits, flora, genetic structures 
+    and many other natural phenomena. These ideas can be organized into categories within mathematics so that those who 
+    ponder the structure of creation in the future may understand it more clearly.
     </p>
-    <p style="margin-top: 20px;">
-      Mathematics is the language of patterns, structures, and relationships. It provides the foundational
-      framework for understanding the universe through abstract reasoning and logical deduction.
+
+    <h2>Geometry</h2>
+
+    <p>
+    Take any shape; it can often be classified into one of the conic sections. Straight lines can be written as 
+    \(y = mx + c\) or \(\frac{x}{a} + \frac{y}{b} = 1\).
     </p>
+
+    <p>
+    Circles can be expressed as
+    \[
+    (x-a)^2 + (y-b)^2 = r^2
+    \]
+    or
+    \[
+    x^2 + y^2 + 2gx + 2fy + c = 0
+    \]
+    where \((-g,-f)\) is the center and \(\sqrt{g^2 + f^2 - c}\) is the radius.
+    </p>
+
+    <p>
+    A parabola is written as
+    \[
+    y^2 = 4ax
+    \]
+    which represents a classic rightward opening parabola.
+    </p>
+
+    <p>
+    An ellipse is
+    \[
+    \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+    \]
+
+    and a hyperbola is
+
+    \[
+    \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1
+    \]
+
+    where \((ae,0)\) and \((-ae,0)\) are the foci and \((a,0)\) and \((-a,0)\) are the vertices.
+    </p>
+
+    <h2>Algebra</h2>
+
+    <p>
+    Algebra serves as a gateway to mathematics. Patterns and problems can be written symbolically and solved using 
+    different algebraic concepts. Natural patterns such as flower petals are often described through sequences and series.
+    </p>
+
+    <p>
+    Arithmetic progression:
+    \[
+    a_n = a + (n-1)d
+    \]
+
+    \[
+    S_n = \frac{n}{2}[2a + (n-1)d]
+    \]
+    </p>
+
+    <p>
+    Geometric progression:
+    \[
+    a_n = ar^{n-1}
+    \]
+
+    \[
+    S_n = a\left(\frac{1-r^n}{1-r}\right)
+    \]
+    </p>
+
+    <p>
+    Harmonic progression is the reciprocal of an arithmetic progression.
+    </p>
+
+    <p>
+    Permutations and combinations:
+    \[
+    nP_r = \frac{n!}{(n-r)!}
+    \]
+
+    \[
+    nP_r = r! \times nC_r
+    \]
+    </p>
+
+    <p>
+    Probability and statistics describe uncertainty in events.
+    </p>
+
+    <p>
+    \[
+    P(A|B) = \frac{P(A \cap B)}{P(B)}
+    \]
+
+    where
+
+    \[
+    P(A) = \frac{n(A)}{n(S)}
+    \]
+    </p>
+
+    <p>
+    Standard deviation:
+    \[
+    \sigma = \sqrt{\frac{\sum x^2}{n} - \left(\frac{\sum x}{n}\right)^2}
+    \]
+
+    or
+
+    \[
+    \sigma = \sqrt{\frac{\sum d^2}{n}}
+    \]
+
+    where
+
+    \[
+    d = x - \bar{x}, \quad \bar{x} = \frac{\sum x}{n}
+    \]
+
+    and variance \(= \sigma^2\).
+    </p>
+
+    <p>
+    Logarithms and the Binomial Theorem introduce functions.
+    </p>
+
+    <p>
+    \[
+    (x+y)^n = {n \choose r} x^{n-r}y^r
+    \]
+
+    \[
+    \log_a b = \frac{\log_c b}{\log_c a}
+    \]
+    </p>
+
+    <p>
+    Quadratic equations:
+    </p>
+
+    \[
+    x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+    \]
+
+    <p>
+    Discriminant conditions:
+    </p>
+
+    \[
+    D = 0 \text{ (real and equal roots)}
+    \]
+
+    \[
+    D > 0 \text{ (real and distinct roots)}
+    \]
+
+    \[
+    D < 0 \text{ (complex roots)}
+    \]
+
+    <p>
+    Complex numbers:
+    </p>
+
+    \[
+    z = a + ib
+    \]
+
+    \[
+    \bar{z} = a - ib
+    \]
+
+    \[
+    |z| = \sqrt{a^2 + b^2}
+    \]
+
+    \[
+    z = re^{i\theta}
+    \]
+
+    where
+
+    \[
+    \theta = \arg z = \tan^{-1}\left(\frac{b}{a}\right)
+    \]
+
+    \[
+    z = r(\cos\theta + i\sin\theta)
+    \]
+
+    <p>
+    Trigonometry describes the relationships in triangles and pyramidal structures.
+    </p>
+
+    \[
+    \sin\theta = \frac{O}{H}, \quad
+    \cos\theta = \frac{A}{H}, \quad
+    \tan\theta = \frac{O}{A}
+    \]
+
+    <p>
+    Matrices and determinants:
+    </p>
+
+    \[
+    A^{-1} = \frac{1}{|A|}\,\mathrm{adj}\,A
+    \]
+
+    \[
+    \mathrm{adj}\,A = (\mathrm{cof}\,A)^T
+    \]
+
+    \[
+    AX = B
+    \]
+
+    \[
+    X = A^{-1}B
+    \]
+
+    <h2>Calculus</h2>
+
+    <p>
+    Calculus is a powerful mathematical tool developed by Isaac Newton to describe motion and change in mechanics.
+    </p>
+
+    \[
+    \int dA = dx \times y
+    \]
+
+    \[
+    A = f(x)\,dx
+    \]
+
+    \[
+    \frac{dy}{dx}
+    \]
+
+    <p>
+    which represents the slope or the rate of change of \(y\) with respect to \(x\).
+    </p>
+
   </section>
 
   <script src="script.js"></script>
