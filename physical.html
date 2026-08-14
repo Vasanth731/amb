@@ -19,6 +19,53 @@
       margin-top: 40px;
       margin-bottom: 10px;
     }
+
+    .section-heading {
+      font-size: 1.6em;
+      color: #ffffff;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    .blog-thumbnails {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .blog-thumb {
+      display: block;
+      width: 160px;
+      text-decoration: none;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      overflow: hidden;
+      background: #111111;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .blog-thumb:hover {
+      border-color: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    .blog-thumb-img {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4em;
+      font-weight: 700;
+      background: linear-gradient(135deg, #86b6cc, #2b3a42);
+      color: #ffffff;
+    }
+
+    .blog-thumb-title {
+      padding: 8px 10px;
+      font-size: 0.85em;
+      line-height: 1.3;
+    }
   </style>
 </head>
 <body>
@@ -322,9 +369,15 @@
     Protons and neutrons form the nucleus and electrons orbit around them, giving rise to all forms of matter in the universe.
     </p>
 
-    <p id="standard-model-readmore">
-    Read more: <a href="https://medium.com/@vasanth.ambrose/the-standard-model-a-brief-introduction-5caa9f725080" target="_blank" rel="noopener noreferrer">The Standard Model: A Brief Introduction</a>
-    </p>
+    <h2 class="section-heading">More About it</h2>
+
+    <div class="blog-thumbnails" id="blogThumbnails">
+      <a class="blog-thumb" href="https://medium.com/@vasanth.ambrose/the-standard-model-a-brief-introduction-5caa9f725080" target="_blank" rel="noopener noreferrer">
+        <div class="blog-thumb-img">SM</div>
+        <div class="blog-thumb-title">The Standard Model: A Brief Introduction</div>
+      </a>
+      <!-- New blog thumbnails can be added here as another .blog-thumb -->
+    </div>
   </section>
 
   <script src="script.js"></script>
