@@ -18,6 +18,46 @@
       margin-top: 40px;
       margin-bottom: 10px;
     }
+
+    .blog-thumbnails {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .blog-thumb {
+      display: block;
+      width: 160px;
+      text-decoration: none;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      overflow: hidden;
+      background: #111111;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .blog-thumb:hover {
+      border-color: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    .blog-thumb-img {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4em;
+      font-weight: 700;
+      background: linear-gradient(135deg, #86b6cc, #2b3a42);
+      color: #ffffff;
+    }
+
+    .blog-thumb-title {
+      padding: 8px 10px;
+      font-size: 0.85em;
+      line-height: 1.3;
+    }
   </style>
 </head>
 <body>
@@ -46,16 +86,22 @@
     <p>
       Similarly, sound plays an important role in defining a culture. Remember whenever we hear an egyptian theme, it always takes us back to that civilization. Even in the present age there are so many genres of music but it all originates from sound waves of different pitch, frequency, wavelength and amplitude.
     </p>
-    <p id="distortion-plugin-readmore">
-    Read more: <a href="distortion_plugin.exe" download>Download Distortion Plugin</a>
-    </p>
+    <div class="blog-thumbnails" id="distortion-plugin-readmore">
+      <a class="blog-thumb" href="distortion_plugin.exe" download>
+        <div class="blog-thumb-img">DP</div>
+        <div class="blog-thumb-title">Download Distortion Plugin</div>
+      </a>
+    </div>
     <h2>Sketch</h2>
     <p>
       How can we forget the cave paintings which are the earliest descriptions of societies. Sketching shows us a wide range of information regarding a persons thought process or the ideology of a society. The canvas can be anything from two-dimensional sheets to three-dimentional wood or it can be as simple as the sand in the seashore. It's the easiest way of the expression of our thought.
     </p>
-    <p id="fma-7dsins-readmore">
-    Read more: <a href="https://www.behance.net/gallery/252590903/FMA-7DSins" target="_blank" rel="noopener noreferrer">FMA: 7 Deadly Sins</a>
-    </p>
+    <div class="blog-thumbnails" id="fma-7dsins-readmore">
+      <a class="blog-thumb" href="https://www.behance.net/gallery/252590903/FMA-7DSins" target="_blank" rel="noopener noreferrer">
+        <div class="blog-thumb-img">FMA</div>
+        <div class="blog-thumb-title">FMA: 7 Deadly Sins</div>
+      </a>
+    </div>
     <h2>Dnc</h2>
     <p>
       This on is interesting it's called dnc (the dance of life). It's part of our life throughout our day, in the way we move and the things we do. It can be both static as well as dynamic. Static dnc is fashion and how we portray ourselves. Dynamic dnc can be the sports we play or the dance moves we make. It's the simplest way to express ouselves and our ideologies to the world around.
