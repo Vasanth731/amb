@@ -27,6 +27,209 @@
       margin-bottom: 20px;
     }
 
+    /* ---------- notes typography ---------- */
+    .note-section {
+      margin-top: 46px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .note-section > h2 {
+      font-size: 1.45em;
+      color: #ffffff;
+      margin: 0 0 14px 0;
+    }
+
+    .eyebrow {
+      display: block;
+      font-size: 0.7em;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.75;
+      margin-bottom: 6px;
+    }
+
+    .note-section h3 {
+      font-size: 1.05em;
+      color: #ffffff;
+      margin: 26px 0 8px 0;
+    }
+
+    .note-section h4 {
+      font-size: 0.95em;
+      color: #ffffff;
+      margin: 20px 0 6px 0;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .note-section ul,
+    .note-section ol {
+      margin: 8px 0 8px 0;
+      padding-left: 22px;
+    }
+
+    .note-section li {
+      margin-bottom: 5px;
+    }
+
+    .lede {
+      font-size: 1.05em;
+    }
+
+    /* ---------- contents ---------- */
+    .contents {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 26px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    .contents h2 {
+      font-size: 0.8em !important;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 10px 0 !important;
+      opacity: 0.85;
+    }
+
+    .contents ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      columns: 2;
+      column-gap: 28px;
+    }
+
+    .contents li {
+      margin-bottom: 4px;
+      font-size: 0.9em;
+      break-inside: avoid;
+    }
+
+    .contents a {
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .contents a:hover {
+      border-bottom-color: #ffffff;
+    }
+
+    /* ---------- tables ---------- */
+    .data-table-wrap {
+      overflow-x: auto;
+      margin: 14px 0 18px 0;
+    }
+
+    table.data {
+      border-collapse: collapse;
+      font-size: 0.9em;
+      min-width: 280px;
+    }
+
+    table.data caption {
+      caption-side: top;
+      text-align: left;
+      font-size: 0.8em;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      padding-bottom: 6px;
+    }
+
+    table.data th,
+    table.data td {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 6px 14px 6px 0;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    table.data thead th {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    table.data tbody tr:last-child th,
+    table.data tbody tr:last-child td {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    table.data td.num,
+    table.data th.num {
+      text-align: right;
+      padding-right: 22px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ---------- asides, boxes, figures ---------- */
+    .aside {
+      border-left: 2px solid rgba(255, 255, 255, 0.6);
+      padding: 2px 0 2px 14px;
+      margin: 14px 0;
+      font-style: italic;
+      font-size: 0.95em;
+      opacity: 0.9;
+    }
+
+    blockquote.law {
+      margin: 14px 0;
+      padding: 12px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.12);
+      font-style: italic;
+    }
+
+    blockquote.law footer {
+      font-style: normal;
+      font-size: 0.85em;
+      opacity: 0.8;
+      margin-top: 6px;
+    }
+
+    figure.diagram {
+      margin: 18px 0;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    figure.diagram svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 560px;
+    }
+
+    figure.diagram figcaption {
+      font-size: 0.85em;
+      opacity: 0.85;
+      margin-top: 8px;
+    }
+
+    .unclear {
+      border-bottom: 1px dotted rgba(255, 255, 255, 0.8);
+    }
+
+    .to-top {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8em;
+      color: #ffffff;
+      opacity: 0.75;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .to-top:hover { opacity: 1; }
+
+    /* ---------- blog thumbnails ---------- */
     .blog-thumbnails {
       display: flex;
       flex-wrap: wrap;
@@ -66,6 +269,37 @@
       font-size: 0.85em;
       line-height: 1.3;
     }
+
+    .pdf-viewer-wrap {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      overflow: hidden;
+      background: #111111;
+    }
+
+    .pdf-viewer-wrap iframe {
+      display: block;
+      width: 100%;
+      height: 80vh;
+      border: 0;
+      background: #ffffff;
+    }
+
+    .pdf-viewer-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .contents ol { columns: 1; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .blog-thumb { transition: none; }
+      .blog-thumb:hover { transform: none; }
+    }
   </style>
 </head>
 <body>
@@ -79,295 +313,1422 @@
     </div>
   </nav>
 
-  <section class="hero" style="background-color: #86b6cc;">
+  <section class="hero" id="top" style="background-color: #86b6cc;">
     <h1>Physical Sciences</h1>
-    <p>
-    The position, velocity and acceleration of an object in motion can be written as functions of time.
+
+    <p class="lede">
+    Classical physics is the part of the subject that is predictable rather than
+    chaotic: the motion of a ball has a mathematical equation draped over it.
+    What follows is a complete set of notes, from units and vectors through to
+    magnetism, with the calculus derivations kept where they belong.
     </p>
 
-    \[
-    s(t) = 5t^{2} + 2t + 1
-    \]
+    <nav class="contents" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#history">A short history</a></li>
+        <li><a href="#units">Units and dimensional analysis</a></li>
+        <li><a href="#vectors">Vectors</a></li>
+        <li><a href="#kinematics">Kinematics</a></li>
+        <li><a href="#forces">Forces and Newton's laws</a></li>
+        <li><a href="#work">Work and energy</a></li>
+        <li><a href="#shm">Simple harmonic motion</a></li>
+        <li><a href="#momentum">Momentum and collisions</a></li>
+        <li><a href="#rotation">Circular and rotational motion</a></li>
+        <li><a href="#gravitation">Gravitation</a></li>
+        <li><a href="#fluids">Fluids</a></li>
+        <li><a href="#heat">Heat and temperature</a></li>
+        <li><a href="#thermo">Thermodynamics</a></li>
+        <li><a href="#entropy">Entropy</a></li>
+        <li><a href="#waves">Waves</a></li>
+        <li><a href="#light">Light</a></li>
+        <li><a href="#electricity">Electricity</a></li>
+        <li><a href="#magnetism">Magnetism</a></li>
+        <li><a href="#beyond">Beyond classical physics</a></li>
+        <li><a href="#notes">Full notes (PDF)</a></li>
+      </ol>
+    </nav>
 
-    \[
-    v(t) = 10t + 2
-    \]
+    <!-- ============================================================ -->
+    <div class="note-section" id="history">
+      <h2><span class="eyebrow">Section 1</span>A short history</h2>
 
-    \[
-    a(t) = 10
-    \]
+      <p>
+      Ancient Greece &rarr; Plato, Aristotle discuss the universe. Natural
+      philosophy &rarr; science, philosophy, religion &rarr; modern
+      civilization, and the changes they undergo.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <tbody>
+            <tr><th>Galileo Galilei</th><td>1564&ndash;1642</td><td>16th century</td></tr>
+            <tr><th>Isaac Newton</th><td>1643&ndash;1727</td><td>17th century</td></tr>
+            <tr><th>Albert Einstein</th><td>1879&ndash;1955</td><td>19th century</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      For the very small, and for things moving far too fast, classical physics
+      gives way to modern physics. Motion principles were understood: the motion
+      of a ball has a mathematical equation draped over it &mdash; &ldquo;predictable,
+      not chaos&rdquo;.
+      </p>
+
+      <blockquote class="law">
+        Everything incomprehensible is comprehensible about the universe.
+        <footer>&mdash; Albert Einstein</footer>
+      </blockquote>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="units">
+      <h2><span class="eyebrow">Section 2</span>Units, significant figures and dimensional analysis</h2>
+
+      <p>
+      Science is a way to communicate. SI units and scientific notation:
+      \(4 \times 10^{-10}\,\mathrm{m}\) (diameter of an atom),
+      \(9.5 \times 10^{20}\,\mathrm{m}\) (diameter of a galaxy).
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <caption>Base quantities</caption>
+          <thead>
+            <tr><th>Quantity</th><th>Unit</th><th>Quantity</th><th>Unit</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>length \(l\)</td><td>metre (m)</td><td>amount of substance</td><td>mole (mol)</td></tr>
+            <tr><td>time \(t\)</td><td>second (s)</td><td>luminous intensity</td><td>candela (cd)</td></tr>
+            <tr><td>mass \(m\)</td><td>kilogram (kg)</td><td>temperature \(T\)</td><td>kelvin (K)</td></tr>
+            <tr><td>current</td><td>ampere (A)</td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Significant figures</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Number</th><th class="num">Sig. fig.</th><th>Number</th><th class="num">Sig. fig.</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>316</td><td class="num">3</td><td>0.035000</td><td class="num">5</td></tr>
+            <tr><td>6.003</td><td class="num">4</td><td>100</td><td class="num">1</td></tr>
+            <tr><td>0.00025</td><td class="num">2</td><td>100.00</td><td class="num">5</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      Calculations take the <em>least</em> number of significant figures; for
+      \(+\) and \(-\), the least significant decimal place governs. Rounding: 5
+      and above round up, 4 and below round down. Moving the decimal to the
+      right gives \(10^{2} = 10 \times 10\); \(10^{-2} = \tfrac{1}{100}\).
+      </p>
+
+      <h3>Prefixes</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <tbody>
+            <tr><td>\(10^{18}\)</td><td>exa (E)</td><td>\(10^{-1}\)</td><td>deci (d)</td></tr>
+            <tr><td>\(10^{15}\)</td><td>peta (P)</td><td>\(10^{-2}\)</td><td>centi (c)</td></tr>
+            <tr><td>\(10^{12}\)</td><td>tera (T)</td><td>\(10^{-3}\)</td><td>milli (m)</td></tr>
+            <tr><td>\(10^{9}\)</td><td>giga (G)</td><td>\(10^{-6}\)</td><td>micro (\(\mu\))</td></tr>
+            <tr><td>\(10^{6}\)</td><td>mega (M)</td><td>\(10^{-9}\)</td><td>nano (n)</td></tr>
+            <tr><td>\(10^{3}\)</td><td>kilo (k)</td><td>\(10^{-12}\)</td><td>pico (p)</td></tr>
+            <tr><td>\(10^{2}\)</td><td>hecto (h)</td><td>\(10^{-15}\)</td><td>femto (f)</td></tr>
+            <tr><td>\(10^{1}\)</td><td>deka (da)</td><td>\(10^{-18}\)</td><td>atto (a)</td></tr>
+            <tr><td>\(10^{0}\)</td><td>\(= 1\)</td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Dimensional analysis</h3>
+
+      <p>Multiply by a version of 1:</p>
+
+      \[
+      7.43\,\mathrm{m} \times \frac{10^{9}\,\mathrm{nm}}{1\,\mathrm{m}}
+      = 7.43 \times 10^{9}\,\mathrm{nm}
+      \]
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="vectors">
+      <h2><span class="eyebrow">Section 3</span>Vectors</h2>
+
+      <ul>
+        <li><strong>Scalar</strong> &rarr; magnitude only (how much)</li>
+        <li><strong>Vector</strong> &rarr; magnitude and direction (how much and which way)</li>
+      </ul>
+
+      <p>
+      Vectors are added <strong>head to tail</strong>; the resultant closes the
+      triangle and \(A^{2} + B^{2} = C^{2}\) for perpendicular components.
+      Subtraction: \(\vec{A} - \vec{B} = \vec{A} + (-\vec{B})\).
+      </p>
+
+      \[
+      A_y = A\sin\theta, \qquad A_x = A\cos\theta
+      \]
+
+      <figure class="diagram">
+        <svg viewBox="0 0 560 170" role="img"
+             aria-label="Head-to-tail vector addition on the left and the components of a vector on the right">
+          <defs>
+            <marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="3.2"
+                    orient="auto" markerUnits="strokeWidth">
+              <path d="M0,0 L7,3.2 L0,6.4 z" fill="#ffffff"/>
+            </marker>
+          </defs>
+          <g stroke="#ffffff" fill="#ffffff" font-family="inherit" font-size="13">
+            <!-- head to tail -->
+            <line x1="30" y1="130" x2="150" y2="130" stroke-width="2" marker-end="url(#ah)"/>
+            <text x="80" y="148" stroke="none">A</text>
+            <line x1="150" y1="130" x2="215" y2="55" stroke-width="2" marker-end="url(#ah)"/>
+            <text x="190" y="105" stroke="none">B</text>
+            <line x1="30" y1="130" x2="215" y2="55" stroke-width="1.2"
+                  stroke-dasharray="5 4" marker-end="url(#ah)"/>
+            <text x="90" y="86" stroke="none">A + B</text>
+            <!-- components -->
+            <line x1="330" y1="130" x2="470" y2="55" stroke-width="2" marker-end="url(#ah)"/>
+            <text x="392" y="82" stroke="none">A</text>
+            <line x1="330" y1="130" x2="470" y2="130" stroke-width="1.6" marker-end="url(#ah)"/>
+            <text x="372" y="148" stroke="none">Aₓ = A cos θ</text>
+            <line x1="470" y1="130" x2="470" y2="55" stroke-width="1.6" marker-end="url(#ah)"/>
+            <text x="480" y="96" stroke="none">A</text>
+            <text x="489" y="100" stroke="none" font-size="10">y</text>
+            <path d="M362,130 A 32 32 0 0 0 353,112" fill="none" stroke-width="1"/>
+            <text x="366" y="118" stroke="none" font-size="11">θ</text>
+          </g>
+        </svg>
+        <figcaption>
+          Left: head-to-tail addition, resultant tail to head. Right: a vector
+          resolved into perpendicular components.
+        </figcaption>
+      </figure>
+
+      <p>
+      A vector times a scalar retains direction (\(\vec{A} \rightarrow 2\vec{A}\));
+      the cross product \(\vec{a} \times \vec{b}\) has magnitude
+      \(|a\,b|\sin\theta\).
+      </p>
+
+      <h3>Position, velocity, acceleration</h3>
+
+      <ul>
+        <li>Position &rarr; distance from a reference point (\(1\,\mathrm{m}\))</li>
+        <li>Velocity &rarr; change in position per unit time (\(1\,\mathrm{m/s}\))</li>
+        <li>Acceleration &rarr; change in velocity per unit time (\(1\,\mathrm{m/s^2}\))</li>
+        <li>Distance (scalar) vs. displacement (vector)</li>
+      </ul>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="kinematics">
+      <h2><span class="eyebrow">Section 4</span>Kinematics</h2>
+
+      <p>
+      Speed is a scalar, velocity a vector: two runners at the same speed
+      (\(3\,\mathrm{m/s}\)) have the same magnitude but, in different
+      directions, different velocities.
+      </p>
+
+      \[
+      \text{average speed} = \frac{\text{distance}}{\text{time}}, \qquad
+      \text{average velocity} = \frac{\text{displacement}}{\text{time}}, \qquad
+      \text{average acceleration} = \frac{\Delta v}{\Delta t}
+      \]
+
+      <p>
+      Acceleration is always a vector. At constant acceleration the velocity
+      gradually increases; deceleration is negative acceleration (a long vector
+      backwards). Mechanics splits into <strong>kinematics</strong> (Galileo)
+      &mdash; motion of objects without reference to forces &mdash; and
+      <strong>dynamics</strong> &mdash; forces and their influence on the motion
+      of objects.
+      </p>
+
+      <h3>Position, velocity and acceleration as functions of time</h3>
+
+      <p>
+      The position, velocity and acceleration of an object in motion can be
+      written as functions of time:
+      </p>
+
+      \[
+      s(t) = 5t^{2} + 2t + 1, \qquad v(t) = 10t + 2, \qquad a(t) = 10
+      \]
+
+      <p>
+      Velocity is the derivative of displacement and acceleration is the
+      derivative of velocity:
+      </p>
+
+      \[
+      \frac{ds}{dt} = v, \qquad \frac{dv}{dt} = \frac{d^{2}s}{dt^{2}} = a
+      \]
+
+      <h3>Equations of motion</h3>
+
+      <p>The four working equations, with the variable each one leaves out:</p>
+
+      \[
+      v_f = v_i + at \quad \text{(missing } d\text{)}
+      \]
+      \[
+      x_f = x_0 + v_i t + \tfrac{1}{2}at^{2} \quad \text{(missing } v_f\text{)}
+      \]
+      \[
+      v_f^{2} = v_i^{2} + 2ad \quad \text{(missing } t\text{)}
+      \]
+      \[
+      d = \left(\frac{v_f + v_i}{2}\right)t, \qquad
+      \bar{v} = \frac{v_f + v_i}{2}
+      \]
+
+      <h4>Derivation from acceleration</h4>
+
+      \[
+      a = \frac{dv}{dt}
+      \]
+      \[
+      \int_{v_0}^{v} dv = \int a\,dt
+      \]
+      \[
+      v - v_0 = at \qquad \Longrightarrow \qquad v = v_0 + at
+      \]
+
+      <h4>Derivation from velocity</h4>
+
+      \[
+      v = \frac{ds}{dt} \qquad \Longrightarrow \qquad v_0 + at = \frac{ds}{dt}
+      \]
+      \[
+      \int v_0\,dt + \int at\,dt = \int ds
+      \]
+      \[
+      s = v_0 t + \frac{at^{2}}{2}
+      \]
+
+      <h4>Derivation using the chain rule</h4>
+
+      \[
+      a = \frac{dv}{dt} = \frac{dv}{ds}\frac{ds}{dt} = v\frac{dv}{ds}
+      \]
+      \[
+      \int a\,ds = \int v\,dv
+      \]
+      \[
+      as = \frac{v^{2}}{2} - \frac{v_0^{2}}{2} \qquad \Longrightarrow \qquad
+      v_0^{2} + 2as = v^{2}
+      \]
+
+      <h3>Vertical velocity</h3>
+
+      <p>
+      \(a = -9.8\,\mathrm{m/s^2}\) on Earth; displacement is the same, \(v_i\)
+      is taken as \(+\)ve, and the same equations apply.
+      </p>
+
+      <h3>Projectile motion</h3>
+
+      <p>
+      A curved path due to gravity; horizontal and vertical motion are
+      <strong>independent</strong> and take the same time.
+      </p>
+
+      <ul>
+        <li>Vertical &rarr; time spent in air (\(d_y\)) &rarr; \(Y\) direction</li>
+        <li>Horizontal &rarr; distance it travels from the cliff (\(v_x\))</li>
+      </ul>
+
+      <p>
+      The time it spends in air relates only to the \(Y\)-direction behaviour:
+      no matter what the horizontal velocity is, the vertical motion is
+      independent of it. The distance travelled depends on the horizontal
+      velocity, and also on the time it spends in air: \(d = v_x t\). So for
+      \(v_i\) at \(30^{\circ}\), \(v_y\) sets the time in air and \(v_x\) sets
+      how far.
+      </p>
+
+      <h3>Problem-solving steps</h3>
+
+      <ol>
+        <li>Data: what do I have &mdash; \(d\), \(v_i\), \(v_f\), \(a\), \(t\)?</li>
+        <li>What am I trying to find?</li>
+        <li>Which equation to use?</li>
+        <li>Does it make sense (the answer)?</li>
+      </ol>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="forces">
+      <h2><span class="eyebrow">Section 5</span>Forces and Newton's laws</h2>
+
+      <p>
+      Forces are vectors: <strong>contact forces</strong> and
+      <strong>non-contact forces</strong> (field forces, which act at the
+      microscopic level). \(1\,\mathrm{N} = 1\,\mathrm{kg\,m/s^2}\).
+      </p>
+
+      <h3>First law</h3>
+
+      <blockquote class="law">
+        Motion in space is normal motion; motion on earth is a special case.
+      </blockquote>
+
+      <p>
+      An object stays at rest or continues to move at a constant velocity unless
+      another force acts on it. The capacity of an object to resist changes in
+      motion is <strong>inertia</strong>, and inertia \(\propto\) mass. Compare a
+      ping-pong ball with a bowling ball: mass is the quantitative measurement of
+      an object's inertia (at rest or in motion). An object will preserve its
+      state of motion unless acted upon by an external <em>net</em> force.
+      </p>
+
+      <p>In terms of momentum,</p>
+
+      \[
+      p = mv, \qquad \frac{dp}{dt} = m\frac{dv}{dt}
+      \]
+
+      <p>
+      so if the velocity is unchanging then \(\dfrac{dv}{dt} = 0\) and therefore
+      \(F = 0\) &mdash; which is the law of inertia.
+      </p>
+
+      <h3>Second law &mdash; the law of acceleration</h3>
+
+      \[
+      F = ma, \qquad a \propto F, \qquad a \propto \frac{1}{m},
+      \qquad a = \frac{F}{m}
+      \]
+
+      <h3>Third law</h3>
+
+      <p>
+      For every action there is an equal and opposite reaction. Taking two
+      bodies together,
+      </p>
+
+      \[
+      p_{AB} + p_{BA} = m_A v_A + m_B v_B
+      \]
+      \[
+      \frac{dp_{AB}}{dt} + \frac{dp_{BA}}{dt}
+      = m_A \frac{dv_A}{dt} + m_B \frac{dv_B}{dt}
+      \]
+      \[
+      F_{AB} = -F_{BA}
+      \]
+
+      <p>
+      Mass is the amount of matter in a person (\(100\,\mathrm{kg}\)) and does
+      not change; weight depends on \(g\):
+      </p>
+
+      \[
+      w = mg = 100 \times 9.8, \qquad w = mg \leftrightarrow N
+      \]
+
+      <h3>Friction</h3>
+
+      <p>Friction acts along a surface.</p>
+
+      <ul>
+        <li>
+          <strong>Static friction</strong> resists the initiation of motion; it is
+          proportional to the normal force (and so to weight),
+          \(F_{\max} = \mu_s N\). If \(F_{\text{applied}} > F_{\max}\) the object
+          will move (accelerate).
+        </li>
+        <li>
+          <strong>Kinetic friction</strong> acts on a moving object, with
+          \(F_k < F_s\).
+        </li>
+      </ul>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <caption>Coefficients of friction</caption>
+          <thead>
+            <tr><th>Surface</th><th class="num">\(\mu_s\)</th><th class="num">\(\mu_k\)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Glass</td><td class="num">0.94</td><td class="num">0.4</td></tr>
+            <tr><td>Steel</td><td class="num">0.74</td><td class="num">0.57</td></tr>
+            <tr><td>Ice</td><td class="num">0.1</td><td class="num">0.03</td></tr>
+            <tr><td>Teflon on steel</td><td class="num">0.04</td><td class="num">0.04</td></tr>
+            <tr><td>Wood on steel</td><td class="num">0.53</td><td class="num">0.36</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      Air resistance and water resistance are friction too &mdash; as in any
+      fluid &mdash; and depend on the viscosity of the fluid.
+      </p>
+
+      <ul>
+        <li>At rest: \(F_{\text{app}} \le F_{\text{static}}\), with \(w = mg\) balanced by \(F_N\).</li>
+        <li>Moving: \(F_{\text{app}} > F_{\min}\), and \(F_s\) changes to \(F_k\).</li>
+      </ul>
+
+      <p>On an incline (\(\theta\) to the incline):</p>
+
+      \[
+      F_f = \mu_k N = \mu_k mg\cos\theta
+      \]
+      \[
+      F_{\text{net}} = \mu_k mg\cos\theta - mg\sin\theta
+      \]
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="work">
+      <h2><span class="eyebrow">Section 6</span>Work and energy</h2>
+
+      <p>Work is action done on an object that displaces the object:</p>
+
+      \[
+      w = F \times d, \qquad w = Fd\cos\theta \quad \text{(scalar)},
+      \qquad W = \int_A^B F \cdot ds
+      \]
+
+      <p>
+      Only the component of force parallel to the displacement counts towards
+      work (only \(F_x\) contributes). Work is \(+\)ve in the same direction as
+      the distance and \(-\)ve in a different direction. Power is the rate of
+      doing work, \(P = F \times v\).
+      </p>
+
+      <p>
+      Energy is the capacity to do work; \(w_{\text{net}} = \Delta KE\), the
+      energy of motion. SI unit: joule (J) \(=\) N&middot;m.
+      </p>
+
+      <h3>Kinetic energy &mdash; by virtue of motion</h3>
+
+      \[
+      w = \tfrac{1}{2}mv_f^{2} - \tfrac{1}{2}mv_i^{2}
+      \qquad \text{(work--energy theorem)}
+      \]
+
+      <p>When an external force does work on a system:</p>
+
+      <ul>
+        <li>\(w = +\)ve &rarr; work done <em>on</em> the system; the system increases its KE</li>
+        <li>\(w = -\)ve &rarr; work done <em>by</em> the system; the system decreases its KE</li>
+      </ul>
+
+      <p>
+      \(E_{KE} = \tfrac{1}{2}mv^{2}\); a more massive object has more KE.
+      </p>
+
+      <h3>Potential energy &mdash; due to position in a field</h3>
+
+      <p>
+      (Gravitational, electromagnetic.) As gravitational PE increases, KE
+      converts down; away from the ground GPE increases (greater potential to
+      fall), towards the centre of the earth there is less PE.
+      </p>
+
+      \[
+      E_{PE} = mgh
+      \]
+
+      <p>Forms of energy: KE, PE, thermal energy, chemical energy.</p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="shm">
+      <h2><span class="eyebrow">Section 7</span>Simple harmonic motion</h2>
+
+      <p>SHM is periodic and repeated.</p>
+
+      <ul>
+        <li>Elastic potential energy &rarr; maximum when least or most compressed, where the direction changes</li>
+        <li>KE &rarr; maximum (block at the middle)</li>
+        <li>Sinusoidal: \(y = \sin x\)</li>
+      </ul>
+
+      <p>
+      Spring constant \(k\); the restoring force is always opposite to the
+      motion:
+      </p>
+
+      \[
+      F_{\text{spring}} = -kx \qquad \text{(Hooke's law)}
+      \]
+
+      \[
+      \text{elastic PE} = \tfrac{1}{2}kx^{2} = \tfrac{1}{2}kA^{2}, \qquad
+      KE = \tfrac{1}{2}mv_{\max}^{2} \ \text{at equilibrium } x = 0,\ PE = 0
+      \]
+
+      \[
+      v_{\max} = A\sqrt{\frac{k}{m}}, \qquad
+      \omega = \sqrt{\frac{k}{m}}, \qquad
+      T = \frac{2\pi}{\omega}, \qquad f = \frac{1}{T}
+      \]
+
+      <p>
+      \(x\) is maximum and \(P\) is maximum at the other side of the
+      oscillation. The total energy of a closed system is conserved (law of
+      conservation of energy); total mechanical energy
+      \(= \tfrac{1}{2}m\omega^{2}A^{2}\).
+      </p>
+
+      <h3>Free fall and the pendulum</h3>
+
+      <p>
+      PE &rarr; KE &rarr; ME, with \(ME = PE + KE\). For a pendulum: at the
+      bottom KE is maximum and PE minimum; at the extremes PE is maximum and KE
+      minimum. <strong>Resonance</strong> increases the amplitude of oscillation
+      by applying a force at the resonant frequency.
+      </p>
+
+      \[
+      \tfrac{1}{2}mv_i^{2} + mgh_i = \tfrac{1}{2}mv_f^{2} + mgh_f
+      \]
+
+      <p>Non-mechanical energy: chemical, thermal, nuclear, electrical, acoustic.</p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="momentum">
+      <h2><span class="eyebrow">Section 8</span>Momentum, impulse and collisions</h2>
+
+      <p>Momentum is a vector: \(\vec{p} = m\vec{v}\) (kg&middot;m/s).</p>
+
+      \[
+      \text{Impulse} = F\Delta t \quad (\mathrm{N \cdot s})
+      \]
+      \[
+      F\Delta t = \Delta p = mv_f - mv_i
+      \qquad \text{(impulse--momentum theorem)}
+      \]
+
+      <p>
+      Hence conservation of linear momentum:
+      \((p_1 + p_2)_i = (p_1 + p_2)_f\), i.e. momentum before collision \(=\)
+      momentum after collision.
+      </p>
+
+      <h3>Elastic collisions</h3>
+
+      <p>
+      The bodies remain separate after the collision; total KE <em>and</em>
+      momentum are conserved.
+      </p>
+
+      <h3>Perfectly inelastic collisions</h3>
+
+      <p>
+      Two separate objects collide, after which they move together as one mass:
+      </p>
+
+      \[
+      p_1 + p_2 = p_{\text{total}}, \qquad
+      m_1v_1 + m_2v_2 = (m_1 + m_2)v_f
+      \]
+
+      <p>
+      KE is not conserved; momentum is conserved. In reality all collisions are
+      inelastic; &ldquo;elastic&rdquo; and &ldquo;perfectly inelastic&rdquo; are
+      approximations for mathematical simplification.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="rotation">
+      <h2><span class="eyebrow">Section 9</span>Circular and rotational motion</h2>
+
+      <p>
+      The instantaneous velocity (tangential speed) is constant in
+      <strong>uniform circular motion</strong>, generated by the centripetal
+      force. The velocity is tangent to the wheel: the magnitude is constant, the
+      direction changing.
+      </p>
+
+      \[
+      F_c = ma_c, \qquad a_c = \frac{v_t^{2}}{r}, \qquad
+      F_c = \frac{m v_t^{2}}{r}
+      \]
+
+      <p>
+      <strong>Centripetal force</strong> is the force that pulls objects towards
+      the axis of rotation during circular motion (e.g. tension, gravity, static
+      friction). <strong>Centrifugal force</strong> is not a real force but a
+      sensation: the inertia of your body attempting to maintain a straight-line
+      path of motion &mdash; inertia follows a linear path.
+      </p>
+
+      <p>
+      Spin is movement around an internal axis; orbit is movement around an
+      external axis.
+      </p>
+
+      <h3>Angular quantities</h3>
+
+      <p>
+      Angular displacement \(\theta\) is the angle swept out by a rotating body;
+      1 quadrant \(= \pi/2\), a full turn \(= 2\pi\) radians, \(+\)ve or \(-\)ve.
+      </p>
+
+      \[
+      \omega = \frac{\Delta\theta}{\Delta t} \ \ (\mathrm{rad/s},\ \text{or rpm}),
+      \qquad
+      \alpha = \frac{\Delta\omega}{\Delta t} \ \ (\mathrm{rad/s^2})
+      \]
+
+      <h3>Rotational kinematics</h3>
+
+      \[
+      \omega_f = \omega_i + \alpha t, \qquad
+      \Delta\theta = \omega_i t + \tfrac{1}{2}\alpha t^{2}, \qquad
+      \omega_f^{2} = \omega_i^{2} + 2\alpha\Delta\theta
+      \]
+
+      <h3>Torque</h3>
+
+      <p>
+      How to initiate rotational motion? \(\tau\) (torque) is the ability of a
+      force to rotate an object:
+      </p>
+
+      \[
+      \tau = F d \sin\theta \quad (\mathrm{N \cdot m}),
+      \qquad \text{maximum at } 90^{\circ}
+      \]
+
+      <p>
+      If it results in clockwise rotation it is \(+\)ve; if \(-\)ve it results in
+      anticlockwise rotation. At equilibrium \(\tau_1 + \tau_2 = 0\).
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="gravitation">
+      <h2><span class="eyebrow">Section 10</span>Newton's law of universal gravitation</h2>
+
+      <p>
+      Satellites orbit around the earth: &ldquo;they fall towards the earth but
+      never hit it&rdquo;.
+      </p>
+
+      <p>
+      Any object with mass will exert a gravitational force &mdash; you too exert
+      a gravitational force, but it is negligible compared to the earth.
+      </p>
+
+      \[
+      F_g = G\frac{m_1 m_2}{r^{2}}, \qquad
+      G = 6.67 \times 10^{-11}\,\mathrm{N\,m^2/kg^2}
+      \]
+
+      <ul>
+        <li>Moon: \(F = ma\) &rarr; less</li>
+        <li>Apple: \(F = ma\) &rarr; negligible</li>
+        <li>Earth: \(F = ma\) &rarr; more considerable</li>
+      </ul>
+
+      <p>
+      In vacuum a feather and a bowling ball fall at the same time: more gravity
+      is exerted on a more massive object, but more mass also means more inertia
+      (resistance to being accelerated). With \(g = 9.8\,\mathrm{m/s^2}\),
+      </p>
+
+      \[
+      mg = G\frac{m_1 m_2}{r^{2}} \qquad \Longrightarrow \qquad
+      g = G\frac{m_2}{r^{2}}
+      \]
+
+      <p>
+      The mass of the falling object cancels from both sides, so it does not
+      affect the rate of free fall.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="fluids">
+      <h2><span class="eyebrow">Section 11</span>Fluids</h2>
+
+      <p>
+      Fluids flow and alter their shape. \(\rho = m/V\); pressure is force per
+      unit area, \(P = \dfrac{F}{A}\); and <strong>buoyancy</strong> is the
+      upward force exerted by a fluid.
+      </p>
+
+      <p>
+      <strong>Archimedes' principle:</strong> a submerged object will experience a
+      buoyant force equal to the weight of the displaced fluid.
+      </p>
+
+      <ul>
+        <li>
+          \(\rho_{\text{ball}} < \rho_{\text{water}}\) and
+          \(w_{\text{ball}} < w_{\text{water}}\) &rarr; the buoyant force will
+          make it float
+        </li>
+        <li>
+          Steel is dense, but the air inside is not:
+          \(F = mg_{\text{displaced fluid}} \rightarrow F = mg_{\text{ship}}\)
+        </li>
+        <li>A floating object displaces fluid based on its <em>mass</em></li>
+        <li>A sinking object displaces fluid based on its <em>volume</em></li>
+        <li>
+          Submerging: the volume of water increases precisely by the volume of
+          the person submerged &mdash; Eureka!
+        </li>
+      </ul>
+
+      <p>For flow through a changing cross-section,</p>
+
+      \[
+      P_1 A_1 V_1 = P_2 A_2 V_2
+      \]
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="heat">
+      <h2><span class="eyebrow">Section 12</span>Heat and temperature</h2>
+
+      <p>
+      Temperature is the amount of heat energy available for work in a system
+      &rarr; the average KE of molecules in the system; more velocity means more
+      KE. Molecular motion is translational, rotational and vibrational.
+      </p>
+
+      <p>
+      Hot &rarr; cool: through collisions, energy is transferred between systems
+      until the temperature is equal &mdash; <strong>thermal equilibrium</strong>.
+      </p>
+
+      <p>
+      KE transfer <em>is</em> heat transfer. Heat is the amount of thermal energy
+      which is added to or removed from a system; heat is energy in transit, and
+      heat transfer alters the temperature of an object.
+      </p>
+
+      \[
+      KE_{\text{avg}} = \tfrac{3}{2}kT
+      \]
+      \[
+      \sum KE_{\text{molecules}} + \sum PE_{\text{molecules}} = U
+      = \tfrac{3}{2}NkT \qquad \text{(thermal energy)}
+      \]
+
+      <p>
+      Molecular potential energy is present within a molecule. Higher
+      temperature &rarr; more internal energy.
+      </p>
+
+      <p>
+      A substance does <em>not</em> contain heat; it contains
+      <strong>internal energy</strong>. Heat is the transfer of those (molecular
+      KE \(+\) PE) from high temperature to low temperature.
+      </p>
+
+      <p>
+      The kinetic theory of gases ties pressure, volume and temperature
+      together:
+      </p>
+
+      \[
+      PV = nRT
+      \]
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="thermo">
+      <h2><span class="eyebrow">Section 13</span>Thermodynamics</h2>
+
+      <p>
+      Thermodynamics is the study of heat and temperature and their relation to
+      energy and work. Energy is conserved:
+      </p>
+
+      \[
+      \Delta PE + \Delta KE + \Delta U = 0
+      \]
+
+      <p>
+      \(U\) can do work &rarr; \(PV\) expansion, heat transfer. A
+      <strong>state function</strong> depends only on the state of the system,
+      not how it got there.
+      </p>
+
+      <h3>Zeroth law</h3>
+
+      <p>
+      If \(A \rightleftharpoons C\) and \(B \rightleftharpoons C\), then \(A\)
+      and \(B\) are in thermal equilibrium. System and surroundings are separated
+      by <em>diathermal walls</em> (allow heat flow) or <em>adiabatic walls</em>
+      (do not allow heat flow).
+      </p>
+
+      <h3>First law &mdash; conservation of energy</h3>
+
+      \[
+      \Delta U = Q - W, \qquad dQ = dU + dW
+      \]
+
+      <p>
+      Internal energy is energy transferred from or to the system as heat and as
+      work (J): \(+\)ve into the system, \(-\)ve out of the system. Here \(dQ\)
+      is heat, \(dU\) is internal energy and \(dW\) is the work done by the
+      system.
+      </p>
+
+      <h3>Special processes</h3>
+
+      <ol>
+        <li>
+          <strong>Constant volume</strong> &mdash; no \(PV\) work done,
+          \(W = 0\), \(\Delta U = Q\) (bomb calorimeter); isovolumetric.
+        </li>
+        <li>
+          <strong>Constant temperature</strong> &mdash; \(0 = Q - W\),
+          \(\Delta U = 0\), \(Q = W\) (isothermal; a car engine). Isobaric:
+          \(W = \int_{V_1}^{V_2} P\,dV = P(V_2 - V_1)\).
+        </li>
+        <li>
+          <strong>No heat transfer</strong> &mdash; \(Q = 0\),
+          \(\Delta U = -W\): adiabatic process. Clouds change due to pressure
+          difference.
+        </li>
+        <li>
+          \(Q = 0\) and \(W = 0\) \(\Longleftrightarrow\) \(\Delta U = 0\)
+          &rarr; isolated system.
+        </li>
+      </ol>
+
+      <p>
+      Sign conventions: heat absorbed \(Q = +\)ve, heat released \(Q = -\)ve;
+      work done <em>by</em> the system \(W = +\)ve, work done <em>on</em> the
+      system \(W = -\)ve.
+      </p>
+
+      <h3>Second law</h3>
+
+      \[
+      Q_H = W + Q_L, \qquad W_{\text{net}} = Q_H - Q_C
+      \]
+
+      <figure class="diagram">
+        <svg viewBox="0 0 560 150" role="img"
+             aria-label="Heat engine taking heat from a hot reservoir, doing work, and rejecting heat to a cold reservoir">
+          <defs>
+            <marker id="ah-engine" markerWidth="9" markerHeight="9" refX="7" refY="3.2"
+                    orient="auto" markerUnits="strokeWidth">
+              <path d="M0,0 L7,3.2 L0,6.4 z" fill="#ffffff" stroke="none"/>
+            </marker>
+          </defs>
+          <g stroke="#ffffff" fill="none" font-family="inherit" font-size="13">
+            <rect x="20" y="40" width="130" height="46" rx="4" stroke-width="1.4"/>
+            <text x="34" y="68" stroke="none" fill="#ffffff">Hot reservoir T</text>
+            <text x="128" y="72" stroke="none" fill="#ffffff" font-size="10">H</text>
+            <circle cx="280" cy="63" r="26" stroke-width="1.4"/>
+            <rect x="410" y="40" width="130" height="46" rx="4" stroke-width="1.4"/>
+            <text x="424" y="68" stroke="none" fill="#ffffff">Cold reservoir T</text>
+            <text x="527" y="72" stroke="none" fill="#ffffff" font-size="10">C</text>
+            <line x1="150" y1="63" x2="248" y2="63" stroke-width="1.6" marker-end="url(#ah-engine)"/>
+            <text x="188" y="52" stroke="none" fill="#ffffff">Q</text>
+            <text x="198" y="56" stroke="none" fill="#ffffff" font-size="10">H</text>
+            <line x1="308" y1="63" x2="406" y2="63" stroke-width="1.6" marker-end="url(#ah-engine)"/>
+            <text x="348" y="52" stroke="none" fill="#ffffff">Q</text>
+            <text x="358" y="56" stroke="none" fill="#ffffff" font-size="10">C</text>
+            <line x1="280" y1="89" x2="280" y2="132" stroke-width="1.6" marker-end="url(#ah-engine)"/>
+            <text x="290" y="120" stroke="none" fill="#ffffff">W</text>
+          </g>
+        </svg>
+        <figcaption>
+          A heat engine: heat in from the hot reservoir, work out, the remainder
+          rejected to the cold reservoir.
+        </figcaption>
+      </figure>
+
+      <p>
+      100&thinsp;% efficiency is not possible; there is no cyclic process for
+      which every process is reversible (<strong>Carnot's principle</strong>)
+      &mdash; friction and lost energy intervene. Heat cannot be transferred from
+      cold to hot temperature (on its own).
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="entropy">
+      <h2><span class="eyebrow">Section 14</span>Entropy</h2>
+
+      <p>
+      Entropy \(S\) (J/K) is a state function measuring disorder; it represents
+      the inevitable partial loss of an engine's ability to convert heat energy to
+      work.
+      </p>
+
+      \[
+      \Delta S = \left(\frac{Q}{T}\right)_{\text{reversible}}
+      \qquad (\text{heat} / \text{Kelvin temperature})
+      \]
+
+      <p>
+      \(\Delta S = 0\) and \(\Delta S_{\text{univ}} = 0\) for a Carnot engine.
+      For any spontaneous process:
+      </p>
+
+      \[
+      \Delta S_{\text{univ}} > 0
+      \]
+
+      <p>
+      Disorder &rarr; \(\Delta S_{\text{univ}} > 0\); order &rarr;
+      \(\Delta S < 0\) locally, with dispersal of energy that increases
+      \(\Delta S_{\text{univ}}\) as a whole. Things spontaneously form on a local
+      level: water to ice, living organisms. Dispersal of matter and energy always
+      involves an increase in entropy. An increase in entropy corresponds with a
+      greater dispersal of matter and energy.
+      </p>
+
+      <h3>Microstates</h3>
+
+      <p>
+      A microstate is a specific configuration of all particles and energies in a
+      system.
+      </p>
+
+      \[
+      S = k\ln W
+      \]
+
+      <p>
+      where \(\ln\) is the natural log, \(W\) is the number of microstates, and
+      \(k\) is the Boltzmann constant,
+      \(1.38 \times 10^{-23}\,\mathrm{m^2\,kg/s^2\,K}\).
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <caption>Four distinguishable particles in two boxes</caption>
+          <thead>
+            <tr><th>Distribution</th><th class="num">Microstates</th><th></th></tr>
+          </thead>
+          <tbody>
+            <tr><td>4 and 0</td><td class="num">1</td><td></td></tr>
+            <tr><td>3 and 1</td><td class="num">4</td><td>(4 ways)</td></tr>
+            <tr><td>2 and 2</td><td class="num">6</td><td></td></tr>
+            <tr><td>1 and 3</td><td class="num">4</td><td></td></tr>
+            <tr><td>0 and 4</td><td class="num">1</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      Statistical mechanics tells us: &ldquo;the distribution with the greatest
+      number of microstates will be preferred statistically&rdquo;. So finding the
+      system in 2 and 2 (i.e. preferred) is 6 out of 16, 37.5&thinsp;%. The
+      probability is for the more dispersed microstate, therefore entropy tends to
+      increase in the universe.
+      </p>
+
+      <h3>Third law</h3>
+
+      <p>
+      Temperature is a measure of available heat energy. As temperature decreases,
+      internal energy decreases and KE decreases. Zero KE &rarr; \(0\,\mathrm{K}
+      = -273.15\,^{\circ}\mathrm{C}\), the solid phase. Entropy at
+      \(0\,\mathrm{K}\) is zero: \(S = k\ln W\) with one microstate gives
+      \(S = 0\) since \(\ln 1 = 0\). It is impossible to lower the temperature of
+      any system to absolute zero in a finite number of steps (zero point energy).
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="waves">
+      <h2><span class="eyebrow">Section 15</span>Waves</h2>
+
+      <p>
+      Light and sound are periodic. Waves &ldquo;originate by disturbance,
+      propagate outwards&rdquo;. A wave travelling through a medium is called a
+      <strong>mechanical wave</strong>.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Transverse waves</th><th>Longitudinal waves (sound)</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>disturbance \(\perp\) to direction</td>
+              <td>disturbance \(\parallel\) to direction, due to compression or rarefaction</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      The medium does not travel; only the <u>energy</u> is carried by the wave.
+      <strong>Electromagnetic waves</strong> do not require a material medium
+      &mdash; e.g. light, in a vacuum.
+      </p>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 560 190" role="img"
+             aria-label="One cycle of a transverse wave labelled with crest, trough, amplitude and wavelength">
+          <g stroke="#ffffff" fill="none" font-family="inherit" font-size="13">
+            <line x1="30" y1="95" x2="530" y2="95" stroke-width="1" opacity="0.6"/>
+            <line x1="40" y1="175" x2="40" y2="20" stroke-width="1" opacity="0.6"/>
+            <path d="M40,95 C 90,10 165,10 215,95 C 265,180 340,180 390,95"
+                  stroke-width="2.2"/>
+            <line x1="127" y1="95" x2="127" y2="33" stroke-width="1.2"
+                  stroke-dasharray="4 3"/>
+            <text x="134" y="60" stroke="none" fill="#ffffff">A₀</text>
+            <text x="104" y="24" stroke="none" fill="#ffffff">crest</text>
+            <text x="288" y="172" stroke="none" fill="#ffffff">trough</text>
+            <line x1="40" y1="140" x2="390" y2="140" stroke-width="1.2"/>
+            <text x="205" y="158" stroke="none" fill="#ffffff">λ</text>
+          </g>
+        </svg>
+        <figcaption>
+          Amplitude is measured perpendicular to the propagation; one wavelength
+          is one complete cycle.
+        </figcaption>
+      </figure>
+
+      <ul>
+        <li>
+          Amplitude \(A_0\) &rarr; distance travelled \(\perp\) to the
+          propagation; the distance to a crest or trough. Greater \(A_0\) &rarr;
+          more energy.
+        </li>
+        <li>Period \(T\) &rarr; time required to complete one cycle.</li>
+        <li>Frequency \(\nu\) &rarr; number of waves per unit time; Hz \(=\) s\(^{-1}\).</li>
+        <li>\(\lambda\) &rarr; length of one cycle of the wave.</li>
+      </ul>
+
+      \[
+      \text{speed} = \lambda\nu
+      \]
+
+      <p>(Mechanical waves travel at a constant speed for a given medium.)</p>
+
+      <p>A travelling wave can be written as</p>
+
+      \[
+      p(x,t) = A \sin(kx - \omega t + \phi)
+      \]
+
+      <h3>Speed of sound by medium</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <tbody>
+            <tr><td>Air</td><td>343 m/s</td></tr>
+            <tr><td>Water</td><td>1484 m/s (4 times air)</td></tr>
+            <tr><td>Steel</td><td>5120 m/s (17 times air)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Superposition and interference</h3>
+
+      <p>
+      Mechanical waves can overlap &rarr; superposition &rarr; interference
+      pattern. Constructive interference adds (\(2n\)); destructive interference
+      subtracts, and complete destructive interference (out of phase) gives less
+      than the individual wave. Boundaries may be fixed, non-fixed, or both fixed
+      (inverted). <strong>Diffraction</strong> &rarr; bending in corners.
+      </p>
+
+      <h3>Standing waves</h3>
+
+      <p>
+      Transverse, stationary waves between fixed ends: right- and
+      left-travelling (reflected) waves interfere to give an interference
+      pattern. The allowed modes are quantized in integer numbers of half
+      wavelengths.
+      </p>
+
+      <ul>
+        <li>Nodes &rarr; zero amplitude (stationary)</li>
+        <li>Antinodes &rarr; points with maximum amplitude</li>
+        <li>More nodes, more energy</li>
+        <li>
+          2D (a drum) also has radial nodes; angular nodes &rarr; linear (1D);
+          3D has nodes that are 2D planes
+        </li>
+      </ul>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <tbody>
+            <tr><td>\(f_1\)</td><td>1st harmonic</td><td>(\(\tfrac{1}{2}\) wavelength)</td></tr>
+            <tr><td>\(f_2\)</td><td>2nd harmonic</td><td>(1 wave) &mdash; octave</td></tr>
+            <tr><td>\(f_3\)</td><td>3rd harmonic</td><td>(\(\tfrac{3}{2}\) wave) &mdash; fifth</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="light">
+      <h2><span class="eyebrow">Section 16</span>Light</h2>
+
+      <p>
+      James Clerk Maxwell: light is oscillating electric and magnetic fields.
+      Different frequencies give different colours.
+      </p>
+
+      <ul>
+        <li>Above visible frequency &rarr; ultraviolet, X-ray, gamma</li>
+        <li>Below visible frequency &rarr; infrared, microwave, radio</li>
+      </ul>
+
+      <p>
+      Radio &rarr; micro &rarr; infrared &rarr; visible &rarr; ultraviolet &rarr;
+      X-rays &rarr; \(\gamma\) rays: \(\nu\) increases, \(\lambda\) decreases.
+      Visible colours: <strong>ROYGBIV</strong>, low frequency to high.
+      </p>
+
+      <p>
+      Some materials can absorb only particular colours and reflect others &mdash;
+      that is what we see. A green leaf: green is reflected, our eyes see it. If
+      all \(\lambda\) are absorbed &rarr; appears black; if all \(\lambda\) are
+      reflected &rarr; white, or some colour that is illuminating it.
+      </p>
+
+      <h3>Reflection and refraction</h3>
+
+      <ul>
+        <li>Reflection: measured from the normal, \(\angle i = \angle r\).</li>
+        <li>
+          Refraction: bending of light as it travels from one medium into another
+          (dense &rarr; less dense and vice versa).
+        </li>
+      </ul>
+
+      <p>For a thin lens or mirror, the object and image distances satisfy</p>
+
+      \[
+      \frac{1}{u} + \frac{1}{v} = \frac{1}{f}
+      \]
+
+      <h3>Colour mixing</h3>
+
+      <p>
+      R, G, B are the additive primaries; Y is the complementary colour of blue;
+      the eye has 3 colour receptors. Subtractive primary colours &rarr; black;
+      additive primary colours &rarr; white.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="electricity">
+      <h2><span class="eyebrow">Section 17</span>Electricity</h2>
+
+      <p>
+      Electric charge: like charges repel, opposite charges attract.
+      \(e^- \rightarrow 1.6 \times 10^{-19}\,\mathrm{C}\) is the fundamental
+      charge (and \(p^+ \rightarrow +1.6 \times 10^{-19}\,\mathrm{C}\)).
+      </p>
+
+      \[
+      F = k\frac{q_1 q_2}{r^{2}}, \qquad
+      k = \frac{1}{4\pi\varepsilon_0} = 8.99 \times 10^{9}, \qquad F_E > F_G
+      \]
+
+      <p>Point charge: \(E = k_e \dfrac{q}{r^{2}}\).</p>
+
+      <h3>Electric potential energy</h3>
+
+      <p>The field does work to produce acceleration:</p>
+
+      \[
+      PE_{\text{elect}} = -qEd \quad (\mathrm{J})
+      \]
+
+      <p>
+      where \(E\) is the electric field strength, \(d\) the displacement from the
+      reference point and \(q\) the charge on the object.
+      </p>
+
+      <p><strong>Potential difference:</strong></p>
+
+      \[
+      \Delta V = \frac{\Delta PE}{q} \quad (\mathrm{V = J/C})
+      \]
+
+      <p>
+      It is not a measure of energy but of its change in energy per unit charge.
+      As charge flows it produces usable energy; current can be generated by
+      either of these.
+      </p>
+
+      <h3>Current, resistance, power</h3>
+
+      \[
+      I = \frac{\Delta Q}{\Delta t} \quad
+      \text{ampere (A)} = 1\,\mathrm{C/s}
+      \]
+      \[
+      R = \frac{\Delta V}{I} \quad \text{ohms } (\Omega = \mathrm{V/A})
+      \]
+      \[
+      P = I\,\Delta V \quad \text{watts (W)} = \mathrm{J/s}
+      \]
+
+      <p>
+      Current arises when there is net movement of electric charge. Resistance is
+      the ability of a material to oppose charge flow. Electric power is the rate
+      at which electrical energy is converted to other forms.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="magnetism">
+      <h2><span class="eyebrow">Section 18</span>Magnetism</h2>
+
+      <p>Circuitry &rarr; computing &rarr; engineering.</p>
+
+      <p>
+      <strong>Magnet:</strong> magnetite (Fe<sub>3</sub>O<sub>4</sub>); Fe, Co,
+      nickel. S&ndash;N &mdash; always both poles. Ferromagnetic: all the spins
+      will align in the same direction.
+      </p>
+
+      <p>
+      The magnetic field of the Earth interacts with the high-energy charged
+      particles which race towards us from the Sun and deflects them towards the
+      magnetic pole &rarr; <strong>aurora borealis</strong> (the northern
+      lights), by collision with atmospheric particles.
+      </p>
+
+      <ul>
+        <li>An electric current will deflect a compass needle.</li>
+        <li>Magnetic fields will affect the path of charged particles.</li>
+      </ul>
+
+      <p>
+      <strong>The electromagnetic force:</strong> a current \(I\) produces a
+      magnetic field \(B\) &mdash; right-hand rule. Worked out roughly 1600 to
+      1900 by <span class="unclear" title="the first name in the notes could not be read with certainty">Nelson</span>,
+      Faraday, Huygens, Coulomb and Maxwell.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="beyond">
+      <h2><span class="eyebrow">Section 19</span>Beyond classical physics</h2>
+
+      <p>
+      Electromagnetism is described by Maxwell's equations, which explain
+      electric and magnetic fields and the nature of light.
+      </p>
+
+      \[
+      \nabla \cdot \mathbf{B} = 0
+      \]
+      \[
+      \nabla \cdot \mathbf{D} = \rho_v
+      \]
+      \[
+      \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}
+      \]
+      \[
+      \nabla \times \mathbf{H} =
+      \mathbf{J} + \frac{\partial \mathbf{D}}{\partial t}
+      \]
+
+      <p>
+      Modern physics explores the quantum realm, where matter is made of
+      fundamental particles.
+      </p>
+
+      <h3>Quarks and their antiparticles</h3>
+
+      \[
+      u,\ c,\ t \qquad \bar{u},\ \bar{c},\ \bar{t}
+      \]
+      \[
+      d,\ s,\ b \qquad \bar{d},\ \bar{s},\ \bar{b}
+      \]
+
+      <h3>Leptons and their antiparticles</h3>
+
+      \[
+      e^{-},\ \mu^{-},\ \tau^{-} \qquad e^{+},\ \mu^{+},\ \tau^{+}
+      \]
+      \[
+      \nu_e,\ \nu_\mu,\ \nu_\tau \qquad
+      \bar{\nu}_e,\ \bar{\nu}_\mu,\ \bar{\nu}_\tau
+      \]
+
+      <h3>Bosons &mdash; the force carriers</h3>
+
+      \[
+      \gamma,\ W^{+},\ W^{-},\ Z^{0},\ g,\ H^{0}
+      \]
+
+      <p>
+      Protons and neutrons form the nucleus and electrons orbit around them,
+      giving rise to all forms of matter in the universe.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <h2 class="section-heading" id="notes">Full Notes</h2>
 
     <p>
-    Velocity is the derivative of displacement and acceleration is the derivative of velocity.
+    The same notes as a typeset PDF, built from the LaTeX source, are embedded
+    below.
     </p>
 
-    \[
-    \frac{ds}{dt} = v
-    \]
-
-    \[
-    \frac{dv}{dt} = \frac{d^{2}s}{dt^{2}} = a
-    \]
-
-    <p>
-    Newton’s first law states that an object remains in constant motion unless acted upon by an external force.
-    </p>
-
-    \[
-    p = mv
-    \]
-
-    \[
-    \frac{dp}{dt} = m\frac{dv}{dt}
-    \]
-
-    <p>
-    If acceleration is constant then the change in velocity is zero and therefore the force is zero, which explains the law of inertia.
-    </p>
-
-    \[
-    \frac{dv}{dt} = 0
-    \]
-
-    \[
-    F = 0
-    \]
-
-    <p>
-    The second law is the law of acceleration, relating force, mass and acceleration.
-    </p>
-
-    \[
-    p = mv
-    \]
-
-    \[
-    \frac{dp}{dt} = m\frac{dv}{dt}
-    \]
-
-    \[
-    a = \frac{F}{m}
-    \]
-
-    <p>
-    The third law states that every action has an equal and opposite reaction.
-    </p>
-
-    \[
-    p_{AB} + p_{BA} = m_A v_A + m_B v_B
-    \]
-
-    \[
-    \frac{dp_{AB}}{dt} + \frac{dp_{BA}}{dt}
-    = m_A \frac{dv_A}{dt} + m_B \frac{dv_B}{dt}
-    \]
-
-    \[
-    F_{AB} = -F_{BA}
-    \]
-
-    <p>
-    The equations of motion can be derived from acceleration.
-    </p>
-
-    \[
-    a = \frac{dv}{dt}
-    \]
-
-    \[
-    \int_{v_0}^{v} dv = \int a\,dt
-    \]
-
-    \[
-    v - v_0 = at
-    \]
-
-    \[
-    v = v_0 + at
-    \]
-
-    <p>
-    Velocity is also the derivative of displacement.
-    </p>
-
-    \[
-    v = \frac{ds}{dt}
-    \]
-
-    \[
-    v_0 + at = \frac{ds}{dt}
-    \]
-
-    \[
-    \int v_0 dt + \int at\,dt = \int ds
-    \]
-
-    \[
-    s = v_0 t + \frac{at^2}{2}
-    \]
-
-    <p>
-    Another equation of motion can be derived using the chain rule.
-    </p>
-
-    \[
-    a = \frac{dv}{dt} = \frac{dv}{ds}\frac{ds}{dt}
-    \]
-
-    \[
-    a = v\frac{dv}{ds}
-    \]
-
-    \[
-    \int a\,ds = \int v\,dv
-    \]
-
-    \[
-    as = \frac{v^2}{2} - \frac{v_0^2}{2}
-    \]
-
-    \[
-    v_0^2 + 2as = v^2
-    \]
-
-    <p>
-    These ideas extend to rotational mechanics and to the concepts of work, energy and power.
-    </p>
-
-    \[
-    W = \int_A^B F \cdot ds
-    \]
-
-    \[
-    P = F \times V
-    \]
-
-    \[
-    E_{KE} = \frac{1}{2}mv^2
-    \]
-
-    \[
-    E_{PE} = mgh
-    \]
-
-    <p>
-    The kinetic theory of gases explains the relationship between pressure, volume and temperature.
-    </p>
-
-    \[
-    PV = nRT
-    \]
-
-    <p>
-    Fluid dynamics studies the behavior of fluids and pressure.
-    </p>
-
-    \[
-    P = \frac{F}{A}
-    \]
-
-    \[
-    P_1A_1V_1 = P_2A_2V_2
-    \]
-
-    <p>
-    Waves and oscillations describe periodic motion.
-    </p>
-
-    \[
-    p(x,t) = A \sin(kx - \omega t + \phi)
-    \]
-
-    <p>
-    Optics studies the behavior of light.
-    </p>
-
-    \[
-    \frac{1}{u} + \frac{1}{v} = \frac{1}{f}
-    \]
-
-    <p>
-    Gravitation explains the attraction between masses.
-    </p>
-
-    \[
-    F = \frac{G M m}{r^2}
-    \]
-
-    <p>
-    Thermodynamics deals with heat, work and internal energy.
-    </p>
-
-    \[
-    dQ = dU + dW
-    \]
-
-    <p>
-    Here \(dQ\) is heat, \(dU\) is internal energy and \(dW\) is the work done by the system.
-    </p>
-
-    <p>
-    Electromagnetism is described by Maxwell's equations which explain electric and magnetic fields and the nature of light.
-    </p>
-
-    \[
-    \nabla \cdot \mathbf{B} = 0
-    \]
-
-    \[
-    \nabla \cdot \mathbf{D} = \rho_v
-    \]
-
-    \[
-    \nabla \times \mathbf{E} =
-    -\frac{\partial \mathbf{B}}{\partial t}
-    \]
-
-    \[
-    \nabla \times \mathbf{H} =
-    \mathbf{J} + \frac{\partial \mathbf{D}}{\partial t}
-    \]
-
-    <p>
-    Modern physics explores the quantum realm where matter is made of fundamental particles.
-    </p>
-
-    \[
-    u, c, t \qquad \bar{u}, \bar{c}, \bar{t}
-    \]
-
-    \[
-    d, s, b \qquad \bar{d}, \bar{s}, \bar{b}
-    \]
-
-    <p>
-    These are quarks and their antiparticles.
-    </p>
-
-    \[
-    e^{-}, \mu^{-}, \tau^{-} \qquad e^{+}, \mu^{+}, \tau^{+}
-    \]
-
-    \[
-    \nu_e, \nu_\mu, \nu_\tau \qquad
-    \bar{\nu}_e, \bar{\nu}_\mu, \bar{\nu}_\tau
-    \]
-
-    <p>
-    These are leptons and their antiparticles.
-    </p>
-
-    \[
-    \gamma, W^{+}, W^{-}, Z^{0}, g, H^{0}
-    \]
-
-    <p>
-    These particles are known as bosons, the force carriers of the universe.
-    </p>
-
-    <p>
-    Protons and neutrons form the nucleus and electrons orbit around them, giving rise to all forms of matter in the universe.
-    </p>
+    <div class="pdf-viewer-wrap">
+      <iframe src="pdfs/classical_physics.pdf" title="Classical Physics notes (PDF)"></iframe>
+    </div>
+    <a class="pdf-viewer-link" href="pdfs/classical_physics.pdf" target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a>
 
     <h2 class="section-heading">More About it</h2>
 
