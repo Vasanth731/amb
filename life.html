@@ -18,6 +18,231 @@
       margin-top: 40px;
       margin-bottom: 10px;
     }
+
+    .section-heading {
+      font-size: 1.6em;
+      color: #ffffff;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    /* ---------- notes typography ---------- */
+    .part-heading {
+      margin-top: 56px;
+      padding: 14px 0 10px 0;
+      border-top: 2px solid #ffffff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .part-heading h2 {
+      font-size: 1.7em;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .part-heading .eyebrow { margin-bottom: 4px; }
+
+    .part-heading p {
+      margin: 8px 0 0 0;
+      font-size: 0.95em;
+      opacity: 0.9;
+    }
+
+    .note-section {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .note-section > h2 {
+      font-size: 1.35em;
+      color: #ffffff;
+      margin: 0 0 14px 0;
+    }
+
+    .eyebrow {
+      display: block;
+      font-size: 0.7em;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.75;
+      margin-bottom: 6px;
+    }
+
+    .note-section h3 {
+      font-size: 1.05em;
+      color: #ffffff;
+      margin: 26px 0 8px 0;
+    }
+
+    .note-section h4 {
+      font-size: 0.95em;
+      color: #ffffff;
+      margin: 20px 0 6px 0;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .note-section ul,
+    .note-section ol {
+      margin: 8px 0;
+      padding-left: 22px;
+    }
+
+    .note-section li { margin-bottom: 5px; }
+
+    .note-section ul ul,
+    .note-section ol ul { margin: 4px 0; }
+
+    .lede { font-size: 1.05em; }
+
+    .flow {
+      text-align: center;
+      margin: 14px 0;
+    }
+
+    /* ---------- contents ---------- */
+    .contents {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 26px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    .contents h2 {
+      font-size: 0.8em !important;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 10px 0 !important;
+      opacity: 0.85;
+    }
+
+    .contents .part-label {
+      font-size: 0.78em;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin: 12px 0 4px 0;
+    }
+
+    .contents ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      columns: 2;
+      column-gap: 28px;
+    }
+
+    .contents li {
+      margin-bottom: 4px;
+      font-size: 0.9em;
+      break-inside: avoid;
+    }
+
+    .contents a {
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .contents a:hover { border-bottom-color: #ffffff; }
+
+    /* ---------- tables ---------- */
+    .data-table-wrap {
+      overflow-x: auto;
+      margin: 14px 0 18px 0;
+    }
+
+    table.data {
+      border-collapse: collapse;
+      font-size: 0.9em;
+      min-width: 280px;
+    }
+
+    table.data caption {
+      caption-side: top;
+      text-align: left;
+      font-size: 0.8em;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      padding-bottom: 6px;
+    }
+
+    table.data th,
+    table.data td {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 6px 14px 6px 0;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    table.data thead th {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+      font-weight: 700;
+    }
+
+    table.data tbody tr:last-child th,
+    table.data tbody tr:last-child td {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    /* ---------- asides, boxes, figures ---------- */
+    .aside {
+      border-left: 2px solid rgba(255, 255, 255, 0.6);
+      padding: 2px 0 2px 14px;
+      margin: 14px 0;
+      font-style: italic;
+      font-size: 0.95em;
+      opacity: 0.9;
+    }
+
+    blockquote.law {
+      margin: 14px 0;
+      padding: 12px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.12);
+      font-style: italic;
+    }
+
+    figure.diagram {
+      margin: 18px 0;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    figure.diagram svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 580px;
+    }
+
+    figure.diagram figcaption {
+      font-size: 0.85em;
+      opacity: 0.85;
+      margin-top: 8px;
+    }
+
+    .to-top {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8em;
+      color: #ffffff;
+      opacity: 0.75;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .to-top:hover { opacity: 1; }
+
+    @media (max-width: 640px) {
+      .contents ol { columns: 1; }
+    }
   </style>
 </head>
 <body>
@@ -31,11 +256,880 @@
     </div>
   </nav>
 
-  <section class="hero" style="background-color: #86dab1;">
+  <section class="hero" id="top" style="background-color: #86dab1;">
     <h1>Life Sciences</h1>
-    <p>
-      Molecules combine to form compounds, and within living organisms, genetic information stored in DNA is transcribed into RNA and then translated into proteins, forming the molecular basis of all life. The diversity of life is broadly classified into five kingdoms, each with its own subdivisions. The Monera kingdom includes simple prokaryotic organisms such as Archaebacteria and Eubacteria. Protista consists of mostly unicellular eukaryotes, including algae, protozoa, and fungus-like protists. The Fungi kingdom comprises organisms like Zygomycota, Ascomycota, Basidiomycota, and Deuteromycota, which play key roles in decomposition. Plantae includes a wide range of plant life, from simpler groups like Thallophyta, Bryophyta, and Pteridophyta to more complex seed-bearing plants grouped under Phanerogamae, which include Gymnosperms and Angiosperms. Finally, the Animalia kingdom encompasses diverse multicellular organisms, classified into groups such as Porifera, Coelenterata, Platyhelminthes, Nematoda, Annelida, Arthropoda, Mollusca, Echinodermata, and Chordata, representing increasing levels of complexity in structure and function..
+
+    <p class="lede">
+      Molecules combine to form compounds, and within living organisms, genetic
+      information stored in DNA is transcribed into RNA and then translated into
+      proteins, forming the molecular basis of all life. The diversity of life is
+      broadly classified into five kingdoms, each with its own subdivisions.
+      What follows works outward from there: how life began, the molecules that
+      carry it, the five kingdoms in full, and the signalling systems that run a
+      body.
     </p>
+
+    <nav class="contents" aria-label="Contents">
+      <h2>Contents</h2>
+
+      <p class="part-label">Part I &mdash; Origins of Life</p>
+      <ol>
+        <li><a href="#began">How life began</a></li>
+        <li><a href="#what-is-life">What is life?</a></li>
+      </ol>
+
+      <p class="part-label">Part II &mdash; Molecules of Life</p>
+      <ol>
+        <li><a href="#dogma">Central dogma of biology</a></li>
+        <li><a href="#nucleic">Nucleic acids</a></li>
+        <li><a href="#pairing">Base pairing</a></li>
+        <li><a href="#genome">Genome and epigenome</a></li>
+        <li><a href="#dna-protein">From DNA to protein</a></li>
+      </ol>
+
+      <p class="part-label">Part III &mdash; The Living World</p>
+      <ol>
+        <li><a href="#kingdoms">The five kingdoms</a></li>
+        <li><a href="#monera">Monera</a></li>
+        <li><a href="#protista">Protista</a></li>
+        <li><a href="#fungi">Fungi</a></li>
+        <li><a href="#plantae">Plantae</a></li>
+        <li><a href="#animalia">Animalia</a></li>
+      </ol>
+
+      <p class="part-label">Part IV &mdash; Signalling and the Brain</p>
+      <ol>
+        <li><a href="#hormone-control">Control of hormone release</a></li>
+        <li><a href="#neuron">The neuron</a></li>
+        <li><a href="#nervous">The nervous system</a></li>
+        <li><a href="#neurotransmitters">Neurotransmitters</a></li>
+        <li><a href="#endocrine">The endocrine system</a></li>
+        <li><a href="#brain">The brain</a></li>
+      </ol>
+    </nav>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part I</span>
+      <h2>Origins of Life</h2>
+      <p>Where the first living thing could have come from, and what makes something alive at all.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="began">
+      <h2>How life began</h2>
+
+      <ul>
+        <li><strong>Charles Darwin</strong> &rarr; life may have come from a warm little pond.</li>
+        <li><strong>Primordial soup</strong> &rarr; amino acids, methane (too old &mdash; ruled out).</li>
+        <li><strong>Archean Eon</strong> &rarr; life began.</li>
+        <li>
+          <strong>Habitability boundary</strong> &rarr; Earth was hot, the
+          atmosphere was hostile, meteors and asteroids hit Earth, the Moon was
+          formed and the crust melted and formed again.
+        </li>
+        <li><strong>Abiogenesis</strong> &rarr; non-life became life; cool, deep seas, oceans, water existed.</li>
+        <li><strong>Biosignature boundary</strong> &rarr; life started to evolve.</li>
+      </ul>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="what-is-life">
+      <h2>What is life?</h2>
+
+      <ul>
+        <li>LIFE &rarr; time from birth to death</li>
+        <li>&rarr; struggle against entropy / preservation of disequilibrium</li>
+        <li>&rarr; what living things do (a closed system)</li>
+      </ul>
+
+      <p>
+      <strong>2nd law of thermodynamics</strong> &rarr; the universe works to
+      maximise entropy.
+      </p>
+
+      <p>
+      Evolution proceeds from natural selection: life began the movement in which
+      molecules of information started to reproduce and evolve by natural
+      selection &mdash; chemistry &rarr; biology.
+      </p>
+
+      <div class="aside">
+      I think if the universe contracts, entropy decreases and we will not die,
+      but we'll keep changing into our old particles.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part II</span>
+      <h2>Molecules of Life</h2>
+      <p>DNA to RNA to protein, the bases that spell it out, and the packaging that decides what gets read.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="dogma">
+      <h2>Central dogma of biology</h2>
+
+      <p class="flow">
+      folded amino acids &rarr; proteins &nbsp;&nbsp;&larr;&nbsp;&nbsp; created by cells
+      </p>
+
+      <p class="flow">
+      cells copy genes from DNA to RNA (GUAC) &rarr; the blueprint
+      </p>
+
+      <p>
+      Energy &rarr; mitochondria: H<sup>+</sup> ions &rarr; ATP &rarr; traced
+      back to deep-sea hydrothermal vents.
+      </p>
+
+      <p>
+      Hydrophilic and hydrophobic molecules form a closed membrane or a stretched
+      membrane, which becomes the <strong>cell membrane</strong>.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="nucleic">
+      <h2>Nucleic acids</h2>
+
+      <p>
+      Nucleic acid &larr; nucleotide (the monomer). DNA is deoxyribonucleic acid
+      (B-form).
+      </p>
+
+      <p class="flow">
+      nucleotide &rarr; phosphate group + sugar (5 C) + nitrogenous base
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <caption>The four DNA bases</caption>
+          <thead>
+            <tr><th>Base</th><th>Class</th><th>Ring system</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Adenine (A)</td><td>purine</td><td>fused two-ring</td></tr>
+            <tr><td>Guanine (G)</td><td>purine</td><td>fused two-ring</td></tr>
+            <tr><td>Thymine (T)</td><td>pyrimidine</td><td>single ring</td></tr>
+            <tr><td>Cytosine (C)</td><td>pyrimidine</td><td>single ring</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Strands and directions</h3>
+
+      <ul>
+        <li>5&prime; &rarr; 3&prime; &rarr; Watson strand</li>
+        <li>3&prime; &rarr; 5&prime; &rarr; Crick strand</li>
+      </ul>
+
+      <p>In RNA, instead of thymine &rarr; <strong>uracil</strong> (U).</p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th></th><th>DNA</th><th>RNA</th></tr>
+          </thead>
+          <tbody>
+            <tr><th>Sugar</th><td>deoxyribose</td><td>ribose</td></tr>
+            <tr><th>Strands</th><td>double stranded</td><td>single stranded</td></tr>
+            <tr><th>Bases</th><td>A, C, G, T</td><td>A, C, G, U</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="flow">
+      sugar + base &rarr; <strong>nucleoside</strong>; + phosphate &rarr;
+      <strong>nucleotide</strong>
+      </p>
+
+      <p>e.g. ATP, cAMP (adenosine monophosphate).</p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="pairing">
+      <h2>Base pairing</h2>
+
+      <p>
+      A pairs with T and G with C, through <strong>hydrogen bonds</strong> &mdash;
+      a base pair.
+      </p>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 560 175" role="img"
+             aria-label="Adenine paired with thymine by two hydrogen bonds and guanine paired with cytosine by three hydrogen bonds">
+          <g stroke="#ffffff" fill="none" font-family="inherit" font-size="15">
+            <!-- A - T -->
+            <rect x="24" y="42" width="74" height="52" rx="5" stroke-width="1.5"/>
+            <text x="61" y="75" text-anchor="middle" stroke="none" fill="#ffffff">A</text>
+            <rect x="176" y="42" width="74" height="52" rx="5" stroke-width="1.5"/>
+            <text x="213" y="75" text-anchor="middle" stroke="none" fill="#ffffff">T</text>
+            <line x1="98" y1="58" x2="176" y2="58" stroke-width="1.4" stroke-dasharray="6 5"/>
+            <line x1="98" y1="78" x2="176" y2="78" stroke-width="1.4" stroke-dasharray="6 5"/>
+            <text x="137" y="112" text-anchor="middle" stroke="none" fill="#ffffff" font-size="12">2 hydrogen bonds</text>
+            <text x="61" y="132" text-anchor="middle" stroke="none" fill="#ffffff" font-size="12">purine</text>
+            <text x="213" y="132" text-anchor="middle" stroke="none" fill="#ffffff" font-size="12">pyrimidine</text>
+            <!-- G - C -->
+            <rect x="310" y="42" width="74" height="52" rx="5" stroke-width="1.5"/>
+            <text x="347" y="75" text-anchor="middle" stroke="none" fill="#ffffff">G</text>
+            <rect x="462" y="42" width="74" height="52" rx="5" stroke-width="1.5"/>
+            <text x="499" y="75" text-anchor="middle" stroke="none" fill="#ffffff">C</text>
+            <line x1="384" y1="52" x2="462" y2="52" stroke-width="1.4" stroke-dasharray="6 5"/>
+            <line x1="384" y1="68" x2="462" y2="68" stroke-width="1.4" stroke-dasharray="6 5"/>
+            <line x1="384" y1="84" x2="462" y2="84" stroke-width="1.4" stroke-dasharray="6 5"/>
+            <text x="423" y="112" text-anchor="middle" stroke="none" fill="#ffffff" font-size="12">3 hydrogen bonds</text>
+            <text x="347" y="132" text-anchor="middle" stroke="none" fill="#ffffff" font-size="12">purine</text>
+            <text x="499" y="132" text-anchor="middle" stroke="none" fill="#ffffff" font-size="12">pyrimidine</text>
+          </g>
+        </svg>
+        <figcaption>
+          A purine always pairs with a pyrimidine, which is what keeps the helix
+          an even width.
+        </figcaption>
+      </figure>
+
+      <ul>
+        <li>T, C &rarr; pyrimidines; A, G &rarr; purines</li>
+        <li>10 base pairs &rarr; 1 turn; &pi;&ndash;&pi; interaction</li>
+        <li>
+          Major and minor grooves: base-pair-specific information vs.
+          base-pair non-specific information
+        </li>
+      </ul>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="genome">
+      <h2>Genome and epigenome</h2>
+
+      <p class="flow">cell &rarr; nucleus &rarr; genome &amp; epigenome</p>
+
+      <p>
+      <strong>GENOME</strong> &rarr; the complete set of DNA found: 2 copies of
+      23 DNA strands, coiled around histones; about 1000 segments &rarr; genes,
+      which regulate protein production.
+      </p>
+
+      <p>
+      <strong>EPIGENOME</strong> &rarr; chemical tags; modifies the genome for
+      when to turn a gene on and off &mdash; let loose or tightly wrapped, to read
+      information.
+      </p>
+
+      <p class="flow">
+      (DNA + histone) coil &rarr; nucleosome &rarr; supercoiling &rarr;
+      chromosome &rarr; chromatin
+      </p>
+
+      <p>Chromatin is all the genetic material in the cell nucleus.</p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="dna-protein">
+      <h2>From DNA to protein</h2>
+
+      <p>
+      DNA &rarr; heredity material. In a eukaryotic cell, the nucleus,
+      chloroplast and mitochondrion carry DNA &rarr; genome.
+      </p>
+
+      <p class="flow">
+      organism &rarr; cell &rarr; nucleus &rarr; chromosomes &rarr; nucleosomes
+      &rarr; histones
+      </p>
+
+      <p>
+      DNA has a double-helix structure with base pairs; DNA strand + histones
+      &rarr; chromatin, and a lot of this is a chromosome.
+      </p>
+
+      <h3>Transcription</h3>
+
+      <p>
+      The process of using a DNA template to create a strand of RNA (messenger).
+      </p>
+
+      <p class="flow">
+      RNA polymerase: <code>gtac</code> / <code>TAC</code> &rarr;
+      <code>caug</code> / <code>AUG</code> &rarr; pre-mRNA
+      </p>
+
+      <ul>
+        <li><strong>Introns:</strong> sections of mRNA that do not code for proteins.</li>
+        <li><strong>Exons:</strong> sections of mRNA which become expressed into protein.</li>
+      </ul>
+
+      <p>
+      Introns are broken down and exons are joined together &rarr; mature mRNA
+      &rarr; ribosome, where the information is translated into protein.
+      </p>
+
+      <h3>Translation</h3>
+
+      <p>The process of making a protein.</p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part III</span>
+      <h2>The Living World</h2>
+      <p>Five kingdoms, and the subdivisions inside each one.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="kingdoms">
+      <h2>The five kingdoms</h2>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr>
+              <th>Monera</th><th>Protista</th><th>Fungi</th>
+              <th>Plantae</th><th>Animalia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>unicellular</td>
+              <td>heterotrophic / autotrophic</td>
+              <td>eukaryotic</td>
+              <td>auto/heterotroph</td>
+              <td>multicellular</td>
+            </tr>
+            <tr>
+              <td>prokaryote</td>
+              <td>uni/multicellular</td>
+              <td>multicellular</td>
+              <td>plant cell</td>
+              <td>eukaryotic</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>mobile/immobile</td>
+              <td></td>
+              <td>vascular / non-vascular</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>single/colony</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="monera">
+      <h2>Monera</h2>
+
+      <ul>
+        <li>Archaebacteria (archaebacteria)</li>
+        <li>Eubacteria (typical bacteria)</li>
+      </ul>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="protista">
+      <h2>Protista</h2>
+
+      <ul>
+        <li>
+          <strong>Algae</strong> (plant-like) &mdash; photosynthetic autotrophs
+          <ul>
+            <li>
+              unicellular: Euglenophyta (euglena), Chrysophyta (diatoms),
+              Pyrrophyta (dinoflagellates)
+            </li>
+            <li>
+              multicellular: Chlorophyta (sea lettuce), Phaeophyta (kelp),
+              Rhodophyta (Irish moss)
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Protozoa</strong> (animal-like) &mdash; heterotrophs
+          <ul>
+            <li>
+              Sarcodina (amoeba), Ciliophora (paramecium),
+              Zoomastigophora (trypanosome), Sporozoa (plasmodium)
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Fungi-like protists</strong> &mdash; heterotrophs
+          <ul>
+            <li>Myxomycota (slime molds), Oomycota (water molds)</li>
+          </ul>
+        </li>
+      </ul>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="fungi">
+      <h2>Fungi</h2>
+
+      <ul>
+        <li>Zygomycota</li>
+        <li>Ascomycota (sac fungi)</li>
+        <li>Basidiomycota (club fungi)</li>
+        <li>Deuteromycota (fungi imperfecti)</li>
+      </ul>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="plantae">
+      <h2>Plantae</h2>
+
+      <ul>
+        <li>
+          <strong>Thallophyta</strong> &mdash; no differentiated plant body:
+          Chlorophyta, Phaeophyta, Rhodophyta
+          (Cyanophyta &mdash; struck out in the notes)
+        </li>
+        <li>
+          <strong>Bryophyta</strong> &mdash; non-vascular: Hepaticae,
+          Anthocerotae, Musci
+        </li>
+        <li>
+          <strong>Pteridophyta</strong> &mdash; vascular, no seed: Psilopsida,
+          Lycopsida, Sphenopsida, Pteropsida
+        </li>
+        <li>
+          <strong>Phanerogamae</strong> &mdash; seed
+          <ul>
+            <li>
+              Gymnosperms (naked seeds): Cycadophyta, Ginkgoales, Coniferales,
+              Gnetales
+            </li>
+            <li>Angiosperms (seed inside fruit): Dicots, Monocots</li>
+          </ul>
+        </li>
+      </ul>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="animalia">
+      <h2>Animalia</h2>
+
+      <ul>
+        <li>
+          <strong>Cellular</strong> level of organisation
+          <ul>
+            <li>1. Porifera (radial body)</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Tissue</strong> level of organisation
+          <ul>
+            <li>no coelom, bilateral body: 2. Coelenterata, 3. Platyhelminthes</li>
+            <li>pseudocoelom: 4. Nematoda</li>
+            <li>
+              true coelom (mesodermal cells formed):
+              <ul>
+                <li>
+                  notochord absent: 5. Annelida, 6. Arthropoda, 7. Mollusca,
+                  8. Echinodermata
+                </li>
+                <li>
+                  notochord present: 9. Chordata &rarr; Amphibia, Reptilia,
+                  Mammalia, Fish, Birds
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part IV</span>
+      <h2>Signalling and the Brain</h2>
+      <p>How one cell tells another what to do &mdash; by post through the blood, or by text across a synapse.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="hormone-control">
+      <h2>Control of hormone release (three ways)</h2>
+
+      <ol>
+        <li>
+          <strong>Hormonal stimulation</strong> &rarr; cells produce their own
+          hormones &rarr; stimulate other cells to produce hormones &rarr;
+          released into the blood stream. (These have &ldquo;tropic&rdquo; in
+          their name; stimulation in response to another.)
+        </li>
+        <li>
+          <strong>Humoral</strong> &rarr; glucose in blood (the stimulus) tells
+          the pancreas to release insulin.
+        </li>
+        <li>
+          <strong>Neural stimulation</strong> &rarr; a neuron stimulates the cell
+          receptor to release hormones to blood vessels.
+        </li>
+      </ol>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="neuron">
+      <h2>The neuron</h2>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 560 185" role="img"
+             aria-label="A neuron with dendrites receiving, a cell body, an axon sending an electrical charge, and a synapse with a gap and receptor sites">
+          <defs>
+            <marker id="ah-n" markerWidth="9" markerHeight="9" refX="7" refY="3.2"
+                    orient="auto" markerUnits="strokeWidth">
+              <path d="M0,0 L7,3.2 L0,6.4 z" fill="#ffffff" stroke="none"/>
+            </marker>
+          </defs>
+          <g stroke="#ffffff" fill="none" font-family="inherit" font-size="12">
+            <!-- dendrites -->
+            <line x1="18" y1="42" x2="72" y2="78" stroke-width="1.4"/>
+            <line x1="14" y1="82" x2="70" y2="86" stroke-width="1.4"/>
+            <line x1="20" y1="122" x2="72" y2="96" stroke-width="1.4"/>
+            <text x="16" y="30" stroke="none" fill="#ffffff">dendrites (receive)</text>
+            <!-- cell body -->
+            <circle cx="96" cy="87" r="25" stroke-width="1.6"/>
+            <text x="96" y="140" text-anchor="middle" stroke="none" fill="#ffffff">cell body</text>
+            <!-- axon -->
+            <line x1="121" y1="87" x2="360" y2="87" stroke-width="1.8" marker-end="url(#ah-n)"/>
+            <text x="230" y="76" text-anchor="middle" stroke="none" fill="#ffffff">axon &mdash; sends the electrical charge</text>
+            <!-- terminal -->
+            <path d="M360,87 q22,-20 40,-8 q18,12 0,26 q-20,12 -40,-6 z" stroke-width="1.5"/>
+            <text x="382" y="140" text-anchor="middle" stroke="none" fill="#ffffff">synapse</text>
+            <!-- gap and post-synaptic side -->
+            <line x1="416" y1="52" x2="416" y2="122" stroke-width="1.1" stroke-dasharray="4 4"/>
+            <text x="416" y="42" text-anchor="middle" stroke="none" fill="#ffffff">synaptic gap</text>
+            <path d="M446,52 q-16,35 0,70" stroke-width="1.6"/>
+            <circle cx="440" cy="70" r="3" stroke-width="1.2"/>
+            <circle cx="437" cy="87" r="3" stroke-width="1.2"/>
+            <circle cx="440" cy="104" r="3" stroke-width="1.2"/>
+            <text x="466" y="90" stroke="none" fill="#ffffff">receptor sites</text>
+          </g>
+        </svg>
+        <figcaption>
+          Dendrites receive, the axon sends, and neurotransmitters cross the gap
+          to receptor sites on the next cell.
+        </figcaption>
+      </figure>
+
+      <p>
+      Across the synaptic gap, neurotransmitters (messengers) are released after
+      an action potential; they reach receptor sites, jump up (inhibit / exhibit)
+      and return back &mdash; <strong>reuptake</strong>.
+      </p>
+
+      <p>Neurotransmitters which bind to another cell tell it:</p>
+
+      <ul>
+        <li>whether to send a signal (excite), or</li>
+        <li>to prohibit sending a signal (inhibit).</li>
+      </ul>
+
+      <p class="flow">
+      neurotransmitter &rarr; receptor &rarr; organ, tissue, gland etc.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="nervous">
+      <h2>The nervous system</h2>
+
+      <ul>
+        <li><strong>Central nervous system</strong> &rarr; brain, spinal cord</li>
+        <li><strong>Peripheral nervous system</strong> &rarr; nerves which spread in and out</li>
+      </ul>
+
+      <p>
+      <strong>Receptor</strong> &rarr; a region of tissue, or a molecule in the
+      cell membrane, which responds specifically to a particular
+      neurotransmitter, hormone, antigen etc.
+      </p>
+
+      <h3>Autonomic nervous system</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr>
+              <th>Parasympathetic NS (rest and digest)</th>
+              <th>Sympathetic NS (fight or flight)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>uses acetylcholine at every single neuron</td>
+              <td>uses it at only the first neuron</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Acetylcholine (ACh)</h3>
+
+      <ul>
+        <li>Nicotinic &rarr; CNS &rarr; memory, cognition</li>
+        <li>
+          Muscarinic &rarr; PNS &rarr; skeletal &amp; muscular; autonomic NS
+          (especially parasympathetic)
+        </li>
+      </ul>
+
+      <div class="aside">
+      How does memory work? We store it; the more we retrieve data from what is
+      stored in the brain, the stronger the neuropath becomes. Therefore memory
+      of that particular thing will be easy to retrieve the next time.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="neurotransmitters">
+      <h2>Neurotransmitters</h2>
+
+      <p>
+      Produced by the amino acid <strong>tyrosine</strong> &rarr;
+      catecholamines.
+      </p>
+
+      <h3>Catecholamines: noradrenaline, adrenaline, dopamine</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th></th><th>Excitatory</th><th>Inhibitory (reduce pain)</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Noradrenaline / adrenaline</th>
+              <td>&alpha;<sub>1</sub>, &beta;<sub>1</sub></td>
+              <td>&alpha;<sub>2</sub>, &beta;<sub>2</sub></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td colspan="2">CNS &rarr; opioid release &nbsp;&nbsp; PNS &rarr; sympathetic</td>
+            </tr>
+            <tr>
+              <th>Dopamine</th>
+              <td colspan="2">DA<sub>1</sub>, DA<sub>2</sub></td>
+            </tr>
+            <tr>
+              <th></th>
+              <td colspan="2">CNS &rarr; reward, motivation, motor control</td>
+            </tr>
+            <tr>
+              <th></th>
+              <td colspan="2">PNS &rarr; blood vessels, kidneys (Na release)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <ul>
+        <li>&alpha;<sub>1</sub> &rarr; blood vessels &rarr; noradrenaline &rarr; constrict &rarr; BP increase</li>
+        <li>&beta;<sub>1</sub> &rarr; heart &rarr; noradrenaline &rarr; heart rate increase</li>
+        <li>&alpha;<sub>2</sub> &rarr; postsynaptic neuron &rarr; negative feedback</li>
+        <li>&beta;<sub>2</sub> &rarr; lungs &rarr; opens airways in the lungs</li>
+      </ul>
+
+      <h3>Others</h3>
+
+      <ul>
+        <li>
+          <strong>Serotonin (5-HT)</strong>: inhibits at 5-HT<sub>1,5</sub>,
+          exhibits at 5-HT<sub>2,3,4,6,7</sub>; CNS &rarr; sleep &amp; mood;
+          PNS &rarr; gastrointestinal.
+        </li>
+        <li>
+          <strong>GABA</strong> (gamma-aminobutyric acid) &mdash; inhibitory:
+          GABA<sub>1</sub>, GABA<sub>2</sub> inhibit neurone firing (won't fire
+          off) due to Cl<sup>&minus;</sup> &rarr; hyperpolarisation.
+        </li>
+        <li>
+          <strong>Glutamate (Glu)</strong> &mdash; excitatory: NMDA, AMPA &rarr;
+          excite neurons to fire off.
+        </li>
+        <li>
+          <strong>Substance P</strong> &rarr; pain &rarr; NK1 (excitatory) &rarr;
+          CNS pain, PNS inflammation.
+        </li>
+        <li><strong>Endorphins</strong> &rarr; pain control and pleasure.</li>
+      </ul>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Excitatory NT</th><th>Inhibitory NT</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Norepinephrine (noradrenaline) &rarr; alertness</td>
+              <td>Serotonin &rarr; hunger &amp; sleep</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="endocrine">
+      <h2>The endocrine system</h2>
+
+      <p>
+      Hormones are chemical messengers manufactured by endocrine glands; they
+      travel through the blood stream and affect other tissues &mdash; growth,
+      metabolism, mood etc.; attraction, appetite, aggression.
+      </p>
+
+      <p class="flow">
+      nervous system &rarr; neurotransmitters (like a text message)<br>
+      endocrine system &rarr; hormones (like the post)
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Gland</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Adrenal glands</td><td>fight or flight</td></tr>
+            <tr><td>Pancreas</td><td>regulates sugar level in blood</td></tr>
+            <tr><td>Thyroid</td><td>affects metabolism</td></tr>
+            <tr><td>Parathyroids</td><td>regulates Ca in blood</td></tr>
+            <tr><td>Testes, ovaries</td><td>sex hormones (metabolism)</td></tr>
+            <tr><td>Pituitary (pea size)</td><td>stimulates growth; oxytocin &rarr; social bonding</td></tr>
+            <tr><td>Hypothalamus</td><td>brain region controlling the pituitary</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="brain">
+      <h2>The brain</h2>
+
+      <h3>Old brain</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Structure</th><th>Function</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cerebellum</td>
+              <td>responsible for non-verbal learning and memory, the perception of time and modulating emotions</td>
+            </tr>
+            <tr>
+              <td>Medulla</td>
+              <td>automatically controls the beating of the heart, the breathing of the lungs etc.</td>
+            </tr>
+            <tr><td>Brain stem</td><td>most ancient and central core of the brain</td></tr>
+            <tr><td>Pons</td><td>helps coordinate several other automatic functions</td></tr>
+            <tr><td>Reticular formation</td><td>network responsible for arousal</td></tr>
+            <tr>
+              <td>Thalamus</td>
+              <td>takes in sensory information related to seeing, hearing, touching &amp; tasting</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Limbic system</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <tbody>
+            <tr><td>Hippocampus</td><td>central to learning &amp; memory</td></tr>
+            <tr>
+              <td>Hypothalamus</td>
+              <td>body temperature regulation, circadian rhythms, hunger; governs the endocrine system</td>
+            </tr>
+            <tr>
+              <td>Amygdala</td>
+              <td>two lima-bean sized clusters of neurons involved in memory consolidation &amp; emotions</td>
+            </tr>
+            <tr><td>Pituitary gland</td><td>secretes hormones</td></tr>
+            <tr><td>Corpus callosum</td><td>connects the hemispheres</td></tr>
+            <tr><td>Glial cell</td><td>supports and nourishes cerebral neurons</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Cerebral cortex</h3>
+
+      <p>
+      Frontal lobes, parietal lobes, occipital lobes, temporal lobes &mdash;
+      separated by fissures.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <tbody>
+            <tr><th>FL</th><td>speaking, planning, abstract thinking, judging, personality aspects</td></tr>
+            <tr><th>PL</th><td>sense of touch, body position</td></tr>
+            <tr><th>OL</th><td>information related to sight</td></tr>
+            <tr><th>TL</th><td>comprehension of sound and speech</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <ul>
+        <li>
+          <strong>Motor cortex</strong> &rarr; voluntary movements; sends the
+          message to the body (&ldquo;pick up that pen&rdquo;).
+        </li>
+        <li>
+          <strong>Somatosensory cortex</strong> &rarr; &ldquo;gah, the mug is
+          hot&rdquo; (feeling).
+        </li>
+      </ul>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
   </section>
 
   <script src="script.js"></script>
