@@ -11,12 +11,111 @@
       min-height: 100vh;
       align-items: flex-start;
       text-align: left;
+      padding-bottom: 80px;
     }
     .hero h2 {
       font-size: 1.6em;
       color: #ffffff;
       margin-top: 40px;
       margin-bottom: 10px;
+    }
+    .hero h3 {
+      font-size: 1.1em;
+      color: #cfe3f5;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-top: 26px;
+      margin-bottom: 6px;
+    }
+
+    /* .hero is a flex column, so block children must be told to fill it */
+    .hero p,
+    .hero ul,
+    .hero ol,
+    .hero table,
+    .hero .chain,
+    .hero .formula,
+    .hero .verse {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .hero ul, .hero ol {
+      padding-left: 1.2em;
+      margin: 8px 0 14px;
+    }
+    .hero li {
+      color: #ffffff;
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+    .hero li > ul {
+      margin: 6px 0 6px;
+    }
+
+    /* Arrow chains, e.g. star -> galaxy -> cluster */
+    .chain {
+      font-weight: 600;
+      color: #ffd98a;
+      line-height: 1.9;
+      margin: 10px 0 16px;
+    }
+
+    /* Formulae and numeric constants */
+    .formula {
+      font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+      background: rgba(255, 255, 255, 0.09);
+      border-left: 3px solid #ffd98a;
+      padding: 10px 14px;
+      margin: 12px 0 16px;
+      line-height: 1.8;
+      overflow-x: auto;
+    }
+
+    /* Verses quoted in the notes */
+    .verse {
+      font-style: italic;
+      color: #e6f0fa;
+      border-left: 3px solid rgba(255, 255, 255, 0.4);
+      padding-left: 14px;
+      margin: 14px 0;
+    }
+    .verse cite {
+      display: block;
+      font-style: normal;
+      font-size: 0.85em;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+
+    /* Epoch timeline */
+    .hero table {
+      border-collapse: collapse;
+      margin: 14px 0 20px;
+      font-size: 0.95em;
+    }
+    .hero th, .hero td {
+      color: #ffffff;
+      text-align: left;
+      vertical-align: top;
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+    }
+    .hero th {
+      font-size: 0.8em;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #cfe3f5;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    }
+    .hero .epoch-name { font-weight: 600; white-space: nowrap; }
+    .table-scroll { width: 100%; max-width: 900px; overflow-x: auto; }
+    .table-scroll table { max-width: none; min-width: 620px; }
+
+    .hero .aside {
+      font-size: 0.9em;
+      opacity: 0.85;
     }
   </style>
 </head>
@@ -33,9 +132,506 @@
 
   <section class="hero" style="background-color: #215486;">
     <h1>Planetary Sciences</h1>
+
     <p>
-      The lifecycle of a star begins in a vast stellar nebula, a cloud of gas and dust spanning about 200 trillion kilometers. Under gravity, regions within the nebula collapse to form a protostar, roughly 100 million kilometers in size, which continues to contract and heat up until nuclear fusion begins, marking its transition into a main sequence star of about 1 million kilometers in diameter. As the star exhausts its hydrogen fuel, it expands into either a red giant (around 100 million kilometers) or, if it is much more massive, a red supergiant (about 1000 million kilometers). A red giant sheds its outer layers to create a planetary nebula, stretching up to 1000 billion kilometers, leaving behind a dense white dwarf of about 10,000 kilometers, which eventually cools into a black dwarf of similar size. In contrast, a red supergiant ends its life in a dramatic supernova explosion, after which its core collapses into either an dense neutron star, only about 15 kilometers wide, or, if massive enough, a black hole with a radius of roughly 50 kilometers.
+      From the first Planck second after the Big Bang to the last evaporating black hole &mdash;
+      how space, time and matter came to exist together, how stars forged the raw material of
+      planets, and where life might be hiding.
     </p>
+
+    <h2>Space, Time and Matter</h2>
+    <p>
+      Space, time and matter all need to exist simultaneously, so that matter can be put in space
+      at a time. Matter has mass, and matter warps space and time &mdash; that curvature is what we
+      call gravity. Matter tells spacetime how to curve, and the warping of spacetime tells matter
+      how to move. This is what explains why the planets revolve around the Sun.
+    </p>
+    <blockquote class="verse">
+      In the beginning God created heaven and earth.
+      <cite>Genesis 1:1 &mdash; beginning (time), heaven (space), earth (matter)</cite>
+    </blockquote>
+
+    <h2>Forces of Classical Physics</h2>
+    <p>
+      The four forces unify as you look further back in time. All of them are different
+      manifestations of the same force.
+    </p>
+    <ul>
+      <li>Electromagnetic + weak nuclear &rarr; <strong>electroweak force</strong></li>
+      <li>Electroweak + strong nuclear &rarr; <strong>grand unified force</strong></li>
+      <li>Grand unified + gravity &rarr; the single force that existed a few Planck seconds after the Big Bang</li>
+    </ul>
+
+    <h2>Standard Model of Particle Physics</h2>
+    <p>
+      Particles fall into two families: fermions, which make up matter, and bosons, which mediate
+      the forces.
+    </p>
+
+    <h3>Fermions &mdash; make up matter</h3>
+    <ul>
+      <li>
+        <strong>Quarks</strong> &mdash; up, top and charm (charge +2/3); down, bottom and strange (charge &minus;1/3).
+        Quarks bind into <strong>hadrons</strong>:
+        <ul>
+          <li><em>Baryons</em> &mdash; formed by 3 quarks</li>
+          <li><em>Mesons</em> &mdash; 1 quark + 1 antiquark</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Leptons</strong> (not made of quarks) &mdash; electron, tau and muon (charge &minus;1);
+        electron neutrino, tau neutrino and muon neutrino (charge 0)
+      </li>
+    </ul>
+
+    <h3>Bosons &mdash; mediate forces</h3>
+    <ul>
+      <li><strong>Photons</strong> &rarr; electromagnetic force, mediated by &gamma;</li>
+      <li><strong>W<sup>&minus;1</sup>, W<sup>+1</sup>, Z<sup>0</sup></strong> &rarr; weak nuclear force</li>
+      <li><strong>Gluons</strong> &rarr; strong nuclear force</li>
+      <li><strong>Higgs</strong>, and the hypothetical <strong>graviton</strong></li>
+    </ul>
+
+    <h2>Symmetry, Quantum Fields and the Planck Scale</h2>
+    <p>
+      There is always symmetry in the universe: for every particle of matter there is antimatter of
+      the same mass and opposite charge. Quantum field theory treats particles as excitations in
+      fields, which paves the way for string theory.
+    </p>
+    <div class="formula">
+      Planck length&nbsp;&nbsp;&rarr;&nbsp; 1.616229 &times; 10<sup>&minus;35</sup> m<br>
+      Planck time&nbsp;&nbsp;&nbsp;&nbsp;&rarr;&nbsp; 10<sup>&minus;43</sup> s<br>
+      t = d / v,&nbsp;&nbsp; c = 3 &times; 10<sup>8</sup> m/s
+    </div>
+    <p>
+      Many theories have tried to explain the beginning of the universe. The Big Bang is the one
+      that still stands, and it is accepted by most scientists. So what came before it? At the Big
+      Bang &mdash; the beginning, t = 0 &mdash; time itself began, so there is no question of a
+      "before"; it doesn't make any sense. The thing to ponder is what happened one Planck time
+      <em>after</em> the Big Bang, and how the universe has evolved over the
+      <strong>13.7 billion years</strong> since.
+    </p>
+
+    <h2>Epochs of the Early Universe</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Epoch</th>
+            <th>Time after Big Bang</th>
+            <th>Temperature</th>
+            <th>What happened</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="epoch-name">Planck epoch</td>
+            <td>0 &ndash; 10<sup>&minus;43</sup> s</td>
+            <td>10<sup>32</sup> K</td>
+            <td>Only the single unified force prevailed; the universe was unimaginably small.</td>
+          </tr>
+          <tr>
+            <td class="epoch-name">Grand unification</td>
+            <td>up to 10<sup>&minus;36</sup> s</td>
+            <td>10<sup>29</sup> K</td>
+            <td>Gravity separated from the rest, leaving the grand unified force.</td>
+          </tr>
+          <tr>
+            <td class="epoch-name">Electroweak epoch</td>
+            <td>10<sup>&minus;32</sup> &ndash; 10<sup>&minus;12</sup> s</td>
+            <td>10<sup>28</sup> K</td>
+            <td>The inflation period; the strong nuclear force separated.</td>
+          </tr>
+          <tr>
+            <td class="epoch-name">Quark epoch</td>
+            <td>up to 10<sup>&minus;6</sup> s</td>
+            <td>10<sup>10</sup> K</td>
+            <td>Quarks began to exist.</td>
+          </tr>
+          <tr>
+            <td class="epoch-name">Hadron epoch</td>
+            <td>10<sup>&minus;6</sup> s &ndash; 1 s</td>
+            <td>&mdash;</td>
+            <td>Baryons and mesons started to exist.</td>
+          </tr>
+          <tr>
+            <td class="epoch-name">Lepton epoch</td>
+            <td>up to 10 s</td>
+            <td>&mdash;</td>
+            <td>Leptons existed.</td>
+          </tr>
+          <tr>
+            <td class="epoch-name">Nucleosynthesis</td>
+            <td>~17 minutes</td>
+            <td>10<sup>9</sup> &ndash; 10<sup>7</sup> K</td>
+            <td>
+              Atomic nuclei exist. The universe is about 800 light years across
+              (1 LY = 9.4 &times; 10<sup>15</sup> m). H : He settles at 3 : 1 by mass.
+            </td>
+          </tr>
+          <tr>
+            <td class="epoch-name">Photon epoch</td>
+            <td>&mdash;</td>
+            <td>4000 K</td>
+            <td>H and He clouds form and collect under gravity; spacetime warps around them.</td>
+          </tr>
+          <tr>
+            <td class="epoch-name">Neutral atoms</td>
+            <td>377,000 years</td>
+            <td>&mdash;</td>
+            <td>Neutral atoms are formed and photons are emitted &mdash; the visible universe.</td>
+          </tr>
+          <tr>
+            <td class="epoch-name">Dark age</td>
+            <td>~150 million years</td>
+            <td>60 K &ndash; 300 K</td>
+            <td>Water in liquid form. Clouds get collected at a single spot and grow dense.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>General Relativity and the Birth of a Star</h2>
+    <p>
+      Anything with mass warps spacetime, inducing a curvature that attracts all massive objects to
+      each other. Roughly a billion years in, dense patches of gas were the seeds of the first
+      stars.
+    </p>
+    <p>
+      A nebula sits in <strong>hydrostatic equilibrium</strong>: the outward energy
+      (E<sub>1</sub>, gas pressure from the molecules) balances the inward energy (E<sub>2</sub>,
+      gravitational force), so E<sub>1</sub> = E<sub>2</sub>. Its atoms exist in the plasma state in
+      dense, hot clouds. Once the cloud's mass exceeds the <strong>Jeans mass</strong>, gravity
+      wins: inward pressure acts as a centripetal force while rotation supplies a centrifugal one.
+      The cloud collapses, nuclear fusion ignites, energy pours out &mdash; and a star is born. Its
+      radiation reionises the surroundings, making way for more stars to form.
+    </p>
+    <p>
+      Nuclear fusion works its way up through H, He, N, O and heavier elements. Iron is as far as a
+      core can go; an iron core ends in a supernova, while a less dense core leads to a planetary
+      nebula. The elements formed during fusion in stars become the raw material for planets and
+      every other entity in the universe. Elements heavier than iron can only be forged in the burst
+      of a supernova &mdash; and this is how planets are formed.
+    </p>
+    <p>
+      Stars exert gravity on one another and so form galaxies. A dwarf galaxy holds 100 million to
+      2 billion stars; a typical galaxy holds around 100 billion.
+    </p>
+    <p class="chain">star &rarr; galaxy &rarr; groups &rarr; cluster &rarr; superclusters</p>
+
+    <h2>Classifying Stars</h2>
+    <p>
+      The spectral sequence <strong>O B A F G K M</strong> runs from about 25,000 K down to 3,500 K.
+    </p>
+    <ul>
+      <li><strong>O</strong> &mdash; blue, big, hot and bright; up to 200 solar masses</li>
+      <li><strong>G</strong> &mdash; yellow, around 1 solar mass</li>
+      <li><strong>K, M</strong> &mdash; red to dark red, small, cool and dim; down to 0.1 solar mass</li>
+      <li><strong>Red giant</strong> &mdash; red and cool, 0.3 &ndash; 8 solar masses</li>
+      <li><strong>White dwarf</strong> &mdash; tiny and hot, 0.2 &ndash; 1.3 solar masses</li>
+    </ul>
+
+    <h2>Lifecycle of a Star</h2>
+    <p>
+      The lifecycle of a star begins in a vast stellar nebula, a cloud of gas and dust spanning
+      about 200 trillion kilometers. Under gravity, regions within the nebula collapse to form a
+      protostar, roughly 100 million kilometers in size, which continues to contract and heat up
+      until nuclear fusion begins, marking its transition into a main sequence star of about
+      1 million kilometers in diameter. As the star exhausts its hydrogen fuel, it expands into
+      either a red giant (around 100 million kilometers) or, if it is much more massive, a red
+      supergiant (about 1000 million kilometers).
+    </p>
+    <p>
+      A red giant of about 1.4 M<sub>&#9737;</sub> sheds its outer layers to create a planetary
+      nebula, stretching up to 10,000 billion kilometers, leaving behind a dense white dwarf of
+      about 10,000 kilometers, which eventually cools into a black dwarf of similar size. In
+      contrast, a red supergiant ends its life in a dramatic supernova explosion, whose gases and
+      clouds go on to form new nebulae. Its core collapses into either a dense neutron star, only
+      about 15 kilometers wide, or, if massive enough, a black hole roughly 50 kilometers across
+      with zero volume and infinite density.
+    </p>
+    <div class="formula">
+      Neutron star&nbsp;&nbsp;&rarr;&nbsp; core of 1.4 &ndash; 3 M<sub>&#9737;</sub><br>
+      Black hole&nbsp;&nbsp;&nbsp;&nbsp;&rarr;&nbsp; core &gt; 3 M<sub>&#9737;</sub>, 0 volume, &rho; = &infin;<br>
+      White dwarf&nbsp;&nbsp;&nbsp;&rarr;&nbsp; core &lt; 1.4 M<sub>&#9737;</sub>
+    </div>
+
+    <h2>How Life Began on Earth</h2>
+    <p>
+      The early Earth was devoid of life and full of volcanic activity, with an atmosphere of
+      hostile conditions. The ingredients were there &mdash; H, CH<sub>4</sub>, CO<sub>2</sub>, N,
+      NH<sub>3</sub> and phosphate, plus water &mdash; and the Sun was the energy source. But the
+      UV rays of that time were far too harsh, so the only protection was water: the deep oceans.
+    </p>
+
+    <h3>Hydrothermal vents &mdash; life in the dark</h3>
+    <p>
+      Sea water seeps into magma chambers and is ejected back at high temperature along with rich
+      minerals, concentrating energy: Fe, Ba, Ca, Si, CO<sub>2</sub>, CH<sub>4</sub> and
+      H<sub>2</sub>. <strong>LUCA</strong>, the Last Universal Common Ancestor, would have lived in
+      a hot, oxygen-free place like this, drawing energy from the chemical gradients across the
+      vents. Genes shared between Archaea, Bacteria and Eukarya are inherited from those ancestors.
+    </p>
+    <ul>
+      <li>
+        <strong>Black smokers</strong> &mdash; acidic, CO<sub>2</sub>-rich water; Cu, Fe, S and
+        CO<sub>2</sub> contribute. Too hot for LUCA.
+      </li>
+      <li>
+        <strong>White smokers</strong> &mdash; the Mid-Atlantic ridge and the Lost City field.
+        Alkaline, with lower CO<sub>2</sub> &mdash; conditions that allow the formation of RNA.
+      </li>
+    </ul>
+    <blockquote class="verse">
+      And the earth was void and empty, and darkness was upon the face of the deep; and the spirit
+      of God moved over the waters.
+      <cite>Genesis 1:2</cite>
+    </blockquote>
+
+    <h2>Dark Matter</h2>
+    <p>
+      Dark matter does not interact with light, is not baryonic matter, and does not emit photons.
+      It is unaffected by radiation, which let it accumulate first and become dense, and it exerts
+      gravitational force. Two lines of evidence point to it:
+    </p>
+    <ul>
+      <li><strong>Gravitational lensing</strong> &mdash; light bending around mass we cannot see</li>
+      <li>
+        <strong>Galaxy rotation curves</strong> &mdash; instead of following Kepler's laws, orbital
+        velocity stays roughly constant with distance from the centre
+      </li>
+    </ul>
+    <p>It could be made of:</p>
+    <ul>
+      <li>WIMPs &mdash; weakly interacting massive particles</li>
+      <li>Sterile neutrinos</li>
+      <li>Supersymmetric particles</li>
+      <li>Other exotic particles</li>
+    </ul>
+
+    <h2>Dark Energy and the Cosmological Constant</h2>
+    <p>
+      Gravity alone says that all galaxies should crumble together and end up as one &mdash; the
+      <strong>Big Crunch</strong>, the opposite of the Big Bang. That does not happen. Instead a
+      repulsive force dominates and the universe expands.
+    </p>
+    <p>
+      The <strong>cosmological constant</strong> &Lambda; describes a constant energy density
+      &mdash; vacuum energy, in energy per m<sup>3</sup> &mdash; that fills up all of spacetime. It
+      was introduced to support the steady state model, where attractive and repulsive forces both
+      act to hold the universe steady. &Lambda; must have been weak in the early universe, becoming
+      more prominent as things grew more sparse, and now expansion is accelerating.
+    </p>
+    <ul>
+      <li>Dark energy &mdash; 68%</li>
+      <li>Dark matter &mdash; 27%</li>
+      <li>Visible matter &mdash; 5%</li>
+    </ul>
+
+    <h2>Hubble, Redshift and Recession</h2>
+    <p>
+      Edwin Hubble found that the emission spectra of galaxies are red-shifted &mdash; a Doppler
+      shift. For a wave at constant speed, a greater wavelength means lower frequency and a lower
+      pitch, while a shorter wavelength means higher frequency and a higher pitch. For light, a
+      source moving towards us is blue-shifted and one moving away is red-shifted. Almost every
+      galaxy is moving away, and <em>recession velocity increases with distance</em>.
+    </p>
+    <div class="formula">
+      v = H<sub>0</sub> D&nbsp;&nbsp; (v in km/s, D in Mpc)<br>
+      H<sub>0</sub> = 70 km/s per Mpc<br>
+      1 Mpc = 3.26 million light years
+    </div>
+
+    <h2>Evidence for the Big Bang</h2>
+    <h3>Olbers' paradox</h3>
+    <p>
+      If space were infinite and filled with infinite stars, the night sky would blaze. Dark space
+      tells us space is not transparent &mdash; there are neither infinite stars nor infinite space.
+    </p>
+    <h3>General relativity</h3>
+    <p>
+      Modern cosmology treats the universe as smooth: <strong>homogeneous</strong> (the same
+      everywhere) and <strong>isotropic</strong> (the same in all directions). General relativity
+      then makes it dynamic and changing &mdash; it must be either expanding or contracting. The
+      cosmological constant &Lambda; was originally added to cancel expansion against contraction
+      and give a static universe.
+    </p>
+    <h3>Redshift, 1929</h3>
+    <p>
+      Hubble's red shift measurements showed the universe expanding. The rival steady state model
+      answered with the C-field, in which new matter is created as the universe expands so that its
+      density stays the same.
+    </p>
+    <h3>Penzias and Wilson, 1964</h3>
+    <p>
+      Arno Penzias and Robert Wilson were using a microwave antenna to study emission produced by
+      Earth's atmosphere, looking for interference that would cause problems. What they found was
+      uniform background noise in all directions &mdash; radiation left over from soon after the Big
+      Bang. This is the <strong>cosmic microwave background radiation</strong>.
+    </p>
+
+    <h2>The Cosmic Microwave Background</h2>
+    <p>
+      The CMB sits at 2.7 K and is isotropic. It originates in thermal equilibrium about 377,000
+      years after the Big Bang, when electrons formed atoms and released photons as they descended
+      to lower energy levels. Those EM waves were stretched out over billions of years, and now
+      they arrive as microwaves.
+    </p>
+    <ul>
+      <li>Recession velocity gives an age of <strong>13.8 billion years</strong></li>
+      <li>H : He &rarr; 3 : 1 by mass</li>
+      <li>Baryon : photon &rarr; 3 : 1</li>
+      <li>
+        The earliest galaxies are visible 13.4 billion light years away &mdash; 13.4 bya, and their
+        light is only reaching us now
+      </li>
+    </ul>
+    <p>
+      Particle accelerators add to the picture: colliding protons at high energy, with
+      E = mc<sup>2</sup>, recreates conditions of the very early universe.
+    </p>
+
+    <h2>The End of the Universe</h2>
+    <p>
+      For the next few billion years, things stay much as they are. After that, two scenarios.
+    </p>
+
+    <h3>Scenario 1 &mdash; ultra-hot death</h3>
+    <p>
+      Expansion halts and reverses back to a single point: <strong>the Big Crunch</strong>. If the
+      universe is elastic, it could bounce &mdash; but how many times has this already happened, and
+      would everything and every law come out exactly the same?
+    </p>
+
+    <h3>Scenario 2 &mdash; ultra-cold death</h3>
+    <p>
+      Expansion continues indefinitely, with dark energy winning against gravitational force. All
+      galaxies drift apart. All stars go away until only one exists and the others are an infinite
+      distance off &mdash; and then that last star dies with no new star to replace it.
+    </p>
+    <p>
+      This is the <strong>end of the stelliferous era</strong>, about a trillion years after the Big
+      Bang. Electrons and protons decay away, with no force left to compete with dark energy. Black
+      holes evaporate through Hawking radiation. The universe reaches zero Kelvin, and spacetime
+      itself is ripped off &mdash; <strong>the Big Rip</strong>.
+    </p>
+    <p class="aside">
+      A new universe with different characteristics could still emerge from quantum fluctuations.
+    </p>
+
+    <h2>The Shape of the Universe</h2>
+    <p>
+      The universe is open, flat or closed, and which one depends on its density &mdash; calculated
+      from the mass and volume of galaxies. Curvature shows up in the angles of a triangle:
+    </p>
+    <ul>
+      <li>Positive curvature &mdash; angles sum to more than 180&deg; &nbsp;(&Omega; &gt; 1, closed)</li>
+      <li>Negative curvature &mdash; angles sum to less than 180&deg; &nbsp;(&Omega; &lt; 1, open)</li>
+      <li>Flat &mdash; angles sum to exactly 180&deg; &nbsp;(&Omega;<sub>0</sub> = 1)</li>
+    </ul>
+    <div class="formula">
+      &Omega;<sub>0</sub> = actual density / critical density
+    </div>
+    <p>
+      Supercomputer simulations of a flat universe reproduce the observed filaments, using roughly
+      six times as much dark matter as baryonic matter. Combined with accelerating expansion and
+      dark energy, this points away from a Big Crunch.
+    </p>
+
+    <h2>Extraterrestrial Life</h2>
+    <p>
+      <strong>Abiogenesis</strong> is the step from non-living chemistry to living biology.
+      <strong>Astrobiology</strong> is the study of life in the universe &mdash; aliens included.
+    </p>
+    <p>
+      The <strong>habitable zone</strong> is the distance from a star where the surface temperature
+      is 0 &ndash; 100 &deg;C, so that water can exist as a liquid. But it isn't the only option:
+      friction in Saturnian moons melts ice from within. Jupiter's <strong>Europa</strong> and
+      Saturn's <strong>Enceladus</strong> are both candidates, and ammonia (NH<sub>3</sub>) can act
+      like water too.
+    </p>
+    <p>
+      Does water really need to be in a liquid state? Could life instead take hold in interstellar
+      dust that is rich in minerals? And of all the unicellular beings that might arise, how many
+      ever get to be intelligent?
+    </p>
+
+    <h3>The Drake equation (1961)</h3>
+    <div class="formula">
+      N = R* &times; f<sub>p</sub> &times; n<sub>e</sub> &times; f<sub>l</sub> &times;
+      f<sub>i</sub> &times; f<sub>c</sub> &times; L
+    </div>
+    <ul>
+      <li><strong>N</strong> &mdash; number of intelligent beings</li>
+      <li><strong>R*</strong> &mdash; average rate of star formation</li>
+      <li><strong>f<sub>p</sub></strong> &mdash; fraction of stars that have planets</li>
+      <li><strong>n<sub>e</sub></strong> &mdash; fraction of those planets that are habitable</li>
+      <li><strong>f<sub>l</sub></strong> &mdash; fraction of those that develop life</li>
+      <li><strong>f<sub>i</sub></strong> &mdash; fraction that become intelligent</li>
+      <li><strong>f<sub>c</sub></strong> &mdash; fraction that could communicate with us</li>
+      <li><strong>L</strong> &mdash; time transmitting, the lifetime of the civilisation</li>
+    </ul>
+    <p class="aside">Are we all alone? For now, it is speculation.</p>
+
+    <h2>Fermi Paradox and the Search</h2>
+    <p>
+      The <strong>Fermi paradox</strong>: the fact that we can't see or hear any other
+      civilisations may indicate that we are the only one.
+    </p>
+    <p>
+      <strong>SETI</strong> &mdash; the search for extraterrestrial intelligence &mdash; has been
+      listening for radio signals since the 1960s. Around 4,000 exoplanets have been found, detected
+      by the dip in brightness when a planet passes in front of its star, and by measuring red shift
+      and blue shift.
+    </p>
+    <ul>
+      <li>
+        The closest system is 4 light years away: <strong>Alpha Centauri</strong>, with
+        <strong>Proxima Centauri</strong> as its star
+      </li>
+      <li>20 July 1969 &mdash; the first Moon landing</li>
+    </ul>
+
+    <h2>Mars and Terraforming</h2>
+    <p>
+      Mars is next. It has no oxygen and it is cold, so the first step is pressurised,
+      temperature-controlled chambers. Terraforming would go something like this:
+    </p>
+    <ol>
+      <li>Ice and CO<sub>2</sub> sit frozen in the poles of Mars</li>
+      <li>Bombs could release it into the atmosphere</li>
+      <li>That would unlock still more CO<sub>2</sub> from the soil</li>
+      <li>The thickening atmosphere heats the planet</li>
+      <li>Water vapour condenses and forms oceans</li>
+      <li>Plants begin to grow</li>
+      <li>Humans can walk without a space suit</li>
+    </ol>
+    <p class="aside">
+      Surface gravity is g = 3.8 m/s<sup>2</sup>, and the whole process would take a long time
+      &mdash; somewhere between 500 and 5,000 years.
+    </p>
+
+    <h2>Moons, Mining and Megastructures</h2>
+    <ul>
+      <li><strong>Jovian moons</strong> &mdash; Europa, Callisto, Ganymede</li>
+      <li><strong>Saturnian moons</strong> &mdash; Enceladus, Titan</li>
+    </ul>
+    <p>
+      Their low gravity makes them useful. Asteroid mining could support both living and energy
+      production. A <strong>Dyson sphere</strong> &mdash; a ring built around the Sun, which could
+      itself be lived on &mdash; is the extreme version: harnessing the energy of a star is crucial
+      for interstellar travel.
+    </p>
+
+    <h3>Kardashev scale &mdash; a civilisation scale</h3>
+    <ul>
+      <li><strong>Type 0</strong> &mdash; humanity today, using crude forms of energy</li>
+      <li><strong>Type 1</strong> &mdash; planetary: uses all the star's energy that hits the planet</li>
+      <li><strong>Type 2</strong> &mdash; stellar: harnesses all the energy produced by its sun</li>
+      <li><strong>Type 3</strong> &mdash; galactic: harnesses the energy of an entire galaxy, black hole farming included</li>
+    </ul>
+
+
   </section>
 
   <script src="script.js"></script>
