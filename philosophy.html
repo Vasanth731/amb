@@ -18,6 +18,231 @@
       margin-top: 40px;
       margin-bottom: 10px;
     }
+
+    .section-heading {
+      font-size: 1.6em;
+      color: #ffffff;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    /* ---------- notes typography ---------- */
+    .part-heading {
+      margin-top: 56px;
+      padding: 14px 0 10px 0;
+      border-top: 2px solid #ffffff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .part-heading h2 {
+      font-size: 1.7em;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .part-heading .eyebrow { margin-bottom: 4px; }
+
+    .part-heading p {
+      margin: 8px 0 0 0;
+      font-size: 0.95em;
+      opacity: 0.9;
+    }
+
+    .note-section {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .note-section > h2 {
+      font-size: 1.35em;
+      color: #ffffff;
+      margin: 0 0 14px 0;
+    }
+
+    .eyebrow {
+      display: block;
+      font-size: 0.7em;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.75;
+      margin-bottom: 6px;
+    }
+
+    .note-section h3 {
+      font-size: 1.05em;
+      color: #ffffff;
+      margin: 26px 0 8px 0;
+    }
+
+    .note-section h4 {
+      font-size: 0.95em;
+      color: #ffffff;
+      margin: 20px 0 6px 0;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .note-section ul,
+    .note-section ol {
+      margin: 8px 0;
+      padding-left: 22px;
+    }
+
+    .note-section li { margin-bottom: 5px; }
+
+    .note-section ul ul,
+    .note-section ol ul { margin: 4px 0; }
+
+    .lede { font-size: 1.05em; }
+
+    .flow {
+      text-align: center;
+      margin: 14px 0;
+    }
+
+    /* ---------- contents ---------- */
+    .contents {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 26px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    .contents h2 {
+      font-size: 0.8em !important;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 10px 0 !important;
+      opacity: 0.85;
+    }
+
+    .contents .part-label {
+      font-size: 0.78em;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin: 12px 0 4px 0;
+    }
+
+    .contents ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      columns: 2;
+      column-gap: 28px;
+    }
+
+    .contents li {
+      margin-bottom: 4px;
+      font-size: 0.9em;
+      break-inside: avoid;
+    }
+
+    .contents a {
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .contents a:hover { border-bottom-color: #ffffff; }
+
+    /* ---------- tables ---------- */
+    .data-table-wrap {
+      overflow-x: auto;
+      margin: 14px 0 18px 0;
+    }
+
+    table.data {
+      border-collapse: collapse;
+      font-size: 0.9em;
+      min-width: 280px;
+    }
+
+    table.data caption {
+      caption-side: top;
+      text-align: left;
+      font-size: 0.8em;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      padding-bottom: 6px;
+    }
+
+    table.data th,
+    table.data td {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 6px 14px 6px 0;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    table.data thead th {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+      font-weight: 700;
+    }
+
+    table.data tbody tr:last-child th,
+    table.data tbody tr:last-child td {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    /* ---------- asides, boxes, figures ---------- */
+    .aside {
+      border-left: 2px solid rgba(255, 255, 255, 0.6);
+      padding: 2px 0 2px 14px;
+      margin: 14px 0;
+      font-style: italic;
+      font-size: 0.95em;
+      opacity: 0.9;
+    }
+
+    blockquote.law {
+      margin: 14px 0;
+      padding: 12px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.12);
+      font-style: italic;
+    }
+
+    figure.diagram {
+      margin: 18px 0;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    figure.diagram svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 580px;
+    }
+
+    figure.diagram figcaption {
+      font-size: 0.85em;
+      opacity: 0.85;
+      margin-top: 8px;
+    }
+
+    .to-top {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8em;
+      color: #ffffff;
+      opacity: 0.75;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .to-top:hover { opacity: 1; }
+
+    @media (max-width: 640px) {
+      .contents ol { columns: 1; }
+    }
   </style>
 </head>
 <body>
@@ -31,14 +256,1294 @@
     </div>
   </nav>
 
-  <section class="hero" style="background-color: #8588e0;">
+  <section class="hero" id="top" style="background-color: #8588e0;">
     <h1>Philosophy</h1>
-    <p>
+
+    <p class="lede">
+      Philosophy asks the questions that cannot be settled by measurement: what
+      is right, what can be known, what makes a life good, whether anything we do
+      is freely chosen, and what it means for a thing to exist at all. What
+      follows works through it by field &mdash; ethics, the good life, the self
+      and freedom, knowledge and language, then society and the thinkers who
+      shaped each argument.
+    </p>
+
+    <p class="lede">
     Different schools of thought in philosophy explore various ways of understanding existence, knowledge, morality, and society. Existentialism, associated with thinkers like Jean-Paul Sartre, focuses on human existence and the idea that individuals define their own meaning in life. Absurdism, often linked to Albert Camus, argues that the human search for meaning is ultimately futile in an indifferent universe. Nihilism, associated with Friedrich Nietzsche, rejects the existence of inherent meaning, truth, or value. Stoicism, practiced by philosophers such as Seneca and Marcus Aurelius, teaches inner peace through accepting what cannot be controlled and aligning oneself with nature. In ethics, Virtue Ethics, rooted in the work of Aristotle, argues that morality arises from a person’s character and virtues, while Consequentialism judges actions as right or wrong based on their outcomes, with Utilitarianism—developed by thinkers like Jeremy Bentham and John Stuart Mill—seeking the greatest overall well-being. In contrast, Deontology, famously associated with Immanuel Kant, emphasizes adherence to duties and moral rules regardless of consequences. In epistemology, Rationalism, advocated by René Descartes, holds that reason is the primary source of knowledge, whereas Empiricism, represented by thinkers like John Locke, maintains that knowledge arises from sensory experience. Constructivism examines how humans actively construct knowledge and meaning from their experiences, while Skepticism questions accepted beliefs and suggests that absolute truth may be unknowable due to limits in perception and reasoning. Social and political philosophies include Critical Theory, developed by scholars of the Frankfurt School, which analyzes how power structures shape society; Marxism, based on the work of Karl Marx, which critiques the exploitation of workers by the ownership class and advocates collective control of resources; and Liberalism, associated with thinkers like John Locke, which emphasizes individual rights and liberties. Related views include Communitarianism, which prioritizes shared community values, and Individualism, which stresses the intrinsic worth and autonomy of the individual. In metaphysics, Idealism argues that reality is fundamentally mental or spiritual, while Realism and Physicalism assert that the physical world and observable matter are primary, with consciousness emerging from physical processes; Naturalism similarly emphasizes understanding reality through scientific facts and experiments, while Spiritualism proposes that the spirits of the dead can communicate with the living. Finally, different approaches to reasoning and knowledge formation include Deductivism, which derives conclusions from logical rules; Inductivism, which infers general patterns from repeated observations; Abductivism, which proposes the most plausible explanation from limited evidence; and Probabilism, which evaluates beliefs and predictions in terms of likelihoods rather than absolute certainty.
     </p>
-    <p>
+    <p class="lede">
     Key philosophers across history have shaped major ideas about knowledge, morality, society, and reality. Socrates (c. 469–399 BCE) is considered one of the founders of Western philosophy, known for his method of questioning to examine beliefs and pursue truth. His student Plato emphasized wisdom, morality, and political philosophy through dialogues such as The Republic. Plato’s student Aristotle made foundational contributions to science, ethics, logic, and metaphysics, founded the Lyceum in Athens, and served as the teacher of Alexander the Great. In the East, Confucius (551–479 BCE) developed a philosophy centered on moral virtue, social harmony, and ethical conduct. In Christian philosophy, Augustine of Hippo helped shape early Christian doctrine by integrating classical philosophy with theology, while Thomas Aquinas, who studied under Albertus Magnus, systematized Catholic theology in his influential work Summa Theologica. In early modern philosophy, René Descartes wrote Meditations on First Philosophy and argued that reason is the foundation of knowledge. John Locke, trained in medicine, developed empiricism and political theories about natural rights, while David Hume, originally educated in law, advanced skepticism and empiricism about knowledge and causation. Jean-Jacques Rousseau, author of The Confessions, influenced ideas about freedom and society that later inspired the French Revolution. Immanuel Kant argued that although knowledge begins with experience, the mind actively structures that experience through innate concepts. Later German philosophy included Georg Wilhelm Friedrich Hegel, whose dialectical ideas influenced many later thinkers. Karl Marx, originally from a Jewish family that converted to Lutheranism, developed a critique of capitalism and theories about class struggle, while Friedrich Nietzsche sharply criticized religion and traditional morality. In the 20th century, Ludwig Wittgenstein made major contributions to analytic philosophy and the philosophy of language.
     </p>
+
+    <nav class="contents" aria-label="Contents">
+      <h2>Contents</h2>
+
+      <p class="part-label">Part I &mdash; The Field</p>
+      <ol>
+        <li><a href="#branches">The branches of philosophy</a></li>
+        <li><a href="#reasoning">How conclusions are reached</a></li>
+      </ol>
+
+      <p class="part-label">Part II &mdash; Ethics</p>
+      <ol>
+        <li><a href="#meta-ethics">Meta-ethics and moral facts</a></li>
+        <li><a href="#divine-command">Divine command and Euthyphro</a></li>
+        <li><a href="#normative">Normative ethics</a></li>
+        <li><a href="#justice">Justice and fairness</a></li>
+      </ol>
+
+      <p class="part-label">Part III &mdash; The Good Life</p>
+      <ol>
+        <li><a href="#good-life">The good life</a></li>
+        <li><a href="#eudaimonia">Eudaimonia</a></li>
+        <li><a href="#hedonism">Hedonism and the experience machine</a></li>
+        <li><a href="#stoicism">Stoicism</a></li>
+        <li><a href="#meaning">Meaning, Sisyphus and the absurd</a></li>
+      </ol>
+
+      <p class="part-label">Part IV &mdash; Self and Freedom</p>
+      <ol>
+        <li><a href="#fungibility">Fungibility and sameness</a></li>
+        <li><a href="#identity">Personal identity</a></li>
+        <li><a href="#determinism">Hard determinism</a></li>
+        <li><a href="#free-will">Free will and compatibilism</a></li>
+      </ol>
+
+      <p class="part-label">Part V &mdash; Knowledge, Language, Beauty</p>
+      <ol>
+        <li><a href="#epistemology">Sources of knowledge</a></li>
+        <li><a href="#metaphysics">What reality is made of</a></li>
+        <li><a href="#language">What is said, what is implied</a></li>
+        <li><a href="#maxims">Grice's maxims</a></li>
+        <li><a href="#meinong">Reference and Meinong's ontology</a></li>
+        <li><a href="#aesthetics">Aesthetic enjoyment and art</a></li>
+      </ol>
+
+      <p class="part-label">Part VI &mdash; Society and Thinkers</p>
+      <ol>
+        <li><a href="#political">Social and political philosophy</a></li>
+        <li><a href="#philosophers">Key philosophers</a></li>
+      </ol>
+    </nav>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part I</span>
+      <h2>The Field</h2>
+      <p>What the divisions of philosophy are, and the forms of reasoning used across all of them.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="branches">
+      <h2>The branches of philosophy</h2>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Branch</th><th>Asks</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Metaphysics</td><td>what exists, and what is it made of?</td></tr>
+            <tr><td>Epistemology</td><td>what can be known, and how?</td></tr>
+            <tr><td>Ethics</td><td>what ought to be done?</td></tr>
+            <tr><td>Logic</td><td>what follows from what?</td></tr>
+            <tr><td>Aesthetics</td><td>what is beautiful, and is that a fact about the thing?</td></tr>
+            <tr><td>Political philosophy</td><td>how should people live together, and who may rule?</td></tr>
+            <tr><td>Philosophy of language</td><td>how do words attach to the world?</td></tr>
+            <tr><td>Philosophy of mind</td><td>what is consciousness, and what makes you <em>you</em>?</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      Ethics itself divides by depth: <strong>applied ethics</strong> handles
+      particular cases, <strong>normative ethics</strong> asks which general
+      theory of right action is correct, and <strong>meta-ethics</strong> goes
+      deeper still &mdash; to the very nature of morality, and whether moral
+      claims are the kind of thing that can be true at all.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="reasoning">
+      <h2>How conclusions are reached</h2>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Method</th><th>Moves from</th><th>Gives you</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Deductivism</td>
+              <td>general rules to a particular case</td>
+              <td>certainty, if the premises hold</td>
+            </tr>
+            <tr>
+              <td>Inductivism</td>
+              <td>repeated observations to a general pattern</td>
+              <td>a likely rule, never a guaranteed one</td>
+            </tr>
+            <tr>
+              <td>Abductivism</td>
+              <td>limited evidence to its most plausible explanation</td>
+              <td>the best available guess</td>
+            </tr>
+            <tr>
+              <td>Probabilism</td>
+              <td>evidence to degrees of belief</td>
+              <td>likelihoods rather than certainties</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="aside">
+      Almost every dispute later on this page can be traced to a disagreement
+      about which of these four is allowed to settle a question &mdash; and
+      whether the answer must be certain to count as knowledge.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part II</span>
+      <h2>Ethics</h2>
+      <p>Whether there are moral facts at all, and if so, what makes an act right and a distribution just.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="meta-ethics">
+      <h2>Meta-ethics and moral facts</h2>
+
+      <p>
+      Meta-ethics is the deep layer: not <em>which</em> acts are wrong, but what
+      sort of claim &ldquo;that is wrong&rdquo; even is. The dividing question is
+      whether there are <strong>moral facts</strong>.
+      </p>
+
+      <ul>
+        <li>
+          <strong>Moral realism</strong> &rarr; there are moral facts. Cruelty is
+          wrong in the way that water is H&#8322;O &mdash; independently of what
+          anyone thinks.
+        </li>
+        <li>
+          <strong>Moral antirealism</strong> &rarr; there are no moral facts.
+          Moral talk is doing something other than describing the world.
+          <ul>
+            <li>
+              <strong>Moral subjectivism</strong> &rarr; a moral claim reports an
+              attitude. &ldquo;Cruelty is wrong&rdquo; says something about the
+              speaker, not about cruelty.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <p>
+      A second axis asks how far a moral rule reaches.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Position</th><th>Claim</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Moral absolutism</td>
+              <td>some acts are right or wrong in every situation, whatever the consequences or context</td>
+            </tr>
+            <tr>
+              <td>Moral relativism</td>
+              <td>moral truth holds only relative to a framework; there is no view from nowhere</td>
+            </tr>
+            <tr>
+              <td>Cultural relativism</td>
+              <td>the framework is the culture &mdash; right and wrong are what a society holds them to be</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="aside">
+      Cultural relativism has an awkward consequence: if a culture's own
+      standards are the final word, then no culture can ever be criticised from
+      outside &mdash; including for the way it treats the people inside it who
+      disagree.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="divine-command">
+      <h2>Divine command and Euthyphro</h2>
+
+      <blockquote class="law">
+      Divine command theory &mdash; the belief that what is moral and what is
+      immoral is commanded by the divine.
+      </blockquote>
+
+      <p>
+      Plato attacks this in the <strong>Euthyphro</strong>, a dialogue in which
+      Socrates questions Euthyphro &mdash; his interlocutor &mdash; on the way to
+      a courthouse. The trap Socrates sets is now called the
+      <strong>Euthyphro problem</strong>, and it is a fork with no comfortable
+      branch.
+      </p>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 560 215" role="img"
+             aria-label="A fork with two branches: an act is moral because the divine commands it, which makes morality arbitrary, or the divine commands it because it is already moral, which makes the divine unnecessary to morality">
+          <g stroke="#ffffff" fill="none" font-family="inherit" font-size="15">
+            <rect x="185" y="14" width="190" height="40" rx="5" stroke-width="1.5"/>
+            <text x="280" y="39" text-anchor="middle" stroke="none" fill="#ffffff" font-size="13">the divine and the good</text>
+
+            <line x1="255" y1="54" x2="150" y2="96" stroke-width="1.4"/>
+            <line x1="305" y1="54" x2="410" y2="96" stroke-width="1.4"/>
+
+            <rect x="30" y="96" width="240" height="50" rx="5" stroke-width="1.5"/>
+            <text x="150" y="116" text-anchor="middle" stroke="none" fill="#ffffff" font-size="12">it is moral because</text>
+            <text x="150" y="134" text-anchor="middle" stroke="none" fill="#ffffff" font-size="12">the divine commands it</text>
+
+            <rect x="290" y="96" width="240" height="50" rx="5" stroke-width="1.5"/>
+            <text x="410" y="116" text-anchor="middle" stroke="none" fill="#ffffff" font-size="12">the divine commands it</text>
+            <text x="410" y="134" text-anchor="middle" stroke="none" fill="#ffffff" font-size="12">because it is already moral</text>
+
+            <text x="150" y="172" text-anchor="middle" stroke="none" fill="#ffffff" font-size="12">then morality is arbitrary</text>
+            <text x="150" y="192" text-anchor="middle" stroke="none" fill="#ffffff" font-size="12">any command would do</text>
+
+            <text x="410" y="172" text-anchor="middle" stroke="none" fill="#ffffff" font-size="12">then morality is independent</text>
+            <text x="410" y="192" text-anchor="middle" stroke="none" fill="#ffffff" font-size="12">and the command adds nothing</text>
+          </g>
+        </svg>
+        <figcaption>
+          Either branch costs the theory something. The first makes goodness a
+          matter of arbitrary decree; the second concedes that goodness is already
+          there to be recognised.
+        </figcaption>
+      </figure>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="normative">
+      <h2>Normative ethics</h2>
+
+      <p>
+      Three families of answer to &ldquo;what makes an act right?&rdquo;, each
+      locating rightness somewhere different.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Theory</th><th>Rightness lies in</th><th>Associated with</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Virtue ethics</td>
+              <td>the character of the person acting</td>
+              <td>Aristotle</td>
+            </tr>
+            <tr>
+              <td>Consequentialism</td>
+              <td>the outcomes the act produces</td>
+              <td>&mdash;</td>
+            </tr>
+            <tr>
+              <td>Utilitarianism</td>
+              <td>outcomes, measured as the greatest overall well-being</td>
+              <td>Bentham, Mill</td>
+            </tr>
+            <tr>
+              <td>Deontology</td>
+              <td>duties and rules, whatever the outcome</td>
+              <td>Kant</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="flow">
+      character &rarr; virtue ethics &nbsp;&bull;&nbsp; outcome &rarr;
+      consequentialism &nbsp;&bull;&nbsp; duty &rarr; deontology
+      </p>
+
+      <p>
+      The three come apart in exactly the cases that matter. A lie that saves a
+      life is forbidden by strict deontology, required by utilitarianism, and
+      judged by virtue ethics according to what it reveals about the liar.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="justice">
+      <h2>Justice and fairness</h2>
+
+      <p class="flow">
+      justice &rarr; still &rarr; fairness
+      </p>
+
+      <p>
+      The two words are close but not identical, and pulling them apart is the
+      work of the subject.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Account</th><th>Distribute according to</th><th>Difficulty</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Justice as equality</td>
+              <td>everyone gets the same</td>
+              <td>identical treatment of unequal needs is not fair</td>
+            </tr>
+            <tr>
+              <td>Need-based justice</td>
+              <td>whoever needs it most</td>
+              <td>who verifies need, and does effort count for nothing?</td>
+            </tr>
+            <tr>
+              <td>Merit-based justice</td>
+              <td>whoever earned or deserves it</td>
+              <td>merit itself depends on unearned luck and starting position</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Restorative justice</h3>
+
+      <p>
+      A different question altogether: not who gets what, but what happens after
+      a wrong. If you do wrong, you try to make it right &mdash; you make amends.
+      </p>
+
+      <blockquote class="law">
+      If you make a mess, you should clean it up.
+      </blockquote>
+
+      <p>
+      Notice how much this differs from punishment. Retribution asks what the
+      wrongdoer deserves to suffer; restoration asks what the wronged person needs
+      in order to be made whole.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part III</span>
+      <h2>The Good Life</h2>
+      <p>What makes a life go well, who gets to judge it, and what to do if the universe supplies no answer.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="good-life">
+      <h2>The good life</h2>
+
+      <p>
+      A prior question hides inside this one: a good life judged
+      <strong>by you</strong>, or <strong>by others</strong>?
+      </p>
+
+      <p>
+      The two standards can diverge completely. A life of quiet obscurity may
+      satisfy the person living it and impress nobody; a celebrated career may
+      look enviable from outside and feel hollow within. Whichever standard is
+      chosen decides the answer before the details are examined.
+      </p>
+
+      <blockquote class="law">
+      The unexamined life is not worth living. &mdash; Socrates
+      </blockquote>
+
+      <p>
+      Which supplies a third possibility. On Socrates' account the good life is
+      not a set of contents at all &mdash; not pleasure, not achievement, not
+      approval &mdash; but a <em>relationship to your own life</em>: having looked
+      at it, questioned it, and understood why you live as you do.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="eudaimonia">
+      <h2>Eudaimonia</h2>
+
+      <p>
+      From Greek thought, and central to <strong>Aristotle</strong>:
+      <strong>eudaimonia</strong> is a life of <em>flourishing</em>. Not a mood,
+      not a run of good fortune, but a life in which a person is constantly
+      striving at self-improvement &mdash; to be more virtuous, wiser, more
+      thoughtful, more self-aware.
+      </p>
+
+      <p class="flow">
+      eudaimonia &rarr; flourishing &rarr; a whole life, not a moment of it
+      </p>
+
+      <p>
+      Two features follow. It is an <strong>activity</strong> rather than a state,
+      so it cannot be handed to you or bought. And it is assessed across a
+      complete life, which is why Aristotle thought you could not call anyone
+      fortunate until their life was over.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="hedonism">
+      <h2>Hedonism and the experience machine</h2>
+
+      <ul>
+        <li><strong>Hedonism</strong> &rarr; good = pleasurable. Pleasure is the only thing valuable in itself.</li>
+        <li><strong>Desire</strong> &rarr; what you are actually after &rarr; the thing the pleasure is attached to.</li>
+      </ul>
+
+      <h3>The experience machine</h3>
+
+      <p>
+      Suppose a machine could give you any experience you wanted, indistinguishable
+      from the real thing, for the rest of your life. Brilliant career, love,
+      achievement &mdash; all of it felt exactly as it would feel if true. Plug in
+      and you never know the difference.
+      </p>
+
+      <p>
+      Most people refuse. Yet if pleasure were the only good, refusing would make
+      no sense. The refusal suggests we want more than the experience of a life
+      &mdash; we want the life to actually be happening, and our achievements to
+      be really ours. It is a hard objection to hedonism, and it is usually
+      credited to Robert Nozick.
+      </p>
+
+      <div class="aside">
+      Things are not always the way they seem &mdash; which is the argument's real
+      sting. Inside the machine, everything seems perfect, and seeming perfect
+      turns out not to be enough.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="stoicism">
+      <h2>Stoicism</h2>
+
+      <p>
+      Practised by <strong>Seneca</strong> and <strong>Marcus Aurelius</strong>,
+      Stoicism teaches inner peace through accepting what cannot be controlled and
+      living in accordance with nature.
+      </p>
+
+      <p class="flow">
+      what is up to me &nbsp;&bull;&nbsp; what is not up to me
+      </p>
+
+      <p>
+      The whole discipline rests on drawing that line honestly. Your judgements,
+      intentions and responses are yours; reputation, health, weather and other
+      people's choices are not. Distress, on this view, comes from placing hope in
+      the second column.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="meaning">
+      <h2>Meaning, Sisyphus and the absurd</h2>
+
+      <p>
+      Sisyphus is condemned to roll a boulder up a hill; each time he nears the
+      top it rolls back, and he begins again, for eternity.
+      </p>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 560 230" role="img"
+             aria-label="A boulder being pushed up a slope, falling back down the far side, and returning to the starting point to begin again">
+          <defs>
+            <marker id="sy-arrow" viewBox="0 0 10 10" refX="8" refY="5"
+                    markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M2 1 L8 5 L2 9" fill="none" stroke="#ffffff" stroke-width="1.6"/>
+            </marker>
+          </defs>
+          <g stroke="#ffffff" fill="none" font-family="inherit" font-size="15">
+            <line x1="40" y1="190" x2="520" y2="190" stroke-width="1.5"/>
+            <line x1="60" y1="190" x2="400" y2="60" stroke-width="1.5"/>
+            <line x1="400" y1="60" x2="400" y2="190" stroke-width="1.5"/>
+            <circle cx="230" cy="125" r="15" stroke-width="1.5"/>
+            <line x1="130" y1="163" x2="310" y2="94" stroke-width="1.4" marker-end="url(#sy-arrow)"/>
+            <text x="205" y="178" text-anchor="middle" stroke="none" fill="#ffffff" font-size="12">push</text>
+            <path d="M412 66 V 178" stroke-width="1.3" stroke-dasharray="6 5" marker-end="url(#sy-arrow)"/>
+            <text x="424" y="120" stroke="none" fill="#ffffff" font-size="12">rolls back</text>
+            <path d="M398 205 H 70" stroke-width="1.3" stroke-dasharray="6 5" marker-end="url(#sy-arrow)"/>
+            <text x="234" y="222" text-anchor="middle" stroke="none" fill="#ffffff" font-size="12">begin again</text>
+          </g>
+        </svg>
+        <figcaption>
+          The task can never be completed, so whatever meaning the labour has
+          cannot come from finishing it.
+        </figcaption>
+      </figure>
+
+      <h3>Three responses</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>School</th><th>Position</th><th>Associated with</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nihilism</td>
+              <td>there is no inherent meaning, truth or value &mdash; and that is the end of it</td>
+              <td>Nietzsche</td>
+            </tr>
+            <tr>
+              <td>Absurdism</td>
+              <td>we need meaning, the universe is indifferent, and so the search for it is ultimately futile</td>
+              <td>Camus</td>
+            </tr>
+            <tr>
+              <td>Existentialism</td>
+              <td>no meaning is given, so each person makes their own</td>
+              <td>Sartre</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      All three begin from the same observation &mdash; that things do not come
+      with inherent meaning attached &mdash; and part company over what to do
+      next. What matters, on the existentialist reading, is not the meaning the
+      universe supplies but the meaning you are making of it.
+      </p>
+
+      <blockquote class="law">
+      Life is in your hands. You, and only you, have the power to make your life
+      great &mdash; and only you can evaluate its greatness.
+      </blockquote>
+
+      <p>
+      <strong>Camus</strong>, writing in the twentieth century, puts the
+      responsibility in the same place: each of us determines the value of our own
+      life. His method for living with the absurd is not resignation but
+      persistence &mdash; keep asking why, accept a claim when there is evidence
+      for it, and go on striving for truth even though no final answer arrives.
+      </p>
+
+      <div class="aside">
+      Notice that this returns the argument to the good life: if only you can
+      evaluate your life's greatness, then &ldquo;by you or by others&rdquo; has
+      been answered, and the burden of the judgement never leaves your hands.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part IV</span>
+      <h2>Self and Freedom</h2>
+      <p>What makes you the same person over time, and whether any of your actions could have gone otherwise.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="fungibility">
+      <h2>Fungibility and sameness</h2>
+
+      <blockquote class="law">
+      Fungibility &mdash; the property of being interchangeable with other objects
+      of the same kind.
+      </blockquote>
+
+      <ul>
+        <li>
+          <strong>Money</strong> &rarr; carries value only &rarr; any
+          &#8377;100 note is as good as any other &rarr; <strong>fungible</strong>.
+        </li>
+        <li>
+          <strong>A mug that was your first gift</strong> &rarr; an identical mug
+          is not the same mug &rarr; <strong>not fungible</strong>.
+        </li>
+      </ul>
+
+      <p>
+      The distinction sets up the harder problem that follows. For fungible
+      things, &ldquo;same kind&rdquo; is all the sameness there is. For a person,
+      it obviously is not &mdash; another human with your qualities would not be
+      you &mdash; so something else must be doing the work.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="identity">
+      <h2>Personal identity</h2>
+
+      <p>
+      What makes the person reading this the same person who existed ten years
+      ago?
+      </p>
+
+      <h3>Body theory</h3>
+
+      <p>
+      The same body, from birth to death. Simple, and immediately in trouble: the
+      body's cells are replaced continuously, so the matter is not the same matter.
+      Push on this and you arrive at the thought that what makes you
+      <em>you</em> is not the physical stuff but the non-physical stuff &mdash;
+      your consciousness.
+      </p>
+
+      <h3>Memory theory</h3>
+
+      <p class="flow">
+      identity &rarr; a chain of memory reaching back
+      </p>
+
+      <p>
+      You are the person whose experiences you remember. But if I lose my memory,
+      am I the same person? And the chain has gaps everywhere &mdash; almost none
+      of last Tuesday survives &mdash; without anyone concluding that a different
+      person woke up on Wednesday.
+      </p>
+
+      <div class="aside">
+      Society is built on the assumption that individuals remain the same person
+      over time, every time. Contracts, promises, punishment and gratitude all
+      presuppose it, which is why a theoretical puzzle about identity is also a
+      practical problem about responsibility.
+      </div>
+
+      <h3>Human and person</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Term</th><th>Criterion</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Human</td><td>having human DNA &mdash; a biological fact</td></tr>
+            <tr><td>Person</td><td>being part of our moral community &mdash; a moral status</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      Keeping these apart matters, because they can come apart. The two words are
+      used interchangeably in ordinary speech, and nearly every hard argument in
+      applied ethics turns on the gap between them.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="determinism">
+      <h2>Hard determinism</h2>
+
+      <blockquote class="law">
+      Hard determinism &mdash; the belief that all events are caused by past
+      events, such that nothing other than what does occur could occur.
+      </blockquote>
+
+      <h3>The principle of alternate possibilities</h3>
+
+      <p>
+      An action is free only if the agent &mdash; the person doing the thing
+      &mdash; could have done otherwise.
+      </p>
+
+      <p class="flow">
+      free action &rarr; a genuine option existed &nbsp;&bull;&nbsp; determinism
+      &rarr; no option existed
+      </p>
+
+      <p>
+      Put those two together and the conclusion is immediate: if determinism is
+      true, no action is free. That is the argument the rest of the debate is
+      trying to escape.
+      </p>
+
+      <h3>Two kinds of causation</h3>
+
+      <ul>
+        <li>
+          <strong>Event causation</strong> &rarr; no physical event can occur
+          without having been caused by a previous event. Every cause is itself an
+          effect, back without limit.
+        </li>
+        <li>
+          <strong>Agent causation</strong> &rarr; an agent can start a whole chain
+          of causality that was not caused by anything else. The agent is an
+          origin, not merely a link.
+        </li>
+      </ul>
+
+      <p>
+      Agent causation is what defenders of free will need, and what makes critics
+      uneasy: it asks us to accept that something in the physical world begins a
+      causal chain from nothing prior.
+      </p>
+
+      <h3>Reductionism</h3>
+
+      <p>
+      The view that all parts of the world, and of our own experience, can be
+      traced back &mdash; reduced down &mdash; to one singular kind of thing. It
+      supports determinism directly: if you are entirely physical stuff obeying
+      physical law, there is no room left for an uncaused decision.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="free-will">
+      <h2>Free will and compatibilism</h2>
+
+      <p>
+      How free you are depends on how many <strong>internal</strong> factors are
+      influencing you, how many <strong>external</strong> ones, and how much of it
+      you actually control.
+      </p>
+
+      <p class="flow">
+      belief + desire + temperament &rarr; action
+      </p>
+
+      <p>
+      Which is uncomfortable, because you did not choose your temperament, and your
+      beliefs and desires arrived through a history you did not select either.
+      </p>
+
+      <h3>Libertarian free will</h3>
+
+      <p>
+      The belief that some human actions are freely chosen &mdash; genuinely open,
+      not merely unpredictable. It requires agent causation, and it rejects the
+      determinist premise outright.
+      </p>
+
+      <h3>Compatibilism</h3>
+
+      <p>
+      The move that accepts determinism and keeps responsibility anyway, by
+      redefining what freedom requires:
+      </p>
+
+      <blockquote class="law">
+      You were responsible, because you did what you wanted to do &mdash; even
+      though you could not have done otherwise.
+      </blockquote>
+
+      <p>
+      Freedom, on this account, is acting from your own desires rather than under
+      compulsion. A person who does what they want is free even if that wanting was
+      itself caused. Critics answer that this renames the problem rather than
+      solving it.
+      </p>
+
+      <h3>The story of Oedipus</h3>
+
+      <p>
+      Told that he is fated to kill his father and marry his mother, Oedipus flees
+      to avoid it &mdash; and the flight is exactly what brings the prophecy about.
+      Every choice he makes is his own, and every choice serves the outcome he was
+      trying to escape.
+      </p>
+
+      <div class="aside">
+      That is why the story survives: it does not resolve the question. Oedipus
+      acts freely at every step and cannot do otherwise in the end, which is
+      precisely the position compatibilism asks us to find acceptable.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part V</span>
+      <h2>Knowledge, Language, Beauty</h2>
+      <p>Where knowledge comes from, what reality is made of, how words carry more than they say, and whether beauty is in the object.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="epistemology">
+      <h2>Sources of knowledge</h2>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Position</th><th>Knowledge comes from</th><th>Associated with</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Rationalism</td><td>reason, prior to experience</td><td>Descartes</td></tr>
+            <tr><td>Empiricism</td><td>sensory experience of the world</td><td>Locke, Hume</td></tr>
+            <tr><td>Constructivism</td><td>active construction of meaning from experience</td><td>&mdash;</td></tr>
+            <tr><td>Skepticism</td><td>nowhere reliable &mdash; absolute truth may be unknowable, given the limits of our perception and reasoning</td><td>Hume</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      <strong>Kant's</strong> settlement is the one most later philosophy builds
+      on: knowledge begins with experience, but the mind actively structures that
+      experience through concepts it brings to it. Neither pure reason nor raw
+      sensation on its own.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="metaphysics">
+      <h2>What reality is made of</h2>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Position</th><th>Claim</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Idealism</td><td>reality is fundamentally mental or spiritual</td></tr>
+            <tr><td>Realism</td><td>the world exists independently of any mind perceiving it</td></tr>
+            <tr><td>Physicalism</td><td>observable matter is primary; consciousness emerges from physical processes</td></tr>
+            <tr><td>Naturalism</td><td>reality is to be understood through scientific fact and experiment</td></tr>
+            <tr><td>Spiritualism</td><td>the spirits of the dead can communicate with the living</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      The stakes connect back to Part IV. Physicalism plus reductionism gives you
+      determinism almost immediately; idealism, which puts mind first, leaves the
+      question wide open.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="language">
+      <h2>What is said, what is implied</h2>
+
+      <p>
+      <strong>Paul Grice</strong> named the gap between
+      <strong>what is meant</strong> and <strong>what is said</strong>, and called
+      the surplus <strong>conversational implicature</strong>.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Term</th><th>Meaning</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>What is said</td>
+              <td>the words that come out of the speaker's mouth &mdash; actual linguistic content</td>
+            </tr>
+            <tr>
+              <td>What is implied</td>
+              <td>the actual words combined with the context in which we say them</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      Asked whether a candidate is any good, a referee who replies only that the
+      applicant has excellent handwriting has said nothing negative and
+      communicated a great deal.
+      </p>
+
+      <h3>Words that do things</h3>
+
+      <p>
+      With your words you can change the world. Saying &ldquo;I do&rdquo; at a
+      wedding, or declaring war, does not describe a state of affairs &mdash; it
+      creates one. Such utterances are called <strong>performatives</strong>, and
+      they cannot be true or false, only successful or botched.
+      </p>
+
+      <p>
+      Words also build what was never there. <strong>Imaginary worlds</strong>
+      &mdash; whole universes &mdash; can be created with our minds and then
+      spoken about in detail, which is the problem the next two sections take up.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="maxims">
+      <h2>Grice's maxims</h2>
+
+      <p>
+      Four rules cooperative speakers are assumed to be following. They are not
+      commands about politeness; they are the assumptions that let a listener
+      recover meaning from words.
+      </p>
+
+      <ol>
+        <li>
+          <strong>Quantity</strong>
+          <ul>
+            <li>be adequately informative</li>
+            <li>do not be more informative than is required</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Quality</strong>
+          <ul>
+            <li>do not say what you think is false</li>
+            <li>refrain from claims for which you have insufficient evidence</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Relation</strong>
+          <ul>
+            <li>say relevant things</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Manner</strong>
+          <ul>
+            <li>avoid obscure turns of phrase</li>
+            <li>avoid ambiguity</li>
+            <li>be brief</li>
+            <li>be orderly</li>
+          </ul>
+        </li>
+      </ol>
+
+      <blockquote class="law">
+      Violating these rules hinders communication.
+      </blockquote>
+
+      <h3>Flouting a maxim</h3>
+
+      <p>
+      Breaking a maxim <em>obviously</em>, so that the listener notices, is not a
+      failure of communication but a device. The referee praising the handwriting
+      flouts relevance on purpose. Sarcasm flouts quality; a deliberately
+      long-winded answer flouts manner. In each case the listener assumes
+      cooperation is intact, asks why the rule was broken, and recovers the real
+      message from the breach itself.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="meinong">
+      <h2>Reference and Meinong's ontology</h2>
+
+      <p>
+      &ldquo;The unicorn in my garden is white.&rdquo; There is no unicorn, so what
+      is the sentence about? <strong>Meinong</strong> answered by splitting
+      existence into three grades, each wider than the last.
+      </p>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 560 265" role="img"
+             aria-label="Three concentric circles: existence at the centre for things present in the world, subsistence around it for concepts, and absistence outermost for objects such as unicorns">
+          <g stroke="#ffffff" fill="none" font-family="inherit" font-size="15">
+            <circle cx="160" cy="132" r="112" stroke-width="1.5"/>
+            <circle cx="160" cy="132" r="72" stroke-width="1.5"/>
+            <circle cx="160" cy="132" r="34" stroke-width="1.5"/>
+            <line x1="239" y1="53" x2="292" y2="42" stroke-width="1.2" stroke-dasharray="4 4"/>
+            <line x1="211" y1="81" x2="292" y2="128" stroke-width="1.2" stroke-dasharray="4 4"/>
+            <line x1="184" y1="108" x2="292" y2="214" stroke-width="1.2" stroke-dasharray="4 4"/>
+            <text x="298" y="38" stroke="none" fill="#ffffff" font-size="13">absistence</text>
+            <text x="298" y="56" stroke="none" fill="#ffffff" font-size="12">unicorns, round squares</text>
+            <text x="298" y="124" stroke="none" fill="#ffffff" font-size="13">subsistence</text>
+            <text x="298" y="142" stroke="none" fill="#ffffff" font-size="12">concepts, numbers</text>
+            <text x="298" y="210" stroke="none" fill="#ffffff" font-size="13">existence</text>
+            <text x="298" y="228" stroke="none" fill="#ffffff" font-size="12">present in the world</text>
+          </g>
+        </svg>
+        <figcaption>
+          Everything the mind can refer to absists; some of it also subsists; a
+          smaller part of that also exists. Reference never fails &mdash; but the
+          outer ring fills up alarmingly fast.
+        </figcaption>
+      </figure>
+
+      <h3>Meinong's jungle</h3>
+
+      <p>
+      That is the nickname for the consequence: the outermost ring is
+      overcrowded. The golden mountain, the round square, every object anyone has
+      ever mistakenly described &mdash; a great many are in there, and most
+      philosophers have found the population unacceptable.
+      </p>
+
+      <h3>Universe of discourse</h3>
+
+      <p>
+      The tidier repair. Fix the domain you are speaking about, and inside it
+      assertions can be true or false.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Claim</th><th>Domain: the real world</th><th>Domain: the fiction</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Harry Potter is a wizard</td>
+              <td>false &mdash; there is no such person</td>
+              <td>true &mdash; and everybody knows it</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      No new grades of being are required. What changed is the universe of
+      discourse the sentence was evaluated against, which is why we can argue about
+      fictional characters without confusion and without believing in them.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="aesthetics">
+      <h2>Aesthetic enjoyment and art</h2>
+
+      <p>
+      Aesthetic enjoyment runs through the <strong>emotions</strong>, which is what
+      makes it hard to treat as a judgement about the object.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Source of beauty</th><th>Example</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Human-made</td><td>a painting, a building, a song &mdash; <strong>art</strong></td></tr>
+            <tr><td>Natural beauty</td><td>a coastline, a storm, a face &mdash; made by nobody</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Two different questions</h3>
+
+      <p class="flow">
+      do you like it? &nbsp;&nbsp;&bull;&nbsp;&nbsp; is it good?
+      </p>
+
+      <p>
+      These come apart constantly, and confusing them is the commonest mistake in
+      talking about art. You can recognise a work as excellent and take no pleasure
+      in it; you can love something you know to be slight. The first question is
+      about you, the second claims something about the work.
+      </p>
+
+      <blockquote class="law">
+      Beauty is in the eye of the beholder.
+      </blockquote>
+
+      <p>
+      Taken strictly, that saying answers only the first question and abolishes the
+      second &mdash; if beauty is entirely in the beholder, no work is better than
+      any other, and criticism has nothing to be about. Which is the same
+      structure as moral subjectivism in Part II, transferred from goodness to
+      beauty.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part VI</span>
+      <h2>Society and Thinkers</h2>
+      <p>How power, rights and community have been argued about, and the people who framed the arguments.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="political">
+      <h2>Social and political philosophy</h2>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>School</th><th>Central claim</th><th>Associated with</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Critical theory</td>
+              <td>analyses how power structures shape society and what passes for common sense</td>
+              <td>the Frankfurt School</td>
+            </tr>
+            <tr>
+              <td>Marxism</td>
+              <td>critiques the exploitation of workers by the ownership class; advocates collective control of resources</td>
+              <td>Marx</td>
+            </tr>
+            <tr>
+              <td>Liberalism</td>
+              <td>individual rights and liberties come first</td>
+              <td>Locke</td>
+            </tr>
+            <tr>
+              <td>Communitarianism</td>
+              <td>shared community values take priority over individual preference</td>
+              <td>&mdash;</td>
+            </tr>
+            <tr>
+              <td>Individualism</td>
+              <td>stresses the intrinsic worth and autonomy of the individual</td>
+              <td>&mdash;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      The recurring disagreement is over the unit of value. If it is the person,
+      liberalism and individualism follow; if it is the community or the class,
+      communitarianism and Marxism do. Most practical political argument is this
+      question in disguise.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="philosophers">
+      <h2>Key philosophers</h2>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <caption>Ancient</caption>
+          <thead>
+            <tr><th>Philosopher</th><th>Contribution</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Socrates (c. 469&ndash;399 BCE)</td>
+              <td>a founder of Western philosophy; examined beliefs by questioning &mdash; the method that bears his name</td>
+            </tr>
+            <tr>
+              <td>Confucius (551&ndash;479 BCE)</td>
+              <td>moral virtue, social harmony and ethical conduct</td>
+            </tr>
+            <tr>
+              <td>Plato</td>
+              <td>student of Socrates; wisdom, morality and political philosophy, through dialogues such as <em>The Republic</em></td>
+            </tr>
+            <tr>
+              <td>Aristotle</td>
+              <td>student of Plato; science, ethics, logic and metaphysics; founded the Lyceum in Athens; taught Alexander the Great</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <caption>Christian philosophy</caption>
+          <tbody>
+            <tr>
+              <td>Augustine of Hippo</td>
+              <td>shaped early Christian doctrine by integrating classical philosophy with theology</td>
+            </tr>
+            <tr>
+              <td>Thomas Aquinas</td>
+              <td>studied under Albertus Magnus; systematised Catholic theology in the <em>Summa Theologica</em></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <caption>Early modern</caption>
+          <tbody>
+            <tr>
+              <td>Ren&eacute; Descartes</td>
+              <td><em>Meditations on First Philosophy</em>; reason as the foundation of knowledge</td>
+            </tr>
+            <tr>
+              <td>John Locke</td>
+              <td>trained in medicine; developed empiricism and political theories of natural rights</td>
+            </tr>
+            <tr>
+              <td>David Hume</td>
+              <td>originally educated in law; advanced skepticism and empiricism about knowledge and causation</td>
+            </tr>
+            <tr>
+              <td>Jean-Jacques Rousseau</td>
+              <td>author of <em>The Confessions</em>; ideas about freedom and society that later influenced the French Revolution</td>
+            </tr>
+            <tr>
+              <td>Immanuel Kant</td>
+              <td>knowledge begins with experience, but the mind structures it through innate concepts</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <caption>Nineteenth and twentieth century</caption>
+          <tbody>
+            <tr>
+              <td>G. W. F. Hegel</td>
+              <td>dialectical thinking, which influenced a great many later philosophers</td>
+            </tr>
+            <tr>
+              <td>Karl Marx</td>
+              <td>from a Jewish family that converted to Lutheranism; critique of capitalism; theories of class struggle</td>
+            </tr>
+            <tr>
+              <td>Friedrich Nietzsche</td>
+              <td>sharp criticism of religion and traditional morality</td>
+            </tr>
+            <tr>
+              <td>Ludwig Wittgenstein</td>
+              <td>analytic philosophy and the philosophy of language</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="aside">
+      The chain of teaching is worth noticing on its own: Socrates taught Plato,
+      Plato taught Aristotle, and Aristotle taught Alexander the Great. Three
+      generations of argument, ending in an empire.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
 
   </section>
 
