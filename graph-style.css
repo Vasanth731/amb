@@ -11,19 +11,6 @@ body {
   position: relative;
 }
 
-/* Fixed, viewport-sized pseudo-element rather than background-attachment: fixed
-   on body, sidestepping iOS Safari's fixed-background bugs. See style.css. */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background-image: url('bg_dg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .navbar {
   position: fixed;
   top: 0;
