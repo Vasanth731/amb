@@ -27,6 +27,13 @@ body {
   background-attachment: fixed;
 }
 
+@media (max-width: 768px), (hover: none) and (pointer: coarse) {
+  .scire-page,
+  .feed-page {
+    background-attachment: scroll;
+  }
+}
+
 .navbar {
   position: fixed;
   top: 0;
