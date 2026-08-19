@@ -198,6 +198,14 @@ body {
   opacity: 1;
 }
 
+/* MathJax equations: let long/wide formulas scroll within their own box
+   instead of being silently clipped by body's overflow-x: hidden. */
+mjx-container {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 3em;
