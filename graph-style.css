@@ -8,6 +8,20 @@ body {
   font-family: sans-serif;
   background-color: #000000;
   overflow: hidden;
+  position: relative;
+}
+
+/* Fixed, viewport-sized pseudo-element rather than background-attachment: fixed
+   on body, sidestepping iOS Safari's fixed-background bugs. See style.css. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url('bg_dg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .navbar {
@@ -115,7 +129,7 @@ body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: #000000;
+  background: transparent;
   overflow: hidden;
 }
 
