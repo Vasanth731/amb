@@ -123,6 +123,16 @@ body {
   padding: 40px;
 }
 
+/* Flex items default to min-width: auto, so a child with unbreakable wide
+   content (a MathJax equation, a data table) refuses to shrink to the
+   viewport and overflows the section instead of wrapping/scrolling within
+   it. Force them to respect the container width so their own overflow-x:
+   auto rules (mjx-container, .data-table-wrap) can actually do their job. */
+.hero > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
 .hero h1 {
   font-size: 5em;
   margin-bottom: 30px;
