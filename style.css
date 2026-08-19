@@ -11,6 +11,14 @@ body {
   overflow-x: hidden;
 }
 
+.scire-page {
+  background-image: url('bgimg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -114,7 +122,7 @@ body {
 
 .hero {
   height: 100vh;
-  background: #000000;
+  background: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -147,7 +155,7 @@ body {
 }
 
 .about {
-  background: #000000;
+  background: transparent;
   padding: 120px 40px;
   text-align: center;
 }
