@@ -26,10 +26,16 @@
       margin-top: 26px;
       margin-bottom: 6px;
     }
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 10px 0 30px;
+    }
     .formula-table {
       width: 100%;
+      min-width: 480px;
       border-collapse: collapse;
-      margin: 10px 0 30px;
+      margin: 0;
       color: #ffffff;
       font-size: 0.95em;
     }
@@ -225,6 +231,7 @@
     Each progression has a matching mean, and for positive numbers they always fall in the same order.
     </p>
 
+    <div class="table-wrap">
     <table class="formula-table">
       <thead>
         <tr><th>Mean</th><th>Two numbers \(a, b\)</th><th>General form</th></tr>
@@ -235,6 +242,7 @@
         <tr><td>Harmonic (HM)</td><td>\(\dfrac{2ab}{a+b}\)</td><td>\(\dfrac{n}{\sum 1/x_i}\)</td></tr>
       </tbody>
     </table>
+    </div>
 
     \[
     \mathrm{AM} \ge \mathrm{GM} \ge \mathrm{HM}, \qquad \mathrm{GM}^2 = \mathrm{AM} \times \mathrm{HM}
@@ -278,6 +286,7 @@
     nC_r = \frac{n!}{r!\,(n-r)!}, \qquad nC_r = nC_{n-r}, \qquad nC_r + nC_{r-1} = (n+1)C_r
     \]
 
+    <div class="table-wrap">
     <table class="formula-table">
       <thead>
         <tr><th>Situation</th><th>Count</th></tr>
@@ -290,6 +299,7 @@
         <tr><td>Total subsets of a set of size \(n\)</td><td>\(2^n\)</td></tr>
       </tbody>
     </table>
+    </div>
 
 
     <a class="to-top" href="#top">Back to top</a>
@@ -420,6 +430,7 @@
 
     <h3>Laws of logarithms</h3>
 
+    <div class="table-wrap">
     <table class="formula-table">
       <thead>
         <tr><th>Law</th><th>Statement</th></tr>
@@ -433,6 +444,7 @@
         <tr><td>Identity</td><td>\(a^{\log_a x} = x\)</td></tr>
       </tbody>
     </table>
+    </div>
 
     <p class="note">
     A logarithm turns multiplication into addition, which is exactly why it collapses exponential growth onto a straight line —
@@ -667,6 +679,7 @@
     a determinant of zero means the transformation flattens space, and information is lost.
     </p>
 
+    <div class="table-wrap">
     <table class="formula-table">
       <thead>
         <tr><th>\(|A|\)</th><th>System \(AX = B\)</th></tr>
@@ -677,6 +690,7 @@
         <tr><td>\(|A| = 0\), \(\mathrm{adj}(A)B = 0\)</td><td>Consistent with infinitely many solutions</td></tr>
       </tbody>
     </table>
+    </div>
 
     <p>
     For small systems Cramer's rule gives the solution directly, where \(D_i\) is \(D\) with the \(i\)-th column replaced by the constants:

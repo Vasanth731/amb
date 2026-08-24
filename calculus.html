@@ -27,10 +27,16 @@
       margin-top: 26px;
       margin-bottom: 6px;
     }
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 10px 0 30px;
+    }
     .formula-table {
       width: 100%;
+      min-width: 480px;
       border-collapse: collapse;
-      margin: 10px 0 30px;
+      margin: 0;
       color: #ffffff;
       font-size: 0.95em;
     }
@@ -225,6 +231,7 @@
 
     <h3>Rules of differentiation</h3>
 
+    <div class="table-wrap">
     <table class="formula-table">
       <thead>
         <tr><th>Rule</th><th>Formula</th></tr>
@@ -238,9 +245,11 @@
         <tr><td>Parametric</td><td>\(\dfrac{dy}{dx} = \dfrac{dy/dt}{dx/dt}\)</td></tr>
       </tbody>
     </table>
+    </div>
 
     <h3>Standard derivatives</h3>
 
+    <div class="table-wrap">
     <table class="formula-table">
       <thead>
         <tr><th>\(f(x)\)</th><th>\(f'(x)\)</th><th>\(f(x)\)</th><th>\(f'(x)\)</th></tr>
@@ -253,6 +262,7 @@
         <tr><td>\(\cot x\)</td><td>\(-\mathrm{cosec}^2 x\)</td><td>\(\tan^{-1} x\)</td><td>\(\dfrac{1}{1+x^2}\)</td></tr>
       </tbody>
     </table>
+    </div>
 
     <h3>Implicit differentiation</h3>
 
@@ -286,6 +296,7 @@
     Stationary points occur where \(f'(x) = 0\); the second derivative decides which kind they are.
     </p>
 
+    <div class="table-wrap">
     <table class="formula-table">
       <thead>
         <tr><th>Condition</th><th>Meaning</th></tr>
@@ -298,6 +309,7 @@
         <tr><td>\(f'(x) < 0\)</td><td>Decreasing on that interval</td></tr>
       </tbody>
     </table>
+    </div>
 
     <h3>Motion and related rates</h3>
 
@@ -345,6 +357,7 @@
 
     <h3>Standard integrals</h3>
 
+    <div class="table-wrap">
     <table class="formula-table">
       <thead>
         <tr><th>\(f(x)\)</th><th>\(\int f(x)\,dx\)</th><th>\(f(x)\)</th><th>\(\int f(x)\,dx\)</th></tr>
@@ -356,6 +369,7 @@
         <tr><td>\(\tan x\)</td><td>\(\ln|\sec x| + C\)</td><td>\(\dfrac{1}{\sqrt{1-x^2}}\)</td><td>\(\sin^{-1} x + C\)</td></tr>
       </tbody>
     </table>
+    </div>
 
     <h3>Techniques</h3>
 
@@ -428,6 +442,7 @@
 
     <h3>Areas and volumes</h3>
 
+    <div class="table-wrap">
     <table class="formula-table">
       <thead>
         <tr><th>Quantity</th><th>Formula</th></tr>
@@ -440,6 +455,7 @@
         <tr><td>Mean value of \(f\) on \([a,b]\)</td><td>\(\dfrac{1}{b-a}\displaystyle\int_a^b f(x)\,dx\)</td></tr>
       </tbody>
     </table>
+    </div>
 
 
     <a class="to-top" href="#top">Back to top</a>
