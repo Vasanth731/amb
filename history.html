@@ -46,6 +46,61 @@
     @media (max-width: 600px) {
       .timeline td:first-child { white-space: normal; }
     }
+    /* ---------- contents ---------- */
+    .contents {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 26px;
+      margin-bottom: 10px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    .contents h2 {
+      font-size: 0.8em !important;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 10px 0 !important;
+      opacity: 0.85;
+    }
+
+    .contents ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      columns: 2;
+      column-gap: 28px;
+    }
+
+    .contents li {
+      margin-bottom: 4px;
+      font-size: 0.9em;
+      break-inside: avoid;
+    }
+
+    .contents a {
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .contents a:hover { border-bottom-color: #ffffff; }
+
+    .to-top {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8em;
+      color: #ffffff;
+      opacity: 0.75;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .to-top:hover { opacity: 1; }
+
+    @media (max-width: 640px) {
+      .contents ol { columns: 1; }
+    }
   </style>
 </head>
 <body>
@@ -59,61 +114,100 @@
     </div>
   </nav>
 
-  <section class="hero" style="background-color: #e57979;">
+  <section class="hero" id="top" style="background-color: #e57979;">
     <h1>History</h1>
     <p>
       Revolutions happen all the time in the history and the Agricultural Revolution marked a major turning point in human history, when societies shifted from hunting, gathering, and herding to settled farming. This transition allowed people to produce surplus food, which in turn enabled trade, population growth, and the rise of centralized governments. Early civilizations often developed near rivers, which provided fertile soil, water, and transportation routes, laying the foundation for complex societies.
     </p>
 
-    <h2>Indus Valley Civilization</h2>
+    <nav class="contents" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#indus-valley-civilization">Indus Valley Civilization</a></li>
+        <li><a href="#mesopotamian-civilization">Mesopotamian Civilization</a></li>
+        <li><a href="#egyptian-civilization">Egyptian Civilization</a></li>
+        <li><a href="#persian-civilization">Persian Civilization</a></li>
+        <li><a href="#greek-civilization">Greek Civilization</a></li>
+        <li><a href="#roman-civilization">Roman Civilization</a></li>
+        <li><a href="#dark-ages">Dark Ages</a></li>
+        <li><a href="#mongols-ottomans-and-venice">Mongols, Ottomans, and Venice</a></li>
+        <li><a href="#canada">Canada</a></li>
+        <li><a href="#mexico">Mexico</a></li>
+        <li><a href="#united-states">United States</a></li>
+        <li><a href="#south-america">South America</a></li>
+        <li><a href="#australia">Australia</a></li>
+        <li><a href="#africa-in-the-colonial-era">Africa in the Colonial Era</a></li>
+        <li><a href="#japan">Japan</a></li>
+        <li><a href="#russia">Russia</a></li>
+      </ol>
+    </nav>
+
+
+    <h2 id="indus-valley-civilization">Indus Valley Civilization</h2>
     <p>
       The Indus Valley Civilization, flourishing around 3000 BCE, was one of the world’s earliest urban cultures, centered around cities like Harappa and Mohenjo-daro. These cities were remarkably advanced, featuring well-planned streets, drainage systems, and public structures such as the Great Bath. The civilization is known for its organization and engineering, though much about its writing system and decline remains a mystery.
     </p>
 
 
-    <h2>Mesopotamian Civilization</h2>
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="mesopotamian-civilization">Mesopotamian Civilization</h2>
     <p>
       Mesopotamia, often called the “cradle of civilization,” developed between the Tigris and Euphrates rivers. The city of Uruk was among the first major urban centers, and the region is known for its ziggurats—massive temple structures. Mesopotamia also gave rise to early law codes, such as that of Hammurabi, and powerful empires like the Assyrians and Babylonians, which played key roles in shaping early governance and culture.
     </p>
 
 
-    <h2>Egyptian Civilization</h2>
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="egyptian-civilization">Egyptian Civilization</h2>
     <p>
       Ancient Egyptian civilization thrived along the Nile River, whose predictable flooding supported agriculture and stability. Society was organized into dynasties ruled by pharaohs, who were considered divine. The Egyptians made significant advancements in architecture, writing (hieroglyphics), and religion, leaving behind monumental structures such as pyramids and temples that still stand today.
     </p>
 
 
-    <h2>Persian Civilization</h2>
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="persian-civilization">Persian Civilization</h2>
     <p>
       The Persian Civilization emerged as a powerful empire under leaders like King Cyrus the Great, who established one of the largest empires of the ancient world. Known for its administrative efficiency and tolerance of different cultures, the Persian Empire was documented by historians such as Herodotus. Its dominant religion, Zoroastrianism, introduced ideas about dualism, morality, and the struggle between good and evil.
     </p>
 
 
-    <h2>Greek Civilization</h2>
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="greek-civilization">Greek Civilization</h2>
     <p>
       Greek civilization made lasting contributions to philosophy, democracy, mathematics, and the arts. City-states like Athens, Sparta, and Corinth each had distinct political and social systems. Athens became the center of democracy and culture, symbolized by structures like the Parthenon. The Greeks also experienced major conflicts such as the Peloponnesian War. Later, Alexander the Great expanded Greek influence across a vast empire, which was eventually divided among the Antigonids, Seleucids, and Ptolemies.
     </p>
 
 
-    <h2>Roman Civilization</h2>
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="roman-civilization">Roman Civilization</h2>
     <p>
       According to legend, Rome was founded by Romulus and Remus, twin brothers raised by a she-wolf, on the city’s seven hills. Rome evolved from a monarchy to a republic governed by the Senate, and later into a vast empire. Key historical figures include Pompey, Crassus, and Julius Caesar, whose actions reshaped Roman politics. Rome also had significant interactions with Egypt, particularly through figures like Cleopatra and Ptolemy, influencing the Mediterranean world.
     </p>
 
 
-    <h2>Dark Ages</h2>
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="dark-ages">Dark Ages</h2>
     <p>
       The Dark Ages followed the fall of the Roman Empire and were characterized by political fragmentation and the rise of feudalism. Society was structured around lords, vassals, kings, knights, and peasants, with power often decentralized among feudal lords and warlords. Despite the term “dark,” important cultural and intellectual developments continued, especially in regions like Baghdad, which became a center of learning and scholarship.
     </p>
 
 
-    <h2>Mongols, Ottomans, and Venice</h2>
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="mongols-ottomans-and-venice">Mongols, Ottomans, and Venice</h2>
     <p>
       In the later medieval period, powerful forces reshaped global connections. The Mongols, led by Genghis Khan, created one of the largest empires in history, facilitating trade across Asia. The Byzantine Empire continued the legacy of Rome in the east while facing pressures from so-called “barbarian” groups. The Ottoman Empire rose under powerful sultans, employing complex administrative systems including the use of eunuchs in court roles. Meanwhile, Venice emerged as a major maritime republic, dominating trade routes between Europe and the East.
     </p>
 
 
-    <h2>Canada</h2>
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="canada">Canada</h2>
     <table class="timeline">
       <thead>
         <tr><th>Date</th><th>Event</th></tr>
@@ -138,7 +232,9 @@
     </table>
 
 
-    <h2>Mexico</h2>
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="mexico">Mexico</h2>
     <table class="timeline">
       <thead>
         <tr><th>Date</th><th>Event</th></tr>
@@ -164,7 +260,9 @@
     </table>
 
 
-    <h2>United States</h2>
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="united-states">United States</h2>
     <table class="timeline">
       <thead>
         <tr><th>Date</th><th>Event</th></tr>
@@ -187,7 +285,9 @@
     </table>
 
 
-    <h2>South America</h2>
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="south-america">South America</h2>
     <table class="timeline">
       <thead>
         <tr><th>Date</th><th>Event</th></tr>
@@ -222,7 +322,9 @@
     </table>
 
 
-    <h2>Australia</h2>
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="australia">Australia</h2>
     <table class="timeline">
       <thead>
         <tr><th>Date</th><th>Event</th></tr>
@@ -246,7 +348,9 @@
     </table>
 
 
-    <h2>Africa in the Colonial Era</h2>
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="africa-in-the-colonial-era">Africa in the Colonial Era</h2>
     <table class="timeline">
       <thead>
         <tr><th>Date</th><th>Event</th></tr>
@@ -274,7 +378,9 @@
     </table>
 
 
-    <h2>Japan</h2>
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="japan">Japan</h2>
     <table class="timeline">
       <thead>
         <tr><th>Date</th><th>Event</th></tr>
@@ -296,7 +402,9 @@
     </table>
 
 
-    <h2>Russia</h2>
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="russia">Russia</h2>
     <table class="timeline">
       <thead>
         <tr><th>Date</th><th>Event</th></tr>
@@ -331,6 +439,8 @@
       </tbody>
     </table>
 
+
+    <a class="to-top" href="#top">Back to top</a>
 
   </section>
 

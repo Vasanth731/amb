@@ -20,6 +20,94 @@
       margin-top: 40px;
       margin-bottom: 10px;
     }
+    .hero h3 {
+      font-size: 1.15em;
+      color: #ffffff;
+      opacity: 0.92;
+      margin-top: 26px;
+      margin-bottom: 6px;
+    }
+    .formula-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 30px;
+      color: #ffffff;
+      font-size: 0.95em;
+    }
+    .formula-table th,
+    .formula-table td {
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 8px 12px;
+      text-align: left;
+      vertical-align: middle;
+    }
+    .formula-table th {
+      background-color: rgba(0, 0, 0, 0.18);
+    }
+    .formula-table tbody tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+    .note {
+      border-left: 3px solid rgba(255, 255, 255, 0.6);
+      padding-left: 14px;
+      margin: 18px 0;
+      opacity: 0.95;
+    }
+    /* ---------- contents ---------- */
+    .contents {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 26px;
+      margin-bottom: 10px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    .contents h2 {
+      font-size: 0.8em !important;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 10px 0 !important;
+      opacity: 0.85;
+    }
+
+    .contents ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      columns: 2;
+      column-gap: 28px;
+    }
+
+    .contents li {
+      margin-bottom: 4px;
+      font-size: 0.9em;
+      break-inside: avoid;
+    }
+
+    .contents a {
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .contents a:hover { border-bottom-color: #ffffff; }
+
+    .to-top {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8em;
+      color: #ffffff;
+      opacity: 0.75;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .to-top:hover { opacity: 1; }
+
+    @media (max-width: 640px) {
+      .contents ol { columns: 1; }
+    }
   </style>
 </head>
 <body>
@@ -33,7 +121,7 @@
     </div>
   </nav>
 
-  <section class="hero" style="background-color: #d97dd7;">
+  <section class="hero" id="top" style="background-color: #d97dd7;">
     <h1>Calculus</h1>
 
     <p>
@@ -55,6 +143,399 @@
     <p>
     which represents the slope or the rate of change of \(y\) with respect to \(x\).
     </p>
+
+    <p>
+    The whole subject rests on a single idea: what happens to a quantity as a step size shrinks toward zero.
+    Take that limit of a ratio and you get the derivative; take that limit of a sum and you get the integral.
+    Newton and Leibniz independently discovered that these two are inverse operations, which is why the subject holds together.
+    </p>
+
+
+    <nav class="contents" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#limits">Limits</a></li>
+        <li><a href="#differentiation">Differentiation</a></li>
+        <li><a href="#applications-of-the-derivative">Applications of the Derivative</a></li>
+        <li><a href="#integration">Integration</a></li>
+        <li><a href="#definite-integrals">Definite Integrals</a></li>
+        <li><a href="#differential-equations">Differential Equations</a></li>
+        <li><a href="#series-expansions">Series Expansions</a></li>
+        <li><a href="#functions-of-several-variables">Functions of Several Variables</a></li>
+      </ol>
+    </nav>
+
+
+    <h2 id="limits">Limits</h2>
+
+    <p>
+    A limit describes the value a function approaches, not necessarily the value it takes. Writing
+    \(\lim_{x \to a} f(x) = L\) means \(f(x)\) can be made as close to \(L\) as we like by taking \(x\) close enough to \(a\).
+    </p>
+
+    <h3>Standard limits</h3>
+
+    \[
+    \lim_{x \to 0}\frac{\sin x}{x} = 1, \qquad
+    \lim_{x \to 0}\frac{\tan x}{x} = 1, \qquad
+    \lim_{x \to 0}\frac{1-\cos x}{x^2} = \frac{1}{2}
+    \]
+
+    \[
+    \lim_{x \to 0}\frac{e^x - 1}{x} = 1, \qquad
+    \lim_{x \to 0}\frac{\log(1+x)}{x} = 1, \qquad
+    \lim_{x \to \infty}\left(1 + \frac{1}{x}\right)^x = e
+    \]
+
+    <p>
+    For the indeterminate forms \(\frac{0}{0}\) and \(\frac{\infty}{\infty}\), L'Hôpital's rule differentiates top and bottom separately:
+    </p>
+
+    \[
+    \lim_{x \to a}\frac{f(x)}{g(x)} = \lim_{x \to a}\frac{f'(x)}{g'(x)}
+    \]
+
+    <h3>Continuity</h3>
+
+    <p>
+    A function is continuous at \(x = a\) when the limit exists, the value exists, and the two agree:
+    </p>
+
+    \[
+    \lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x) = f(a)
+    \]
+
+    <p class="note">
+    Every differentiable function is continuous, but the reverse fails — \(f(x) = |x|\) is continuous at the origin
+    yet has no single tangent there.
+    </p>
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="differentiation">Differentiation</h2>
+
+    <p>
+    The derivative is defined as the limit of the slope of a chord as the two points merge:
+    </p>
+
+    \[
+    \frac{dy}{dx} = \lim_{h \to 0}\frac{f(x+h) - f(x)}{h}
+    \]
+
+    <h3>Rules of differentiation</h3>
+
+    <table class="formula-table">
+      <thead>
+        <tr><th>Rule</th><th>Formula</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Power</td><td>\(\dfrac{d}{dx}(x^n) = nx^{n-1}\)</td></tr>
+        <tr><td>Sum</td><td>\((u \pm v)' = u' \pm v'\)</td></tr>
+        <tr><td>Product</td><td>\((uv)' = u'v + uv'\)</td></tr>
+        <tr><td>Quotient</td><td>\(\left(\dfrac{u}{v}\right)' = \dfrac{u'v - uv'}{v^2}\)</td></tr>
+        <tr><td>Chain</td><td>\(\dfrac{dy}{dx} = \dfrac{dy}{du} \cdot \dfrac{du}{dx}\)</td></tr>
+        <tr><td>Parametric</td><td>\(\dfrac{dy}{dx} = \dfrac{dy/dt}{dx/dt}\)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Standard derivatives</h3>
+
+    <table class="formula-table">
+      <thead>
+        <tr><th>\(f(x)\)</th><th>\(f'(x)\)</th><th>\(f(x)\)</th><th>\(f'(x)\)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>\(\sin x\)</td><td>\(\cos x\)</td><td>\(e^x\)</td><td>\(e^x\)</td></tr>
+        <tr><td>\(\cos x\)</td><td>\(-\sin x\)</td><td>\(a^x\)</td><td>\(a^x \ln a\)</td></tr>
+        <tr><td>\(\tan x\)</td><td>\(\sec^2 x\)</td><td>\(\ln x\)</td><td>\(\dfrac{1}{x}\)</td></tr>
+        <tr><td>\(\sec x\)</td><td>\(\sec x \tan x\)</td><td>\(\sin^{-1} x\)</td><td>\(\dfrac{1}{\sqrt{1-x^2}}\)</td></tr>
+        <tr><td>\(\cot x\)</td><td>\(-\mathrm{cosec}^2 x\)</td><td>\(\tan^{-1} x\)</td><td>\(\dfrac{1}{1+x^2}\)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Implicit differentiation</h3>
+
+    <p>
+    When \(y\) cannot be isolated, differentiate both sides with respect to \(x\) and treat \(y\) as a function of \(x\).
+    For \(x^2 + y^2 = r^2\):
+    </p>
+
+    \[
+    2x + 2y\frac{dy}{dx} = 0 \quad \Longrightarrow \quad \frac{dy}{dx} = -\frac{x}{y}
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="applications-of-the-derivative">Applications of the Derivative</h2>
+
+    <h3>Tangents and normals</h3>
+
+    <p>
+    At the point \((x_1, y_1)\) the tangent has slope \(m = \left.\frac{dy}{dx}\right|_{(x_1,y_1)}\), and the normal is perpendicular to it:
+    </p>
+
+    \[
+    y - y_1 = m(x - x_1), \qquad y - y_1 = -\frac{1}{m}(x - x_1)
+    \]
+
+    <h3>Maxima and minima</h3>
+
+    <p>
+    Stationary points occur where \(f'(x) = 0\); the second derivative decides which kind they are.
+    </p>
+
+    <table class="formula-table">
+      <thead>
+        <tr><th>Condition</th><th>Meaning</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>\(f'(x) = 0,\ f''(x) < 0\)</td><td>Local maximum</td></tr>
+        <tr><td>\(f'(x) = 0,\ f''(x) > 0\)</td><td>Local minimum</td></tr>
+        <tr><td>\(f''(x) = 0\) with a sign change</td><td>Point of inflection</td></tr>
+        <tr><td>\(f'(x) > 0\)</td><td>Increasing on that interval</td></tr>
+        <tr><td>\(f'(x) < 0\)</td><td>Decreasing on that interval</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Motion and related rates</h3>
+
+    <p>
+    This is the use Newton built the subject for. Position, velocity and acceleration are successive derivatives with respect to time:
+    </p>
+
+    \[
+    v = \frac{ds}{dt}, \qquad a = \frac{dv}{dt} = \frac{d^2s}{dt^2}
+    \]
+
+    <p>
+    When two quantities are linked, the chain rule links their rates. If a spherical balloon is inflated,
+    \(V = \tfrac{4}{3}\pi r^3\) gives
+    </p>
+
+    \[
+    \frac{dV}{dt} = 4\pi r^2 \frac{dr}{dt}
+    \]
+
+    <h3>Mean value theorem</h3>
+
+    <p>
+    If \(f\) is continuous on \([a,b]\) and differentiable on \((a,b)\), then somewhere inside the interval the instantaneous
+    rate equals the average rate:
+    </p>
+
+    \[
+    f'(c) = \frac{f(b) - f(a)}{b - a}
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="integration">Integration</h2>
+
+    <p>
+    Integration reverses differentiation and accumulates quantities. The indefinite integral carries an arbitrary constant
+    because differentiation destroys constant terms.
+    </p>
+
+    \[
+    \int x^n \, dx = \frac{x^{n+1}}{n+1} + C, \qquad n \ne -1
+    \]
+
+    <h3>Standard integrals</h3>
+
+    <table class="formula-table">
+      <thead>
+        <tr><th>\(f(x)\)</th><th>\(\int f(x)\,dx\)</th><th>\(f(x)\)</th><th>\(\int f(x)\,dx\)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>\(\dfrac{1}{x}\)</td><td>\(\ln|x| + C\)</td><td>\(e^x\)</td><td>\(e^x + C\)</td></tr>
+        <tr><td>\(\sin x\)</td><td>\(-\cos x + C\)</td><td>\(\sec^2 x\)</td><td>\(\tan x + C\)</td></tr>
+        <tr><td>\(\cos x\)</td><td>\(\sin x + C\)</td><td>\(\dfrac{1}{1+x^2}\)</td><td>\(\tan^{-1} x + C\)</td></tr>
+        <tr><td>\(\tan x\)</td><td>\(\ln|\sec x| + C\)</td><td>\(\dfrac{1}{\sqrt{1-x^2}}\)</td><td>\(\sin^{-1} x + C\)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Techniques</h3>
+
+    <p>
+    Substitution undoes the chain rule, letting \(u = g(x)\) so that \(du = g'(x)\,dx\):
+    </p>
+
+    \[
+    \int f(g(x))\,g'(x)\,dx = \int f(u)\,du
+    \]
+
+    <p>
+    Integration by parts undoes the product rule, and the choice of \(u\) usually follows the ILATE order —
+    inverse, logarithmic, algebraic, trigonometric, exponential:
+    </p>
+
+    \[
+    \int u\,dv = uv - \int v\,du
+    \]
+
+    <p>
+    Partial fractions split a rational function into pieces that can each be integrated directly:
+    </p>
+
+    \[
+    \frac{px + q}{(x-a)(x-b)} = \frac{A}{x-a} + \frac{B}{x-b}
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="definite-integrals">Definite Integrals</h2>
+
+    <p>
+    The definite integral is the limit of a sum of thin rectangles — exactly the \(\int dA = dx \times y\) idea above,
+    made precise:
+    </p>
+
+    \[
+    \int_a^b f(x)\,dx = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i)\,\Delta x
+    \]
+
+    <p>
+    The Fundamental Theorem of Calculus is what connects the two halves of the subject, turning an infinite sum into a
+    subtraction of antiderivative values:
+    </p>
+
+    \[
+    \int_a^b f(x)\,dx = F(b) - F(a), \qquad \text{where } F'(x) = f(x)
+    \]
+
+    <h3>Properties</h3>
+
+    \[
+    \int_a^b f(x)\,dx = -\int_b^a f(x)\,dx, \qquad
+    \int_a^b f(x)\,dx = \int_a^c f(x)\,dx + \int_c^b f(x)\,dx
+    \]
+
+    \[
+    \int_a^b f(x)\,dx = \int_a^b f(a+b-x)\,dx
+    \]
+
+    \[
+    \int_{-a}^{a} f(x)\,dx =
+    \begin{cases}
+    2\displaystyle\int_0^a f(x)\,dx, & f \text{ even} \\[6pt]
+    0, & f \text{ odd}
+    \end{cases}
+    \]
+
+    <h3>Areas and volumes</h3>
+
+    <table class="formula-table">
+      <thead>
+        <tr><th>Quantity</th><th>Formula</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Area under a curve</td><td>\(\displaystyle\int_a^b y\,dx\)</td></tr>
+        <tr><td>Area between two curves</td><td>\(\displaystyle\int_a^b (y_{\text{upper}} - y_{\text{lower}})\,dx\)</td></tr>
+        <tr><td>Volume of revolution about \(x\)</td><td>\(\displaystyle\pi\int_a^b y^2\,dx\)</td></tr>
+        <tr><td>Arc length</td><td>\(\displaystyle\int_a^b \sqrt{1 + \left(\frac{dy}{dx}\right)^2}\,dx\)</td></tr>
+        <tr><td>Mean value of \(f\) on \([a,b]\)</td><td>\(\dfrac{1}{b-a}\displaystyle\int_a^b f(x)\,dx\)</td></tr>
+      </tbody>
+    </table>
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="differential-equations">Differential Equations</h2>
+
+    <p>
+    A differential equation relates a function to its own rate of change, which is how most physical laws are actually written.
+    The simplest kind separates:
+    </p>
+
+    \[
+    \frac{dy}{dx} = f(x)g(y) \quad \Longrightarrow \quad \int \frac{dy}{g(y)} = \int f(x)\,dx
+    \]
+
+    <p>
+    A first-order linear equation is solved with an integrating factor:
+    </p>
+
+    \[
+    \frac{dy}{dx} + P(x)y = Q(x), \qquad \mathrm{IF} = e^{\int P\,dx}
+    \]
+
+    \[
+    y \cdot \mathrm{IF} = \int Q \cdot \mathrm{IF}\,dx + C
+    \]
+
+    <p>
+    Exponential growth and decay is the canonical example — when the rate of change is proportional to the amount present:
+    </p>
+
+    \[
+    \frac{dN}{dt} = kN \quad \Longrightarrow \quad N = N_0 e^{kt}
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="series-expansions">Series Expansions</h2>
+
+    <p>
+    A smooth function can be rebuilt near a point from its derivatives there. Taylor's series does this around \(x = a\),
+    and Maclaurin's series is the special case \(a = 0\):
+    </p>
+
+    \[
+    f(x) = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3 + \cdots
+    \]
+
+    \[
+    e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
+    \]
+
+    \[
+    \sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots, \qquad
+    \cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots
+    \]
+
+    <p class="note">
+    Comparing the series for \(e^{ix}\), \(\cos x\) and \(\sin x\) term by term produces Euler's formula
+    \(e^{ix} = \cos x + i\sin x\) — the link between calculus and the polar form of complex numbers in Algebra.
+    </p>
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="functions-of-several-variables">Functions of Several Variables</h2>
+
+    <p>
+    When a quantity depends on more than one variable, a partial derivative measures its change in one direction
+    while the others are held fixed:
+    </p>
+
+    \[
+    \frac{\partial z}{\partial x}, \qquad \frac{\partial z}{\partial y}
+    \]
+
+    <p>
+    The total differential combines them to give the overall change:
+    </p>
+
+    \[
+    dz = \frac{\partial z}{\partial x}dx + \frac{\partial z}{\partial y}dy
+    \]
+
+    <p>
+    The gradient vector points in the direction of steepest increase, which is the basis of optimisation methods
+    used well beyond pure mathematics:
+    </p>
+
+    \[
+    \nabla f = \left(\frac{\partial f}{\partial x},\, \frac{\partial f}{\partial y},\, \frac{\partial f}{\partial z}\right)
+    \]
+
+    <a class="to-top" href="#top">Back to top</a>
+
   </section>
 
   <script src="script.js"></script>

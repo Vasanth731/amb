@@ -19,6 +19,94 @@
       margin-top: 40px;
       margin-bottom: 10px;
     }
+    .hero h3 {
+      font-size: 1.15em;
+      color: #ffffff;
+      opacity: 0.92;
+      margin-top: 26px;
+      margin-bottom: 6px;
+    }
+    .formula-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 30px;
+      color: #ffffff;
+      font-size: 0.95em;
+    }
+    .formula-table th,
+    .formula-table td {
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 8px 12px;
+      text-align: left;
+      vertical-align: middle;
+    }
+    .formula-table th {
+      background-color: rgba(0, 0, 0, 0.18);
+    }
+    .formula-table tbody tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+    .note {
+      border-left: 3px solid rgba(255, 255, 255, 0.6);
+      padding-left: 14px;
+      margin: 18px 0;
+      opacity: 0.95;
+    }
+    /* ---------- contents ---------- */
+    .contents {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 26px;
+      margin-bottom: 10px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    .contents h2 {
+      font-size: 0.8em !important;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 10px 0 !important;
+      opacity: 0.85;
+    }
+
+    .contents ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      columns: 2;
+      column-gap: 28px;
+    }
+
+    .contents li {
+      margin-bottom: 4px;
+      font-size: 0.9em;
+      break-inside: avoid;
+    }
+
+    .contents a {
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .contents a:hover { border-bottom-color: #ffffff; }
+
+    .to-top {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8em;
+      color: #ffffff;
+      opacity: 0.75;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .to-top:hover { opacity: 1; }
+
+    @media (max-width: 640px) {
+      .contents ol { columns: 1; }
+    }
   </style>
 </head>
 <body>
@@ -32,13 +120,84 @@
     </div>
   </nav>
 
-  <section class="hero" style="background-color: #b4d781;">
+  <section class="hero" id="top" style="background-color: #b4d781;">
     <h1>Geometry</h1>
 
     <p>
-    Take any shape; it can often be classified into one of the conic sections. Straight lines can be written as 
+    Take any shape; it can often be classified into one of the conic sections. Straight lines can be written as
     \(y = mx + c\) or \(\frac{x}{a} + \frac{y}{b} = 1\).
     </p>
+
+
+    <nav class="contents" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#the-coordinate-plane">The Coordinate Plane</a></li>
+        <li><a href="#circles">Circles</a></li>
+        <li><a href="#conic-sections">Conic Sections</a></li>
+        <li><a href="#triangles-and-polygons">Triangles and Polygons</a></li>
+        <li><a href="#mensuration">Mensuration</a></li>
+        <li><a href="#three-dimensional-geometry">Three-Dimensional Geometry</a></li>
+        <li><a href="#vectors">Vectors</a></li>
+      </ol>
+    </nav>
+
+
+    <h2 id="the-coordinate-plane">The Coordinate Plane</h2>
+
+    <p>
+    Coordinate geometry, introduced by Descartes, turns geometric questions into algebraic ones by attaching numbers to points.
+    Once that translation is made, a distance becomes a formula and an intersection becomes a pair of simultaneous equations.
+    </p>
+
+    <table class="formula-table">
+      <thead>
+        <tr><th>Quantity</th><th>Formula</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Distance between two points</td><td>\(\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}\)</td></tr>
+        <tr><td>Midpoint</td><td>\(\left(\dfrac{x_1+x_2}{2},\, \dfrac{y_1+y_2}{2}\right)\)</td></tr>
+        <tr><td>Section formula (ratio \(m:n\))</td><td>\(\left(\dfrac{mx_2+nx_1}{m+n},\, \dfrac{my_2+ny_1}{m+n}\right)\)</td></tr>
+        <tr><td>Slope</td><td>\(m = \dfrac{y_2-y_1}{x_2-x_1} = \tan\theta\)</td></tr>
+        <tr><td>Area of a triangle</td><td>\(\tfrac{1}{2}\left|x_1(y_2-y_3) + x_2(y_3-y_1) + x_3(y_1-y_2)\right|\)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Forms of a straight line</h3>
+
+    \[
+    y = mx + c \quad \text{(slope–intercept)}, \qquad
+    y - y_1 = m(x - x_1) \quad \text{(point–slope)}
+    \]
+
+    \[
+    \frac{x}{a} + \frac{y}{b} = 1 \quad \text{(intercept)}, \qquad
+    ax + by + c = 0 \quad \text{(general)}
+    \]
+
+    <h3>Relationships between lines</h3>
+
+    <p>
+    Two lines are parallel when their slopes are equal and perpendicular when the product of their slopes is \(-1\).
+    The angle between them, and the distance from a point to a line, follow directly:
+    </p>
+
+    \[
+    \tan\theta = \left|\frac{m_1 - m_2}{1 + m_1m_2}\right|
+    \]
+
+    \[
+    d = \frac{|ax_1 + by_1 + c|}{\sqrt{a^2 + b^2}}
+    \]
+
+    \[
+    m_1 = m_2 \ \text{(parallel)}, \qquad m_1m_2 = -1 \ \text{(perpendicular)}
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="circles">Circles</h2>
 
     <p>
     Circles can be expressed as
@@ -53,12 +212,74 @@
     </p>
 
     <p>
+    A line meets a circle in two points, one point or none, and which case occurs is decided by comparing the perpendicular
+    distance from the centre with the radius. The line \(y = mx + c\) is tangent to \(x^2 + y^2 = r^2\) exactly when
+    </p>
+
+    \[
+    c^2 = r^2(1 + m^2)
+    \]
+
+    <p>
+    The tangent at a point \((x_1, y_1)\) on the circle is obtained by the rule of replacing \(x^2\) with \(xx_1\) and \(y^2\) with \(yy_1\):
+    </p>
+
+    \[
+    xx_1 + yy_1 = r^2
+    \]
+
+    <p>
+    The length of a tangent drawn from an external point \((x_1, y_1)\) is
+    </p>
+
+    \[
+    L = \sqrt{x_1^2 + y_1^2 + 2gx_1 + 2fy_1 + c}
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="conic-sections">Conic Sections</h2>
+
+    <p>
+    All the curves below arise from slicing a double cone at different angles — which is why one definition covers them all.
+    A conic is the locus of points whose distance from a fixed point (the focus) is a constant multiple \(e\) (the eccentricity)
+    of the distance from a fixed line (the directrix).
+    </p>
+
+    <table class="formula-table">
+      <thead>
+        <tr><th>Conic</th><th>Eccentricity</th><th>Standard form</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Circle</td><td>\(e = 0\)</td><td>\(x^2 + y^2 = r^2\)</td></tr>
+        <tr><td>Ellipse</td><td>\(0 < e < 1\)</td><td>\(\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1\)</td></tr>
+        <tr><td>Parabola</td><td>\(e = 1\)</td><td>\(y^2 = 4ax\)</td></tr>
+        <tr><td>Hyperbola</td><td>\(e > 1\)</td><td>\(\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1\)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Parabola</h3>
+
+    <p>
     A parabola is written as
     \[
     y^2 = 4ax
     \]
     which represents a classic rightward opening parabola.
     </p>
+
+    <p>
+    Its focus is at \((a, 0)\), its directrix is the line \(x = -a\), and its latus rectum — the chord through the focus
+    perpendicular to the axis — has length \(4a\). The reflective property, that all rays parallel to the axis pass through
+    the focus, is what makes this shape the basis of satellite dishes and headlight reflectors.
+    </p>
+
+    \[
+    y = mx + \frac{a}{m} \quad \text{(tangent condition for } y^2 = 4ax)
+    \]
+
+    <h3>Ellipse and hyperbola</h3>
 
     <p>
     An ellipse is
@@ -74,6 +295,159 @@
 
     where \((ae,0)\) and \((-ae,0)\) are the foci and \((a,0)\) and \((-a,0)\) are the vertices.
     </p>
+
+    <p>
+    The eccentricity of each is fixed by the relationship between \(a\) and \(b\):
+    </p>
+
+    \[
+    b^2 = a^2(1 - e^2) \quad \text{(ellipse)}, \qquad b^2 = a^2(e^2 - 1) \quad \text{(hyperbola)}
+    \]
+
+    <p>
+    An ellipse is the locus of points whose distances to the two foci sum to a constant \(2a\), while a hyperbola is the locus
+    where that difference is constant. The hyperbola also has asymptotes it approaches but never meets:
+    </p>
+
+    \[
+    y = \pm\frac{b}{a}x
+    \]
+
+    <p class="note">
+    Kepler found that planets travel on ellipses with the Sun at one focus, and Newton later derived that fact from his
+    inverse-square law of gravitation — conic sections turned out to be the shapes of orbits.
+    </p>
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="triangles-and-polygons">Triangles and Polygons</h2>
+
+    <p>
+    Classical geometry concerns shapes rather than coordinates, and the triangle is its central object.
+    Four notable centres arise from four different constructions:
+    </p>
+
+    <table class="formula-table">
+      <thead>
+        <tr><th>Centre</th><th>Constructed from</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Centroid</td><td>Intersection of the medians, at \(\left(\dfrac{x_1+x_2+x_3}{3},\, \dfrac{y_1+y_2+y_3}{3}\right)\)</td></tr>
+        <tr><td>Incentre</td><td>Intersection of the angle bisectors; centre of the inscribed circle</td></tr>
+        <tr><td>Circumcentre</td><td>Intersection of the perpendicular bisectors; centre of the circumscribed circle</td></tr>
+        <tr><td>Orthocentre</td><td>Intersection of the altitudes</td></tr>
+      </tbody>
+    </table>
+
+    <p>
+    Pythagoras' theorem holds for right-angled triangles, and the cosine rule generalises it to any triangle —
+    the extra term vanishes precisely when the angle is a right angle.
+    </p>
+
+    \[
+    a^2 + b^2 = c^2, \qquad c^2 = a^2 + b^2 - 2ab\cos C
+    \]
+
+    <p>
+    For a regular polygon with \(n\) sides, the interior and exterior angles are
+    </p>
+
+    \[
+    \text{Interior} = \frac{(n-2)\times 180^\circ}{n}, \qquad \text{Exterior} = \frac{360^\circ}{n}
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="mensuration">Mensuration</h2>
+
+    <table class="formula-table">
+      <thead>
+        <tr><th>Solid</th><th>Volume</th><th>Surface area</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sphere</td><td>\(\dfrac{4}{3}\pi r^3\)</td><td>\(4\pi r^2\)</td></tr>
+        <tr><td>Cylinder</td><td>\(\pi r^2 h\)</td><td>\(2\pi r(r+h)\)</td></tr>
+        <tr><td>Cone</td><td>\(\dfrac{1}{3}\pi r^2 h\)</td><td>\(\pi r(r + l)\), \(l = \sqrt{r^2+h^2}\)</td></tr>
+        <tr><td>Cuboid</td><td>\(lbh\)</td><td>\(2(lb + bh + hl)\)</td></tr>
+        <tr><td>Pyramid</td><td>\(\dfrac{1}{3} \times \text{base area} \times h\)</td><td>Base \(+\) sum of triangular faces</td></tr>
+      </tbody>
+    </table>
+
+    <p>
+    Sector and arc measurements in a circle of radius \(r\), with \(\theta\) in radians:
+    </p>
+
+    \[
+    \text{Arc} = r\theta, \qquad \text{Sector area} = \frac{1}{2}r^2\theta
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="three-dimensional-geometry">Three-Dimensional Geometry</h2>
+
+    <p>
+    Extending coordinates to space adds a third axis, and the same distance idea carries over:
+    </p>
+
+    \[
+    d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2}
+    \]
+
+    <p>
+    A line through a point with direction ratios \(a, b, c\) is written in symmetric form, and a plane is written
+    with a normal vector \((a, b, c)\):
+    </p>
+
+    \[
+    \frac{x-x_1}{a} = \frac{y-y_1}{b} = \frac{z-z_1}{c}
+    \]
+
+    \[
+    ax + by + cz + d = 0
+    \]
+
+    <p>
+    The distance from a point to a plane extends the two-dimensional formula by one term:
+    </p>
+
+    \[
+    D = \frac{|ax_1 + by_1 + cz_1 + d|}{\sqrt{a^2+b^2+c^2}}
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="vectors">Vectors</h2>
+
+    <p>
+    A vector carries both magnitude and direction, which makes it the natural language for geometry in space.
+    The two products encode the two questions we most often ask about a pair of directions.
+    </p>
+
+    \[
+    \vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos\theta
+    \]
+
+    \[
+    |\vec{a} \times \vec{b}| = |\vec{a}||\vec{b}|\sin\theta
+    \]
+
+    <p>
+    The dot product measures how much two vectors point the same way and vanishes when they are perpendicular.
+    The cross product produces a vector perpendicular to both, whose magnitude equals the area of the parallelogram they span.
+    The scalar triple product gives the volume of the parallelepiped formed by three vectors, and is zero exactly when
+    they lie in a common plane:
+    </p>
+
+    \[
+    V = |\vec{a} \cdot (\vec{b} \times \vec{c})|
+    \]
+
+    <a class="to-top" href="#top">Back to top</a>
+
   </section>
 
   <script src="script.js"></script>

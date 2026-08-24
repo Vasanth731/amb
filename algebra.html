@@ -19,6 +19,94 @@
       margin-top: 40px;
       margin-bottom: 10px;
     }
+    .hero h3 {
+      font-size: 1.15em;
+      color: #ffffff;
+      opacity: 0.92;
+      margin-top: 26px;
+      margin-bottom: 6px;
+    }
+    .formula-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 30px;
+      color: #ffffff;
+      font-size: 0.95em;
+    }
+    .formula-table th,
+    .formula-table td {
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 8px 12px;
+      text-align: left;
+      vertical-align: middle;
+    }
+    .formula-table th {
+      background-color: rgba(0, 0, 0, 0.18);
+    }
+    .formula-table tbody tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+    .note {
+      border-left: 3px solid rgba(255, 255, 255, 0.6);
+      padding-left: 14px;
+      margin: 18px 0;
+      opacity: 0.95;
+    }
+    /* ---------- contents ---------- */
+    .contents {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 26px;
+      margin-bottom: 10px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    .contents h2 {
+      font-size: 0.8em !important;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 10px 0 !important;
+      opacity: 0.85;
+    }
+
+    .contents ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      columns: 2;
+      column-gap: 28px;
+    }
+
+    .contents li {
+      margin-bottom: 4px;
+      font-size: 0.9em;
+      break-inside: avoid;
+    }
+
+    .contents a {
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .contents a:hover { border-bottom-color: #ffffff; }
+
+    .to-top {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8em;
+      color: #ffffff;
+      opacity: 0.75;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .to-top:hover { opacity: 1; }
+
+    @media (max-width: 640px) {
+      .contents ol { columns: 1; }
+    }
   </style>
 </head>
 <body>
@@ -32,13 +120,70 @@
     </div>
   </nav>
 
-  <section class="hero" style="background-color: #6fb3d5;">
+  <section class="hero" id="top" style="background-color: #6fb3d5;">
     <h1>Algebra</h1>
 
     <p>
-    Algebra serves as a gateway to mathematics. Patterns and problems can be written symbolically and solved using 
+    Algebra serves as a gateway to mathematics. Patterns and problems can be written symbolically and solved using
     different algebraic concepts. Natural patterns such as flower petals are often described through sequences and series.
     </p>
+
+
+    <nav class="contents" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#sets-and-number-systems">Sets and Number Systems</a></li>
+        <li><a href="#sequences-and-series">Sequences and Series</a></li>
+        <li><a href="#permutations-and-combinations">Permutations and Combinations</a></li>
+        <li><a href="#probability">Probability</a></li>
+        <li><a href="#statistics">Statistics</a></li>
+        <li><a href="#logarithms-and-the-binomial-theorem">Logarithms and the Binomial Theorem</a></li>
+        <li><a href="#polynomials">Polynomials</a></li>
+        <li><a href="#quadratic-equations">Quadratic Equations</a></li>
+        <li><a href="#complex-numbers">Complex Numbers</a></li>
+        <li><a href="#trigonometry">Trigonometry</a></li>
+        <li><a href="#matrices-and-determinants">Matrices and Determinants</a></li>
+      </ol>
+    </nav>
+
+
+    <h2 id="sets-and-number-systems">Sets and Number Systems</h2>
+
+    <p>
+    Every algebraic statement lives inside some number system, and each system is built by patching a gap in the one before it.
+    The naturals \(\mathbb{N}\) cannot subtract freely, so we build the integers \(\mathbb{Z}\); the integers cannot divide freely,
+    so we build the rationals \(\mathbb{Q}\); the rationals leave gaps such as \(\sqrt{2}\), so we build the reals \(\mathbb{R}\);
+    and the reals cannot solve \(x^2 = -1\), so we build the complex numbers \(\mathbb{C}\).
+    </p>
+
+    \[
+    \mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}
+    \]
+
+    <p>
+    Counting the elements of overlapping collections uses the inclusion–exclusion principle:
+    </p>
+
+    \[
+    n(A \cup B) = n(A) + n(B) - n(A \cap B)
+    \]
+
+    \[
+    n(A \cup B \cup C) = n(A) + n(B) + n(C) - n(A \cap B) - n(B \cap C) - n(A \cap C) + n(A \cap B \cap C)
+    \]
+
+    <p>
+    De Morgan's laws relate unions and intersections through complements:
+    </p>
+
+    \[
+    (A \cup B)' = A' \cap B', \qquad (A \cap B)' = A' \cup B'
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="sequences-and-series">Sequences and Series</h2>
 
     <p>
     Arithmetic progression:
@@ -67,6 +212,53 @@
     </p>
 
     <p>
+    When \(|r| < 1\), a geometric series has a finite sum even though it never stops:
+    </p>
+
+    \[
+    S_\infty = \frac{a}{1-r}, \qquad |r| < 1
+    \]
+
+    <h3>Means and the AM–GM–HM inequality</h3>
+
+    <p>
+    Each progression has a matching mean, and for positive numbers they always fall in the same order.
+    </p>
+
+    <table class="formula-table">
+      <thead>
+        <tr><th>Mean</th><th>Two numbers \(a, b\)</th><th>General form</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Arithmetic (AM)</td><td>\(\dfrac{a+b}{2}\)</td><td>\(\dfrac{1}{n}\sum x_i\)</td></tr>
+        <tr><td>Geometric (GM)</td><td>\(\sqrt{ab}\)</td><td>\(\left(\prod x_i\right)^{1/n}\)</td></tr>
+        <tr><td>Harmonic (HM)</td><td>\(\dfrac{2ab}{a+b}\)</td><td>\(\dfrac{n}{\sum 1/x_i}\)</td></tr>
+      </tbody>
+    </table>
+
+    \[
+    \mathrm{AM} \ge \mathrm{GM} \ge \mathrm{HM}, \qquad \mathrm{GM}^2 = \mathrm{AM} \times \mathrm{HM}
+    \]
+
+    <p>
+    Equality holds only when all the numbers are equal — which is why AM–GM is such a common tool for proving
+    that a quantity is minimised at a symmetric point.
+    </p>
+
+    <h3>Standard summations</h3>
+
+    \[
+    \sum_{k=1}^{n} k = \frac{n(n+1)}{2}, \qquad
+    \sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}, \qquad
+    \sum_{k=1}^{n} k^3 = \left[\frac{n(n+1)}{2}\right]^2
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="permutations-and-combinations">Permutations and Combinations</h2>
+
+    <p>
     Permutations and combinations:
     \[
     nP_r = \frac{n!}{(n-r)!}
@@ -76,6 +268,33 @@
     nP_r = r! \times nC_r
     \]
     </p>
+
+    <p>
+    A permutation counts arrangements, where order matters; a combination counts selections, where it does not.
+    The factor of \(r!\) between them is exactly the number of ways of ordering the \(r\) chosen objects.
+    </p>
+
+    \[
+    nC_r = \frac{n!}{r!\,(n-r)!}, \qquad nC_r = nC_{n-r}, \qquad nC_r + nC_{r-1} = (n+1)C_r
+    \]
+
+    <table class="formula-table">
+      <thead>
+        <tr><th>Situation</th><th>Count</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Arrangements of \(n\) distinct objects</td><td>\(n!\)</td></tr>
+        <tr><td>Arrangements with repeats \(p, q, r\) alike</td><td>\(\dfrac{n!}{p!\,q!\,r!}\)</td></tr>
+        <tr><td>Circular arrangements of \(n\) objects</td><td>\((n-1)!\)</td></tr>
+        <tr><td>Selections allowing repetition</td><td>\((n+r-1)C_r\)</td></tr>
+        <tr><td>Total subsets of a set of size \(n\)</td><td>\(2^n\)</td></tr>
+      </tbody>
+    </table>
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="probability">Probability</h2>
 
     <p>
     Probability and statistics describe uncertainty in events.
@@ -92,6 +311,47 @@
     P(A) = \frac{n(A)}{n(S)}
     \]
     </p>
+
+    <p>
+    From the conditional formula everything else follows. The addition rule handles "or", the multiplication rule handles "and",
+    and Bayes' theorem reverses the direction of the conditioning:
+    </p>
+
+    \[
+    P(A \cup B) = P(A) + P(B) - P(A \cap B)
+    \]
+
+    \[
+    P(A \cap B) = P(A)\,P(B|A) = P(B)\,P(A|B)
+    \]
+
+    \[
+    P(A|B) = \frac{P(B|A)\,P(A)}{P(B)}
+    \]
+
+    <p>
+    Two events are independent precisely when \(P(A \cap B) = P(A)P(B)\), which is the same as saying \(P(A|B) = P(A)\) —
+    knowing \(B\) tells you nothing about \(A\).
+    </p>
+
+    <h3>Binomial distribution</h3>
+
+    <p>
+    For \(n\) independent trials each succeeding with probability \(p\):
+    </p>
+
+    \[
+    P(X = r) = nC_r\, p^r q^{\,n-r}, \qquad q = 1-p
+    \]
+
+    \[
+    \mu = np, \qquad \sigma^2 = npq
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="statistics">Statistics</h2>
 
     <p>
     Standard deviation:
@@ -115,18 +375,96 @@
     </p>
 
     <p>
+    The mean, median and mode each describe the centre of a distribution but respond differently to outliers: the mean is dragged
+    toward extreme values, while the median is not. For a moderately skewed distribution they are related empirically by
+    </p>
+
+    \[
+    \text{Mode} \approx 3\,\text{Median} - 2\,\text{Mean}
+    \]
+
+    <p>
+    To compare spread across data sets with different units, the coefficient of variation expresses deviation as a percentage of the mean:
+    </p>
+
+    \[
+    \mathrm{CV} = \frac{\sigma}{\bar{x}} \times 100\%
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="logarithms-and-the-binomial-theorem">Logarithms and the Binomial Theorem</h2>
+
+    <p>
     Logarithms and the Binomial Theorem introduce functions.
     </p>
 
     <p>
     \[
-    (x+y)^n = {n \choose r} x^{n-r}y^r
+    (x+y)^n = \sum_{r=0}^{n} {n \choose r} x^{n-r}y^r
     \]
 
     \[
     \log_a b = \frac{\log_c b}{\log_c a}
     \]
     </p>
+
+    <p>
+    The general term of the expansion is the piece to reach for when a specific coefficient is wanted:
+    </p>
+
+    \[
+    T_{r+1} = {n \choose r} x^{n-r} y^r
+    \]
+
+    <h3>Laws of logarithms</h3>
+
+    <table class="formula-table">
+      <thead>
+        <tr><th>Law</th><th>Statement</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Product</td><td>\(\log_a(mn) = \log_a m + \log_a n\)</td></tr>
+        <tr><td>Quotient</td><td>\(\log_a\left(\dfrac{m}{n}\right) = \log_a m - \log_a n\)</td></tr>
+        <tr><td>Power</td><td>\(\log_a(m^k) = k\log_a m\)</td></tr>
+        <tr><td>Change of base</td><td>\(\log_a b = \dfrac{\log_c b}{\log_c a}\)</td></tr>
+        <tr><td>Reciprocal</td><td>\(\log_a b = \dfrac{1}{\log_b a}\)</td></tr>
+        <tr><td>Identity</td><td>\(a^{\log_a x} = x\)</td></tr>
+      </tbody>
+    </table>
+
+    <p class="note">
+    A logarithm turns multiplication into addition, which is exactly why it collapses exponential growth onto a straight line —
+    the reason log scales appear whenever data spans many orders of magnitude.
+    </p>
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="polynomials">Polynomials</h2>
+
+    <p>
+    A polynomial of degree \(n\) has exactly \(n\) roots in \(\mathbb{C}\), counted with multiplicity. Two theorems make root-finding tractable:
+    the remainder theorem says the remainder on dividing \(P(x)\) by \((x-a)\) is \(P(a)\), and the factor theorem says \((x-a)\) is a factor
+    exactly when \(P(a) = 0\).
+    </p>
+
+    <p>
+    For a cubic \(ax^3 + bx^2 + cx + d = 0\) with roots \(\alpha, \beta, \gamma\), the symmetric functions of the roots are
+    read straight off the coefficients:
+    </p>
+
+    \[
+    \alpha + \beta + \gamma = -\frac{b}{a}, \qquad
+    \alpha\beta + \beta\gamma + \gamma\alpha = \frac{c}{a}, \qquad
+    \alpha\beta\gamma = -\frac{d}{a}
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="quadratic-equations">Quadratic Equations</h2>
 
     <p>
     Quadratic equations:
@@ -151,6 +489,31 @@
     \[
     D < 0 \text{ (complex roots)}
     \]
+
+    <p>
+    The roots also determine the coefficients, so a quadratic can be rebuilt from its solutions:
+    </p>
+
+    \[
+    \alpha + \beta = -\frac{b}{a}, \qquad \alpha\beta = \frac{c}{a}
+    \]
+
+    \[
+    x^2 - (\alpha+\beta)x + \alpha\beta = 0
+    \]
+
+    <p>
+    Completing the square rewrites the same equation in vertex form, which shows immediately where the turning point sits:
+    </p>
+
+    \[
+    y = a(x-h)^2 + k, \qquad h = -\frac{b}{2a}, \quad k = -\frac{D}{4a}
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="complex-numbers">Complex Numbers</h2>
 
     <p>
     Complex numbers:
@@ -183,6 +546,41 @@
     \]
 
     <p>
+    Writing \(z\) in polar form turns multiplication into rotation: moduli multiply while arguments add. De Moivre's theorem
+    is the statement of this for powers, and it is what makes roots of unity easy to describe.
+    </p>
+
+    \[
+    (\cos\theta + i\sin\theta)^n = \cos n\theta + i\sin n\theta
+    \]
+
+    \[
+    z^{1/n} = r^{1/n}\left[\cos\left(\frac{\theta + 2k\pi}{n}\right) + i\sin\left(\frac{\theta + 2k\pi}{n}\right)\right], \quad k = 0,1,\dots,n-1
+    \]
+
+    <p>
+    The \(n\)-th roots of unity are these values with \(r = 1\) and \(\theta = 0\); they sit at the vertices of a regular
+    \(n\)-gon on the unit circle and sum to zero. Some useful identities:
+    </p>
+
+    \[
+    z\bar{z} = |z|^2, \qquad |z_1 z_2| = |z_1||z_2|, \qquad |z_1 + z_2| \le |z_1| + |z_2|
+    \]
+
+    <p>
+    Setting \(\theta = \pi\) in the polar form gives Euler's identity, which ties together five of the most important constants in mathematics:
+    </p>
+
+    \[
+    e^{i\pi} + 1 = 0
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="trigonometry">Trigonometry</h2>
+
+    <p>
     Trigonometry describes the relationships in triangles and pyramidal structures.
     </p>
 
@@ -191,6 +589,57 @@
     \cos\theta = \frac{A}{H}, \quad
     \tan\theta = \frac{O}{A}
     \]
+
+    <h3>Fundamental identities</h3>
+
+    \[
+    \sin^2\theta + \cos^2\theta = 1, \qquad
+    1 + \tan^2\theta = \sec^2\theta, \qquad
+    1 + \cot^2\theta = \mathrm{cosec}^2\theta
+    \]
+
+    <h3>Compound and multiple angles</h3>
+
+    \[
+    \sin(A \pm B) = \sin A\cos B \pm \cos A \sin B
+    \]
+
+    \[
+    \cos(A \pm B) = \cos A\cos B \mp \sin A \sin B
+    \]
+
+    \[
+    \tan(A \pm B) = \frac{\tan A \pm \tan B}{1 \mp \tan A\tan B}
+    \]
+
+    \[
+    \sin 2\theta = 2\sin\theta\cos\theta, \qquad
+    \cos 2\theta = \cos^2\theta - \sin^2\theta = 1 - 2\sin^2\theta, \qquad
+    \tan 2\theta = \frac{2\tan\theta}{1-\tan^2\theta}
+    \]
+
+    <h3>Solving general triangles</h3>
+
+    <p>
+    Right-angled ratios only take you so far; for any triangle the sine and cosine rules apply.
+    </p>
+
+    \[
+    \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R
+    \]
+
+    \[
+    c^2 = a^2 + b^2 - 2ab\cos C
+    \]
+
+    \[
+    \text{Area} = \frac{1}{2}ab\sin C = \sqrt{s(s-a)(s-b)(s-c)}, \qquad s = \frac{a+b+c}{2}
+    \]
+
+
+    <a class="to-top" href="#top">Back to top</a>
+
+    <h2 id="matrices-and-determinants">Matrices and Determinants</h2>
 
     <p>
     Matrices and determinants:
@@ -211,6 +660,54 @@
     \[
     X = A^{-1}B
     \]
+
+    <p>
+    This inverse exists only when \(|A| \ne 0\), so the determinant is the quantity that decides whether a system of linear
+    equations has a unique solution at all. Geometrically, \(|A|\) is the factor by which the matrix scales area or volume —
+    a determinant of zero means the transformation flattens space, and information is lost.
+    </p>
+
+    <table class="formula-table">
+      <thead>
+        <tr><th>\(|A|\)</th><th>System \(AX = B\)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>\(|A| \ne 0\)</td><td>Consistent with a unique solution</td></tr>
+        <tr><td>\(|A| = 0\), \(\mathrm{adj}(A)B \ne 0\)</td><td>Inconsistent — no solution</td></tr>
+        <tr><td>\(|A| = 0\), \(\mathrm{adj}(A)B = 0\)</td><td>Consistent with infinitely many solutions</td></tr>
+      </tbody>
+    </table>
+
+    <p>
+    For small systems Cramer's rule gives the solution directly, where \(D_i\) is \(D\) with the \(i\)-th column replaced by the constants:
+    </p>
+
+    \[
+    x = \frac{D_x}{D}, \qquad y = \frac{D_y}{D}, \qquad z = \frac{D_z}{D}
+    \]
+
+    <h3>Useful properties</h3>
+
+    \[
+    |AB| = |A||B|, \qquad |A^T| = |A|, \qquad |A^{-1}| = \frac{1}{|A|}, \qquad |kA| = k^n|A|
+    \]
+
+    \[
+    (AB)^{-1} = B^{-1}A^{-1}, \qquad (AB)^T = B^T A^T
+    \]
+
+    <h3>Eigenvalues and eigenvectors</h3>
+
+    <p>
+    An eigenvector is a direction the matrix does not turn — it only stretches it by a factor \(\lambda\), the eigenvalue.
+    These are found from the characteristic equation:
+    </p>
+
+    \[
+    AX = \lambda X \quad \Longrightarrow \quad |A - \lambda I| = 0
+    \]
+
+    <a class="to-top" href="#top">Back to top</a>
 
   </section>
 
