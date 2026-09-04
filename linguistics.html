@@ -19,10 +19,237 @@
       margin-bottom: 10px;
     }
 
+    .section-heading {
+      font-size: 1.6em;
+      color: #ffffff;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    /* ---------- notes typography ---------- */
+    .part-heading {
+      margin-top: 56px;
+      padding: 14px 0 10px 0;
+      border-top: 2px solid #ffffff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .part-heading h2 {
+      font-size: 1.7em;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .part-heading .eyebrow { margin-bottom: 4px; }
+
+    .part-heading p {
+      margin: 8px 0 0 0;
+      font-size: 0.95em;
+      opacity: 0.9;
+    }
+
+    .note-section {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .note-section > h2 {
+      font-size: 1.35em;
+      color: #ffffff;
+      margin: 0 0 14px 0;
+    }
+
+    .eyebrow {
+      display: block;
+      font-size: 0.7em;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.75;
+      margin-bottom: 6px;
+    }
+
+    .note-section h3 {
+      font-size: 1.05em;
+      color: #ffffff;
+      margin: 26px 0 8px 0;
+    }
+
+    .note-section h4 {
+      font-size: 0.95em;
+      color: #ffffff;
+      margin: 20px 0 6px 0;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .note-section ul,
+    .note-section ol {
+      margin: 8px 0;
+      padding-left: 22px;
+    }
+
+    .note-section li { margin-bottom: 5px; }
+
+    .note-section ul ul,
+    .note-section ol ul { margin: 4px 0; }
+
+    .lede { font-size: 1.05em; }
+
+    .flow {
+      text-align: center;
+      margin: 14px 0;
+    }
+
+    /* ---------- contents ---------- */
+    .contents {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 26px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    .contents h2 {
+      font-size: 0.8em !important;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 10px 0 !important;
+      opacity: 0.85;
+    }
+
+    .contents .part-label {
+      font-size: 0.78em;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin: 12px 0 4px 0;
+    }
+
+    .contents ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      columns: 2;
+      column-gap: 28px;
+    }
+
+    .contents li {
+      margin-bottom: 4px;
+      font-size: 0.9em;
+      break-inside: avoid;
+    }
+
+    .contents a {
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .contents a:hover { border-bottom-color: #ffffff; }
+
+    /* ---------- tables ---------- */
+    .data-table-wrap {
+      overflow-x: auto;
+      margin: 14px 0 18px 0;
+    }
+
+    table.data {
+      border-collapse: collapse;
+      font-size: 0.9em;
+      min-width: 280px;
+    }
+
+    table.data caption {
+      caption-side: top;
+      text-align: left;
+      font-size: 0.8em;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      padding-bottom: 6px;
+    }
+
+    table.data th,
+    table.data td {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 6px 14px 6px 0;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    table.data thead th {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+      font-weight: 700;
+    }
+
+    table.data tbody tr:last-child th,
+    table.data tbody tr:last-child td {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    /* ---------- asides, boxes, figures ---------- */
+    .aside {
+      border-left: 2px solid rgba(255, 255, 255, 0.6);
+      padding: 2px 0 2px 14px;
+      margin: 14px 0;
+      font-style: italic;
+      font-size: 0.95em;
+      opacity: 0.9;
+    }
+
+    blockquote.law {
+      margin: 14px 0;
+      padding: 12px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.12);
+      font-style: italic;
+    }
+
+    figure.diagram {
+      margin: 18px 0;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    figure.diagram svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 580px;
+    }
+
+    figure.diagram figcaption {
+      font-size: 0.85em;
+      opacity: 0.85;
+      margin-top: 8px;
+    }
+
+    .to-top {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8em;
+      color: #ffffff;
+      opacity: 0.75;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .to-top:hover { opacity: 1; }
+
+    @media (max-width: 640px) {
+      .contents ol { columns: 1; }
+    }
+
+    /* ---------- project thumbnails ---------- */
     .blog-thumbnails {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
+      margin: 16px 0 4px 0;
     }
 
     .blog-thumb {
@@ -71,41 +298,625 @@
     </div>
   </nav>
 
-  <section class="hero" style="background-color: #6553b2;">
+  <section class="hero" id="top" style="background-color: #6553b2;">
     <h1>Linguistics</h1>
-    <p>
+
+    <p class="lede">
       Linguistics is the study of language and its structure. It examines how languages are formed,
-      how they change over time, how they are processed by the human brain, and how they are used in social
-      contexts. And here we explain the four ways in which language takes form.
+      how they change over time, how they are processed by the human brain, and how they are used
+      in social contexts. What follows sets out the field itself, then the four ways in which
+      language takes form &mdash; literature, sound, sketch and dnc &mdash; and finally what all
+      four have in common.
     </p>
-    <h2>Literature</h2>
-    <p>
-      Literature can be the basic form of human thought and culture. Speech and writing have preserved so much of information about civilizations, present and older. It might have started as as expression of a single person and extented to a small community and further formed a society based on it's cultural significance. 
-    </p>
-    <h2>Sound</h2>
-    <p>
-      Similarly, sound plays an important role in defining a culture. Remember whenever we hear an egyptian theme, it always takes us back to that civilization. Even in the present age there are so many genres of music but it all originates from sound waves of different pitch, frequency, wavelength and amplitude.
-    </p>
-    <div class="blog-thumbnails" id="distortion-plugin-readmore">
-      <a class="blog-thumb" href="distortion_plugin.exe" download>
-        <div class="blog-thumb-img">DP</div>
-        <div class="blog-thumb-title">Download Distortion Plugin</div>
-      </a>
+
+    <nav class="contents" aria-label="Contents">
+      <h2>Contents</h2>
+
+      <p class="part-label">Part I &mdash; The Field</p>
+      <ol>
+        <li><a href="#levels">The levels of language</a></li>
+        <li><a href="#branches">Branches of linguistics</a></li>
+        <li><a href="#change">Families and change</a></li>
+        <li><a href="#writing">Writing systems</a></li>
+      </ol>
+
+      <p class="part-label">Part II &mdash; Four Ways Language Takes Form</p>
+      <ol>
+        <li><a href="#literature">Literature</a></li>
+        <li><a href="#sound">Sound</a></li>
+        <li><a href="#sketch">Sketch</a></li>
+        <li><a href="#dnc">Dnc</a></li>
+      </ol>
+
+      <p class="part-label">Part III &mdash; How Meaning Travels</p>
+      <ol>
+        <li><a href="#signs">Signs and semiotics</a></li>
+        <li><a href="#four">The four modes compared</a></li>
+      </ol>
+    </nav>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part I</span>
+      <h2>The Field</h2>
+      <p>How language is built, how it splits and drifts, and how it came to be written down.</p>
     </div>
-    <h2>Sketch</h2>
-    <p>
-      How can we forget the cave paintings which are the earliest descriptions of societies. Sketching shows us a wide range of information regarding a persons thought process or the ideology of a society. The canvas can be anything from two-dimensional sheets to three-dimentional wood or it can be as simple as the sand in the seashore. It's the easiest way of the expression of our thought.
-    </p>
-    <div class="blog-thumbnails" id="fma-7dsins-readmore">
-      <a class="blog-thumb" href="https://www.behance.net/gallery/252590903/FMA-7DSins" target="_blank" rel="noopener noreferrer">
-        <div class="blog-thumb-img">FMA</div>
-        <div class="blog-thumb-title">FMA: 7 Homunculi</div>
-      </a>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="levels">
+      <h2>The levels of language</h2>
+
+      <p>
+      Language is studied in layers, each smaller unit combining into the next. The layers are
+      largely independent, which is why a sentence can be perfectly grammatical and still mean
+      nothing, or be ungrammatical and entirely clear.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Level</th><th>Studies</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Phonetics</td><td>the physical sounds of speech &mdash; how they are produced and heard</td></tr>
+            <tr><td>Phonology</td><td>which sound contrasts a particular language treats as meaningful</td></tr>
+            <tr><td>Morphology</td><td>how words are built from smaller meaningful parts</td></tr>
+            <tr><td>Syntax</td><td>how words combine into phrases and sentences</td></tr>
+            <tr><td>Semantics</td><td>what words and sentences mean, in themselves</td></tr>
+            <tr><td>Pragmatics</td><td>what a speaker means by them on a particular occasion</td></tr>
+            <tr><td>Discourse</td><td>how stretches of language hold together beyond the sentence</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="flow">
+      phoneme &nbsp;&rarr;&nbsp; morpheme &nbsp;&rarr;&nbsp; word &nbsp;&rarr;&nbsp; phrase
+      &nbsp;&rarr;&nbsp; sentence &nbsp;&rarr;&nbsp; discourse
+      </p>
+
+      <p>
+      The unit that matters most is the <strong>phoneme</strong>: not a sound as such, but a sound
+      contrast a language uses to distinguish words. The distinction is language-specific, which is
+      why a contrast that is obvious to one speaker can be nearly inaudible to another.
+      </p>
+
+      <div class="aside">
+      A finite inventory &mdash; a few dozen phonemes, a few thousand morphemes &mdash; generates an
+      unlimited number of sentences no one has said before. That productivity is the property
+      linguistics is really trying to explain.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
     </div>
-    <h2>Dnc</h2>
-    <p>
-      This on is interesting it's called dnc (the dance of life). It's part of our life throughout our day, in the way we move and the things we do. It can be both static as well as dynamic. Static dnc is fashion and how we portray ourselves. Dynamic dnc can be the sports we play or the dance moves we make. It's the simplest way to express ouselves and our ideologies to the world around.
-    </p>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="branches">
+      <h2>Branches of linguistics</h2>
+
+      <p>
+      The four questions in the opening paragraph are not loose description &mdash; each names a
+      branch of the field.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Question</th><th>Branch</th><th>Asks</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>How languages are formed</td>
+              <td>Descriptive and theoretical linguistics</td>
+              <td>what the structure of a given language actually is, and what all languages share</td>
+            </tr>
+            <tr>
+              <td>How they change over time</td>
+              <td>Historical and comparative linguistics</td>
+              <td>how languages drift, split and relate to one another</td>
+            </tr>
+            <tr>
+              <td>How they are processed by the brain</td>
+              <td>Psycholinguistics and neurolinguistics</td>
+              <td>how language is acquired, produced, understood and lost</td>
+            </tr>
+            <tr>
+              <td>How they are used in social contexts</td>
+              <td>Sociolinguistics</td>
+              <td>how speech varies by group, setting, class and identity</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      Two more are practical rather than descriptive: <strong>applied linguistics</strong>, covering
+      language teaching, translation and speech therapy, and
+      <strong>computational linguistics</strong>, which builds systems that process language and in
+      doing so tests how well our accounts of it hold up.
+      </p>
+
+      <p>
+      On the brain side, two regions have been known since the nineteenth century for the different
+      ways their damage disrupts speech: <strong>Broca's area</strong>, where production breaks down
+      while comprehension largely survives, and <strong>Wernicke's area</strong>, where speech stays
+      fluent but stops carrying sense.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="change">
+      <h2>Families and change</h2>
+
+      <p>
+      Languages change constantly and unevenly, and because change accumulates, a single language
+      spoken across a wide area eventually becomes several. Comparing the results lets us
+      reconstruct the parent even when nothing of it was ever written down.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Family</th><th>Includes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Indo-European</td><td>Sanskrit, Hindi, Bengali, Persian, Greek, Latin and its descendants, the Germanic and Slavic languages</td></tr>
+            <tr><td>Dravidian</td><td>Kannada, Tamil, Telugu, Malayalam</td></tr>
+            <tr><td>Sino-Tibetan</td><td>Chinese languages, Tibetan, Burmese</td></tr>
+            <tr><td>Afro-Asiatic</td><td>Arabic, Hebrew, Amharic, ancient Egyptian</td></tr>
+            <tr><td>Austronesian</td><td>Malay, Indonesian, Tagalog, Malagasy, Hawaiian</td></tr>
+            <tr><td>Niger&ndash;Congo</td><td>Swahili, Yoruba, Zulu and several hundred more</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      The reconstruction works because sound change is regular: it applies across the whole
+      vocabulary rather than word by word, so correspondences between related languages are
+      systematic and can be run backwards. Proto-Indo-European was recovered this way, from
+      descendants spread from Iceland to Bengal, without a single surviving text.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <caption>Kinds of change</caption>
+          <tbody>
+            <tr><td>Sound change</td><td>pronunciation shifts across the whole system</td></tr>
+            <tr><td>Semantic drift</td><td>a word's meaning narrows, widens or moves entirely</td></tr>
+            <tr><td>Borrowing</td><td>vocabulary taken from a language in contact</td></tr>
+            <tr><td>Grammaticalisation</td><td>a full word wears down into a grammatical marker</td></tr>
+            <tr><td>Analogy</td><td>irregular forms get regularised by pressure from the pattern</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="flow">
+      ~7,000 languages spoken &nbsp;&bull;&nbsp; about 40% with under 1,000 speakers
+      </p>
+
+      <div class="aside">
+      Every language that falls out of use takes with it a body of knowledge about place, plant, kin
+      and story that was often never written down &mdash; which is why documentation has become one
+      of the field's more urgent activities.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="writing">
+      <h2>Writing systems</h2>
+
+      <p>
+      Speech is universal and roughly as old as our species; writing has been invented only a
+      handful of times. Each system answers the same question differently: what size of unit does a
+      single mark stand for?
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Type</th><th>A symbol stands for</th><th>Example</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Logographic</td><td>a whole word or morpheme</td><td>Chinese characters</td></tr>
+            <tr><td>Syllabary</td><td>a syllable</td><td>Japanese kana</td></tr>
+            <tr><td>Abjad</td><td>a consonant; vowels mostly unwritten</td><td>Arabic, Hebrew</td></tr>
+            <tr><td>Alphabet</td><td>a single consonant or vowel</td><td>Greek, Latin, Cyrillic</td></tr>
+            <tr><td>Abugida</td><td>a consonant carrying an inherent vowel, modified by marks</td><td>Kannada, Devanagari</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      The historical direction of travel is from picture toward sound. A drawing of a thing becomes
+      a symbol for the thing, then for the word, then for the sound the word begins with &mdash; at
+      which point the symbol has forgotten what it depicted and can spell anything.
+      </p>
+
+      <p class="flow">
+      pictogram &nbsp;&rarr;&nbsp; ideogram &nbsp;&rarr;&nbsp; logogram &nbsp;&rarr;&nbsp; syllable
+      &nbsp;&rarr;&nbsp; phoneme
+      </p>
+
+      <p>
+      Which is where Part II begins: the sketch came first, and writing is what happened when
+      sketching was made to carry speech.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part II</span>
+      <h2>Four Ways Language Takes Form</h2>
+      <p>Literature, sound, sketch and dnc &mdash; four channels through which thought gets out of one head and into another.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="literature">
+      <h2>Literature</h2>
+
+      <p>
+      Literature can be the basic form of human thought and culture. Speech and writing have
+      preserved so much information about civilizations, present and older. It might have started
+      as the expression of a single person, extended to a small community, and further formed a
+      society based on its cultural significance.
+      </p>
+
+      <h3>Before writing</h3>
+
+      <p>
+      That sequence &mdash; one person, then a community, then a society built on it &mdash; is
+      what oral tradition does, and it worked for far longer than writing has existed. Oral
+      literature is held in memory by the shape of the language itself: metre, rhyme, alliteration
+      and repeated formulaic phrases are all mnemonic devices before they are ornament. The Homeric
+      epics and the Vedas were both transmitted for centuries this way, and in the Vedic case with
+      an accuracy that written copying does not match.
+      </p>
+
+      <div class="aside">
+      Writing did not simply record what speech was already doing. It allowed a text to outlast
+      everyone who knew it, be read out of order, and be argued with line by line &mdash; which is
+      roughly the precondition for law, scripture and philosophy as we have them.
+      </div>
+
+      <h3>What written form makes possible</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Property</th><th>Consequence</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Permanence</td><td>a voice reaches people the speaker will never meet</td></tr>
+            <tr><td>Detachment</td><td>the text can be examined apart from its author's presence</td></tr>
+            <tr><td>Revision</td><td>thought can be reworked rather than only re-performed</td></tr>
+            <tr><td>Accumulation</td><td>each generation starts from the previous one's record</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="sound">
+      <h2>Sound</h2>
+
+      <p>
+      Similarly, sound plays an important role in defining a culture. Remember whenever we hear an
+      Egyptian theme, it always takes us back to that civilization. Even in the present age there
+      are so many genres of music, but it all originates from sound waves of different pitch,
+      frequency, wavelength and amplitude.
+      </p>
+
+      <h3>The four properties</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Property</th><th>Physically</th><th>Heard as</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Frequency</td><td>cycles per second, in hertz</td><td>pitch &mdash; how high or low</td></tr>
+            <tr><td>Wavelength</td><td>the distance one cycle occupies</td><td>the same information as frequency, inverted</td></tr>
+            <tr><td>Amplitude</td><td>the size of the pressure variation</td><td>loudness</td></tr>
+            <tr><td>Waveform</td><td>the mix of overtones present</td><td>timbre &mdash; why a flute and a violin differ at the same pitch</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="flow">
+      v = f&lambda; &nbsp;&bull;&nbsp; v &asymp; 343 m/s in air &nbsp;&bull;&nbsp; human hearing
+      &asymp; 20 Hz &ndash; 20 kHz
+      </p>
+
+      <p>
+      Pitch and wavelength are not two independent controls: fix the speed of sound and setting one
+      sets the other. What genuinely varies independently is amplitude and waveform, which is why
+      timbre &mdash; the overtone mix &mdash; is what actually identifies an instrument, a voice, or
+      the "Egyptian theme" that places a whole civilization in two bars.
+      </p>
+
+      <h3>Sound carrying meaning</h3>
+
+      <p>
+      Speech uses these same properties structurally rather than decoratively. In
+      <strong>tone languages</strong> such as Mandarin, pitch distinguishes words outright &mdash;
+      the same syllable at a different contour is a different word. Elsewhere pitch and timing work
+      above the word as <strong>prosody</strong>, marking questions, emphasis, irony and turn-taking.
+      Prosody is doing a great deal of the work in ordinary conversation, which is why flat text
+      loses so much and why the same sentence can be a compliment or an insult.
+      </p>
+
+      <div class="blog-thumbnails" id="distortion-plugin-readmore">
+        <a class="blog-thumb" href="distortion_plugin.exe" download>
+          <div class="blog-thumb-img">DP</div>
+          <div class="blog-thumb-title">Download Distortion Plugin</div>
+        </a>
+      </div>
+
+      <div class="aside">
+      Distortion is a good illustration of the table above. It leaves frequency largely alone and
+      reshapes the waveform, adding overtones that were not in the original &mdash; the note stays
+      the same while the character of it changes completely.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="sketch">
+      <h2>Sketch</h2>
+
+      <p>
+      How can we forget the cave paintings, which are the earliest descriptions of societies.
+      Sketching shows us a wide range of information regarding a person's thought process or the
+      ideology of a society. The canvas can be anything from two-dimensional sheets to
+      three-dimensional wood, or it can be as simple as the sand on the seashore. It's the easiest
+      way of the expression of our thought.
+      </p>
+
+      <h3>The earliest record</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Site</th><th>Roughly</th><th>Notable for</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Sulawesi and Borneo caves</td><td>45,000+ years</td><td>among the oldest known figurative painting</td></tr>
+            <tr><td>Chauvet, France</td><td>~32,000 years</td><td>animals rendered with shading and implied movement</td></tr>
+            <tr><td>Lascaux, France</td><td>~17,000 years</td><td>large composed scenes across a cave system</td></tr>
+            <tr><td>Bhimbetka, India</td><td>~10,000 years and later</td><td>continuous use across many periods, including dance and hunt scenes</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      The handprint is the recurring motif across all of them, on separate continents, made by
+      people with no contact &mdash; the simplest possible statement that someone was here. It is
+      also the point where sketch and dnc meet, since the mark is a record of a body's position.
+      </p>
+
+      <h3>Why it is the easiest way</h3>
+
+      <p>
+      A sketch has an advantage the other three modes lack: much of it needs no shared code. A
+      drawn horse resembles a horse, so it can be read by someone who shares no language with the
+      person who drew it. Words cannot do this &mdash; they work only by prior agreement.
+      </p>
+
+      <p>
+      That advantage has a limit, and the limit is instructive. Resemblance handles objects well and
+      abstractions badly: there is nothing that <em>looks like</em> "yesterday", "if", or "not". So
+      every picture-based system that had to carry real language eventually borrowed sound, which is
+      the transition traced in Part I.
+      </p>
+
+      <div class="blog-thumbnails" id="fma-7dsins-readmore">
+        <a class="blog-thumb" href="https://www.behance.net/gallery/252590903/FMA-7DSins" target="_blank" rel="noopener noreferrer">
+          <div class="blog-thumb-img">FMA</div>
+          <div class="blog-thumb-title">FMA: 7 Homunculi</div>
+        </a>
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="dnc">
+      <h2>Dnc</h2>
+
+      <p>
+      This one is interesting &mdash; it's called dnc, the dance of life. It's part of our life
+      throughout our day, in the way we move and the things we do. It can be both static as well as
+      dynamic. Static dnc is fashion and how we portray ourselves. Dynamic dnc can be the sports we
+      play or the dance moves we make. It's the simplest way to express ourselves and our ideologies
+      to the world around.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Form</th><th>Is</th><th>Reads as</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Static dnc</td><td>dress, grooming, posture, how we portray ourselves</td><td>a standing claim about who one is</td></tr>
+            <tr><td>Dynamic dnc</td><td>sport, dance, gesture, the way we move through a day</td><td>something asserted in the moment</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>The body as a channel</h3>
+
+      <p>
+      Linguistics has names for both halves. <strong>Kinesics</strong> is the study of gesture,
+      posture and expression; <strong>proxemics</strong> is the study of distance &mdash; how close
+      people stand, which is regulated by rules nobody is taught and everybody notices when broken.
+      Both vary sharply between cultures, which is exactly what makes them signalling systems rather
+      than reflexes.
+      </p>
+
+      <p>
+      Static dnc has a linguistic parallel too. Sociolinguistics finds that speech carries the same
+      information as clothing: accent, vocabulary and register announce region, group and
+      affiliation before any content arrives. People shift between varieties depending on who they
+      are with &mdash; <strong>code-switching</strong> &mdash; and getting dressed for an occasion
+      is the same operation performed in a different medium.
+      </p>
+
+      <h3>Sign language is not gesture</h3>
+
+      <p>
+      One thing worth separating out carefully. Sign languages are full natural languages, not
+      elaborate gesture and not dnc in the sense above. They have phonology built from handshape,
+      location and movement, their own morphology and syntax, regional dialects, and they are
+      acquired by children on the same developmental schedule as speech. They are also not
+      derivative of the surrounding spoken language: British and American Sign Language are
+      unrelated to one another despite both countries speaking English.
+      </p>
+
+      <div class="aside">
+      Which makes the deeper point about all four modes. Language is not tied to sound at all
+      &mdash; it is a structure that can be carried by the voice, the hand or the page, and it
+      survives the change of channel intact.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part III</span>
+      <h2>How Meaning Travels</h2>
+      <p>What literature, sound, sketch and dnc share, and where they come apart.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="signs">
+      <h2>Signs and semiotics</h2>
+
+      <p>
+      Semiotics is the study of signs in general, and it is the discipline that covers all four
+      modes at once. <strong>Saussure</strong> split every sign into two parts.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Part</th><th>Is</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Signifier</td><td>the form &mdash; the sound, mark, garment or movement</td></tr>
+            <tr><td>Signified</td><td>the concept it calls up</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      His central observation was that the link between the two is <strong>arbitrary</strong>. There
+      is nothing dog-like about the sound "dog"; the pairing holds because a community treats it as
+      holding. This is why languages can differ at all, and why they drift &mdash; nothing anchors
+      the pairing except agreement, and agreement moves.
+      </p>
+
+      <h3>Three ways a sign can work</h3>
+
+      <p>
+      <strong>Peirce</strong> then distinguished how the link is made, which sorts the four modes
+      neatly.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Kind</th><th>Works by</th><th>Example</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Icon</td><td>resemblance</td><td>a drawn horse, a portrait, onomatopoeia</td></tr>
+            <tr><td>Index</td><td>real connection or trace</td><td>smoke for fire, a handprint on a cave wall</td></tr>
+            <tr><td>Symbol</td><td>convention alone</td><td>the word "horse", a national flag, a wedding ring</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      Sketch leans iconic, which is why it crosses language barriers. Literature is almost purely
+      symbolic, which is why it does not. Sound and dnc sit across all three at once: a drum imitates
+      a heartbeat, a limp indicates an injury, and a black armband means grief only by agreement.
+      </p>
+
+      <blockquote class="law">
+      Nothing means anything on its own. It means something to someone, under a code they share.
+      </blockquote>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="four">
+      <h2>The four modes compared</h2>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <caption>Set side by side</caption>
+          <thead>
+            <tr><th>Mode</th><th>Channel</th><th>Lasts</th><th>Mainly</th><th>Needs a shared code?</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Literature</td>
+              <td>voice, then page</td>
+              <td>indefinitely, once written</td>
+              <td>symbolic</td>
+              <td>yes &mdash; entirely</td>
+            </tr>
+            <tr>
+              <td>Sound</td>
+              <td>air, as pressure waves</td>
+              <td>only as long as it sounds</td>
+              <td>iconic and symbolic</td>
+              <td>partly &mdash; some effects are direct</td>
+            </tr>
+            <tr>
+              <td>Sketch</td>
+              <td>any surface that takes a mark</td>
+              <td>as long as the surface does</td>
+              <td>iconic</td>
+              <td>largely not</td>
+            </tr>
+            <tr>
+              <td>Dnc</td>
+              <td>the body itself</td>
+              <td>the moment, unless recorded</td>
+              <td>indexical and symbolic</td>
+              <td>yes, and it varies by culture</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      Two things fall out of reading across the rows. The trade-off is between reach and
+      independence: the modes that travel furthest in time are the ones that depend most completely
+      on a code being shared, while the mode that needs least agreement &mdash; sketch &mdash; is
+      also the one that struggles most with anything abstract.
+      </p>
+
+      <p>
+      And in practice the four almost never appear alone. A film, a ritual, a live performance or a
+      page with a diagram on it runs several channels at once, each covering what the others cannot
+      &mdash; which is what linguistics calls <strong>multimodality</strong>, and what the four
+      sections above describe from the inside.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
   </section>
 
   <script src="script.js"></script>

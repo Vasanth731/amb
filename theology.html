@@ -18,6 +18,231 @@
       margin-top: 40px;
       margin-bottom: 10px;
     }
+
+    .section-heading {
+      font-size: 1.6em;
+      color: #ffffff;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    /* ---------- notes typography ---------- */
+    .part-heading {
+      margin-top: 56px;
+      padding: 14px 0 10px 0;
+      border-top: 2px solid #ffffff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .part-heading h2 {
+      font-size: 1.7em;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .part-heading .eyebrow { margin-bottom: 4px; }
+
+    .part-heading p {
+      margin: 8px 0 0 0;
+      font-size: 0.95em;
+      opacity: 0.9;
+    }
+
+    .note-section {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .note-section > h2 {
+      font-size: 1.35em;
+      color: #ffffff;
+      margin: 0 0 14px 0;
+    }
+
+    .eyebrow {
+      display: block;
+      font-size: 0.7em;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.75;
+      margin-bottom: 6px;
+    }
+
+    .note-section h3 {
+      font-size: 1.05em;
+      color: #ffffff;
+      margin: 26px 0 8px 0;
+    }
+
+    .note-section h4 {
+      font-size: 0.95em;
+      color: #ffffff;
+      margin: 20px 0 6px 0;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .note-section ul,
+    .note-section ol {
+      margin: 8px 0;
+      padding-left: 22px;
+    }
+
+    .note-section li { margin-bottom: 5px; }
+
+    .note-section ul ul,
+    .note-section ol ul { margin: 4px 0; }
+
+    .lede { font-size: 1.05em; }
+
+    .flow {
+      text-align: center;
+      margin: 14px 0;
+    }
+
+    /* ---------- contents ---------- */
+    .contents {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 26px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    .contents h2 {
+      font-size: 0.8em !important;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 10px 0 !important;
+      opacity: 0.85;
+    }
+
+    .contents .part-label {
+      font-size: 0.78em;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin: 12px 0 4px 0;
+    }
+
+    .contents ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      columns: 2;
+      column-gap: 28px;
+    }
+
+    .contents li {
+      margin-bottom: 4px;
+      font-size: 0.9em;
+      break-inside: avoid;
+    }
+
+    .contents a {
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .contents a:hover { border-bottom-color: #ffffff; }
+
+    /* ---------- tables ---------- */
+    .data-table-wrap {
+      overflow-x: auto;
+      margin: 14px 0 18px 0;
+    }
+
+    table.data {
+      border-collapse: collapse;
+      font-size: 0.9em;
+      min-width: 280px;
+    }
+
+    table.data caption {
+      caption-side: top;
+      text-align: left;
+      font-size: 0.8em;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      padding-bottom: 6px;
+    }
+
+    table.data th,
+    table.data td {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 6px 14px 6px 0;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    table.data thead th {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+      font-weight: 700;
+    }
+
+    table.data tbody tr:last-child th,
+    table.data tbody tr:last-child td {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    /* ---------- asides, boxes, figures ---------- */
+    .aside {
+      border-left: 2px solid rgba(255, 255, 255, 0.6);
+      padding: 2px 0 2px 14px;
+      margin: 14px 0;
+      font-style: italic;
+      font-size: 0.95em;
+      opacity: 0.9;
+    }
+
+    blockquote.law {
+      margin: 14px 0;
+      padding: 12px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.12);
+      font-style: italic;
+    }
+
+    figure.diagram {
+      margin: 18px 0;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    figure.diagram svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 580px;
+    }
+
+    figure.diagram figcaption {
+      font-size: 0.85em;
+      opacity: 0.85;
+      margin-top: 8px;
+    }
+
+    .to-top {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.8em;
+      color: #ffffff;
+      opacity: 0.75;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .to-top:hover { opacity: 1; }
+
+    @media (max-width: 640px) {
+      .contents ol { columns: 1; }
+    }
   </style>
 </head>
 <body>
@@ -31,166 +256,826 @@
     </div>
   </nav>
 
-  <section class="hero" style="background-color: #97aaeac7;">
+  <section class="hero" id="top" style="background-color: #97aaeac7;">
     <h1>Theology</h1>
 
-    <h2>The Perspective</h2>
-    <p>
-    Theology in my perspective is the study of how people throughout history have understood God. 
-    We ourselves are part of creation, and therefore a created mind cannot fully comprehend the 
-    Creator, but we can attempt to understand through reflection and study. The oldest writings 
-    related to this tradition are the Dead Sea Scrolls, which show how the Hebrews interpreted 
-    their Creator. According to this narrative, God created the universe, a dynamic system of 
-    space, time, and matter. Humanity began with Adam, whose fall was followed by generations 
-    leading to Noah and the great flood. Even after the flood there were further transgressions. 
-    Later Abraham, descended from Terah in the line of Shem, was called by God to follow Him. 
-    Through Isaac and Jacob, whose twelve sons formed the tribes of Israel, the story continues. 
-    Joseph became the right hand of Pharaoh and saved his family during famine, though later 
-    generations fell into captivity. Through Moses the Exodus occurred, and the nation of Israel 
-    was formed, guided by judges, prophets, and kings. All these events were seen as preparing 
-    the way for the Messiah, Christ Jesus, believed by Christians to be the Word of God who 
-    became flesh, fulfilled prophecies, lived a perfect life, died to save humanity, and rose 
-    again. After his ascension, his followers spread this message and many became martyrs. 
-    They formed the early centers of Christianity in Jerusalem, Antioch, Alexandria, 
-    Constantinople, and Rome. Over time various interpretations and denominations emerged 
-    as people developed different theological and social understandings of the church.
+    <p class="lede">
+      Theology is the study of how people have understood the divine &mdash; what they took the
+      ultimate to be, what they believed it asked of them, and how those answers were argued over,
+      written down and passed on. What follows works through it by tradition, beginning with the
+      perspective these notes are written from, then the Abrahamic faiths, the traditions of India
+      and East Asia, and finally the positions that reject the question and the questions every
+      tradition ends up facing.
     </p>
 
-    <h2>Judaism</h2>
-    <p>
-    Judaism is one of the oldest Abrahamic faiths and shares the early creation narrative 
-    and covenant traditions dating to around 2000 BCE. It centers on the covenant between 
-    the one God, often referred to as YHWH, and the descendants of Abraham. This covenant 
-    was formalized through Moses and the giving of the Torah at Sinai. Central beliefs 
-    include the declaration of the Shema, “Hear O Israel, the Lord our God, the Lord is One,” 
-    and the observance of 613 mitzvot or commandments concerning ethics, ritual, and justice. 
-    Jewish scripture includes the Tanakh, composed of the Torah, the Prophets, and the Writings, 
-    as well as the Oral Torah preserved in the Mishnah and Talmud. Jewish life involves rituals 
-    such as circumcision, bar or bat mitzvah, marriage traditions, and mourning practices. 
-    Weekly Shabbat observance and festivals such as Rosh Hashanah, Yom Kippur, Passover, and 
-    Hanukkah shape religious life. Over time several branches developed, including Orthodox, 
-    Conservative, Reform, and Reconstructionist traditions. Jewish thought also includes 
-    historical schools such as the teachings associated with Beit Shammai and Beit Hillel.
-    </p>
+    <nav class="contents" aria-label="Contents">
+      <h2>Contents</h2>
 
-    <h2>Islam</h2>
-    <p>
-    Islam originated in seventh-century Arabia with the Prophet Muhammad, who is believed 
-    to have received revelations from God through the angel Gabriel. These revelations 
-    were compiled in the Quran, considered the final and preserved scripture in Islam. 
-    Central to Islamic belief is Tawhid, the absolute oneness of God, along with belief 
-    in angels, earlier scriptures, prophets from Adam to Muhammad, the Day of Judgment, 
-    and divine destiny. The life and sayings of Muhammad recorded in hadith literature 
-    serve as guidance alongside the Quran. After Muhammad’s death in 632 CE, the community 
-    divided over leadership, leading to the Sunni and Shia traditions. Islamic practice 
-    centers on the Five Pillars: the declaration of faith, daily prayers, charity, fasting 
-    during Ramadan, and pilgrimage to Mecca. Islamic law, known as Sharia, guides ethical 
-    and social life. Throughout history the Islamic world contributed greatly to science, 
-    medicine, mathematics, and philosophy during the Islamic Golden Age. Mystical traditions 
-    such as Sufism emphasize spiritual experience and closeness to the divine.
-    </p>
+      <p class="part-label">Part I &mdash; Approach</p>
+      <ol>
+        <li><a href="#perspective">The perspective</a></li>
+        <li><a href="#method">How theology is studied</a></li>
+      </ol>
 
-    <h2>Hinduism</h2>
-    <p>
-    Hinduism developed over thousands of years in the Indian subcontinent and does not 
-    have a single founder. It encompasses a wide range of philosophies, rituals, and 
-    traditions. Central ideas include Brahman as the ultimate reality, Atman as the 
-    individual soul, karma as the law of action and consequence, samsara as the cycle 
-    of rebirth, and moksha as liberation from that cycle. Hindu thought includes many 
-    deities and traditions, such as the Trimurti of Brahma, Vishnu, and Shiva, as well 
-    as various forms of the divine feminine. Sacred texts include the Vedas, the Upanishads, 
-    the epics Mahabharata and Ramayana, and later Puranic literature. Paths to spiritual 
-    growth include knowledge, devotion, action, and meditation. Religious practice often 
-    involves rituals known as puja, temple worship, pilgrimages, and festivals such as 
-    Diwali and Holi. Hindu traditions have also influenced philosophical and ethical ideas 
-    such as nonviolence, which shaped figures like Mahatma Gandhi.
-    </p>
+      <p class="part-label">Part II &mdash; The Abrahamic Tradition</p>
+      <ol>
+        <li><a href="#narrative">The biblical narrative</a></li>
+        <li><a href="#judaism">Judaism</a></li>
+        <li><a href="#christianity">Christianity</a></li>
+        <li><a href="#islam">Islam</a></li>
+      </ol>
 
-    <h2>Buddhism</h2>
-    <p>
-    Buddhism began in the fifth century BCE with Siddhartha Gautama, who later became known 
-    as the Buddha or “the Enlightened One.” After encountering suffering in the world, he 
-    taught a path aimed at understanding and overcoming it. His teachings are summarized in 
-    the Four Noble Truths, which explain suffering, its origin in craving, its cessation, 
-    and the path to its end through the Noble Eightfold Path. Buddhism also teaches the 
-    impermanence of all things, the absence of a permanent self, and the importance of wisdom, 
-    ethical conduct, and meditation. The goal is nirvana, liberation from the cycle of rebirth. 
-    Different traditions developed over time, including Theravada in Southeast Asia, Mahayana 
-    in East Asia, and Vajrayana in Tibet. Buddhist communities are centered around the Sangha, 
-    the monastic and lay community that preserves and practices the teachings.
-    </p>
+      <p class="part-label">Part III &mdash; Traditions of India and East Asia</p>
+      <ol>
+        <li><a href="#hinduism">Hinduism</a></li>
+        <li><a href="#buddhism">Buddhism</a></li>
+        <li><a href="#daoism">Daoism</a></li>
+        <li><a href="#confucianism">Confucianism</a></li>
+        <li><a href="#shinto">Shinto</a></li>
+      </ol>
 
-    <h2>African Diasporic Religions</h2>
-    <p>
-    African diasporic religions developed from indigenous African traditions that spread 
-    through the transatlantic slave trade and later blended with elements of Christianity 
-    and Islam. Traditions such as Vodou in Haiti, Santería in Cuba, and Candomblé in Brazil 
-    reflect this blending. Many of these traditions view the universe as interconnected 
-    through a spiritual realm, the human realm, and the ancestral realm. Deities and spirits 
-    are honored through rituals, music, dance, offerings, and festivals. Ancestors play an 
-    important role, and community identity is often preserved through these spiritual 
-    practices. These traditions emphasize harmony between people, nature, and the spiritual 
-    world.
-    </p>
+      <p class="part-label">Part IV &mdash; Other Traditions and Positions</p>
+      <ol>
+        <li><a href="#african">African diasporic religions</a></li>
+        <li><a href="#atheism">Atheism and humanism</a></li>
+        <li><a href="#other">Other beliefs and observations</a></li>
+      </ol>
 
-    <h2>Shinto</h2>
-    <p>
-    Shinto is the indigenous spiritual tradition of Japan and is often described as “the 
-    way of the kami,” referring to spiritual beings or forces present in nature and in 
-    ancestors. It has no single founder or central scripture, though early myths appear 
-    in texts such as the Kojiki and Nihongi. According to these myths, the cosmos emerged 
-    from primordial chaos and the first heavenly deities appeared, followed by generations 
-    of divine beings including Izanagi and Izanami who created the islands of Japan and 
-    many other kami. Nature itself is considered sacred, and humans live alongside these 
-    spirits. Ritual purification practices and shrine worship are central to Shinto life. 
-    Kami are believed to inhabit natural places and sacred objects, and harmony with them 
-    is maintained through respect, offerings, and rituals performed by shrine priests.
-    </p>
+      <p class="part-label">Part V &mdash; Questions Across Traditions</p>
+      <ol>
+        <li><a href="#arguments">Arguments about God</a></li>
+        <li><a href="#evil">The problem of evil</a></li>
+        <li><a href="#comparative">A comparative view</a></li>
+      </ol>
+    </nav>
 
-    <h2>Daoism</h2>
-    <p>
-    Daoism emerged in ancient China and is associated with thinkers such as Laozi and 
-    Zhuangzi. The central idea is the Dao, the fundamental way or principle underlying 
-    the universe. Daoist teachings encourage harmony with natural patterns rather than 
-    forcing outcomes. Concepts such as yin and yang describe the dynamic balance of 
-    opposites, while qi represents the vital energy that flows through all things. 
-    Practices include meditation, philosophy, martial arts, and traditional healing 
-    methods, all aimed at living in harmony with the natural order.
-    </p>
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part I</span>
+      <h2>Approach</h2>
+      <p>Where these notes are written from, and how the subject is studied at all.</p>
+    </div>
 
-    <h2>Confucianism</h2>
-    <p>
-    Confucianism began with the teachings of Confucius in ancient China around the sixth 
-    century BCE. It focuses less on theology and more on ethical and social harmony. 
-    Important values include filial piety, humaneness, and proper conduct within society. 
-    Confucius taught that a stable and moral society depends on respect, education, and 
-    the cultivation of virtue. His teachings were later compiled in the Analects and 
-    became deeply influential in East Asian philosophy and governance.
-    </p>
+    <!-- ============================================================ -->
+    <div class="note-section" id="perspective">
+      <h2>The perspective</h2>
 
-    <h2>Atheism</h2>
-    <p>
-    Atheism is not a religion but a philosophical position that rejects belief in gods or 
-    supernatural beings. It emphasizes evidence, reason, and human-centered ethics. 
-    Although skepticism toward gods appears in ancient philosophy, atheism became more 
-    prominent during the Enlightenment and with the growth of modern science. Some forms 
-    of atheism actively deny the existence of deities, while others simply lack belief. 
-    Many atheists adopt ethical frameworks based on humanism, emphasizing compassion, 
-    human rights, and rational inquiry rather than divine authority.
-    </p>
+      <p>
+      Theology in my perspective is the study of how people throughout history have understood God.
+      We ourselves are part of creation, and therefore a created mind cannot fully comprehend the
+      Creator, but we can attempt to understand through reflection and study.
+      </p>
 
-    <h2>Other Beliefs and Observations</h2>
-    <p>
-    Throughout history many cultures practiced polytheism, believing in multiple gods 
-    associated with natural forces. Monuments such as Stonehenge or ancient Egyptian 
-    sun worship reflect early attempts to understand cosmic order. Some traditions 
-    developed ideas of a single supreme force governing the universe, while others 
-    focused on interactions between the human and spirit worlds. Modern scientific 
-    studies have even examined how the brain responds during meditation or prayer, 
-    suggesting that belief and faith can influence neurological activity. These 
-    observations show that humanity’s search for meaning and understanding of the 
-    divine has taken many different forms across cultures and time.
-    </p>
+      <p>
+      The oldest writings related to this tradition are the Dead Sea Scrolls, which show how the
+      Hebrews interpreted their Creator. Found in caves near Qumran from 1947 onward and dating
+      from roughly the third century BCE to the first century CE, they are the oldest surviving
+      manuscripts of the Hebrew scriptures &mdash; the texts themselves are older, but these are
+      the earliest copies we can read.
+      </p>
+
+      <div class="aside">
+      The limit stated above is itself a theological position, and an old one: that the finite
+      cannot contain the infinite, so all theological language is approximate. Traditions that
+      accept it tend to develop a <em>negative</em> theology, describing God by what must be
+      denied rather than by what can be asserted.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="method">
+      <h2>How theology is studied</h2>
+
+      <p>
+      Theology is not the same as religious studies. Theology reasons from within a tradition,
+      taking its sources seriously as sources; religious studies describes traditions from outside
+      as historical and social facts. Both appear on this page, and it is worth knowing which one
+      is being read.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <caption>Where theology draws from</caption>
+          <thead>
+            <tr><th>Source</th><th>Supplies</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Scripture</td><td>the texts a tradition holds authoritative</td></tr>
+            <tr><td>Tradition</td><td>the accumulated interpretation of those texts by the community</td></tr>
+            <tr><td>Reason</td><td>argument and inference applied to both</td></tr>
+            <tr><td>Experience</td><td>what practitioners report of prayer, ritual and moral life</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <caption>Kinds of theology</caption>
+          <tbody>
+            <tr><td>Natural theology</td><td>what might be known of God from the world alone, without revelation</td></tr>
+            <tr><td>Revealed theology</td><td>what is held to be known only because it was disclosed</td></tr>
+            <tr><td>Systematic theology</td><td>arranging a tradition's claims into a coherent whole</td></tr>
+            <tr><td>Biblical and historical theology</td><td>the texts in their original setting, and how doctrine developed over time</td></tr>
+            <tr><td>Apologetics</td><td>defending a position against objections</td></tr>
+            <tr><td>Comparative theology</td><td>reading traditions against one another</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part II</span>
+      <h2>The Abrahamic Tradition</h2>
+      <p>Three faiths tracing themselves to Abraham, sharing a beginning and disagreeing about almost everything after it.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="narrative">
+      <h2>The biblical narrative</h2>
+
+      <p>
+      According to this narrative, God created the universe, a dynamic system of space, time and
+      matter. Humanity began with Adam, whose fall was followed by generations leading to Noah and
+      the great flood. Even after the flood there were further transgressions.
+      </p>
+
+      <p>
+      Later Abraham, descended from Terah in the line of Shem, was called by God to follow Him.
+      Through Isaac and Jacob, whose twelve sons formed the tribes of Israel, the story continues.
+      Joseph became the right hand of Pharaoh and saved his family during famine, though later
+      generations fell into captivity. Through Moses the Exodus occurred, and the nation of Israel
+      was formed, guided by judges, prophets and kings.
+      </p>
+
+      <p class="flow">
+      creation &nbsp;&rarr;&nbsp; fall &nbsp;&rarr;&nbsp; flood &nbsp;&rarr;&nbsp; call of Abraham
+      &nbsp;&rarr;&nbsp; Exodus &nbsp;&rarr;&nbsp; nation &nbsp;&rarr;&nbsp; prophets
+      </p>
+
+      <p>
+      All these events were seen as preparing the way for the Messiah, Christ Jesus, believed by
+      Christians to be the Word of God who became flesh, fulfilled prophecies, lived a perfect
+      life, died to save humanity, and rose again.
+      </p>
+
+      <div class="aside">
+      The structure is worth noting independently of whether one accepts it: the narrative is
+      arranged as promise and fulfilment, so each episode is read forward toward what follows.
+      That reading is what Christianity added; Judaism holds the same scriptures without it, and
+      the disagreement between the two turns largely on this point rather than on the texts
+      themselves.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="judaism">
+      <h2>Judaism</h2>
+
+      <p>
+      Judaism is one of the oldest Abrahamic faiths and shares the early creation narrative and
+      covenant traditions dating to around 2000 BCE. It centers on the covenant between the one
+      God, often referred to as YHWH, and the descendants of Abraham. This covenant was formalized
+      through Moses and the giving of the Torah at Sinai.
+      </p>
+
+      <p>
+      Central beliefs include the declaration of the Shema &mdash; "Hear O Israel, the Lord our
+      God, the Lord is One" &mdash; and the observance of 613 mitzvot or commandments concerning
+      ethics, ritual and justice.
+      </p>
+
+      <h3>Scripture</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Text</th><th>Contains</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Tanakh</td><td>the Torah (law), the Nevi'im (Prophets) and the Ketuvim (Writings)</td></tr>
+            <tr><td>Oral Torah</td><td>preserved in the Mishnah and expanded in the Talmud</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Practice</h3>
+
+      <p>
+      Jewish life involves rituals such as circumcision, bar or bat mitzvah, marriage traditions
+      and mourning practices. Weekly Shabbat observance and festivals such as Rosh Hashanah, Yom
+      Kippur, Passover and Hanukkah shape religious life.
+      </p>
+
+      <h3>Branches and schools</h3>
+
+      <p>
+      Over time several branches developed, including Orthodox, Conservative, Reform and
+      Reconstructionist traditions, differing chiefly over how far the commandments bind and how
+      they are interpreted in changed circumstances. Jewish thought also includes historical schools
+      such as the teachings associated with Beit Shammai and Beit Hillel &mdash; two rival houses of
+      interpretation whose recorded disagreements became a model for how argument itself could be
+      preserved rather than resolved.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="christianity">
+      <h2>Christianity</h2>
+
+      <p>
+      After his ascension, his followers spread this message and many became martyrs. They formed
+      the early centers of Christianity in Jerusalem, Antioch, Alexandria, Constantinople and Rome.
+      Over time various interpretations and denominations emerged as people developed different
+      theological and social understandings of the church.
+      </p>
+
+      <h3>Scripture and creed</h3>
+
+      <p>
+      The Christian Bible holds the Hebrew scriptures as the Old Testament alongside a New Testament
+      of four gospels, the Acts of the Apostles, the epistles and Revelation. Its central claims
+      were fixed in creeds by councils of bishops when disputes could not be settled otherwise:
+      Nicaea in 325 on the divinity of Christ, and Chalcedon in 451 on how divine and human natures
+      are held together in one person.
+      </p>
+
+      <h3>Divisions</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>When</th><th>Division</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>451 onward</td>
+              <td>Churches rejecting Chalcedon separate &mdash; the Oriental Orthodox communion</td>
+            </tr>
+            <tr>
+              <td>1054</td>
+              <td>The Great Schism divides Rome from Constantinople: Catholic and Eastern Orthodox</td>
+            </tr>
+            <tr>
+              <td>1517 onward</td>
+              <td>The Reformation produces the Protestant churches &mdash; Lutheran, Reformed, Anglican, and later Baptist, Methodist and Pentecostal</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      The recurring points of disagreement are consistent across all three splits: where authority
+      lies &mdash; in scripture alone, in scripture read through tradition, or in a teaching office
+      &mdash; how salvation is received, and what the sacraments do.
+      </p>
+
+      <div class="aside">
+      Four of the five early centres named above &mdash; Jerusalem, Antioch, Alexandria and
+      Constantinople &mdash; lie in the eastern Mediterranean. Christianity's centre of gravity
+      moved west later, and in the last century has moved substantially to Africa, Asia and Latin
+      America.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="islam">
+      <h2>Islam</h2>
+
+      <p>
+      Islam originated in seventh-century Arabia with the Prophet Muhammad, who is believed to have
+      received revelations from God through the angel Gabriel. These revelations were compiled in
+      the Quran, considered the final and preserved scripture in Islam. The life and sayings of
+      Muhammad recorded in hadith literature serve as guidance alongside the Quran.
+      </p>
+
+      <h3>Belief</h3>
+
+      <p>
+      Central to Islamic belief is Tawhid, the absolute oneness of God, along with belief in angels,
+      earlier scriptures, prophets from Adam to Muhammad, the Day of Judgment, and divine destiny.
+      </p>
+
+      <h3>The Five Pillars</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Pillar</th><th>Practice</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Shahada</td><td>the declaration of faith</td></tr>
+            <tr><td>Salat</td><td>daily prayers</td></tr>
+            <tr><td>Zakat</td><td>charity</td></tr>
+            <tr><td>Sawm</td><td>fasting during Ramadan</td></tr>
+            <tr><td>Hajj</td><td>pilgrimage to Mecca</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Division, law and mysticism</h3>
+
+      <p>
+      After Muhammad's death in 632 CE, the community divided over leadership, leading to the Sunni
+      and Shia traditions. Islamic law, known as Sharia, guides ethical and social life, developed
+      through schools of jurisprudence that read the Quran and hadith alongside analogy and
+      scholarly consensus. Mystical traditions such as Sufism emphasize spiritual experience and
+      closeness to the divine.
+      </p>
+
+      <p>
+      Throughout history the Islamic world contributed greatly to science, medicine, mathematics
+      and philosophy during the Islamic Golden Age &mdash; the period in which Greek philosophy was
+      preserved, translated and argued with, and in which Aristotle reached medieval Europe by way
+      of Arabic commentary.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part III</span>
+      <h2>Traditions of India and East Asia</h2>
+      <p>Traditions organised less around a covenant than around a way &mdash; of release, of harmony, or of conduct.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="hinduism">
+      <h2>Hinduism</h2>
+
+      <p>
+      Hinduism developed over thousands of years in the Indian subcontinent and does not have a
+      single founder. It encompasses a wide range of philosophies, rituals and traditions &mdash;
+      which is why it resists being described as one system with one doctrine.
+      </p>
+
+      <h3>Central ideas</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Term</th><th>Meaning</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Brahman</td><td>the ultimate reality</td></tr>
+            <tr><td>Atman</td><td>the individual soul</td></tr>
+            <tr><td>Karma</td><td>the law of action and consequence</td></tr>
+            <tr><td>Samsara</td><td>the cycle of rebirth</td></tr>
+            <tr><td>Moksha</td><td>liberation from that cycle</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      Hindu thought includes many deities and traditions, such as the Trimurti of Brahma, Vishnu
+      and Shiva, as well as various forms of the divine feminine. Schools differ on how Atman and
+      Brahman are related: whether the two are ultimately identical, distinct, or somehow both.
+      </p>
+
+      <h3>Texts and paths</h3>
+
+      <p>
+      Sacred texts include the Vedas, the Upanishads, the epics Mahabharata and Ramayana, and later
+      Puranic literature. Paths to spiritual growth include knowledge, devotion, action and
+      meditation &mdash; several routes rather than one, suited to different temperaments.
+      </p>
+
+      <p class="flow">
+      jnana (knowledge) &nbsp;&bull;&nbsp; bhakti (devotion) &nbsp;&bull;&nbsp; karma (action)
+      &nbsp;&bull;&nbsp; dhyana (meditation)
+      </p>
+
+      <p>
+      Religious practice often involves rituals known as puja, temple worship, pilgrimages and
+      festivals such as Diwali and Holi. Hindu traditions have also influenced philosophical and
+      ethical ideas such as nonviolence, which shaped figures like Mahatma Gandhi.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="buddhism">
+      <h2>Buddhism</h2>
+
+      <p>
+      Buddhism began in the fifth century BCE with Siddhartha Gautama, who later became known as
+      the Buddha or "the Enlightened One." After encountering suffering in the world, he taught a
+      path aimed at understanding and overcoming it.
+      </p>
+
+      <h3>The Four Noble Truths</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th></th><th>Truth</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>There is suffering</td></tr>
+            <tr><td>2</td><td>It originates in craving</td></tr>
+            <tr><td>3</td><td>It can cease</td></tr>
+            <tr><td>4</td><td>There is a path to its end &mdash; the Noble Eightfold Path</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      Buddhism also teaches the impermanence of all things, the absence of a permanent self, and
+      the importance of wisdom, ethical conduct and meditation. The goal is nirvana, liberation from
+      the cycle of rebirth.
+      </p>
+
+      <div class="aside">
+      The denial of a permanent self is the sharpest break with the Hindu traditions it emerged
+      alongside: rebirth is retained, but there is no unchanging Atman that carries across it
+      &mdash; only a continuing process.
+      </div>
+
+      <h3>Traditions</h3>
+
+      <p>
+      Different traditions developed over time, including Theravada in Southeast Asia, Mahayana in
+      East Asia, and Vajrayana in Tibet. Buddhist communities are centered around the Sangha, the
+      monastic and lay community that preserves and practices the teachings.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="daoism">
+      <h2>Daoism</h2>
+
+      <p>
+      Daoism emerged in ancient China and is associated with thinkers such as Laozi and Zhuangzi.
+      The central idea is the Dao, the fundamental way or principle underlying the universe. Daoist
+      teachings encourage harmony with natural patterns rather than forcing outcomes.
+      </p>
+
+      <p>
+      Concepts such as yin and yang describe the dynamic balance of opposites, while qi represents
+      the vital energy that flows through all things. Practices include meditation, philosophy,
+      martial arts and traditional healing methods, all aimed at living in harmony with the natural
+      order.
+      </p>
+
+      <blockquote class="law">
+      The way that can be spoken of is not the constant way.
+      </blockquote>
+
+      <p>
+      The opening of the <em>Daodejing</em> makes the same move as the negative theologies of the
+      Abrahamic traditions, from the opposite direction: the ultimate is not withheld because it is
+      too holy to name, but because naming is the wrong kind of act toward it.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="confucianism">
+      <h2>Confucianism</h2>
+
+      <p>
+      Confucianism began with the teachings of Confucius in ancient China around the sixth century
+      BCE. It focuses less on theology and more on ethical and social harmony. Important values
+      include filial piety, humaneness and proper conduct within society.
+      </p>
+
+      <p>
+      Confucius taught that a stable and moral society depends on respect, education and the
+      cultivation of virtue. His teachings were later compiled in the Analects and became deeply
+      influential in East Asian philosophy and governance.
+      </p>
+
+      <div class="aside">
+      Whether Confucianism is a religion at all is genuinely contested. It has ritual, canonical
+      texts and an account of the ultimate order of things, but it makes few claims about gods and
+      little about an afterlife &mdash; which is why it appears on some lists of world religions
+      and not others.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="shinto">
+      <h2>Shinto</h2>
+
+      <p>
+      Shinto is the indigenous spiritual tradition of Japan and is often described as "the way of
+      the kami," referring to spiritual beings or forces present in nature and in ancestors. It has
+      no single founder or central scripture, though early myths appear in texts such as the Kojiki
+      and Nihongi.
+      </p>
+
+      <p>
+      According to these myths, the cosmos emerged from primordial chaos and the first heavenly
+      deities appeared, followed by generations of divine beings including Izanagi and Izanami who
+      created the islands of Japan and many other kami.
+      </p>
+
+      <p>
+      Nature itself is considered sacred, and humans live alongside these spirits. Ritual
+      purification practices and shrine worship are central to Shinto life. Kami are believed to
+      inhabit natural places and sacred objects, and harmony with them is maintained through
+      respect, offerings and rituals performed by shrine priests.
+      </p>
+
+      <p>
+      Because Shinto makes few exclusive demands, most Japanese practice sits alongside Buddhism
+      rather than in competition with it &mdash; commonly with Shinto rites for birth and marriage
+      and Buddhist ones for death.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part IV</span>
+      <h2>Other Traditions and Positions</h2>
+      <p>Traditions carried across oceans, the position that rejects the whole question, and what the wider record shows.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="african">
+      <h2>African diasporic religions</h2>
+
+      <p>
+      African diasporic religions developed from indigenous African traditions that spread through
+      the transatlantic slave trade and later blended with elements of Christianity and Islam.
+      Traditions such as Vodou in Haiti, Santer&iacute;a in Cuba and Candombl&eacute; in Brazil
+      reflect this blending.
+      </p>
+
+      <p>
+      Many of these traditions view the universe as interconnected through a spiritual realm, the
+      human realm and the ancestral realm.
+      </p>
+
+      <p class="flow">
+      spiritual realm &nbsp;&bull;&nbsp; human realm &nbsp;&bull;&nbsp; ancestral realm
+      </p>
+
+      <p>
+      Deities and spirits are honored through rituals, music, dance, offerings and festivals.
+      Ancestors play an important role, and community identity is often preserved through these
+      spiritual practices. These traditions emphasize harmony between people, nature and the
+      spiritual world.
+      </p>
+
+      <div class="aside">
+      The blending was frequently a survival strategy rather than a theological choice: practice
+      forbidden outright could continue under the cover of permitted saints and feast days, and the
+      correspondences that resulted became part of the traditions themselves.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="atheism">
+      <h2>Atheism and humanism</h2>
+
+      <p>
+      Atheism is not a religion but a philosophical position that rejects belief in gods or
+      supernatural beings. It emphasizes evidence, reason and human-centered ethics. Although
+      skepticism toward gods appears in ancient philosophy, atheism became more prominent during the
+      Enlightenment and with the growth of modern science.
+      </p>
+
+      <p>
+      Some forms of atheism actively deny the existence of deities, while others simply lack belief.
+      The distinction matters, because the two carry different burdens of argument.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Position</th><th>Claim</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Strong atheism</td><td>asserts that no deity exists</td></tr>
+            <tr><td>Weak atheism</td><td>simply lacks the belief, without asserting the denial</td></tr>
+            <tr><td>Agnosticism</td><td>holds the question unresolved, or unresolvable</td></tr>
+            <tr><td>Ignosticism</td><td>holds the question insufficiently defined to answer</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      Many atheists adopt ethical frameworks based on humanism, emphasizing compassion, human rights
+      and rational inquiry rather than divine authority. The standing challenge to that project is
+      the one raised in the Euthyphro dilemma from the other direction: whether a morality with no
+      external anchor can bind, and whether it needs to.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="other">
+      <h2>Other beliefs and observations</h2>
+
+      <p>
+      Throughout history many cultures practiced polytheism, believing in multiple gods associated
+      with natural forces. Monuments such as Stonehenge or ancient Egyptian sun worship reflect
+      early attempts to understand cosmic order. Some traditions developed ideas of a single supreme
+      force governing the universe, while others focused on interactions between the human and
+      spirit worlds.
+      </p>
+
+      <h3>Recurring forms</h3>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Form</th><th>Holds that</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Polytheism</td><td>many gods exist, often tied to natural forces</td></tr>
+            <tr><td>Monotheism</td><td>there is exactly one God</td></tr>
+            <tr><td>Henotheism</td><td>many gods exist but one is worshipped</td></tr>
+            <tr><td>Pantheism</td><td>God and the universe are identical</td></tr>
+            <tr><td>Panentheism</td><td>the universe is in God, who also exceeds it</td></tr>
+            <tr><td>Animism</td><td>spirit is present throughout the natural world</td></tr>
+            <tr><td>Deism</td><td>a creator exists but does not intervene</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>The brain at prayer</h3>
+
+      <p>
+      Modern scientific studies have even examined how the brain responds during meditation or
+      prayer, suggesting that belief and faith can influence neurological activity. Contemplative
+      practice shows measurable effects on attention networks and on stress response, and long-term
+      practitioners show differences in the regions involved.
+      </p>
+
+      <div class="aside">
+      What such findings can and cannot establish is worth being precise about. That a practice
+      changes the brain is a claim about the practice, not about whether its object exists &mdash;
+      the same measurements would be expected either way.
+      </div>
+
+      <p>
+      These observations show that humanity's search for meaning and understanding of the divine has
+      taken many different forms across cultures and time.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ############################################################ -->
+    <div class="part-heading">
+      <span class="eyebrow">Part V</span>
+      <h2>Questions Across Traditions</h2>
+      <p>The arguments that recur wherever the subject is taken up, and how the traditions line up against each other.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="arguments">
+      <h2>Arguments about God</h2>
+
+      <p>
+      Natural theology asks what could be established without appeal to revelation. Four classical
+      arguments recur, each with a standing objection &mdash; and none of them is regarded as
+      settled by everyone.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Argument</th><th>Runs</th><th>Objection</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cosmological</td>
+              <td>everything that begins has a cause; the universe began; so it has a cause</td>
+              <td>why must the cause be exempt from the rule, and why call it God?</td>
+            </tr>
+            <tr>
+              <td>Teleological</td>
+              <td>the order and fine-tuning of the world suggests design</td>
+              <td>order can arise from undirected processes; apparent tuning may be selection effect</td>
+            </tr>
+            <tr>
+              <td>Ontological</td>
+              <td>a greatest conceivable being would have to exist, or it would not be greatest</td>
+              <td>existence may not be a property that can be reasoned into being</td>
+            </tr>
+            <tr>
+              <td>Moral</td>
+              <td>binding moral obligation requires a source beyond human preference</td>
+              <td>obligation may be grounded in reason, contract or sentiment instead</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      Notably, several traditions on this page are indifferent to the whole exercise. The question
+      "does God exist" is central to the Abrahamic faiths, marginal in Confucianism, and reframed
+      entirely in Buddhism, where the pressing question is not what exists but how suffering ends.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="evil">
+      <h2>The problem of evil</h2>
+
+      <p>
+      The hardest problem for monotheism is stated in three lines that seem individually plausible
+      and jointly impossible.
+      </p>
+
+      <blockquote class="law">
+      God is all-powerful. God is perfectly good. Evil exists.
+      </blockquote>
+
+      <p>
+      Responses &mdash; <strong>theodicies</strong> &mdash; deny that the three actually conflict.
+      </p>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <thead>
+            <tr><th>Response</th><th>Says</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Free will defence</td><td>genuine freedom entails the possibility of its misuse; the freedom is worth the cost</td></tr>
+            <tr><td>Soul-making</td><td>a world with hardship develops virtues a frictionless one could not</td></tr>
+            <tr><td>Limited perspective</td><td>a created mind may be unable to see how a particular evil fits &mdash; the position stated at the top of this page</td></tr>
+            <tr><td>Reframing</td><td>some traditions relocate the problem: karma distributes consequence across lives, and dualist systems posit an opposing principle</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      The version hardest to answer is not moral evil but natural evil &mdash; earthquake, disease,
+      the suffering of children and animals &mdash; because no appeal to human freedom reaches it.
+      </p>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
+
+    <!-- ============================================================ -->
+    <div class="note-section" id="comparative">
+      <h2>A comparative view</h2>
+
+      <div class="data-table-wrap">
+        <table class="data">
+          <caption>Set side by side</caption>
+          <thead>
+            <tr><th>Tradition</th><th>Ultimate</th><th>Core text</th><th>Goal</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Judaism</td><td>one God, YHWH</td><td>Tanakh, Talmud</td><td>faithfulness to the covenant</td></tr>
+            <tr><td>Christianity</td><td>one God, triune</td><td>Bible</td><td>salvation and union with God</td></tr>
+            <tr><td>Islam</td><td>one God, Tawhid</td><td>Quran, hadith</td><td>submission and divine mercy</td></tr>
+            <tr><td>Hinduism</td><td>Brahman</td><td>Vedas, Upanishads</td><td>moksha &mdash; release from rebirth</td></tr>
+            <tr><td>Buddhism</td><td>no creator posited</td><td>Pali canon, sutras</td><td>nirvana &mdash; the end of suffering</td></tr>
+            <tr><td>Daoism</td><td>the Dao</td><td>Daodejing, Zhuangzi</td><td>harmony with the natural way</td></tr>
+            <tr><td>Confucianism</td><td>Heaven, the moral order</td><td>Analects</td><td>virtue and social harmony</td></tr>
+            <tr><td>Shinto</td><td>the kami</td><td>Kojiki, Nihongi</td><td>purity and harmony with the kami</td></tr>
+            <tr><td>Atheism</td><td>none posited</td><td>&mdash;</td><td>a good life on human terms</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+      Read across the rows, one division does most of the work. Where the ultimate is a
+      <em>person</em> who acts and can be addressed, the tradition organises itself around covenant,
+      obedience and relationship. Where the ultimate is a <em>principle</em> or a state of affairs,
+      it organises itself around alignment, insight and practice. The Abrahamic faiths sit on one
+      side of that line and most of Part III on the other &mdash; which is why the two groups
+      disagree less often than they simply ask different questions.
+      </p>
+
+      <div class="aside">
+      A caution on tables like this one: every cell compresses centuries of internal disagreement
+      into a phrase, and practitioners of any row would qualify their own. It is a map, and no map
+      is the ground.
+      </div>
+
+      <a class="to-top" href="#top">Back to top</a>
+    </div>
 
   </section>
 

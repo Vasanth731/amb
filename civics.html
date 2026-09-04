@@ -11,12 +11,188 @@
       min-height: 100vh;
       align-items: flex-start;
       text-align: left;
+      padding-bottom: 80px;
     }
     .hero h2 {
       font-size: 1.6em;
       color: #ffffff;
       margin-top: 40px;
       margin-bottom: 10px;
+    }
+    .hero h3 {
+      font-size: 1.1em;
+      color: #ffffff;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+      padding-bottom: 4px;
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+    .hero h4 {
+      font-size: 0.98em;
+      color: #4e4210;
+      font-weight: 700;
+      font-style: italic;
+      margin-top: 20px;
+      margin-bottom: 4px;
+    }
+
+    /* .hero is a flex column, so block children must be told to fill it */
+    .hero p,
+    .hero ul,
+    .hero ol,
+    .hero table,
+    .hero .chain,
+    .hero .formula,
+    .hero .verse {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .hero ul, .hero ol {
+      padding-left: 1.2em;
+      margin: 8px 0 14px;
+    }
+    .hero li {
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+    .hero li > ul { margin: 6px 0; }
+
+    /* Arrow chains, e.g. bill -> debate -> assent */
+    .chain {
+      font-weight: 700;
+      color: #4e4210;
+      line-height: 1.9;
+      margin: 10px 0 16px;
+    }
+
+    /* Key terms and principles */
+    .formula {
+      background: rgba(0, 0, 0, 0.12);
+      border-left: 3px solid #4e4210;
+      padding: 10px 14px;
+      margin: 12px 0 16px;
+      line-height: 1.8;
+      overflow-x: auto;
+    }
+
+    /* Quoted passages */
+    .verse {
+      font-style: italic;
+      border-left: 3px solid rgba(0, 0, 0, 0.3);
+      padding-left: 14px;
+      margin: 14px 0;
+    }
+    .verse cite {
+      display: block;
+      font-style: normal;
+      font-size: 0.85em;
+      opacity: 0.85;
+      margin-top: 4px;
+    }
+
+    .hero table {
+      border-collapse: collapse;
+      margin: 14px 0 20px;
+      font-size: 0.95em;
+    }
+    .hero th, .hero td {
+      text-align: left;
+      vertical-align: top;
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+    }
+    .hero thead tr { background: rgba(0, 0, 0, 0.15); }
+    .hero th {
+      font-size: 0.8em;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.35);
+    }
+    .hero .row-name { font-weight: 700; white-space: nowrap; }
+    .table-scroll { width: 100%; max-width: 900px; overflow-x: auto; }
+    .table-scroll table { max-width: none; min-width: 600px; }
+
+    .hero .aside { font-size: 0.9em; opacity: 0.9; }
+
+    /* ---------- contents ---------- */
+    .contents {
+      width: 100%;
+      max-width: 900px;
+      box-sizing: border-box;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 26px;
+      margin-bottom: 10px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    .contents h2 {
+      font-size: 0.8em !important;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 10px 0 !important;
+      opacity: 0.9;
+    }
+
+    .contents ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: none;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    .contents > ol > li {
+      margin-bottom: 14px;
+      font-size: 0.95em;
+      font-weight: 700;
+      break-inside: avoid;
+    }
+
+    .contents ul {
+      list-style: none;
+      margin: 5px 0 0 0;
+      padding-left: 14px;
+      max-width: none;
+    }
+
+    .contents ul li {
+      font-size: 0.85em;
+      font-weight: 400;
+      line-height: 1.5;
+      opacity: 0.9;
+      margin-bottom: 2px;
+    }
+
+    .contents a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .contents a:hover { border-bottom-color: #4e4210; }
+
+    .to-top {
+      display: inline-block;
+      margin-top: 10px;
+      margin-bottom: 4px;
+      font-size: 0.8em;
+      color: inherit;
+      opacity: 0.75;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .to-top:hover { opacity: 1; }
+
+    @media (max-width: 640px) {
+      .contents ol { columns: 1; }
     }
   </style>
 </head>
@@ -31,14 +207,503 @@
     </div>
   </nav>
 
-  <section class="hero" style="background-color: #d5c56d;">
+  <section class="hero" id="top" style="background-color: #d5c56d;">
     <h1>Civics</h1>
+
     <p>
-      Civics is the study of how societies govern themselves and how citizens participate in public life. It explains the structure and functions of government, the rights and responsibilities of citizens, and the rules that help communities live together peacefully. A good place to start is understanding the three main branches of government found in many democracies: the legislative branch, which makes laws; the executive branch, which implements and enforces laws; and the judicial branch, which interprets laws and resolves disputes. Civics also covers concepts such as constitutions, elections, political parties, local government, and the rule of law. The central idea is that governments derive their authority from the people and are accountable to them.
+      The study of how societies govern themselves and how citizens take part in public life
+      &mdash; what institutions do, why they exist, and how ordinary people can influence decisions
+      that affect their communities and countries.
+    </p>
+
+    <nav class="contents" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li>
+          <a href="#what">What Civics Studies</a>
+          <ul>
+            <li><a href="#consent">Authority from the people</a></li>
+            <li><a href="#state">State, government and nation</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#branches">The Three Branches of Government</a>
+          <ul>
+            <li><a href="#legislative">Legislative</a></li>
+            <li><a href="#executive">Executive</a></li>
+            <li><a href="#judicial">Judicial</a></li>
+            <li><a href="#checks">Separation of powers</a></li>
+            <li><a href="#bill">How a bill becomes law</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#constitution">Constitutions and the Rule of Law</a>
+          <ul>
+            <li><a href="#what-constitution">What a constitution does</a></li>
+            <li><a href="#rule-of-law">The rule of law</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#forms">Forms of Government</a>
+          <ul>
+            <li><a href="#democracy">Kinds of democracy</a></li>
+            <li><a href="#systems">Parliamentary and presidential</a></li>
+            <li><a href="#distribution">Unitary and federal</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#elections">Elections and Political Parties</a>
+          <ul>
+            <li><a href="#voting">Suffrage and the ballot</a></li>
+            <li><a href="#systems-electoral">Electoral systems</a></li>
+            <li><a href="#parties">Political parties</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#local">Local Government</a>
+        </li>
+        <li>
+          <a href="#rights">Rights and Responsibilities</a>
+          <ul>
+            <li><a href="#your-rights">Rights</a></li>
+            <li><a href="#your-duties">Responsibilities</a></li>
+            <li><a href="#limits">Where rights meet limits</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#participation">Participation and Accountability</a>
+          <ul>
+            <li><a href="#taking-part">Ways of taking part</a></li>
+            <li><a href="#evaluating">Evaluating a public policy</a></li>
+            <li><a href="#accountable">Holding power accountable</a></li>
+          </ul>
+        </li>
+      </ol>
+    </nav>
+
+
+    <!-- ============================================================ -->
+    <h2 id="what">What Civics Studies</h2>
+    <p>
+      Civics explains the structure and functions of government, the rights and responsibilities of
+      citizens, and the rules that help communities live together peacefully. Rather than focusing
+      on politicians or political debates alone, it is essentially the study of citizenship and the
+      practical workings of democracy and government &mdash; the machinery rather than the
+      personalities.
+    </p>
+
+    <h3 id="consent">Authority from the people</h3>
+    <p>
+      The central idea is that governments derive their authority from the people and are
+      accountable to them. Everything else in the subject follows from that claim: elections exist
+      to grant and withdraw the authority, constitutions exist to define its limits, and courts
+      exist to enforce those limits when the government would rather they did not apply.
+    </p>
+    <p class="aside">
+      This is a normative claim as much as a descriptive one. Not every government meets it, and a
+      good deal of civics involves examining the gap between how a system is described on paper and
+      how it operates in practice.
+    </p>
+
+    <h3 id="state">State, government and nation</h3>
+    <p>
+      Three words that get used interchangeably mean different things, and keeping them apart makes
+      the rest of the subject clearer.
+    </p>
+    <div class="formula">
+      State&nbsp;&nbsp;&nbsp;&nbsp;&rarr;&nbsp; a permanent political entity: territory, population, government, sovereignty<br>
+      Government&rarr;&nbsp; the particular set of people and institutions currently exercising power<br>
+      Nation&nbsp;&nbsp;&nbsp;&rarr;&nbsp; a community sharing identity, culture or history &mdash; not necessarily matching any state's borders
+    </div>
+    <p>
+      Governments change while the state continues, which is why a change of government is not a
+      change of country.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="branches">The Three Branches of Government</h2>
+    <p>
+      A good place to start is understanding the three main branches of government found in many
+      democracies.
+    </p>
+
+    <h3 id="legislative">Legislative</h3>
+    <p>
+      The branch that <strong>makes laws</strong>. It also holds the power of the purse &mdash;
+      approving taxation and spending &mdash; and scrutinises the executive through questions,
+      debates and committees. Legislatures are often <strong>bicameral</strong>, with a lower house
+      elected directly by population and an upper house representing regions or states, so that
+      legislation must satisfy two differently constituted bodies.
+    </p>
+
+    <h3 id="executive">Executive</h3>
+    <p>
+      The branch that <strong>implements and enforces laws</strong>. This means the head of state or
+      government and the cabinet, but far more of it is the permanent civil service, the police and
+      the regulatory agencies &mdash; the parts that carry out policy long after the ministers who
+      announced it have moved on.
+    </p>
+
+    <h3 id="judicial">Judicial</h3>
+    <p>
+      The branch that <strong>interprets laws and resolves disputes</strong>. Its distinctive
+      requirement is independence: judges must be able to rule against the government that appointed
+      them, which is why security of tenure and protected salaries are treated as constitutional
+      matters rather than administrative ones. Through <strong>judicial review</strong>, courts in
+      many systems can strike down laws or executive actions that conflict with the constitution.
+    </p>
+
+    <h3 id="checks">Separation of powers</h3>
+    <p>
+      The point of dividing government three ways is that each branch can check the others, so that
+      no single body both makes the rules and judges its own compliance with them.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Branch</th><th>Function</th><th>Typical checks on it</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-name">Legislative</td>
+            <td>Makes laws; approves budgets</td>
+            <td>Laws struck down by courts; bills vetoed or returned; the legislature itself faces election</td>
+          </tr>
+          <tr>
+            <td class="row-name">Executive</td>
+            <td>Implements and enforces laws</td>
+            <td>Budgets withheld; actions reviewed by courts; questioned, censured or removed by the legislature</td>
+          </tr>
+          <tr>
+            <td class="row-name">Judicial</td>
+            <td>Interprets laws; resolves disputes</td>
+            <td>Judges appointed through the other branches; jurisdiction and law can be amended; impeachment for misconduct</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 id="bill">How a bill becomes law</h3>
+    <p class="chain">
+      proposal &rarr; introduction &rarr; committee scrutiny &rarr; debate and amendment &rarr;
+      vote &rarr; second chamber &rarr; head of state's assent &rarr; law
     </p>
     <p>
-      As a citizen, civics helps you understand not only your rights—such as freedom of speech, voting rights, and legal protections—but also your responsibilities, including obeying laws, paying taxes, serving on juries where applicable, and participating in community affairs. Learning civics enables you to evaluate public policies, follow current events, engage in informed discussions, and make thoughtful decisions during elections. Rather than focusing on politicians or political debates alone, civics teaches how institutions work, why they exist, and how ordinary people can influence decisions that affect their communities and countries. It is essentially the study of citizenship and the practical workings of democracy and government.
+      Most of the real work happens at the committee stage, where the text is examined line by line
+      and evidence is taken &mdash; the debates that get reported are usually the least
+      consequential part of the process. A bill that clears every stage but is not signed, or that
+      passes one chamber and fails in the other, simply does not become law.
     </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="constitution">Constitutions and the Rule of Law</h2>
+
+    <h3 id="what-constitution">What a constitution does</h3>
+    <p>
+      A constitution is the document, or set of established practices, that creates the institutions
+      of government, distributes power between them, and states what government may not do. It sits
+      above ordinary law: where the two conflict, the constitution prevails, which is what makes it
+      a limit rather than merely a policy.
+    </p>
+    <ul>
+      <li><strong>Written</strong> constitutions are codified in a single document &mdash; most countries</li>
+      <li><strong>Unwritten</strong> or uncodified ones rest on statutes, conventions and precedent accumulated over time &mdash; the United Kingdom being the standard example</li>
+      <li><strong>Rigid</strong> constitutions require a special procedure to amend, such as a supermajority or a referendum; <strong>flexible</strong> ones can be changed like any other law</li>
+    </ul>
+    <p>
+      The amendment procedure is one of the most consequential clauses in any constitution. Too
+      rigid and the document cannot adapt; too flexible and it stops being a constraint on whoever
+      currently holds a majority.
+    </p>
+
+    <h3 id="rule-of-law">The rule of law</h3>
+    <p>
+      The rule of law means that power is exercised through known, general rules rather than
+      arbitrary decision &mdash; and that the rules bind the government as much as the governed.
+    </p>
+    <div class="formula">
+      Laws are public, clear and knowable in advance<br>
+      They apply equally, including to officials and to the government itself<br>
+      They are applied by independent courts through fair procedure<br>
+      No one is punished except under an existing law, proven in a proper hearing
+    </div>
+    <p>
+      The contrast is with <strong>rule by law</strong>, where a government uses legal instruments
+      as tools while remaining above them. The formal apparatus can look identical in both cases,
+      which is why the test is practical: what happens when the state loses in its own courts.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="forms">Forms of Government</h2>
+
+    <h3 id="democracy">Kinds of democracy</h3>
+    <p>
+      <strong>Direct democracy</strong> has citizens decide questions themselves, as in a
+      referendum or a village assembly. <strong>Representative democracy</strong> has them elect
+      others to decide on their behalf, which is what scale requires. Most systems mix the two,
+      using representatives for ordinary legislation and referendums for constitutional questions.
+    </p>
+    <p class="aside">
+      A <strong>republic</strong> is a state whose head is not a hereditary monarch. A
+      <strong>constitutional monarchy</strong> keeps a monarch as a ceremonial head of state while
+      real power sits with an elected government &mdash; so republic and democracy are separate
+      questions, and a country can be one without being the other.
+    </p>
+
+    <h3 id="systems">Parliamentary and presidential</h3>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th></th><th>Parliamentary</th><th>Presidential</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-name">Executive comes from</td>
+            <td>The legislature; the prime minister is a sitting member</td>
+            <td>A separate election; the president is not part of the legislature</td>
+          </tr>
+          <tr>
+            <td class="row-name">Survives by</td>
+            <td>Retaining the confidence of the legislature</td>
+            <td>Serving a fixed term</td>
+          </tr>
+          <tr>
+            <td class="row-name">Removal</td>
+            <td>A no-confidence vote can end the government at any time</td>
+            <td>Only by impeachment for specified misconduct</td>
+          </tr>
+          <tr>
+            <td class="row-name">Trade-off</td>
+            <td>Responsive, but can be unstable under fragmented parliaments</td>
+            <td>Stable, but can deadlock when legislature and president disagree</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 id="distribution">Unitary and federal</h3>
+    <p>
+      Power can also be divided vertically rather than horizontally. In a <strong>unitary</strong>
+      state, authority rests with the central government, which may delegate to lower levels and may
+      withdraw that delegation. In a <strong>federal</strong> state, the constitution itself divides
+      subjects between the centre and the states or provinces, so neither can simply abolish the
+      other's sphere. A <strong>confederation</strong> reverses the balance, leaving the member
+      states dominant and the centre weak.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="elections">Elections and Political Parties</h2>
+
+    <h3 id="voting">Suffrage and the ballot</h3>
+    <p>
+      <strong>Universal adult suffrage</strong> &mdash; one person, one vote, regardless of
+      property, sex or literacy &mdash; is recent nearly everywhere and was won incrementally
+      rather than granted at once. Two procedural features make a vote meaningful: the
+      <strong>secret ballot</strong>, which protects voters from pressure and from being punished
+      for their choice, and an <strong>independent election authority</strong>, which administers
+      the process so that no contesting party controls the count.
+    </p>
+
+    <h3 id="systems-electoral">Electoral systems</h3>
+    <p>
+      How votes convert into seats shapes politics more than almost any other rule.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>System</th><th>How it works</th><th>Tends to produce</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-name">First past the post</td>
+            <td>Highest vote in each constituency wins the seat</td>
+            <td>Clear local representation and single-party majorities; large parties over-rewarded, small ones under-represented</td>
+          </tr>
+          <tr>
+            <td class="row-name">Proportional representation</td>
+            <td>Seats allocated in proportion to each party's vote share</td>
+            <td>Seats matching votes closely; frequent coalitions and negotiated governments</td>
+          </tr>
+          <tr>
+            <td class="row-name">Ranked or runoff voting</td>
+            <td>Voters rank candidates, or a second round is held between the top two</td>
+            <td>Winners with majority support rather than a plurality</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="aside">
+      Because constituency boundaries decide which votes count where, who draws them matters
+      &mdash; manipulating them for partisan advantage is known as gerrymandering.
+    </p>
+
+    <h3 id="parties">Political parties</h3>
+    <p>
+      Parties organise scattered opinion into a small number of programmes voters can actually
+      choose between, recruit and train candidates, and give electors something to hold responsible
+      at the next election. A <strong>two-party</strong> system concentrates choice and usually
+      yields single-party government; a <strong>multi-party</strong> system widens choice and
+      usually yields coalitions. Where one party wins indefinitely, the formal machinery of
+      elections can remain intact while the accountability it was meant to deliver weakens.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="local">Local Government</h2>
+    <p>
+      Local government is the level most people actually encounter: water supply, drainage,
+      sanitation, roads, street lighting, local schools and clinics, building permission, markets
+      and waste collection. The argument for it is <strong>subsidiarity</strong> &mdash; decisions
+      should be taken at the lowest level competent to take them, because that level knows the
+      circumstances and is easiest for residents to reach.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Level</th><th>Typically covers</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-name">Village or ward</td><td>The smallest unit; direct local works and grievances, often with a general assembly of residents</td></tr>
+          <tr><td class="row-name">Block or district</td><td>Coordination across many villages; rural development, larger works</td></tr>
+          <tr><td class="row-name">Municipality or city</td><td>Urban services, planning, local taxation and licensing</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      In India this is the <strong>panchayati raj</strong> system for rural areas &mdash; gram
+      panchayat, panchayat samiti and zilla parishad &mdash; alongside municipal corporations and
+      councils in towns and cities, with seats reserved for women and for scheduled castes and
+      tribes.
+    </p>
+    <p class="aside">
+      The recurring weakness of local government everywhere is fiscal: bodies given
+      responsibilities without independent revenue remain dependent on transfers from above, and
+      dependence limits how far they can actually decide anything.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="rights">Rights and Responsibilities</h2>
+    <p>
+      As a citizen, civics helps you understand not only your rights but also your
+      responsibilities. The two are connected: a right claimed by everyone only functions if enough
+      people accept the corresponding duty.
+    </p>
+
+    <h3 id="your-rights">Rights</h3>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Right</th><th>What it protects</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-name">Freedom of speech</td><td>Expressing opinion, criticising government, and publishing without prior permission</td></tr>
+          <tr><td class="row-name">Voting rights</td><td>A share in choosing who governs, and the ability to remove them</td></tr>
+          <tr><td class="row-name">Legal protections</td><td>Due process: knowing the charge, a fair hearing, counsel, and no punishment without law</td></tr>
+          <tr><td class="row-name">Equality before the law</td><td>The same rules and the same treatment regardless of who you are</td></tr>
+          <tr><td class="row-name">Assembly and association</td><td>Meeting, protesting peacefully, and forming unions, parties and societies</td></tr>
+          <tr><td class="row-name">Belief and conscience</td><td>Holding, practising or declining religion without penalty</td></tr>
+          <tr><td class="row-name">Movement and residence</td><td>Travelling and settling within the country</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 id="your-duties">Responsibilities</h3>
+    <ul>
+      <li><strong>Obeying laws</strong> &mdash; including the ones you disagree with, while working through legitimate channels to change them</li>
+      <li><strong>Paying taxes</strong> &mdash; the revenue every public service is funded from</li>
+      <li><strong>Serving on juries</strong> where applicable &mdash; the citizen's direct role in the justice system</li>
+      <li><strong>Participating in community affairs</strong> &mdash; attending meetings, voting, raising local issues</li>
+      <li><strong>Respecting others' rights</strong> &mdash; the condition on which your own claim to them rests</li>
+    </ul>
+
+    <h3 id="limits">Where rights meet limits</h3>
+    <p>
+      Rights are rarely absolute. They are limited where they collide with the rights of others or
+      with a compelling public interest such as safety or public health, and constitutions usually
+      say so explicitly. The live questions in most countries are about where those limits fall and
+      who decides &mdash; which is why so much constitutional litigation concerns the boundary
+      rather than the right itself.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="participation">Participation and Accountability</h2>
+
+    <h3 id="taking-part">Ways of taking part</h3>
+    <p>
+      Voting is the most visible form of participation but far from the only one, and the others
+      operate in the years between elections when most decisions are actually made.
+    </p>
+    <ul>
+      <li>Contacting an elected representative about a specific problem</li>
+      <li>Attending local body meetings and public consultations</li>
+      <li>Petitions, campaigns and peaceful protest</li>
+      <li>Filing information requests to obtain official records</li>
+      <li>Public interest litigation, where courts allow it</li>
+      <li>Working through unions, associations, cooperatives and civil society organisations</li>
+      <li>Standing for office, from a local ward upward</li>
+    </ul>
+
+    <h3 id="evaluating">Evaluating a public policy</h3>
+    <p>
+      Learning civics enables you to evaluate public policies, follow current events, engage in
+      informed discussions, and make thoughtful decisions during elections. A workable set of
+      questions to put to any proposal:
+    </p>
+    <div class="formula">
+      What problem is this meant to solve, and how would we know if it worked?<br>
+      Who benefits, who bears the cost, and are those the same people?<br>
+      What does it cost, and where is the money coming from?<br>
+      Who has the authority to do this, and is it the right level of government?<br>
+      What is the strongest argument on the other side?
+    </div>
+
+    <h3 id="accountable">Holding power accountable</h3>
+    <p>
+      Accountability is not a single mechanism but a set of overlapping ones, and the redundancy is
+      the point &mdash; each is capable of failing.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Mechanism</th><th>How it constrains power</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-name">Elections</td><td>Periodic removal of those who govern badly</td></tr>
+          <tr><td class="row-name">Courts</td><td>Individual remedies and review of unlawful action</td></tr>
+          <tr><td class="row-name">Legislative oversight</td><td>Questions, committees and inquiries into executive conduct</td></tr>
+          <tr><td class="row-name">Audit institutions</td><td>Independent examination of how public money was actually spent</td></tr>
+          <tr><td class="row-name">Ombudsman and anti-corruption bodies</td><td>Investigation of complaints against officials</td></tr>
+          <tr><td class="row-name">Free press and open data</td><td>Disclosure &mdash; the precondition for every other mechanism working</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Which is where the subject returns to its starting point. Institutions do not run themselves;
+      they work to the extent that enough people understand them well enough to use them.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
   </section>
 
   <script src="script.js"></script>

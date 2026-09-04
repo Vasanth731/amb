@@ -11,12 +11,188 @@
       min-height: 100vh;
       align-items: flex-start;
       text-align: left;
+      padding-bottom: 80px;
     }
     .hero h2 {
       font-size: 1.6em;
       color: #ffffff;
       margin-top: 40px;
       margin-bottom: 10px;
+    }
+    .hero h3 {
+      font-size: 1.1em;
+      color: #ffffff;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+      padding-bottom: 4px;
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+    .hero h4 {
+      font-size: 0.98em;
+      color: #635010;
+      font-weight: 700;
+      font-style: italic;
+      margin-top: 20px;
+      margin-bottom: 4px;
+    }
+
+    /* .hero is a flex column, so block children must be told to fill it */
+    .hero p,
+    .hero ul,
+    .hero ol,
+    .hero table,
+    .hero .chain,
+    .hero .formula,
+    .hero .verse {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .hero ul, .hero ol {
+      padding-left: 1.2em;
+      margin: 8px 0 14px;
+    }
+    .hero li {
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+    .hero li > ul { margin: 6px 0; }
+
+    /* Arrow chains, e.g. small structures -> larger structures */
+    .chain {
+      font-weight: 700;
+      color: #635010;
+      line-height: 1.9;
+      margin: 10px 0 16px;
+    }
+
+    /* Key terms and definitions */
+    .formula {
+      background: rgba(0, 0, 0, 0.12);
+      border-left: 3px solid #635010;
+      padding: 10px 14px;
+      margin: 12px 0 16px;
+      line-height: 1.8;
+      overflow-x: auto;
+    }
+
+    /* Quoted passages */
+    .verse {
+      font-style: italic;
+      border-left: 3px solid rgba(0, 0, 0, 0.28);
+      padding-left: 14px;
+      margin: 14px 0;
+    }
+    .verse cite {
+      display: block;
+      font-style: normal;
+      font-size: 0.85em;
+      opacity: 0.85;
+      margin-top: 4px;
+    }
+
+    .hero table {
+      border-collapse: collapse;
+      margin: 14px 0 20px;
+      font-size: 0.95em;
+    }
+    .hero th, .hero td {
+      text-align: left;
+      vertical-align: top;
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+    }
+    .hero thead tr { background: rgba(0, 0, 0, 0.15); }
+    .hero th {
+      font-size: 0.8em;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.35);
+    }
+    .hero .row-name { font-weight: 700; white-space: nowrap; }
+    .table-scroll { width: 100%; max-width: 900px; overflow-x: auto; }
+    .table-scroll table { max-width: none; min-width: 620px; }
+
+    .hero .aside { font-size: 0.9em; opacity: 0.9; }
+
+    /* ---------- contents ---------- */
+    .contents {
+      width: 100%;
+      max-width: 900px;
+      box-sizing: border-box;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 26px;
+      margin-bottom: 10px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    .contents h2 {
+      font-size: 0.8em !important;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 10px 0 !important;
+      opacity: 0.9;
+    }
+
+    .contents ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: none;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    .contents > ol > li {
+      margin-bottom: 14px;
+      font-size: 0.95em;
+      font-weight: 700;
+      break-inside: avoid;
+    }
+
+    .contents ul {
+      list-style: none;
+      margin: 5px 0 0 0;
+      padding-left: 14px;
+      max-width: none;
+    }
+
+    .contents ul li {
+      font-size: 0.85em;
+      font-weight: 400;
+      line-height: 1.5;
+      opacity: 0.9;
+      margin-bottom: 2px;
+    }
+
+    .contents a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .contents a:hover { border-bottom-color: #635010; }
+
+    .to-top {
+      display: inline-block;
+      margin-top: 10px;
+      margin-bottom: 4px;
+      font-size: 0.8em;
+      color: inherit;
+      opacity: 0.75;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .to-top:hover { opacity: 1; }
+
+    @media (max-width: 640px) {
+      .contents ol { columns: 1; }
     }
   </style>
 </head>
@@ -31,11 +207,486 @@
     </div>
   </nav>
 
-  <section class="hero" style="background-color: #ebdc8b;">
+  <section class="hero" id="top" style="background-color: #ebdc8b;">
     <h1>Sociology</h1>
+
     <p>
-    Studies about people and society work in the present. It focuses on social institutions and behavior patterns. It covers both the macro and micro focus of asking the questions regarding society. Social functions are of two types manifest (intended consequences of particular structure) and latent (unintended). It’s like how schools are for learning as well as for socializing. Social dysfunctions also exist. Aguste Comte, the founder of sociology states that phenomena can be studied through direct observation and these can be pulled together into theories. This is used to make a data driven reseach to analyze and the hypotheses (possible relationship between two variables). The conflict theory states that we labour and change things around to survive and while trying to free ourselves from these natural constrains we entangled ourselves in new social constraints. It also deals with theories like Race Conflict theory and Gender conflict theory. Symbols, values and norms are different in different senarios which leads us to a culture, subculture and counter culture. Nurture is the behaviour based on the people and environment around us. Social development, socialization, interactions led us from small structures to larger structures. Social group is a collection of people who have something in common and significant. Formal organizations are formed to achieve goals efficiently while Noemative organizations are formed for people to join as volunteers and pursue some goal that is morally worthwile and Coercive organisations are those like jail where people don’t have a say in joining or not. An oligarchy is where the people in the top make decision for all in the botton like a hierarchy which gives rise to bureaucracies. Deviants are non-normative, positive and negative sanctions are response to conformity. Social stratification is a system by which society categorizes people and ranks them in hierarchy. Aparthed and caste system are few examples. Anticipatory socialization is learning to fit into a group you’ll someday be a part of. Class socialization is the most common one passed on from parents to children. Politics, Sex, Race, Ethnicity, Religion all of these can be understood through the concepts of sociology. Gender is social convention while sex is binary. Ethnicities are socially constructed categories based on cultural traits, also that has a shared cultural heritage but not on visual or biological traits. Race is based on observable, physical traits. Kinship is a social bond which is based on common ancestry, marriage or adoption. Fictive kin is when friends become family. Education is a social institution through which society provides its members with all kinds of important knowledge.
+      The study of how people and society work in the present &mdash; social institutions, patterns
+      of behaviour, and the structures that shape choices people experience as entirely their own.
     </p>
+
+    <nav class="contents" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li>
+          <a href="#what">What Sociology Studies</a>
+          <ul>
+            <li><a href="#macromicro">Macro and micro focus</a></li>
+            <li><a href="#imagination">The sociological imagination</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#paradigms">Founders and Theoretical Paradigms</a>
+          <ul>
+            <li><a href="#comte">Comte and positivism</a></li>
+            <li><a href="#functionalism">Structural functionalism</a></li>
+            <li><a href="#conflict">Conflict theory</a></li>
+            <li><a href="#interactionism">Symbolic interactionism</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#methods">Research Methods</a>
+        </li>
+        <li>
+          <a href="#culture">Culture</a>
+          <ul>
+            <li><a href="#symbols">Symbols, values and norms</a></li>
+            <li><a href="#subculture">Culture, subculture, counterculture</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#socialization">Socialization</a>
+          <ul>
+            <li><a href="#nurture">Nature and nurture</a></li>
+            <li><a href="#self">Developing a self</a></li>
+            <li><a href="#types-social">Anticipatory and class socialization</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#groups">Groups and Organizations</a>
+          <ul>
+            <li><a href="#socialgroup">Social groups</a></li>
+            <li><a href="#formal">Formal, normative and coercive</a></li>
+            <li><a href="#bureaucracy">Oligarchy and bureaucracy</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#deviance">Deviance and Social Control</a>
+        </li>
+        <li>
+          <a href="#stratification">Social Stratification</a>
+          <ul>
+            <li><a href="#systems">Caste, class and apartheid</a></li>
+            <li><a href="#mobility">Mobility and its limits</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#identity">Gender, Sex, Race and Ethnicity</a>
+          <ul>
+            <li><a href="#gender">Gender and sex</a></li>
+            <li><a href="#race">Race and ethnicity</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#institutions">Family, Religion, Education and Politics</a>
+          <ul>
+            <li><a href="#kinship">Kinship and family</a></li>
+            <li><a href="#religion">Religion</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#politics">Politics and authority</a></li>
+          </ul>
+        </li>
+      </ol>
+    </nav>
+
+
+    <!-- ============================================================ -->
+    <h2 id="what">What Sociology Studies</h2>
+    <p>
+      Sociology studies how people and society work in the present, focusing on social institutions
+      and patterns of behaviour. Where anthropology reaches back through evolution and material
+      remains, sociology takes the society currently in front of it and asks why it holds the shape
+      it does. Politics, sex, race, ethnicity and religion can all be understood through its
+      concepts.
+    </p>
+
+    <h3 id="macromicro">Macro and micro focus</h3>
+    <p>
+      The discipline covers both the macro and the micro focus of asking questions about society.
+      A <strong>macro</strong> question asks how whole systems work: why a country's inequality is
+      rising, how an institution reproduces itself. A <strong>micro</strong> question asks how
+      interaction works up close: how two strangers negotiate a queue, how a classroom establishes
+      who speaks. The same phenomenon usually needs both.
+    </p>
+
+    <h3 id="imagination">The sociological imagination</h3>
+    <p>
+      C. Wright Mills gave the discipline its central habit of mind: the capacity to see
+      <em>personal troubles</em> as <em>public issues</em>. One person unemployed is a biography;
+      ten million unemployed is a structure, and no amount of individual effort explains it. The
+      move from the first reading to the second is what sociology trains.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="paradigms">Founders and Theoretical Paradigms</h2>
+
+    <h3 id="comte">Comte and positivism</h3>
+    <p>
+      Auguste Comte, the founder of sociology, held that social phenomena can be studied through
+      direct observation, and that these observations can be pulled together into theories. This is
+      what makes data-driven research possible: gathering evidence in order to analyse it and test
+      <strong>hypotheses</strong>, each a proposed relationship between two variables.
+    </p>
+
+    <h3 id="functionalism">Structural functionalism</h3>
+    <p>
+      This paradigm treats society as a system of interlocking parts, each contributing to the
+      stability of the whole. Robert Merton distinguished two kinds of contribution.
+      <strong>Manifest functions</strong> are the intended consequences of a particular structure,
+      and <strong>latent functions</strong> are the unintended ones. Schools are for learning
+      &mdash; the manifest function &mdash; as well as for socializing, supervising children during
+      working hours and sorting people into future positions, none of which appears in the
+      curriculum. <strong>Social dysfunctions</strong> also exist: consequences that undermine the
+      system rather than support it.
+    </p>
+    <p class="aside">
+      &Eacute;mile Durkheim's work on solidarity, the division of labour and suicide rates
+      established the approach's central claim &mdash; that social facts are real and cannot be
+      reduced to individual psychology.
+    </p>
+
+    <h3 id="conflict">Conflict theory</h3>
+    <p>
+      Conflict theory states that we labour and change things around us in order to survive, and
+      that while trying to free ourselves from these natural constraints we entangle ourselves in
+      new social ones. Where functionalism sees parts cooperating, conflict theory sees groups
+      competing over scarce resources, and asks who benefits from an arrangement that is presented
+      as being in everyone's interest.
+    </p>
+    <p>
+      Karl Marx located the conflict in class and ownership of the means of production. The
+      approach also deals with <strong>race conflict theory</strong>, which centres racial
+      domination and resistance, and <strong>gender conflict theory</strong>, which centres
+      patriarchy and the unequal distribution of power between men and women.
+    </p>
+
+    <h3 id="interactionism">Symbolic interactionism</h3>
+    <p>
+      The micro-level paradigm: society exists in and through everyday interaction, and what holds
+      it together is shared meaning. Max Weber insisted on understanding action from the actor's own
+      point of view, and George Herbert Mead built an account of how the self arises out of taking
+      the perspective of others. Erving Goffman later described social life as performance, with
+      front stages, back stages and considerable effort spent managing impressions.
+    </p>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Paradigm</th><th>Level</th><th>Society is&hellip;</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-name">Structural functionalism</td><td>Macro</td><td>A system of parts working to maintain stability</td></tr>
+          <tr><td class="row-name">Conflict theory</td><td>Macro</td><td>An arena of competition over resources and power</td></tr>
+          <tr><td class="row-name">Symbolic interactionism</td><td>Micro</td><td>The ongoing product of everyday shared meaning</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="methods">Research Methods</h2>
+    <p>
+      Research begins by turning a concept into something measurable &mdash;
+      <strong>operationalization</strong> &mdash; then choosing a method suited to the question.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Method</th><th>Good for</th><th>Weakness</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-name">Survey</td><td>Patterns across large populations</td><td>Depends on what people are willing and able to report</td></tr>
+          <tr><td class="row-name">Experiment</td><td>Establishing cause and effect</td><td>Artificial settings; limited scope for social questions</td></tr>
+          <tr><td class="row-name">Field research</td><td>Meaning and process in real settings</td><td>Hard to generalise; observer effects</td></tr>
+          <tr><td class="row-name">Secondary analysis</td><td>Historical and cross-national comparison</td><td>Data were collected for someone else's purpose</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="formula">
+      Independent variable&nbsp;&nbsp;&rarr;&nbsp; the presumed cause<br>
+      Dependent variable&nbsp;&nbsp;&nbsp;&nbsp;&rarr;&nbsp; the presumed effect<br>
+      Reliability&nbsp;&nbsp;&rarr;&nbsp; the measure gives consistent results<br>
+      Validity&nbsp;&nbsp;&nbsp;&nbsp;&rarr;&nbsp; the measure captures what it claims to
+    </div>
+    <p>
+      The standing warning is that <strong>correlation is not causation</strong>. Two variables can
+      move together because one causes the other, because the causation runs the other way, or
+      because a third variable drives both.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="culture">Culture</h2>
+
+    <h3 id="symbols">Symbols, values and norms</h3>
+    <p>
+      Symbols, values and norms are different in different scenarios, and the particular
+      combination is what constitutes a culture. <strong>Symbols</strong> carry shared meaning,
+      <strong>values</strong> state what is worth wanting, and <strong>norms</strong> specify
+      expected behaviour. Norms come in degrees of seriousness:
+    </p>
+    <ul>
+      <li><strong>Folkways</strong> &mdash; everyday customs; breaking them is odd rather than wrong</li>
+      <li><strong>Mores</strong> &mdash; morally weighted rules; breaking them provokes real censure</li>
+      <li><strong>Taboos</strong> &mdash; prohibitions so strong that violation is close to unthinkable</li>
+      <li><strong>Laws</strong> &mdash; norms formally codified and enforced by the state</li>
+    </ul>
+
+    <h3 id="subculture">Culture, subculture, counterculture</h3>
+    <p>
+      Difference in symbols, values and norms leads to <strong>culture</strong>,
+      <strong>subculture</strong> &mdash; a group with distinct patterns within a wider society
+      &mdash; and <strong>counterculture</strong>, whose values stand deliberately opposed to the
+      mainstream. Culture divides into the <strong>material</strong>, the physical things a society
+      produces, and the <strong>non-material</strong>: its ideas, beliefs and practices. The two
+      change at different speeds, producing what William Ogburn called <strong>cultural lag</strong>
+      &mdash; technology arriving before the norms for using it.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="socialization">Socialization</h2>
+
+    <h3 id="nurture">Nature and nurture</h3>
+    <p>
+      <strong>Nurture</strong> is behaviour based on the people and environment around us.
+      Sociology does not deny biology, but its contribution is to show how much of what feels
+      innate &mdash; taste, ambition, accent, posture, what counts as common sense &mdash; is
+      learned from a particular position in a particular society. Cases of extreme isolation
+      demonstrate how little develops without it.
+    </p>
+
+    <h3 id="self">Developing a self</h3>
+    <p>
+      Social development, socialization and interaction lead us from small structures to larger
+      ones.
+    </p>
+    <p class="chain">interaction &rarr; group &rarr; institution &rarr; society</p>
+    <p>
+      Charles Horton Cooley described the <strong>looking-glass self</strong>: we come to see
+      ourselves as we believe others see us. Mead distinguished the spontaneous <em>I</em> from the
+      socially formed <em>me</em>, and argued that children develop a self by learning to take the
+      role of the other, first in imitation, then in play, then in organised games with rules.
+      The <strong>agents of socialization</strong> are family first, then school, peer group,
+      workplace and media.
+    </p>
+
+    <h3 id="types-social">Anticipatory and class socialization</h3>
+    <p>
+      <strong>Anticipatory socialization</strong> is learning to fit into a group you will someday
+      be a part of &mdash; rehearsing the manner of a profession before entering it.
+      <strong>Class socialization</strong> is the most common form, passed from parents to children:
+      not just resources but dispositions, speech, expectations and a sense of what is realistic to
+      want. <strong>Resocialization</strong> is the deliberate replacement of one set of norms with
+      another, which is what Goffman's <strong>total institutions</strong> &mdash; barracks,
+      monasteries, prisons &mdash; are built to accomplish.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="groups">Groups and Organizations</h2>
+
+    <h3 id="socialgroup">Social groups</h3>
+    <p>
+      A <strong>social group</strong> is a collection of people who have something in common that
+      is significant to them. <strong>Primary groups</strong> are small, lasting and
+      emotionally central; <strong>secondary groups</strong> are larger and goal-oriented.
+      <strong>In-groups</strong> command loyalty while <strong>out-groups</strong> attract
+      suspicion, and a <strong>reference group</strong> is whichever group a person measures
+      themselves against &mdash; often one they do not belong to.
+    </p>
+    <p class="aside">
+      Size changes everything: a dyad of two is intense but fragile, since either member's exit ends
+      it, while a triad of three gains stability and the possibility of two-against-one.
+    </p>
+
+    <h3 id="formal">Formal, normative and coercive</h3>
+    <p>
+      <strong>Formal organizations</strong> are formed to achieve goals efficiently. Within them:
+    </p>
+    <ul>
+      <li><strong>Normative</strong> organizations are ones people join as volunteers to pursue a goal they consider morally worthwhile</li>
+      <li><strong>Coercive</strong> organizations are those like jails, where people have no say in whether they join</li>
+      <li><strong>Utilitarian</strong> organizations are joined for material reward &mdash; most workplaces</li>
+    </ul>
+
+    <h3 id="bureaucracy">Oligarchy and bureaucracy</h3>
+    <p>
+      An <strong>oligarchy</strong> is where the people at the top make decisions for everyone at
+      the bottom, a hierarchy which gives rise to <strong>bureaucracies</strong>. Weber described
+      the bureaucratic form by its specialisation, its hierarchy of offices, its written rules, its
+      impersonality and its hiring on technical qualification rather than personal connection.
+    </p>
+    <p>
+      Its virtue is that it treats like cases alike; its costs are ritualism, inefficiency and
+      alienation, and its tendency, as Robert Michels argued, is for power to concentrate at the top
+      regardless of how democratic the organisation's founding intentions were.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="deviance">Deviance and Social Control</h2>
+    <p>
+      <strong>Deviants</strong> are non-normative &mdash; they depart from the expectations of their
+      society. Deviance is therefore relative: nothing is deviant in itself, only in relation to a
+      set of norms, which is why the same act can be criminal in one place and unremarkable in
+      another.
+    </p>
+    <p>
+      <strong>Sanctions</strong> are responses to conformity and its absence. Positive sanctions
+      reward compliance and negative sanctions punish departure; each can be formal, delivered by
+      an institution, or informal, delivered by a raised eyebrow.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Explanation</th><th>Account of deviance</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-name">Strain theory</td><td>Merton &mdash; deviance arises when society promotes goals but restricts legitimate means of reaching them</td></tr>
+          <tr><td class="row-name">Labeling theory</td><td>Deviance lies in the reaction, not the act; being labelled can produce a career in it</td></tr>
+          <tr><td class="row-name">Differential association</td><td>Deviance is learned in groups, like anything else</td></tr>
+          <tr><td class="row-name">Control theory</td><td>Strong social bonds restrain behaviour; weak ones release it</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="stratification">Social Stratification</h2>
+    <p>
+      <strong>Social stratification</strong> is a system by which a society categorizes people and
+      ranks them in a hierarchy. It is a property of societies rather than individuals, it persists
+      across generations, it is supported by beliefs that present it as natural or deserved, and it
+      applies to whole categories of people rather than to particular ones.
+    </p>
+
+    <h3 id="systems">Caste, class and apartheid</h3>
+    <p>
+      <strong>Apartheid</strong> and the <strong>caste system</strong> are among the clearest
+      examples. Caste systems assign position at birth and hold it for life, tying occupation,
+      marriage and contact to inherited rank. Apartheid in South Africa was stratification written
+      directly into law by race. <strong>Class systems</strong> permit movement in principle and
+      justify themselves through <strong>meritocracy</strong> &mdash; the claim that position
+      reflects talent and effort.
+    </p>
+
+    <h3 id="mobility">Mobility and its limits</h3>
+    <p>
+      <strong>Social mobility</strong> is movement between positions: upward or downward,
+      intragenerational within one life, or intergenerational between parents and children. The
+      Davis&ndash;Moore thesis argues stratification is functional because it rewards the work most
+      important to a society; critics reply that reward tracks power and inheritance far more
+      closely than it tracks importance, and point to the gap between income and accumulated wealth
+      as the mechanism by which advantage persists.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="identity">Gender, Sex, Race and Ethnicity</h2>
+
+    <h3 id="gender">Gender and sex</h3>
+    <p>
+      <strong>Gender</strong> is a social convention while <strong>sex</strong> refers to biological
+      categorisation. What follows from the distinction is that expectations attached to gender
+      &mdash; occupations, temperament, responsibility for care &mdash; are social arrangements
+      rather than biological necessities, and they vary between societies and shift over time.
+      <strong>Patriarchy</strong> names a system in which men hold disproportionate power, and
+      sociologists study it through measurable traces: pay gaps, the division of unpaid domestic
+      labour, and representation in positions of authority.
+    </p>
+
+    <h3 id="race">Race and ethnicity</h3>
+    <p>
+      <strong>Ethnicities</strong> are socially constructed categories based on cultural traits and
+      a shared cultural heritage, rather than on visual or biological traits.
+      <strong>Race</strong> is based on observable, physical traits. Both are socially constructed,
+      but that does not make them unreal in their effects: racial categories vary between countries
+      and change over time, yet they reliably predict differences in income, health, education and
+      treatment by the state.
+    </p>
+    <p>
+      A <strong>minority</strong> in the sociological sense is defined by subordinate position
+      rather than by numbers. <strong>Prejudice</strong> is the attitude,
+      <strong>discrimination</strong> the action, and <strong>institutional discrimination</strong>
+      the version built into ordinary procedures, which continues to produce unequal outcomes
+      without requiring anyone to hold prejudiced views.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="institutions">Family, Religion, Education and Politics</h2>
+
+    <h3 id="kinship">Kinship and family</h3>
+    <p>
+      <strong>Kinship</strong> is a social bond based on common ancestry, marriage or adoption
+      &mdash; which already shows that it is not purely biological. <strong>Fictive kin</strong> is
+      what we have when friends become family, and it does much of the same work: obligation,
+      support, a claim on someone's time. Family forms vary widely, from nuclear to extended, and
+      the marriage rules attached to them &mdash; who may marry whom, and where a couple lives
+      afterwards &mdash; differ from society to society.
+    </p>
+
+    <h3 id="religion">Religion</h3>
+    <p>
+      Durkheim treated religion as the community's way of representing itself to itself, dividing
+      the world into the <strong>sacred</strong> and the <strong>profane</strong> and binding people
+      through shared ritual. Weber traced how a religious ethic could shape economic behaviour, in
+      his account of the Protestant ethic and the development of capitalism. Contemporary work
+      centres on <strong>secularization</strong>, on religion's continuing role in identity and
+      politics, and on the difference between belief, belonging and practice, which do not decline
+      together.
+    </p>
+
+    <h3 id="education">Education</h3>
+    <p>
+      <strong>Education</strong> is a social institution through which society provides its members
+      with all kinds of important knowledge. Its latent functions are as consequential as its
+      manifest one: the <strong>hidden curriculum</strong> teaches punctuality, deference and how to
+      wait; <strong>tracking</strong> sorts pupils into paths that tend to confirm where they
+      started; and <strong>credentialism</strong> makes qualifications a gate to employment
+      independent of the skills they certify.
+    </p>
+
+    <h3 id="politics">Politics and authority</h3>
+    <p>
+      Politics is the social organisation of <strong>power</strong>, the ability to achieve an aim
+      despite resistance. Weber distinguished power from <strong>authority</strong>, which is power
+      accepted as legitimate, and identified three grounds on which that acceptance rests:
+    </p>
+    <div class="formula">
+      Traditional&nbsp;&nbsp;&nbsp;&rarr;&nbsp; legitimacy from custom and inheritance<br>
+      Rational&ndash;legal&nbsp;&rarr;&nbsp; legitimacy from rules and offices<br>
+      Charismatic&nbsp;&nbsp;&rarr;&nbsp; legitimacy from the personal qualities of a leader
+    </div>
+    <p>
+      States are then classified by how power is held and constrained &mdash; democratic,
+      authoritarian, totalitarian &mdash; and sociology studies not only formal institutions but
+      the distribution of power beneath them: who is organised, who participates, and whose
+      interests are represented when decisions are made.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
   </section>
 
   <script src="script.js"></script>

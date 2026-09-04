@@ -11,12 +11,174 @@
       min-height: 100vh;
       align-items: flex-start;
       text-align: left;
+      padding-bottom: 80px;
     }
     .hero h2 {
       font-size: 1.6em;
       color: #ffffff;
       margin-top: 40px;
       margin-bottom: 10px;
+    }
+    .hero h3 {
+      font-size: 1.1em;
+      color: #ffffff;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+      padding-bottom: 4px;
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+    .hero h4 {
+      font-size: 0.98em;
+      color: #ffd166;
+      font-weight: 700;
+      font-style: italic;
+      margin-top: 20px;
+      margin-bottom: 4px;
+    }
+
+    /* .hero is a flex column, so block children must be told to fill it */
+    .hero p,
+    .hero ul,
+    .hero ol,
+    .hero table,
+    .hero .chain,
+    .hero .formula,
+    .hero .verse {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .hero ul, .hero ol {
+      padding-left: 1.2em;
+      margin: 8px 0 14px;
+    }
+    .hero li {
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+    .hero li > ul { margin: 6px 0; }
+
+    /* Arrow chains, e.g. weathering -> erosion -> deposition */
+    .chain {
+      font-weight: 700;
+      color: #ffd166;
+      line-height: 1.9;
+      margin: 10px 0 16px;
+    }
+
+    /* Figures, coordinates and key numbers */
+    .formula {
+      font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+      background: rgba(0, 0, 0, 0.18);
+      border-left: 3px solid #ffd166;
+      padding: 10px 14px;
+      margin: 12px 0 16px;
+      line-height: 1.8;
+      overflow-x: auto;
+    }
+
+    .hero table {
+      border-collapse: collapse;
+      margin: 14px 0 20px;
+      font-size: 0.95em;
+    }
+    .hero th, .hero td {
+      text-align: left;
+      vertical-align: top;
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .hero thead tr { background: rgba(0, 0, 0, 0.18); }
+    .hero th {
+      font-size: 0.8em;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    }
+    .hero .row-name { font-weight: 700; white-space: nowrap; }
+    .table-scroll { width: 100%; max-width: 900px; overflow-x: auto; }
+    .table-scroll table { max-width: none; min-width: 560px; }
+
+    .hero .aside { font-size: 0.9em; opacity: 0.9; }
+
+    /* ---------- contents ---------- */
+    .contents {
+      width: 100%;
+      max-width: 900px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 26px;
+      margin-bottom: 10px;
+      background: rgba(0, 0, 0, 0.18);
+    }
+
+    .contents h2 {
+      font-size: 0.8em !important;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 10px 0 !important;
+      opacity: 0.9;
+    }
+
+    .contents ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: none;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    .contents > ol > li {
+      margin-bottom: 14px;
+      font-size: 0.95em;
+      font-weight: 700;
+      break-inside: avoid;
+    }
+
+    .contents ul {
+      list-style: none;
+      margin: 5px 0 0 0;
+      padding-left: 14px;
+      max-width: none;
+    }
+
+    .contents ul li {
+      font-size: 0.85em;
+      font-weight: 400;
+      line-height: 1.5;
+      opacity: 0.9;
+      margin-bottom: 2px;
+    }
+
+    .contents a {
+      color: #ffffff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .contents a:hover { border-bottom-color: #ffd166; }
+
+    .to-top {
+      display: inline-block;
+      margin-top: 10px;
+      margin-bottom: 4px;
+      font-size: 0.8em;
+      color: #ffffff;
+      opacity: 0.75;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .to-top:hover { opacity: 1; }
+
+    @media (max-width: 640px) {
+      .contents ol { columns: 1; }
     }
   </style>
 </head>
@@ -31,32 +193,451 @@
     </div>
   </nav>
 
-  <section class="hero" style="background-color: #be5da7;">
+  <section class="hero" id="top" style="background-color: #be5da7;">
     <h1>Geography</h1>
 
-    <h2>Landforms</h2>
     <p>
-      Mountains are very high landforms with steep slopes and peaks. Hills are smaller, rounded elevations of land. Plateaus are flat-topped highlands raised above the surrounding land. Plains are large, flat or gently rolling lowlands. Valleys are low areas between hills or mountains, often formed by rivers. Deserts are dry regions that receive very little rainfall. Dunes are mounds of sand shaped by the wind, commonly found in deserts. Canyons are deep valleys with steep sides, usually carved by rivers over time. Cliffs are steep or nearly vertical rock faces. Volcanoes are openings in the Earth’s crust through which lava, ash, and gases erupt.
+      The study of the Earth's surface and of the people on it &mdash; what the features are, the
+      forces that carved them, and how the pattern of land and water shaped where societies settled
+      and where borders were eventually drawn.
     </p>
 
-    <h2>Water Bodies</h2>
+    <nav class="contents" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li>
+          <a href="#what">What Geography Studies</a>
+          <ul>
+            <li><a href="#two-halves">Physical and human geography</a></li>
+            <li><a href="#themes">The five themes</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#maps">Maps and Location</a>
+          <ul>
+            <li><a href="#coordinates">Latitude and longitude</a></li>
+            <li><a href="#scale">Scale and projection</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#tectonics">The Earth's Structure and Plate Tectonics</a>
+          <ul>
+            <li><a href="#layers">Layers of the Earth</a></li>
+            <li><a href="#boundaries">Plate boundaries</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#shaping">Forces That Shape the Land</a>
+          <ul>
+            <li><a href="#weathering">Weathering, erosion, deposition</a></li>
+            <li><a href="#agents">The four agents</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#landforms">Landforms</a>
+        </li>
+        <li>
+          <a href="#water">Water Bodies</a>
+          <ul>
+            <li><a href="#water-table">The features</a></li>
+            <li><a href="#cycle">The water cycle</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#coastal">Coastal and Ocean Features</a>
+        </li>
+        <li>
+          <a href="#natural">Other Natural Features</a>
+          <ul>
+            <li><a href="#natural-table">The features</a></li>
+            <li><a href="#biomes">Biomes and climate zones</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#climate">Weather and Climate</a>
+        </li>
+        <li>
+          <a href="#political">Continents and Political Geography</a>
+          <ul>
+            <li><a href="#continents">The continents</a></li>
+            <li><a href="#settlement">Settlement and borders</a></li>
+          </ul>
+        </li>
+      </ol>
+    </nav>
+
+
+    <!-- ============================================================ -->
+    <h2 id="what">What Geography Studies</h2>
+
+    <h3 id="two-halves">Physical and human geography</h3>
     <p>
-      Oceans are vast bodies of salt water that cover most of the Earth’s surface. Seas are smaller parts of oceans, often partially enclosed by land. Rivers are flowing bodies of freshwater that move toward seas, lakes, or oceans. Lakes are large inland bodies of standing water. Ponds are smaller and shallower bodies of still water. Streams are narrow, flowing water bodies, often smaller than rivers. Waterfalls are places where water flows over a steep drop or cliff. Glaciers are large masses of ice that move slowly over land. Ice caps are thick layers of ice that cover extensive land areas, especially in polar regions.
+      Geography splits into two halves that share a single question: why is this here and not
+      somewhere else? <strong>Physical geography</strong> covers landforms, water, climate, soils
+      and ecosystems. <strong>Human geography</strong> covers population, settlement, economy,
+      culture and politics. The interesting work usually happens where the two meet &mdash; a
+      floodplain is a physical fact and a decision about where to build a city.
     </p>
 
-    <h2>Coastal and Ocean Features</h2>
+    <h3 id="themes">The five themes</h3>
+    <ul>
+      <li><strong>Location</strong> &mdash; absolute, given by coordinates, or relative, given by what a place is near</li>
+      <li><strong>Place</strong> &mdash; the physical and human character that makes somewhere distinct</li>
+      <li><strong>Human&ndash;environment interaction</strong> &mdash; how people adapt to, depend on and modify their surroundings</li>
+      <li><strong>Movement</strong> &mdash; the flow of people, goods, water and ideas</li>
+      <li><strong>Region</strong> &mdash; areas grouped by a shared feature, whether physical, cultural or economic</li>
+    </ul>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="maps">Maps and Location</h2>
+
+    <h3 id="coordinates">Latitude and longitude</h3>
     <p>
-      Beaches are sandy or pebbly shores found along the edges of water bodies. Bays are curved inlets of water that are partially enclosed by land. Gulfs are large and deep bays with narrow openings to the sea. Straits are narrow passages of water that connect two larger water bodies. An isthmus is a narrow strip of land that connects two larger land areas. Peninsulas are landforms surrounded by water on three sides. Capes are points of land that extend outward into a body of water. Fjords are long, deep inlets of the sea with steep sides, typically formed by glaciers. Lagoons are shallow bodies of water separated from the sea by sandbars, coral reefs, or barrier islands.
+      Any point on Earth can be fixed by two angles. <strong>Latitude</strong> runs from the
+      Equator north and south in parallel circles; <strong>longitude</strong> runs from pole to
+      pole through the Prime Meridian at Greenwich. Latitude largely determines how much solar
+      energy a place receives, which is why it predicts climate so well; longitude determines local
+      time.
+    </p>
+    <div class="formula">
+      Equator&nbsp;&nbsp;&nbsp;&nbsp;&rarr;&nbsp; 0&deg; latitude, circumference ~40,075 km<br>
+      Tropics&nbsp;&nbsp;&nbsp;&nbsp;&rarr;&nbsp; Cancer 23.5&deg;N, Capricorn 23.5&deg;S<br>
+      Polar circles&rarr;&nbsp; Arctic 66.5&deg;N, Antarctic 66.5&deg;S<br>
+      Prime Meridian&rarr;&nbsp; 0&deg; longitude; 15&deg; of longitude = 1 hour of time
+    </div>
+    <p>
+      The Earth's 23.5&deg; axial tilt is what produces seasons: it is not distance from the Sun
+      but the angle at which sunlight strikes a hemisphere.
     </p>
 
-    <h2>Other Natural Features</h2>
+    <h3 id="scale">Scale and projection</h3>
     <p>
-      Forests are large areas of land densely covered with trees. Wetlands are regions where the land is saturated with water, forming a transition between land and water. Marshes are wetlands dominated by grasses and soft plants. Swamps are wetlands characterized by the presence of trees and woody vegetation. Grasslands are open regions covered mainly with grasses and very few trees. Tundra is a cold, treeless region where the ground remains frozen for most of the year.
+      <strong>Scale</strong> states how much ground a map distance represents &mdash; a large-scale
+      map covers a small area in great detail, and a small-scale map does the reverse.
+      <strong>Projection</strong> is the unavoidable compromise of drawing a sphere on a flat sheet:
+      every projection distorts area, shape, distance or direction, and the only choice is which
+      distortion to accept. Mercator preserves direction, which is why it was used for navigation,
+      at the cost of hugely inflating land near the poles.
+    </p>
+    <p class="aside">
+      Modern practice has largely moved to <strong>GIS</strong>, which layers data over coordinates,
+      with satellite <strong>remote sensing</strong> and <strong>GPS</strong> supplying the raw
+      positions.
     </p>
 
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="tectonics">The Earth's Structure and Plate Tectonics</h2>
+
+    <h3 id="layers">Layers of the Earth</h3>
+    <p class="chain">crust &rarr; mantle &rarr; outer core &rarr; inner core</p>
     <p>
-      Based on the land features and the settlement of people the political countries emerged in the continents of Africa, Europe, Middle-East, Asia, Australia, Antractica, North and South America
+      The crust is thin &mdash; a few kilometres under the oceans, tens of kilometres under the
+      continents &mdash; and it is broken into rigid plates that ride on the slowly convecting
+      mantle beneath. The liquid outer core generates the planet's magnetic field.
     </p>
+
+    <h3 id="boundaries">Plate boundaries</h3>
+    <p>
+      Almost every dramatic feature on the Earth's surface sits at a plate boundary, and the type of
+      boundary determines what forms there.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Boundary</th><th>Motion</th><th>Produces</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-name">Convergent</td>
+            <td>Plates collide</td>
+            <td>Fold mountains, ocean trenches, volcanic arcs, deep earthquakes &mdash; the Himalayas are India still pushing into Asia</td>
+          </tr>
+          <tr>
+            <td class="row-name">Divergent</td>
+            <td>Plates separate</td>
+            <td>Mid-ocean ridges, rift valleys, new crust &mdash; the East African Rift and the Mid-Atlantic Ridge</td>
+          </tr>
+          <tr>
+            <td class="row-name">Transform</td>
+            <td>Plates slide past</td>
+            <td>Shallow, often severe earthquakes with little volcanism &mdash; the San Andreas Fault</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      <strong>Volcanoes</strong> are openings in the Earth's crust through which lava, ash and gases
+      erupt. Most sit above subduction zones or spreading ridges, which is why they trace out the
+      Pacific "Ring of Fire" rather than scattering at random; a few, like Hawaii, sit over isolated
+      mantle hotspots.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="shaping">Forces That Shape the Land</h2>
+
+    <h3 id="weathering">Weathering, erosion, deposition</h3>
+    <p>
+      Tectonics builds land up; the surface processes wear it back down. The sequence is always the
+      same, and every feature in the sections below is the product of one stage of it.
+    </p>
+    <p class="chain">weathering &rarr; erosion &rarr; transport &rarr; deposition</p>
+    <p>
+      <strong>Weathering</strong> breaks rock in place &mdash; physically by frost and heat,
+      chemically by water and acids, biologically by roots and burrowing.
+      <strong>Erosion</strong> then removes the loosened material, and
+      <strong>deposition</strong> drops it somewhere else, where it may eventually become rock
+      again.
+    </p>
+
+    <h3 id="agents">The four agents</h3>
+    <ul>
+      <li><strong>Rivers</strong> &mdash; cut valleys, gorges and canyons upstream; build floodplains, meanders and deltas downstream</li>
+      <li><strong>Glaciers</strong> &mdash; carve U-shaped valleys, cirques and fjords, and dump moraines at their margins</li>
+      <li><strong>Wind</strong> &mdash; the dominant agent in deserts, where it removes fine material and piles the rest into dunes</li>
+      <li><strong>Waves</strong> &mdash; shape the entire coastline, cutting cliffs and caves in some places and building beaches and spits in others</li>
+    </ul>
+    <p class="aside">
+      Rock itself circulates: igneous rock forms from cooling magma, is broken down into sediment
+      that compacts into sedimentary rock, and heat and pressure convert either into metamorphic
+      rock &mdash; the rock cycle.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="landforms">Landforms</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Feature</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-name">Mountains</td><td>Very high landforms with steep slopes and peaks</td></tr>
+          <tr><td class="row-name">Hills</td><td>Smaller, rounded elevations of land</td></tr>
+          <tr><td class="row-name">Plateaus</td><td>Flat-topped highlands raised above the surrounding land</td></tr>
+          <tr><td class="row-name">Plains</td><td>Large, flat or gently rolling lowlands</td></tr>
+          <tr><td class="row-name">Valleys</td><td>Low areas between hills or mountains, often formed by rivers</td></tr>
+          <tr><td class="row-name">Deserts</td><td>Dry regions that receive very little rainfall</td></tr>
+          <tr><td class="row-name">Dunes</td><td>Mounds of sand shaped by the wind, commonly found in deserts</td></tr>
+          <tr><td class="row-name">Canyons</td><td>Deep valleys with steep sides, usually carved by rivers over time</td></tr>
+          <tr><td class="row-name">Cliffs</td><td>Steep or nearly vertical rock faces</td></tr>
+          <tr><td class="row-name">Volcanoes</td><td>Openings in the Earth's crust through which lava, ash and gases erupt</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Two things are worth reading off this list. Mountains come in distinct kinds &mdash; fold
+      mountains raised by collision, block mountains lifted between faults, and volcanic mountains
+      built from their own erupted material. And plains matter historically out of proportion to
+      how dramatic they look: flat, well-watered lowland is where agriculture and therefore dense
+      population concentrates.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="water">Water Bodies</h2>
+
+    <h3 id="water-table">The features</h3>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Feature</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-name">Oceans</td><td>Vast bodies of salt water that cover most of the Earth's surface</td></tr>
+          <tr><td class="row-name">Seas</td><td>Smaller parts of oceans, often partially enclosed by land</td></tr>
+          <tr><td class="row-name">Rivers</td><td>Flowing bodies of freshwater that move toward seas, lakes or oceans</td></tr>
+          <tr><td class="row-name">Lakes</td><td>Large inland bodies of standing water</td></tr>
+          <tr><td class="row-name">Ponds</td><td>Smaller and shallower bodies of still water</td></tr>
+          <tr><td class="row-name">Streams</td><td>Narrow, flowing water bodies, often smaller than rivers</td></tr>
+          <tr><td class="row-name">Waterfalls</td><td>Places where water flows over a steep drop or cliff</td></tr>
+          <tr><td class="row-name">Glaciers</td><td>Large masses of ice that move slowly over land</td></tr>
+          <tr><td class="row-name">Ice caps</td><td>Thick layers of ice covering extensive land areas, especially in polar regions</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      A river system has its own vocabulary: the <strong>source</strong> where it begins, the
+      <strong>tributaries</strong> that join it, the <strong>drainage basin</strong> it collects
+      from, the <strong>watershed</strong> dividing one basin from the next, and the
+      <strong>mouth</strong> where it ends &mdash; often in a delta or an estuary.
+    </p>
+
+    <h3 id="cycle">The water cycle</h3>
+    <p class="chain">evaporation &rarr; condensation &rarr; precipitation &rarr; runoff &amp; infiltration &rarr; evaporation</p>
+    <div class="formula">
+      Oceans hold ~97% of the Earth's water<br>
+      Ice caps and glaciers hold ~2% &mdash; most of the fresh water<br>
+      Accessible fresh water is well under 1% of the total
+    </div>
+    <p>
+      That last figure explains a great deal of human geography: settlements, borders and conflicts
+      cluster around the small share of water that is both fresh and reachable.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="coastal">Coastal and Ocean Features</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Feature</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-name">Beaches</td><td>Sandy or pebbly shores found along the edges of water bodies</td></tr>
+          <tr><td class="row-name">Bays</td><td>Curved inlets of water partially enclosed by land</td></tr>
+          <tr><td class="row-name">Gulfs</td><td>Large and deep bays with narrow openings to the sea</td></tr>
+          <tr><td class="row-name">Straits</td><td>Narrow passages of water connecting two larger water bodies</td></tr>
+          <tr><td class="row-name">Isthmus</td><td>A narrow strip of land connecting two larger land areas</td></tr>
+          <tr><td class="row-name">Peninsulas</td><td>Landforms surrounded by water on three sides</td></tr>
+          <tr><td class="row-name">Capes</td><td>Points of land extending outward into a body of water</td></tr>
+          <tr><td class="row-name">Fjords</td><td>Long, deep inlets of the sea with steep sides, typically formed by glaciers</td></tr>
+          <tr><td class="row-name">Lagoons</td><td>Shallow bodies of water separated from the sea by sandbars, coral reefs or barrier islands</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Straits and isthmuses are the two features on this list that have shaped history most
+      directly, because both are chokepoints: a strait is the only way through for shipping, and an
+      isthmus is the only way across by land. Control of the Bosphorus, the Strait of Malacca and
+      the Strait of Hormuz has mattered for centuries, and the Suez and Panama canals were built
+      precisely to cut through isthmuses that stood in the way.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="natural">Other Natural Features</h2>
+
+    <h3 id="natural-table">The features</h3>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Feature</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-name">Forests</td><td>Large areas of land densely covered with trees</td></tr>
+          <tr><td class="row-name">Wetlands</td><td>Regions where the land is saturated with water, forming a transition between land and water</td></tr>
+          <tr><td class="row-name">Marshes</td><td>Wetlands dominated by grasses and soft plants</td></tr>
+          <tr><td class="row-name">Swamps</td><td>Wetlands characterized by trees and woody vegetation</td></tr>
+          <tr><td class="row-name">Grasslands</td><td>Open regions covered mainly with grasses and very few trees</td></tr>
+          <tr><td class="row-name">Tundra</td><td>Cold, treeless region where the ground remains frozen for most of the year</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 id="biomes">Biomes and climate zones</h3>
+    <p>
+      These are not arbitrary categories &mdash; each is what grows where a particular combination
+      of temperature and rainfall allows. Read together, they form a rough gradient from the Equator
+      to the poles: tropical rainforest, savanna and grassland, desert, temperate forest, boreal
+      forest, tundra, ice cap. Grasslands appear where there is enough rain for grass but too little
+      for trees, and tundra is treeless because the subsoil stays permanently frozen as
+      <strong>permafrost</strong>.
+    </p>
+    <p class="aside">
+      Wetlands are disproportionately valuable for their area: they buffer floods, filter water,
+      store carbon and support dense concentrations of species &mdash; which is why draining them
+      has proven costly.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="climate">Weather and Climate</h2>
+    <p>
+      <strong>Weather</strong> is the state of the atmosphere now; <strong>climate</strong> is the
+      pattern of weather averaged over decades. Four factors do most of the work in explaining a
+      place's climate: latitude, altitude, distance from the sea, and prevailing winds and ocean
+      currents.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Zone</th><th>Character</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-name">Tropical</td><td>Hot year-round; either wet throughout or strongly seasonal rainfall</td></tr>
+          <tr><td class="row-name">Arid</td><td>Evaporation exceeds rainfall; deserts and semi-deserts</td></tr>
+          <tr><td class="row-name">Temperate</td><td>Distinct warm and cool seasons; moderate rainfall</td></tr>
+          <tr><td class="row-name">Continental</td><td>Large seasonal swings, far from any moderating ocean</td></tr>
+          <tr><td class="row-name">Polar</td><td>Cold throughout; tundra and ice cap</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      The <strong>monsoon</strong> is the clearest case of geography producing climate. Land heats
+      and cools faster than sea, so in summer the Asian landmass warms, air rises over it, and moist
+      air is drawn in off the Indian Ocean; in winter the flow reverses. The result is a sharply
+      seasonal rainfall that much of South and Southeast Asia has organised its agriculture around.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="political">Continents and Political Geography</h2>
+
+    <h3 id="continents">The continents</h3>
+    <p>
+      Based on the land features and the settlement of people, political countries emerged across
+      Africa, Europe, the Middle East, Asia, Australia, Antarctica, and North and South America.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Landmass</th><th>Note</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-name">Asia</td><td>Largest in both area and population; contains the highest and lowest points on land</td></tr>
+          <tr><td class="row-name">Africa</td><td>Straddles the Equator, so its climate belts mirror north and south</td></tr>
+          <tr><td class="row-name">Europe</td><td>No physical separation from Asia; the division is historical and cultural</td></tr>
+          <tr><td class="row-name">North America</td><td>Joined to South America by the Isthmus of Panama</td></tr>
+          <tr><td class="row-name">South America</td><td>Holds the Amazon basin and the Andes, the longest mountain range</td></tr>
+          <tr><td class="row-name">Australia</td><td>Smallest continent; mostly arid interior with population on the coasts</td></tr>
+          <tr><td class="row-name">Antarctica</td><td>Ice cap continent with research stations but no permanent population or countries</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="aside">
+      The <strong>Middle East</strong> is a region rather than a continent &mdash; it spans western
+      Asia and north-eastern Africa &mdash; and Antarctica, being governed by treaty rather than
+      divided into states, is the one landmass where no political countries emerged at all.
+    </p>
+
+    <h3 id="settlement">Settlement and borders</h3>
+    <p>
+      Where people settled was never random. Early and dense settlement followed fertile soil,
+      reliable fresh water, navigable rivers, defensible ground and access to the sea &mdash; which
+      is why the great river valleys filled first and why most large cities today still sit on a
+      coast or a river.
+    </p>
+    <p>
+      Borders drawn along rivers, watersheds and mountain ranges are called
+      <strong>natural boundaries</strong>; those drawn along lines of latitude and longitude,
+      typically by outside powers with a map rather than local knowledge, are
+      <strong>geometric boundaries</strong>. Much of Africa's border network is of the second kind,
+      a direct legacy of the partition agreed in Europe, and a good deal of subsequent conflict
+      traces to boundaries that cut across the communities living on the ground.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
 
   </section>
 

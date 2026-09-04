@@ -11,12 +11,188 @@
       min-height: 100vh;
       align-items: flex-start;
       text-align: left;
+      padding-bottom: 80px;
     }
     .hero h2 {
       font-size: 1.6em;
       color: #ffffff;
       margin-top: 40px;
       margin-bottom: 10px;
+    }
+    .hero h3 {
+      font-size: 1.1em;
+      color: #ffffff;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+      padding-bottom: 4px;
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+    .hero h4 {
+      font-size: 0.98em;
+      color: #5c2160;
+      font-weight: 700;
+      font-style: italic;
+      margin-top: 20px;
+      margin-bottom: 4px;
+    }
+
+    /* .hero is a flex column, so block children must be told to fill it */
+    .hero p,
+    .hero ul,
+    .hero ol,
+    .hero table,
+    .hero .chain,
+    .hero .formula,
+    .hero .verse {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .hero ul, .hero ol {
+      padding-left: 1.2em;
+      margin: 8px 0 14px;
+    }
+    .hero li {
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+    .hero li > ul { margin: 6px 0; }
+
+    /* Arrow chains, e.g. sensory -> short term -> long term */
+    .chain {
+      font-weight: 700;
+      color: #5c2160;
+      line-height: 1.9;
+      margin: 10px 0 16px;
+    }
+
+    /* Key terms and definitions */
+    .formula {
+      background: rgba(0, 0, 0, 0.12);
+      border-left: 3px solid #5c2160;
+      padding: 10px 14px;
+      margin: 12px 0 16px;
+      line-height: 1.8;
+      overflow-x: auto;
+    }
+
+    /* Quoted passages */
+    .verse {
+      font-style: italic;
+      border-left: 3px solid rgba(0, 0, 0, 0.28);
+      padding-left: 14px;
+      margin: 14px 0;
+    }
+    .verse cite {
+      display: block;
+      font-style: normal;
+      font-size: 0.85em;
+      opacity: 0.85;
+      margin-top: 4px;
+    }
+
+    .hero table {
+      border-collapse: collapse;
+      margin: 14px 0 20px;
+      font-size: 0.95em;
+    }
+    .hero th, .hero td {
+      text-align: left;
+      vertical-align: top;
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+    }
+    .hero thead tr { background: rgba(0, 0, 0, 0.15); }
+    .hero th {
+      font-size: 0.8em;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.35);
+    }
+    .hero .row-name { font-weight: 700; white-space: nowrap; }
+    .table-scroll { width: 100%; max-width: 900px; overflow-x: auto; }
+    .table-scroll table { max-width: none; min-width: 620px; }
+
+    .hero .aside { font-size: 0.9em; opacity: 0.9; }
+
+    /* ---------- contents ---------- */
+    .contents {
+      width: 100%;
+      max-width: 900px;
+      box-sizing: border-box;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 26px;
+      margin-bottom: 10px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    .contents h2 {
+      font-size: 0.8em !important;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 10px 0 !important;
+      opacity: 0.9;
+    }
+
+    .contents ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: none;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    .contents > ol > li {
+      margin-bottom: 14px;
+      font-size: 0.95em;
+      font-weight: 700;
+      break-inside: avoid;
+    }
+
+    .contents ul {
+      list-style: none;
+      margin: 5px 0 0 0;
+      padding-left: 14px;
+      max-width: none;
+    }
+
+    .contents ul li {
+      font-size: 0.85em;
+      font-weight: 400;
+      line-height: 1.5;
+      opacity: 0.9;
+      margin-bottom: 2px;
+    }
+
+    .contents a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .contents a:hover { border-bottom-color: #5c2160; }
+
+    .to-top {
+      display: inline-block;
+      margin-top: 10px;
+      margin-bottom: 4px;
+      font-size: 0.8em;
+      color: inherit;
+      opacity: 0.75;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .to-top:hover { opacity: 1; }
+
+    @media (max-width: 640px) {
+      .contents ol { columns: 1; }
     }
   </style>
 </head>
@@ -31,11 +207,523 @@
     </div>
   </nav>
 
-  <section class="hero" style="background-color: #dea0de;">
+  <section class="hero" id="top" style="background-color: #dea0de;">
     <h1>Psychology</h1>
+
     <p>
-    Psychology is the scientific study of the mind and behavior, encompassing conscious and unconscious mental processes, emotions, and actions. Structuralism, functionalism and Psychoanalysis. It’s our brain and how its connected through the nervous system by the neurons and neuro-transmitters like the endorphins and other hormones cause all our brain activity and feelings. Perception is the top-down way our brains organize and interpret the information and put it into context. Consciousness is our awareness of ourselves and our environment. Rapid Eye Movement (REM) is the recurring sleep stage during which vivid dreams commonly occur where the motor cortex is active but the brainstem is blocking those messages such that it gives the muscles the feel of paralysis, except for the eyes. Sensory memories to short term(working memory) to long term (procedural, mnemonics, chunking) which is made strong by recall. The explicit memory is willingly concentrated memory while implicit is retention independent of conscious recollection. Cognition is our thoughts, perspectives and expectations. Language is a set of spoken, written or signed words which combine together to communicate meaning. Ego gets what the unconscious energy wants balancing with the superego. In psychoanalytic theory, defense mechanisms is the ego’s protective method of reducing anxiety by unconsciously distorting reality. This defense mechanism is part of our personality. Social cognitive perspective is the interaction between our traits and their social context. The Schachter-Singer theory states that to experience emotion one must be physically aroused and cognitively label that arousal. Emotions 2D model - (plesant/positive) relaxed, enthusiastic, sad, angry (unplesant/negative). Psychological Disorders and mental illness seems to first cause Distress (subjective feeling that something is wrong) which then leads to Dysfunction (inability to work). OCD (Obsessive Compulsive Disorder), Generalized Anxiety Disorder (GAD), Phobias, Panic attacks are few examples. It is caused by learning perspective and biological perspective. Depressive and Bipolar Disorders, Trauma and Addiction, Schizophrenia and Dissociative Disorder, Personality disorders are few other examples. Psychotheraphy involves a therapist using a range of techniques to help overcome troubles, gain insight and achieve personal growth is an initial step to treat disorders. Biomedical Treatments ain to physiologically change the brain’s electrochemical state with psychotropic drugs, magnetic impulses or electrical currents. Pharmacotheraphy uses drugs to affect the mental state. They are categorized into four categories, antipsychotics, anxiolytics, antidepressants, mood stabilizers. In individual psychology there are three branches cognitive, personality and clinica. While social psychology focuses on the power of the situation and how each one influences one another in certain condition. Cooperation is the key. Stereotype is an overgeneralized belief about a particular group of people. Combination of biological factors like genetic, neurological, biochemical influences, environment and experience add on to how we behave.
+      The scientific study of the mind and behavior, encompassing conscious and unconscious mental
+      processes, emotions and actions &mdash; from the firing of a single neuron to the pressure a
+      crowd exerts on the person standing in it.
     </p>
+
+    <nav class="contents" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li>
+          <a href="#schools">Origins and Schools of Thought</a>
+          <ul>
+            <li><a href="#early">Structuralism, functionalism, psychoanalysis</a></li>
+            <li><a href="#modern">Behaviourism to the biopsychosocial model</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#biology">The Biological Basis</a>
+          <ul>
+            <li><a href="#neurons">Neurons and neurotransmitters</a></li>
+            <li><a href="#nervous">The nervous system</a></li>
+            <li><a href="#brain">Regions of the brain</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#perception">Sensation, Perception and Consciousness</a>
+          <ul>
+            <li><a href="#topdown">Top-down and bottom-up</a></li>
+            <li><a href="#sleep">Sleep and REM</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#memory">Memory</a>
+          <ul>
+            <li><a href="#stages">The three stages</a></li>
+            <li><a href="#explicit">Explicit and implicit</a></li>
+            <li><a href="#strengthening">Strengthening and forgetting</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#cognition">Cognition and Language</a>
+        </li>
+        <li>
+          <a href="#emotion">Emotion and Motivation</a>
+          <ul>
+            <li><a href="#theories-emotion">Theories of emotion</a></li>
+            <li><a href="#twod">The two-dimensional model</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#personality">Personality</a>
+          <ul>
+            <li><a href="#psychoanalytic">Id, ego and superego</a></li>
+            <li><a href="#defense">Defense mechanisms</a></li>
+            <li><a href="#traits">Traits and social context</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#disorders">Psychological Disorders</a>
+          <ul>
+            <li><a href="#distress">Distress and dysfunction</a></li>
+            <li><a href="#anxiety">Anxiety and OCD</a></li>
+            <li><a href="#mood">Mood, trauma and addiction</a></li>
+            <li><a href="#psychotic">Schizophrenia and dissociation</a></li>
+            <li><a href="#causes">Why disorders arise</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#treatment">Treatment</a>
+          <ul>
+            <li><a href="#psychotherapy">Psychotherapy</a></li>
+            <li><a href="#biomedical">Biomedical treatments</a></li>
+            <li><a href="#pharmaco">Pharmacotherapy</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#branches">Branches of Psychology</a>
+          <ul>
+            <li><a href="#individual">Individual psychology</a></li>
+            <li><a href="#social">Social psychology</a></li>
+            <li><a href="#naturenurture">Nature and nurture together</a></li>
+          </ul>
+        </li>
+      </ol>
+    </nav>
+
+
+    <!-- ============================================================ -->
+    <h2 id="schools">Origins and Schools of Thought</h2>
+
+    <h3 id="early">Structuralism, functionalism, psychoanalysis</h3>
+    <p>
+      The discipline begins with three answers to the same question. <strong>Structuralism</strong>,
+      associated with Wilhelm Wundt and Edward Titchener, tried to break consciousness into its
+      elementary sensations by asking trained observers to report on their own inner experience.
+      <strong>Functionalism</strong>, associated with William James, objected that this misses the
+      point: a mind is for something, and the question is what mental processes accomplish.
+      <strong>Psychoanalysis</strong>, Sigmund Freud's contribution, held that behaviour is largely
+      driven by unconscious conflict inaccessible to introspection at all.
+    </p>
+
+    <h3 id="modern">Behaviourism to the biopsychosocial model</h3>
+    <p>
+      Behaviourism then rejected inner experience as unmeasurable and studied only observable
+      responses; the cognitive revolution of the 1950s and 60s brought the mind back as an
+      information-processing system; humanistic psychology insisted on growth and meaning; and
+      evolutionary and biological approaches asked what the mind was built for. Contemporary
+      practice mostly declines to choose, using the <strong>biopsychosocial model</strong>, which
+      treats every phenomenon as having biological, psychological and social contributions at once.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="biology">The Biological Basis</h2>
+
+    <h3 id="neurons">Neurons and neurotransmitters</h3>
+    <p>
+      All brain activity and feeling comes down to the brain and how it is connected through the
+      nervous system: neurons signalling to one another with neurotransmitters and hormones such as
+      the endorphins. A neuron fires all-or-nothing &mdash; an <strong>action potential</strong>
+      travels down the axon, and chemical messengers cross the <strong>synapse</strong> to the next
+      cell, where they either excite or inhibit it.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Messenger</th>
+            <th>Associated with</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-name">Endorphins</td><td>Pain relief and pleasure; the body's own opiates</td></tr>
+          <tr><td class="row-name">Dopamine</td><td>Reward, motivation, movement; implicated in addiction and schizophrenia</td></tr>
+          <tr><td class="row-name">Serotonin</td><td>Mood, appetite, sleep; a target of many antidepressants</td></tr>
+          <tr><td class="row-name">Acetylcholine</td><td>Muscle action, learning and memory</td></tr>
+          <tr><td class="row-name">GABA</td><td>The main inhibitory messenger; too little is linked to anxiety and seizures</td></tr>
+          <tr><td class="row-name">Norepinephrine</td><td>Alertness and arousal</td></tr>
+          <tr><td class="row-name">Cortisol</td><td>A hormone, not a transmitter &mdash; the body's main stress signal</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 id="nervous">The nervous system</h3>
+    <p class="chain">
+      central (brain + spinal cord) &nbsp;|&nbsp; peripheral &rarr; somatic (voluntary) &middot;
+      autonomic &rarr; sympathetic (arousing) &middot; parasympathetic (calming)
+    </p>
+    <p>
+      The sympathetic branch produces the fight-or-flight response; the parasympathetic returns the
+      body to baseline afterwards. Much of what is experienced as an emotion is this system's
+      activity being noticed.
+    </p>
+
+    <h3 id="brain">Regions of the brain</h3>
+    <ul>
+      <li><strong>Brainstem</strong> &mdash; breathing, heartbeat, arousal; also gates signals during sleep</li>
+      <li><strong>Cerebellum</strong> &mdash; balance, coordination, procedural learning</li>
+      <li><strong>Limbic system</strong> &mdash; amygdala (fear, threat), hippocampus (forming new memories), hypothalamus (drives, hormones)</li>
+      <li><strong>Motor cortex</strong> &mdash; issues commands for voluntary movement</li>
+      <li><strong>Frontal lobe</strong> &mdash; planning, judgement, inhibition; the last region to finish developing</li>
+      <li><strong>Occipital, temporal and parietal lobes</strong> &mdash; vision, hearing and language, touch and spatial sense</li>
+    </ul>
+    <p class="aside">
+      <strong>Neuroplasticity</strong> means none of this is fixed: connections strengthen with
+      use and weaken without it, throughout life.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="perception">Sensation, Perception and Consciousness</h2>
+
+    <h3 id="topdown">Top-down and bottom-up</h3>
+    <p>
+      <strong>Sensation</strong> is the raw intake of energy by the sense organs.
+      <strong>Perception</strong> is the top-down way our brains organize and interpret that
+      information and put it into context &mdash; which is why the same stimulus can be read two
+      ways, and why expectation changes what is seen. Bottom-up processing builds upward from the
+      data; top-down processing reaches downward from prior knowledge, and the two run together.
+    </p>
+    <p>
+      <strong>Consciousness</strong> is our awareness of ourselves and our environment. Attention is
+      its bottleneck: selective attention means most of the available information never reaches
+      awareness at all, as demonstrated by inattentional blindness.
+    </p>
+
+    <h3 id="sleep">Sleep and REM</h3>
+    <p>
+      Sleep runs in roughly 90-minute cycles through light sleep, deep slow-wave sleep and
+      <strong>REM</strong>. Rapid Eye Movement is the recurring sleep stage during which vivid
+      dreams commonly occur: the motor cortex is active but the brainstem is blocking those
+      messages, so the muscles have the feel of paralysis &mdash; everything except the eyes. The
+      arrangement means the dreamer does not act out the dream.
+    </p>
+    <p>
+      Deep sleep appears to matter most for consolidating memory and for physical repair, while REM
+      proportion is highest in infancy. The whole cycle is timed by the
+      <strong>circadian rhythm</strong>, an internal clock entrained by light.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="memory">Memory</h2>
+
+    <h3 id="stages">The three stages</h3>
+    <p class="chain">sensory memory &rarr; short-term (working) memory &rarr; long-term memory</p>
+    <p>
+      Sensory memory holds an impression for a fraction of a second. Short-term or working memory
+      holds only a handful of items for seconds at a time, and it is where thinking actually
+      happens. Long-term memory is effectively unlimited in capacity, and includes procedural
+      memory for skills. Getting material across the second boundary is the whole problem, and
+      <strong>mnemonics</strong> and <strong>chunking</strong> are the standard tools &mdash;
+      chunking works by packing several items into one unit so that limited capacity holds more.
+    </p>
+
+    <h3 id="explicit">Explicit and implicit</h3>
+    <p>
+      <strong>Explicit</strong> memory is willingly concentrated memory &mdash; facts and events you
+      can deliberately bring to mind and state. <strong>Implicit</strong> memory is retention
+      independent of conscious recollection: riding a bicycle, a conditioned flinch, the effect of
+      an advertisement you do not remember seeing. The two rely on different brain systems, which is
+      why amnesia can destroy one while leaving the other intact.
+    </p>
+
+    <h3 id="strengthening">Strengthening and forgetting</h3>
+    <p>
+      Memory is made strong by <strong>recall</strong>. Retrieving something effortfully
+      strengthens it far more than re-reading it does, which is why testing yourself beats
+      highlighting. Spacing retrievals out over time works better still.
+    </p>
+    <div class="formula">
+      Encoding &rarr; storage &rarr; retrieval&nbsp;&nbsp; (failure at any stage looks like "forgetting")<br>
+      Ebbinghaus forgetting curve&nbsp;&nbsp;&rarr;&nbsp; steepest loss occurs soon after learning<br>
+      Retrieval is reconstructive&nbsp;&nbsp;&rarr;&nbsp; each recall can alter the memory
+    </div>
+    <p class="aside">
+      Because recall rebuilds rather than replays, confident memories can be wrong &mdash; the basis
+      of research on misinformation effects and eyewitness testimony.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="cognition">Cognition and Language</h2>
+    <p>
+      <strong>Cognition</strong> is our thoughts, perspectives and expectations &mdash; all the
+      mental activity of knowing, judging and deciding. Because that activity has to be fast,
+      it runs largely on <strong>heuristics</strong>: mental shortcuts that are usually right and
+      predictably wrong.
+    </p>
+    <ul>
+      <li><strong>Availability</strong> &mdash; judging likelihood by how easily examples come to mind</li>
+      <li><strong>Representativeness</strong> &mdash; judging by resemblance to a stereotype rather than by base rates</li>
+      <li><strong>Anchoring</strong> &mdash; being pulled toward the first number offered</li>
+      <li><strong>Confirmation bias</strong> &mdash; seeking evidence that fits what is already believed</li>
+      <li><strong>Framing</strong> &mdash; the same facts producing different choices depending on wording</li>
+    </ul>
+    <p>
+      <strong>Language</strong> is a set of spoken, written or signed words which combine together
+      to communicate meaning. Its structure runs from phonemes to morphemes to grammar, and its
+      productivity is what makes it distinct: a finite vocabulary and a finite set of rules generate
+      an unlimited number of new sentences. Children acquire it on a striking schedule without
+      formal teaching, which led Noam Chomsky to argue for an innate capacity, and there appears to
+      be a critical period beyond which a first language cannot be fully acquired. Broca's area
+      supports production and Wernicke's area comprehension, so damage to each produces a
+      characteristically different aphasia.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="emotion">Emotion and Motivation</h2>
+
+    <h3 id="theories-emotion">Theories of emotion</h3>
+    <p>
+      The <strong>Schachter&ndash;Singer</strong> two-factor theory states that to experience emotion
+      one must be physically aroused and cognitively label that arousal. The label matters as much as
+      the arousal: the same racing heart becomes fear or excitement depending on how the situation is
+      read. Two earlier theories disagree about the ordering.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Theory</th><th>Sequence</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-name">James&ndash;Lange</td><td>Stimulus &rarr; bodily arousal &rarr; emotion is the reading of the body</td></tr>
+          <tr><td class="row-name">Cannon&ndash;Bard</td><td>Stimulus &rarr; arousal and emotion occur simultaneously and independently</td></tr>
+          <tr><td class="row-name">Schachter&ndash;Singer</td><td>Stimulus &rarr; arousal + cognitive label &rarr; specific emotion</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 id="twod">The two-dimensional model</h3>
+    <p>
+      Emotions can be mapped on two axes &mdash; valence from pleasant to unpleasant, and arousal
+      from high to low &mdash; which places the familiar states in four quadrants:
+    </p>
+    <div class="formula">
+      pleasant / positive&nbsp;&nbsp;&rarr;&nbsp; relaxed (low arousal) &middot; enthusiastic (high arousal)<br>
+      unpleasant / negative&nbsp;&nbsp;&rarr;&nbsp; sad (low arousal) &middot; angry (high arousal)
+    </div>
+    <p>
+      Motivation is treated similarly as a mix of biological drives and higher goals. Maslow's
+      hierarchy arranges them from physiological needs through safety, belonging and esteem to
+      self-actualisation &mdash; a useful ordering, though the evidence for a strict sequence is
+      weak.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="personality">Personality</h2>
+
+    <h3 id="psychoanalytic">Id, ego and superego</h3>
+    <p>
+      In psychoanalytic theory the mind is divided three ways. The <strong>id</strong> is
+      unconscious drive; the <strong>superego</strong> is internalised moral prohibition; and the
+      <strong>ego</strong> gets what the unconscious energy wants while balancing it against the
+      superego and the demands of reality.
+    </p>
+
+    <h3 id="defense">Defense mechanisms</h3>
+    <p>
+      Defense mechanisms are the ego's protective method of reducing anxiety by unconsciously
+      distorting reality, and they form part of our personality rather than sitting outside it.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Mechanism</th><th>What it does</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-name">Repression</td><td>Pushes threatening material out of awareness</td></tr>
+          <tr><td class="row-name">Denial</td><td>Refuses to accept an external reality</td></tr>
+          <tr><td class="row-name">Projection</td><td>Attributes one's own unacceptable impulses to someone else</td></tr>
+          <tr><td class="row-name">Rationalisation</td><td>Supplies an acceptable reason in place of the real one</td></tr>
+          <tr><td class="row-name">Displacement</td><td>Redirects an impulse toward a safer target</td></tr>
+          <tr><td class="row-name">Regression</td><td>Retreats to an earlier stage of functioning</td></tr>
+          <tr><td class="row-name">Sublimation</td><td>Channels the impulse into socially valued activity</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 id="traits">Traits and social context</h3>
+    <p>
+      The <strong>social cognitive perspective</strong> describes personality as the interaction
+      between our traits and their social context &mdash; not the trait alone, and not the situation
+      alone, but each shaping the other over time through what Albert Bandura called reciprocal
+      determinism.
+    </p>
+    <p>
+      Trait approaches instead try to measure the stable dimensions themselves. The most
+      replicated is the five-factor model:
+    </p>
+    <p class="chain">openness &middot; conscientiousness &middot; extraversion &middot; agreeableness &middot; neuroticism</p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="disorders">Psychological Disorders</h2>
+
+    <h3 id="distress">Distress and dysfunction</h3>
+    <p>
+      Psychological disorders and mental illness seem to first cause <strong>distress</strong>, the
+      subjective feeling that something is wrong, which then leads to <strong>dysfunction</strong>,
+      the inability to work and carry on ordinary life. Diagnosis generally requires that a pattern
+      be persistent, distressing and impairing rather than merely unusual &mdash; the criteria are
+      catalogued in the DSM and ICD, which are revised as the evidence changes.
+    </p>
+
+    <h3 id="anxiety">Anxiety and OCD</h3>
+    <ul>
+      <li><strong>OCD</strong> (Obsessive Compulsive Disorder) &mdash; intrusive obsessions paired with compulsions performed to relieve them</li>
+      <li><strong>Generalized Anxiety Disorder (GAD)</strong> &mdash; persistent, unfocused worry not tied to any one object</li>
+      <li><strong>Phobias</strong> &mdash; intense fear of a specific object or situation, out of proportion to the actual danger</li>
+      <li><strong>Panic attacks</strong> &mdash; sudden episodes of overwhelming physical arousal and dread</li>
+    </ul>
+
+    <h3 id="mood">Mood, trauma and addiction</h3>
+    <p>
+      <strong>Depressive and bipolar disorders</strong> involve sustained disturbance of mood
+      itself &mdash; depression as persistent low mood and loss of interest, bipolar disorder as
+      alternation between depression and mania. <strong>Trauma</strong>-related conditions such as
+      PTSD follow overwhelming events and involve re-experiencing, avoidance and hyperarousal.
+      <strong>Addiction</strong> involves compulsive use despite harm, with tolerance and
+      withdrawal, and is closely tied to the dopamine reward system.
+    </p>
+
+    <h3 id="psychotic">Schizophrenia and dissociation</h3>
+    <p>
+      <strong>Schizophrenia</strong> involves a break in the relationship between thought and
+      reality: hallucinations, delusions and disorganised speech, alongside negative symptoms such
+      as flattened affect and withdrawal. <strong>Dissociative disorders</strong> involve
+      disruptions of memory, identity or continuity of experience.
+      <strong>Personality disorders</strong> are enduring, inflexible patterns of relating that
+      cause difficulty across many situations rather than in one.
+    </p>
+
+    <h3 id="causes">Why disorders arise</h3>
+    <p>
+      Disorders are caused by both the <strong>learning perspective</strong> &mdash; conditioning,
+      reinforcement and modelling, which explain particularly well how a phobia is acquired and
+      maintained &mdash; and the <strong>biological perspective</strong>: genetics, brain structure
+      and neurotransmitter function. The two combine in the
+      <strong>diathesis&ndash;stress model</strong>, where an inherited vulnerability only becomes
+      a disorder when enough environmental stress is applied.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="treatment">Treatment</h2>
+
+    <h3 id="psychotherapy">Psychotherapy</h3>
+    <p>
+      Psychotherapy involves a therapist using a range of techniques to help overcome troubles,
+      gain insight and achieve personal growth, and it is the initial step in treating most
+      disorders. The main families differ in where they look for the problem.
+    </p>
+    <ul>
+      <li><strong>Cognitive behavioural therapy (CBT)</strong> &mdash; identifies and changes distorted thought patterns and the behaviours that maintain them; the best-evidenced approach for anxiety and depression</li>
+      <li><strong>Behaviour therapy</strong> &mdash; uses conditioning directly, as in graduated exposure for phobias</li>
+      <li><strong>Psychodynamic therapy</strong> &mdash; seeks insight into unconscious conflict and its origins</li>
+      <li><strong>Humanistic therapy</strong> &mdash; provides unconditional positive regard so the person can move toward growth</li>
+      <li><strong>Group and family therapy</strong> &mdash; treats the relationships rather than only the individual</li>
+    </ul>
+
+    <h3 id="biomedical">Biomedical treatments</h3>
+    <p>
+      Biomedical treatments aim to physiologically change the brain's electrochemical state, using
+      psychotropic drugs, magnetic impulses or electrical currents. Transcranial magnetic
+      stimulation delivers the magnetic version, and electroconvulsive therapy the electrical one
+      &mdash; now given under anaesthetic and reserved largely for severe depression that has not
+      responded to anything else.
+    </p>
+
+    <h3 id="pharmaco">Pharmacotherapy</h3>
+    <p>
+      Pharmacotherapy uses drugs to affect the mental state, and they fall into four categories.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Category</th><th>Used for</th><th>Acts mainly on</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="row-name">Antipsychotics</td><td>Schizophrenia, mania, psychosis</td><td>Dopamine transmission</td></tr>
+          <tr><td class="row-name">Anxiolytics</td><td>Anxiety, panic, acute agitation</td><td>GABA (benzodiazepines)</td></tr>
+          <tr><td class="row-name">Antidepressants</td><td>Depression, anxiety, OCD</td><td>Serotonin and norepinephrine</td></tr>
+          <tr><td class="row-name">Mood stabilizers</td><td>Bipolar disorder</td><td>Lithium and anticonvulsants</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="aside">
+      For most conditions the evidence favours combining medication with therapy over either alone.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="branches">Branches of Psychology</h2>
+
+    <h3 id="individual">Individual psychology</h3>
+    <p>
+      In individual psychology there are three branches: <strong>cognitive</strong>, which studies
+      the mental processes themselves; <strong>personality</strong>, which studies stable individual
+      differences; and <strong>clinical</strong>, which assesses and treats disorder. Developmental,
+      educational, health and industrial-organisational psychology sit alongside them.
+    </p>
+
+    <h3 id="social">Social psychology</h3>
+    <p>
+      Social psychology focuses on the power of the situation and on how each of us influences one
+      another under particular conditions. Its recurring finding is that circumstances predict
+      behaviour better than character does &mdash; and that people systematically underestimate
+      this, an error known as the <strong>fundamental attribution error</strong>.
+    </p>
+    <ul>
+      <li><strong>Conformity</strong> &mdash; Asch showed people will endorse an obviously wrong answer when a group states it first</li>
+      <li><strong>Obedience</strong> &mdash; Milgram showed ordinary people following instructions to inflict what they believed was harm</li>
+      <li><strong>Bystander effect</strong> &mdash; the more witnesses present, the less likely any one intervenes</li>
+      <li><strong>Groupthink</strong> &mdash; cohesive groups suppressing dissent in favour of consensus</li>
+    </ul>
+    <p>
+      A <strong>stereotype</strong> is an overgeneralized belief about a particular group of people.
+      It becomes prejudice when it carries an emotional charge, and discrimination when it becomes
+      action. Contact between groups on equal footing, working toward a shared goal, is the most
+      reliable way to reduce it &mdash; cooperation is the key.
+    </p>
+
+    <h3 id="naturenurture">Nature and nurture together</h3>
+    <p>
+      A combination of biological factors &mdash; genetic, neurological and biochemical influences
+      &mdash; together with environment and experience add up to how we behave. The question is not
+      which of the two matters but how they interact: genes shape sensitivity to environments,
+      environments switch genes on and off, and behaviour then selects further environments.
+    </p>
+    <p class="chain">genes &harr; environment &harr; behaviour</p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
   </section>
 
   <script src="script.js"></script>

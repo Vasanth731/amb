@@ -11,12 +11,188 @@
       min-height: 100vh;
       align-items: flex-start;
       text-align: left;
+      padding-bottom: 80px;
     }
     .hero h2 {
       font-size: 1.6em;
       color: #ffffff;
       margin-top: 40px;
       margin-bottom: 10px;
+    }
+    .hero h3 {
+      font-size: 1.1em;
+      color: #ffffff;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+      padding-bottom: 4px;
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+    .hero h4 {
+      font-size: 0.98em;
+      color: #6b4212;
+      font-weight: 700;
+      font-style: italic;
+      margin-top: 20px;
+      margin-bottom: 4px;
+    }
+
+    /* .hero is a flex column, so block children must be told to fill it */
+    .hero p,
+    .hero ul,
+    .hero ol,
+    .hero table,
+    .hero .chain,
+    .hero .formula,
+    .hero .verse {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .hero ul, .hero ol {
+      padding-left: 1.2em;
+      margin: 8px 0 14px;
+    }
+    .hero li {
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+    .hero li > ul { margin: 6px 0; }
+
+    /* Arrow chains, e.g. sensory -> short term -> long term */
+    .chain {
+      font-weight: 700;
+      color: #6b4212;
+      line-height: 1.9;
+      margin: 10px 0 16px;
+    }
+
+    /* Key terms, dates and definitions */
+    .formula {
+      background: rgba(0, 0, 0, 0.12);
+      border-left: 3px solid #6b4212;
+      padding: 10px 14px;
+      margin: 12px 0 16px;
+      line-height: 1.8;
+      overflow-x: auto;
+    }
+
+    /* Quoted passages */
+    .verse {
+      font-style: italic;
+      border-left: 3px solid rgba(0, 0, 0, 0.28);
+      padding-left: 14px;
+      margin: 14px 0;
+    }
+    .verse cite {
+      display: block;
+      font-style: normal;
+      font-size: 0.85em;
+      opacity: 0.85;
+      margin-top: 4px;
+    }
+
+    .hero table {
+      border-collapse: collapse;
+      margin: 14px 0 20px;
+      font-size: 0.95em;
+    }
+    .hero th, .hero td {
+      text-align: left;
+      vertical-align: top;
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+    }
+    .hero thead tr { background: rgba(0, 0, 0, 0.15); }
+    .hero th {
+      font-size: 0.8em;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.35);
+    }
+    .hero .row-name { font-weight: 700; white-space: nowrap; }
+    .table-scroll { width: 100%; max-width: 900px; overflow-x: auto; }
+    .table-scroll table { max-width: none; min-width: 620px; }
+
+    .hero .aside { font-size: 0.9em; opacity: 0.9; }
+
+    /* ---------- contents ---------- */
+    .contents {
+      width: 100%;
+      max-width: 900px;
+      box-sizing: border-box;
+      border: 1px solid rgba(0, 0, 0, 0.25);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-top: 26px;
+      margin-bottom: 10px;
+      background: rgba(0, 0, 0, 0.12);
+    }
+
+    .contents h2 {
+      font-size: 0.8em !important;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin: 0 0 10px 0 !important;
+      opacity: 0.9;
+    }
+
+    .contents ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: none;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    .contents > ol > li {
+      margin-bottom: 14px;
+      font-size: 0.95em;
+      font-weight: 700;
+      break-inside: avoid;
+    }
+
+    .contents ul {
+      list-style: none;
+      margin: 5px 0 0 0;
+      padding-left: 14px;
+      max-width: none;
+    }
+
+    .contents ul li {
+      font-size: 0.85em;
+      font-weight: 400;
+      line-height: 1.5;
+      opacity: 0.9;
+      margin-bottom: 2px;
+    }
+
+    .contents a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .contents a:hover { border-bottom-color: #6b4212; }
+
+    .to-top {
+      display: inline-block;
+      margin-top: 10px;
+      margin-bottom: 4px;
+      font-size: 0.8em;
+      color: inherit;
+      opacity: 0.75;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .to-top:hover { opacity: 1; }
+
+    @media (max-width: 640px) {
+      .contents ol { columns: 1; }
     }
   </style>
 </head>
@@ -31,11 +207,456 @@
     </div>
   </nav>
 
-  <section class="hero" style="background-color: #e8c18a;">
+  <section class="hero" id="top" style="background-color: #e8c18a;">
     <h1>Anthropology</h1>
+
     <p>
-    Studies on the human culture from a history and evolutionary perspective. The four branches are cultural, archaeology, biological and linguistic. We understand about people who lived years ago through ruins and objects they left behind. It also helps us to understand the cultures around the world. In the The Brief History of Humankind Yuval Noah Harari states that the cognitive, agricultural and scientific revolution are the main few revolutions in the human history. By examining social practices, belief systems, languages, human evolution, and material remains, anthropology helps us build a comprehensive picture of how societies develop and adapt over time.
+      The study of human culture from a historical and evolutionary perspective &mdash; how we
+      became the kind of animal that has culture at all, how we read the lives of people who left
+      nothing behind but ruins and objects, and how societies develop and adapt over time.
     </p>
+
+    <nav class="contents" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li>
+          <a href="#what">What Anthropology Studies</a>
+          <ul>
+            <li><a href="#holism">Holism and the comparative method</a></li>
+            <li><a href="#relativism">Relativism and ethnocentrism</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#branches">The Four Branches</a>
+          <ul>
+            <li><a href="#cultural">Cultural anthropology</a></li>
+            <li><a href="#archaeology">Archaeology</a></li>
+            <li><a href="#biological">Biological anthropology</a></li>
+            <li><a href="#linguistic">Linguistic anthropology</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#evolution">Human Evolution</a>
+          <ul>
+            <li><a href="#hominins">The hominin line</a></li>
+            <li><a href="#three-shifts">Bipedalism, brains and tools</a></li>
+            <li><a href="#dispersal">Out of Africa</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#revolutions">The Three Revolutions</a>
+          <ul>
+            <li><a href="#cognitive">Cognitive revolution</a></li>
+            <li><a href="#agricultural">Agricultural revolution</a></li>
+            <li><a href="#scientific">Scientific revolution</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#material">Reading the Material Record</a>
+          <ul>
+            <li><a href="#stratigraphy">Stratigraphy and context</a></li>
+            <li><a href="#dating">Dating methods</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#culture-systems">Culture, Kinship and Belief</a>
+          <ul>
+            <li><a href="#symbols">Symbols, norms and values</a></li>
+            <li><a href="#kinship">Kinship and descent</a></li>
+            <li><a href="#belief">Belief and ritual</a></li>
+            <li><a href="#exchange">Exchange and economy</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#language">Language and Thought</a>
+        </li>
+        <li>
+          <a href="#fieldwork">Fieldwork and the Discipline</a>
+          <ul>
+            <li><a href="#observation">Participant observation</a></li>
+            <li><a href="#figures">Key figures</a></li>
+          </ul>
+        </li>
+      </ol>
+    </nav>
+
+
+    <!-- ============================================================ -->
+    <h2 id="what">What Anthropology Studies</h2>
+    <p>
+      Anthropology asks what it means to be human, and answers by comparison. Where most
+      disciplines take one slice of human life, anthropology insists on the whole of it: biology
+      and belief, bones and grammar, the last four million years and the village down the road. By
+      examining social practices, belief systems, languages, human evolution and material remains,
+      it builds a comprehensive picture of how societies develop and adapt over time, and it helps
+      us understand the cultures around the world rather than only our own.
+    </p>
+
+    <h3 id="holism">Holism and the comparative method</h3>
+    <p>
+      Two commitments define the field. <strong>Holism</strong> is the refusal to separate the
+      biological from the cultural &mdash; a human diet is at once a nutritional fact, an economic
+      system and a set of taboos. The <strong>comparative method</strong> is the habit of testing
+      any claim about "human nature" against the widest possible range of societies, because a
+      pattern found in one place tells you nothing until you know whether it holds elsewhere.
+    </p>
+
+    <h3 id="relativism">Relativism and ethnocentrism</h3>
+    <p>
+      <strong>Ethnocentrism</strong> is judging another culture by the standards of your own.
+      <strong>Cultural relativism</strong> is the discipline's corrective: understanding a practice
+      first in its own terms and its own context before evaluating it. Fieldworkers distinguish the
+      <strong>emic</strong> view, the account insiders give of their own lives, from the
+      <strong>etic</strong> view, the analytical account an outside observer constructs.
+    </p>
+    <p class="aside">
+      Relativism as a method is not the same as relativism as a morality, and anthropologists
+      argue about where the line falls &mdash; particularly over practices that cause harm.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="branches">The Four Branches</h2>
+    <p>
+      The four branches are cultural, archaeology, biological and linguistic. Each takes a
+      different kind of evidence, and the field's claim is that the four together say more than any
+      one alone.
+    </p>
+
+    <h3 id="cultural">Cultural anthropology</h3>
+    <p>
+      Also called social anthropology, this branch studies living societies &mdash; their kinship,
+      politics, economics, religion and everyday practice &mdash; primarily through long-term
+      fieldwork. Its characteristic product is the <strong>ethnography</strong>, a detailed written
+      account of one community, and its characteristic move is to use that one case to unsettle
+      assumptions that seemed universal.
+    </p>
+
+    <h3 id="archaeology">Archaeology</h3>
+    <p>
+      We understand people who lived years ago through the ruins and objects they left behind.
+      Archaeology recovers and interprets that material record: tools, pottery, hearths, burials,
+      buildings, seeds, bones and rubbish. Rubbish is often the most informative of these, because
+      nobody curates a midden for posterity.
+    </p>
+
+    <h3 id="biological">Biological anthropology</h3>
+    <p>
+      Sometimes called physical anthropology, this branch covers human evolution, primatology,
+      human variation, genetics, growth and adaptation, and forensic identification. It supplies
+      the deep timeline the other branches work within.
+    </p>
+
+    <h3 id="linguistic">Linguistic anthropology</h3>
+    <p>
+      Language is treated here not as an abstract system but as social action: how people actually
+      speak, what speaking does, how languages are related, and how they change and die.
+    </p>
+    <p class="aside">
+      A fifth, <strong>applied anthropology</strong>, is often added &mdash; the use of all four in
+      practical settings such as public health, development, forensics, heritage management and
+      product design.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="evolution">Human Evolution</h2>
+
+    <h3 id="hominins">The hominin line</h3>
+    <p>
+      Humans did not descend from chimpanzees; the two share a common ancestor roughly 6 to 7
+      million years ago. What followed was not a ladder but a bush, with several hominin species
+      often alive at the same time.
+    </p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Species</th>
+            <th>When</th>
+            <th>Notable for</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-name">Sahelanthropus</td>
+            <td>~7 mya</td>
+            <td>Among the earliest candidates after the split from other apes</td>
+          </tr>
+          <tr>
+            <td class="row-name">Australopithecus</td>
+            <td>4 &ndash; 2 mya</td>
+            <td>Fully bipedal with a small brain; includes "Lucy" and the Laetoli footprints</td>
+          </tr>
+          <tr>
+            <td class="row-name">Homo habilis</td>
+            <td>2.4 &ndash; 1.4 mya</td>
+            <td>Associated with the first systematic stone tools</td>
+          </tr>
+          <tr>
+            <td class="row-name">Homo erectus</td>
+            <td>1.9 mya &ndash; 100 kya</td>
+            <td>First to leave Africa; controlled use of fire; body proportions like ours</td>
+          </tr>
+          <tr>
+            <td class="row-name">Homo heidelbergensis</td>
+            <td>700 &ndash; 200 kya</td>
+            <td>Large-brained; likely ancestral to both Neanderthals and us</td>
+          </tr>
+          <tr>
+            <td class="row-name">Homo neanderthalensis</td>
+            <td>400 &ndash; 40 kya</td>
+            <td>Cold-adapted Eurasians; burials, pigments, complex tools</td>
+          </tr>
+          <tr>
+            <td class="row-name">Homo sapiens</td>
+            <td>~300 kya &ndash; now</td>
+            <td>Originating in Africa; the only surviving hominin</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 id="three-shifts">Bipedalism, brains and tools</h3>
+    <p>
+      Three changes matter most, and they did not happen together. Walking upright came first, by
+      several million years, freeing the hands and reshaping the pelvis &mdash; which narrowed the
+      birth canal and pushed human infants toward being born helpless.
+      <strong>Encephalization</strong>, the growth in brain size relative to body, came later and
+      was expensive: the brain is about 2% of body weight and burns roughly 20% of resting energy.
+      Cooking, which pre-digests food outside the body, is one leading explanation for how that bill
+      was paid.
+    </p>
+    <p class="chain">bipedalism &rarr; free hands &rarr; tools &rarr; cooking &rarr; bigger brains &rarr; longer childhood</p>
+
+    <h3 id="dispersal">Out of Africa</h3>
+    <p>
+      <em>Homo erectus</em> spread across Eurasia first. Our own species left Africa in a major
+      dispersal roughly 60,000 to 70,000 years ago, reaching Australia by around 50,000 years ago
+      and the Americas by at least 15,000 years ago. Ancient DNA has since shown that the newcomers
+      interbred with the populations they met: most people outside Africa carry a small percentage
+      of Neanderthal ancestry, and some populations carry Denisovan ancestry too.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="revolutions">The Three Revolutions</h2>
+    <p>
+      In <em>Sapiens: A Brief History of Humankind</em>, Yuval Noah Harari argues that the
+      cognitive, agricultural and scientific revolutions are the main few turning points in human
+      history &mdash; each one changing not just what people could do but what they could imagine
+      doing.
+    </p>
+
+    <h3 id="cognitive">Cognitive revolution</h3>
+    <p>
+      Around 70,000 years ago, <em>Homo sapiens</em> began behaving in ways no other species had:
+      art, ornament, long-distance trade, burial with grave goods, boats. Harari's proposal is that
+      the key new capacity was <strong>fiction</strong> &mdash; the ability to speak about things
+      that do not physically exist. Gods, nations, laws and money are all of this kind, and they
+      allow strangers to cooperate in very large numbers on the strength of a shared story.
+    </p>
+
+    <h3 id="agricultural">Agricultural revolution</h3>
+    <p>
+      From about 12,000 years ago, societies in several independent centres &mdash; the Fertile
+      Crescent, China, Mesoamerica, the Andes, New Guinea &mdash; shifted from foraging to farming.
+      Domesticated plants and animals produced a surplus, and surplus made possible permanent
+      settlement, storage, specialists, taxation, writing and states.
+    </p>
+    <p>
+      Harari calls this "history's biggest fraud", and the skeletal evidence gives the claim some
+      support: early farmers were typically shorter, worked longer hours, ate a narrower diet and
+      carried more infectious disease and tooth decay than the foragers before them. Wheat did very
+      well; individual humans did worse, even as their numbers grew.
+    </p>
+
+    <h3 id="scientific">Scientific revolution</h3>
+    <p>
+      From roughly 500 years ago, a new willingness to admit ignorance, to use mathematics, and to
+      convert knowledge into power set off a feedback loop between science, empire and capital that
+      has not yet stopped. Anthropology itself is a product of this period &mdash; which is part of
+      why the discipline is uneasy about its own colonial origins.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="material">Reading the Material Record</h2>
+
+    <h3 id="stratigraphy">Stratigraphy and context</h3>
+    <p>
+      The single most important principle is <strong>context</strong>: an object's meaning lies in
+      where it was found, what lay beside it and what lay above and below it. A beautiful pot with
+      no recorded position is nearly mute, which is why looting destroys knowledge even when the
+      object survives.
+    </p>
+    <p>
+      <strong>Stratigraphy</strong> applies the geological law of superposition &mdash; lower layers
+      are older &mdash; to human deposits. <strong>Seriation</strong> orders sites by how the styles
+      of their artefacts change, and <strong>typology</strong> groups artefacts into classes so they
+      can be compared across sites at all.
+    </p>
+
+    <h3 id="dating">Dating methods</h3>
+    <div class="formula">
+      Radiocarbon (<sup>14</sup>C)&nbsp;&nbsp;&rarr;&nbsp; half-life 5,730 years; organic material up to ~50,000 years<br>
+      Dendrochronology&nbsp;&nbsp;&rarr;&nbsp; tree rings; year-by-year precision where wood survives<br>
+      Potassium&ndash;argon&nbsp;&nbsp;&rarr;&nbsp; volcanic rock; millions of years, used for early hominins<br>
+      Thermoluminescence&nbsp;&nbsp;&rarr;&nbsp; fired pottery and burnt flint
+    </div>
+    <p>
+      Alongside dating, other techniques reconstruct life rather than time: pollen and seed analysis
+      for environment and diet, isotope analysis of teeth for where a person grew up,
+      <strong>ethnoarchaeology</strong> &mdash; watching living craftspeople to understand the
+      traces their work leaves &mdash; and, increasingly, ancient DNA.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="culture-systems">Culture, Kinship and Belief</h2>
+
+    <h3 id="symbols">Symbols, norms and values</h3>
+    <p>
+      Culture is learned, shared and symbolic. It is transmitted between generations rather than
+      inherited biologically, which is why it can change far faster than genes can. It divides into
+      the <strong>material</strong> &mdash; the objects a society makes &mdash; and the
+      <strong>non-material</strong>: its symbols, values, norms, beliefs and language.
+    </p>
+
+    <h3 id="kinship">Kinship and descent</h3>
+    <p>
+      Every society organises relatedness, but none does it the same way, and the categories are
+      social rather than simply biological. Descent may be traced through the father
+      (<strong>patrilineal</strong>), the mother (<strong>matrilineal</strong>), both
+      (<strong>bilateral</strong>) or by choice. Residence after marriage may be with the husband's
+      kin, the wife's kin, or neither.
+    </p>
+    <p class="aside">
+      The terms themselves reveal the system: English collapses many relatives into "cousin", while
+      other languages distinguish mother's brother's child from father's brother's child, because
+      the two stand in entirely different social relations to you.
+    </p>
+
+    <h3 id="belief">Belief and ritual</h3>
+    <p>
+      Belief systems range from <strong>animism</strong>, in which spirit inhabits the world at
+      large, through <strong>totemism</strong>, which links social groups to natural species, to
+      the organised world religions. What anthropology attends to is less doctrine than practice:
+      what ritual does for the people performing it.
+    </p>
+    <p>
+      Arnold van Gennep showed that <strong>rites of passage</strong> the world over share three
+      phases, and Victor Turner developed the middle one into a general account of how societies
+      manage change.
+    </p>
+    <p class="chain">separation &rarr; liminality &rarr; reincorporation</p>
+
+    <h3 id="exchange">Exchange and economy</h3>
+    <p>
+      Not all economies are markets. Anthropologists distinguish
+      <strong>reciprocity</strong> (direct give-and-take between parties),
+      <strong>redistribution</strong> (goods collected centrally, then handed back out) and
+      <strong>market exchange</strong> (price-setting through supply and demand). Marcel Mauss's
+      work on the gift showed that a present is rarely free: it creates an obligation, and the
+      obligation creates the relationship.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="language">Language and Thought</h2>
+    <p>
+      Language is the medium culture travels in, so its history is a record of human history.
+      <strong>Historical linguistics</strong> reconstructs relationships between languages by
+      comparing systematic sound correspondences, and can recover vocabulary from languages never
+      written down &mdash; Proto-Indo-European being the classic case, inferred from descendants
+      spanning Iceland to Bengal.
+    </p>
+    <p>
+      The <strong>Sapir&ndash;Whorf hypothesis</strong> asks whether the language you speak shapes
+      how you think. Its strong form, that language determines thought, is not supported; a weaker
+      version, in which habitual linguistic categories nudge attention and memory, has held up in
+      studies of colour, space and time.
+    </p>
+    <div class="formula">
+      ~7,000 languages spoken today<br>
+      roughly 40% have fewer than 1,000 speakers<br>
+      a language is estimated to fall out of use every few weeks
+    </div>
+    <p>
+      Every language that dies takes with it a body of knowledge about place, plant, kin and story
+      that was never written down &mdash; which is why documentation work sits at the centre of
+      the linguistic branch.
+    </p>
+
+    <a class="to-top" href="#top">Back to top</a>
+
+
+    <!-- ============================================================ -->
+    <h2 id="fieldwork">Fieldwork and the Discipline</h2>
+
+    <h3 id="observation">Participant observation</h3>
+    <p>
+      The signature method is to live for an extended period among the people being studied,
+      learning the language and joining in daily life while recording it. The method's strength is
+      access to what people actually do rather than what they say they do; its difficulty is that
+      the observer is part of what is observed. Contemporary practice therefore treats
+      <strong>reflexivity</strong> &mdash; accounting for the fieldworker's own position and effect
+      &mdash; as part of the evidence rather than a flaw in it.
+    </p>
+    <p class="aside">
+      Ethics has moved to the centre of the field: informed consent, community benefit, the
+      repatriation of human remains and artefacts, and honesty about the discipline's history of
+      working alongside colonial administrations.
+    </p>
+
+    <h3 id="figures">Key figures</h3>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Figure</th>
+            <th>Contribution</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-name">Franz Boas</td>
+            <td>Established cultural relativism and dismantled the ranking of cultures on a single scale of progress</td>
+          </tr>
+          <tr>
+            <td class="row-name">Bronis&#322;aw Malinowski</td>
+            <td>Set the standard for long-term participant observation and functional analysis</td>
+          </tr>
+          <tr>
+            <td class="row-name">Margaret Mead</td>
+            <td>Brought questions of gender, adolescence and childrearing to a wide public audience</td>
+          </tr>
+          <tr>
+            <td class="row-name">Claude L&eacute;vi-Strauss</td>
+            <td>Structuralism: the search for shared underlying patterns beneath surface cultural difference</td>
+          </tr>
+          <tr>
+            <td class="row-name">Clifford Geertz</td>
+            <td>Interpretive anthropology and "thick description" &mdash; culture read as a text</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <a class="to-top" href="#top">Back to top</a>
+
   </section>
 
   <script src="script.js"></script>
