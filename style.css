@@ -246,6 +246,122 @@ mjx-container {
   overflow-y: hidden;
 }
 
+/* Arcade — RL game cards on the Feed page */
+.arcade-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.arcade-card {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  background: #000000;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  font-family: inherit;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.arcade-card:hover,
+.arcade-card:focus-visible {
+  background-color: #333333;
+  transform: translateY(-4px);
+}
+
+.arcade-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #ffffff;
+}
+
+.arcade-card-title {
+  padding: 12px;
+  font-size: 1.1em;
+  text-align: left;
+}
+
+.arcade-card-title small {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.6em;
+  color: #aaaaaa;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Arcade popup player */
+.arcade-modal {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  background-color: rgba(0, 0, 0, 0.96);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.arcade-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.arcade-modal-inner {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+}
+
+.arcade-modal-inner h3 {
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.arcade-modal-inner video {
+  width: 100%;
+  max-height: 75vh;
+  border: 1px solid #ffffff;
+  background: #000000;
+}
+
+.arcade-modal-close {
+  position: absolute;
+  top: -44px;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 2em;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.arcade-modal-close:hover {
+  color: #cccccc;
+}
+
+@media (max-width: 600px) {
+  .arcade-modal-close {
+    top: -40px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 3em;

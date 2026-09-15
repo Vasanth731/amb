@@ -41,5 +41,49 @@ dropdownTitles.forEach(title => {
   });
 });
 
+// Arcade — RL game popup player
+const arcadeModal = document.getElementById("arcadeModal");
+
+if (arcadeModal) {
+  const arcadeVideo = document.getElementById("arcadeModalVideo");
+  const arcadeTitle = document.getElementById("arcadeModalTitle");
+  const arcadeClose = document.getElementById("arcadeModalClose");
+  const arcadeCards = document.querySelectorAll(".arcade-card");
+
+  function openArcadeModal(src, title) {
+    arcadeTitle.textContent = title;
+    arcadeVideo.src = src;
+    arcadeModal.classList.add("active");
+    arcadeVideo.play();
+  }
+
+  function closeArcadeModal() {
+    arcadeModal.classList.remove("active");
+    arcadeVideo.pause();
+    arcadeVideo.removeAttribute("src");
+    arcadeVideo.load();
+  }
+
+  arcadeCards.forEach(card => {
+    card.addEventListener("click", () => {
+      openArcadeModal(card.dataset.src, card.dataset.title);
+    });
+  });
+
+  arcadeClose.addEventListener("click", closeArcadeModal);
+
+  arcadeModal.addEventListener("click", (e) => {
+    if (e.target === arcadeModal) {
+      closeArcadeModal();
+    }
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && arcadeModal.classList.contains("active")) {
+      closeArcadeModal();
+    }
+  });
+}
+
 
 

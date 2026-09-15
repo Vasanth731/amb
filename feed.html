@@ -38,6 +38,31 @@
         <p>A standalone distortion plugin.<br>Download it for free.</p>
       </article>
     </section>
+
+    <section class="hero" id="feed-arcade">
+      <article id="arcade-rl">
+        <h2>Arcade — RL Games</h2>
+        <p>Reinforcement-learning agents trained from scratch, playing Atari. Click a game to watch a recorded episode of the trained agent in action.</p>
+        <div class="arcade-grid">
+          <button class="arcade-card" type="button" data-game="pacman" data-src="pacman_rl.webm" data-title="Pacman — DQN agent">
+            <img src="pacman_thumb.png" alt="Pacman RL agent gameplay thumbnail" loading="lazy" />
+            <span class="arcade-card-title">Pacman<small>DQN agent</small></span>
+          </button>
+          <button class="arcade-card" type="button" data-game="pong" data-src="pong_rl.webm" data-title="Pong — PPO agent">
+            <img src="pong_thumb.png" alt="Pong RL agent gameplay thumbnail" loading="lazy" />
+            <span class="arcade-card-title">Pong<small>PPO agent</small></span>
+          </button>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <div class="arcade-modal" id="arcadeModal">
+    <div class="arcade-modal-inner">
+      <button class="arcade-modal-close" id="arcadeModalClose" aria-label="Close">&times;</button>
+      <h3 id="arcadeModalTitle"></h3>
+      <video id="arcadeModalVideo" controls autoplay loop muted playsinline></video>
+    </div>
   </div>
 
   <script src="script.js"></script>
