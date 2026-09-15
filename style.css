@@ -176,6 +176,15 @@ body {
   color: #ffffff;
 }
 
+.feed-page a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.feed-page a:hover {
+  color: #cccccc;
+}
+
 .about {
   background: transparent;
   padding: 120px 40px;
