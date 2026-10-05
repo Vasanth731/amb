@@ -48,7 +48,7 @@ if (arcadeModal) {
   const arcadeVideo = document.getElementById("arcadeModalVideo");
   const arcadeTitle = document.getElementById("arcadeModalTitle");
   const arcadeClose = document.getElementById("arcadeModalClose");
-  const arcadeCards = document.querySelectorAll(".arcade-card");
+  const arcadeCards = document.querySelectorAll(".arcade-card[data-src]");
 
   function openArcadeModal(src, title) {
     arcadeTitle.textContent = title;
