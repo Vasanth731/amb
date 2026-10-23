@@ -331,6 +331,15 @@
     .ref-body > h4:first-child { margin-top: 16px; }
 
     .ref-body > p:first-child { margin-top: 16px; }
+
+    .ref-part {
+      margin-top: 28px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.25);
+      font-size: 1.1em;
+    }
+
+    .ref-body > .ref-part:first-child { margin-top: 16px; padding-top: 0; border-top: none; }
   </style>
 </head>
 <body>
@@ -3933,9 +3942,11 @@
 
       <p class="ref-index"><span class="eyebrow">Carnatic music</span><a href="#music-swaras">Swaras</a> &middot; <a href="#music-ragas">Ragas &amp; melakartas</a> &middot; <a href="#music-meet">Ragas meet modes</a> &middot; <a href="#music-thalam">Thalam</a> &middot; <a href="#music-path">Learning path</a> &middot; <a href="#music-hindustani">Carnatic vs Hindustani</a></p>
 
-      <details class="ref" id="music-staff">
-        <summary>Part 1 &mdash; The staff &amp; the clefs<span class="ref-tag">Western notation</span></summary>
+      <details class="ref" id="music-western">
+        <summary>Western notation<span class="ref-tag">Parts 1 &ndash; 5</span></summary>
         <div class="ref-body">
+
+          <h4 class="ref-part" id="music-staff">Part 1 &mdash; The staff &amp; the clefs</h4>
 
           <p>
           Music is written on a staff (or stave): five horizontal lines and the four spaces between them. Each line and space represents a pitch. A clef at the far left fixes which pitches those lines mean. Notes sitting higher on the staff sound higher; notes too high or low for the five lines get short ledger lines added above or below.
@@ -4020,12 +4031,8 @@
           <p>
           Other clefs exist &mdash; the movable C clef (alto clef for viola, tenor clef for cello/bassoon) points its centre at middle C on whichever line it sits. Treble and bass are by far the most common.
           </p>
-        </div>
-      </details>
 
-      <details class="ref" id="music-rhythm">
-        <summary>Part 2 &mdash; Notes, rests &amp; counting<span class="ref-tag">Western notation</span></summary>
-        <div class="ref-body">
+          <h4 class="ref-part" id="music-rhythm">Part 2 &mdash; Notes, rests &amp; counting</h4>
 
           <p>
           A note's shape tells you how long it lasts, measured in beats. Each value is half the length of the one before it: a whole note equals two half notes, a half note equals two quarters, and so on &mdash; the whole system is built on halving. For every note value there is a matching rest, a symbol for silence lasting exactly as long.
@@ -4077,12 +4084,8 @@
           <p>
           Counting 4/4 out loud: “1 &amp; 2 &amp; 3 &amp; 4 &amp;” &mdash; the numbers are the beats (quarter notes) and the “&amp;” (“and”) are the half-beats (eighth notes) in between.
           </p>
-        </div>
-      </details>
 
-      <details class="ref" id="music-symbols">
-        <summary>Part 3 &mdash; Accidentals, dynamics &amp; articulations<span class="ref-tag">Western notation</span></summary>
-        <div class="ref-body">
+          <h4 class="ref-part" id="music-symbols">Part 3 &mdash; Accidentals, dynamics &amp; articulations</h4>
 
           <div class="data-table-wrap">
             <table class="data">
@@ -4177,12 +4180,8 @@
           <p>
           A metronome mark like “♩ = 120” is exact: 120 quarter-note beats per minute. <em>rit.</em> (ritardando) means gradually slow down; <em>accel.</em> (accelerando) means gradually speed up; <em>a tempo</em> returns to the original speed.
           </p>
-        </div>
-      </details>
 
-      <details class="ref" id="music-keys">
-        <summary>Part 4 &mdash; Key signatures &amp; the circle of fifths<span class="ref-tag">Western notation</span></summary>
-        <div class="ref-body">
+          <h4 class="ref-part" id="music-keys">Part 4 &mdash; Key signatures &amp; the circle of fifths</h4>
 
           <p>
           A <strong>key signature</strong> is a set of sharps or flats written right after the clef; it applies to every matching note in the whole piece, so you don't rewrite them each time. It tells you the key &mdash; the home note and scale the music is built around. The circle of fifths is the map of all of them.
@@ -4319,12 +4318,8 @@
             <li>Inside ring &rarr; relative minor (shares the signature).</li>
             <li>Parallel minor = same root, other mode (C vs Cm).</li>
           </ul>
-        </div>
-      </details>
 
-      <details class="ref" id="music-scales">
-        <summary>Part 5 &mdash; Scales, intervals &amp; the diatonic modes<span class="ref-tag">Western notation</span></summary>
-        <div class="ref-body">
+          <h4 class="ref-part" id="music-scales">Part 5 &mdash; Scales, intervals &amp; the diatonic modes</h4>
 
           <p>
           A scale is a ladder of notes built from a pattern of whole steps (W, two semitones) and half steps (H, one semitone). The major scale is the reference pattern everything else is measured against.
@@ -4408,9 +4403,11 @@
         </div>
       </details>
 
-      <details class="ref" id="music-swaras">
-        <summary>Part 6 &mdash; Carnatic foundations: swaras &amp; swarasthanas<span class="ref-tag">Carnatic music</span></summary>
+      <details class="ref" id="music-carnatic">
+        <summary>Carnatic music<span class="ref-tag">Parts 6 &ndash; 11</span></summary>
         <div class="ref-body">
+
+          <h4 class="ref-part" id="music-swaras">Part 6 &mdash; Carnatic foundations: swaras &amp; swarasthanas</h4>
 
           <p>
           Carnatic music is the classical music of South India. Instead of fixed letter names (C, D, E…) it uses seven <strong>swaras</strong> (notes) sung relative to a home note, Sa, whose actual pitch is chosen by the performer. The seven swaras are Sa Ri Ga Ma Pa Da Ni &mdash; written S R G M P D N. A dot above a swara (Ṡ) means the upper octave; a dot below means the lower octave.
@@ -4516,12 +4513,8 @@
           <p>
           Sa is movable &mdash; the singer picks the pitch of Sa (the shruti). M1 = Shuddha (pure) Madhyama, the perfect 4th. M2 = Prati Madhyama, the raised 4th (a tritone above Sa).
           </p>
-        </div>
-      </details>
 
-      <details class="ref" id="music-ragas">
-        <summary>Part 7 &mdash; Ragas &amp; the 72 melakarta system<span class="ref-tag">Carnatic music</span></summary>
-        <div class="ref-body">
+          <h4 class="ref-part" id="music-ragas">Part 7 &mdash; Ragas &amp; the 72 melakarta system</h4>
 
           <p>
           A <strong>raga</strong> is more than a scale: it is a set of swaras plus rules for how to move through them and which gamakas to use. Every raga is written as an <strong>arohanam</strong> (ascending order) and an <strong>avarohanam</strong> (descending order).
@@ -4590,12 +4583,8 @@
               </tbody>
             </table>
           </div>
-        </div>
-      </details>
 
-      <details class="ref" id="music-meet">
-        <summary>Part 8 &mdash; Where Carnatic meets Western: ragas &amp; modes<span class="ref-tag">Carnatic music</span></summary>
-        <div class="ref-body">
+          <h4 class="ref-part" id="music-meet">Part 8 &mdash; Where Carnatic meets Western: ragas &amp; modes</h4>
 
           <p>
           Raga <strong>Shankarabharanam</strong> is the 29th melakarta, a Shuddha Madhyama raga in the Bana chakra. Its swaras are exactly the Western major scale (Ionian mode); in Hindustani music the same scale is called Bilawal.
@@ -4640,12 +4629,8 @@
           <p>
           Every Western mode that contains a perfect 5th is also a melakarta raga. The other 66 melakartas use step patterns Western theory has no everyday name for &mdash; Mayamalavagowla, for example, is the “double harmonic” scale.
           </p>
-        </div>
-      </details>
 
-      <details class="ref" id="music-thalam">
-        <summary>Part 9 &mdash; Thalam: Carnatic rhythm<span class="ref-tag">Carnatic music</span></summary>
-        <div class="ref-body">
+          <h4 class="ref-part" id="music-thalam">Part 9 &mdash; Thalam: Carnatic rhythm</h4>
 
           <p>
           A <strong>thalam</strong> is a repeating rhythmic cycle, counted out with the hand. It is built from three angas (parts):
@@ -4715,12 +4700,8 @@
           <p>
           Adi thalam (Chatusra jathi Triputa thalam): 4 + 2 + 2 = 8 aksharas &mdash; the most common thalam in Carnatic music.
           </p>
-        </div>
-      </details>
 
-      <details class="ref" id="music-path">
-        <summary>Part 10 &mdash; The learning path<span class="ref-tag">Carnatic music</span></summary>
-        <div class="ref-body">
+          <h4 class="ref-part" id="music-path">Part 10 &mdash; The learning path</h4>
 
           <p>
           Carnatic training follows a fixed ladder, usually starting in Mayamalavagowla. The first four are warm-ups that train the voice on exact swarasthanas; later stages add rhythm, gamakas, lyrics and finally improvisation.
@@ -4744,12 +4725,8 @@
               </tbody>
             </table>
           </div>
-        </div>
-      </details>
 
-      <details class="ref" id="music-hindustani">
-        <summary>Part 11 &mdash; Carnatic vs Hindustani<span class="ref-tag">Carnatic music</span></summary>
-        <div class="ref-body">
+          <h4 class="ref-part" id="music-hindustani">Part 11 &mdash; Carnatic vs Hindustani</h4>
 
           <p>
           India has two classical traditions. They share the raga&ndash;thalam idea but differ in emphasis:
