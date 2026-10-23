@@ -75,7 +75,21 @@
       <article id="distortion-plugin">
         <h2>Digital Signal Processing</h2>
         <p>Check out few standalone guitar plugins. <br> <a href="physical.html#dsp-readmore"> To know more</a></p>
-        <div class="arcade-grid">
+        <div class="arcade-grid dsp-tabs">
+          <button class="arcade-card dsp-tab" type="button" data-panel="dsp-dynamic" aria-expanded="false" aria-controls="dsp-dynamic">
+            <span class="arcade-card-title">Dynamic<small>2 plugins</small></span>
+          </button>
+          <button class="arcade-card dsp-tab" type="button" data-panel="dsp-gain" aria-expanded="false" aria-controls="dsp-gain">
+            <span class="arcade-card-title">Gain<small>4 plugins</small></span>
+          </button>
+          <button class="arcade-card dsp-tab" type="button" data-panel="dsp-modulation" aria-expanded="false" aria-controls="dsp-modulation">
+            <span class="arcade-card-title">Modulation<small>8 plugins</small></span>
+          </button>
+          <a class="arcade-card dsp-tab" href="pdb.exe" download>
+            <span class="arcade-card-title">PedalBoard<small>Download</small></span>
+          </a>
+        </div>
+        <div class="arcade-grid dsp-panel" id="dsp-dynamic" hidden>
           <a class="arcade-card" href="d_comp.exe" download>
             <img src="d_comp_thumbnail.jpeg" alt="Squeeze compressor plugin interface" loading="lazy" />
             <span class="arcade-card-title">Squeeze<small>Compressor</small></span>
@@ -84,6 +98,8 @@
             <img src="d_ng_thumbnail.jpeg" alt="Silence noise gate plugin interface" loading="lazy" />
             <span class="arcade-card-title">Silence<small>Gate</small></span>
           </a>
+        </div>
+        <div class="arcade-grid dsp-panel" id="dsp-gain" hidden>
           <a class="arcade-card" href="g_bst.exe" download>
             <img src="g_bst_thumbnail.jpeg" alt="Clean boost plugin interface" loading="lazy" />
             <span class="arcade-card-title">Clean<small>Boost</small></span>
@@ -100,6 +116,8 @@
             <img src="g_od_thumbnail.jpeg" alt="Green drive plugin interface" loading="lazy" />
             <span class="arcade-card-title">Green<small>Drive</small></span>
           </a>
+        </div>
+        <div class="arcade-grid dsp-panel" id="dsp-modulation" hidden>
           <a class="arcade-card" href="m_ch.exe" download>
             <img src="m_ch_thumbnail.jpeg" alt="Velvet chorus plugin interface" loading="lazy" />
             <span class="arcade-card-title">Velvet<small>Chorus</small></span>
@@ -112,25 +130,25 @@
             <img src="m_ph_thumbnail.jpeg" alt="Sweep phaser plugin interface" loading="lazy" />
             <span class="arcade-card-title">Sweep<small>Phaser</small></span>
           </a>
-          <a class="arcade-card" href="m_tr.exe" download>
-            <img src="m_tr_thumbnail.jpeg" alt="Pulse tremolo plugin interface" loading="lazy" />
-            <span class="arcade-card-title">Pulse<small>Tremolo</small></span>
-          </a>
-          <a class="arcade-card" href="m_vib.exe" download>
-            <img src="m_vib_thumbnail.jpeg" alt="Warble vibrato plugin interface" loading="lazy" />
-            <span class="arcade-card-title">Warble<small>Vibrato</small></span>
-          </a>
-          <a class="arcade-card" href="m_uv.exe" download>
-            <img src="m_uv_thumbnail.jpeg" alt="Uni vibe plugin interface" loading="lazy" />
-            <span class="arcade-card-title">Uni<small>Vibe</small></span>
+          <a class="arcade-card" href="m_reb.exe" download>
+            <img src="m_reb_thumbnail.jpeg" alt="Echo Chamber reverb plugin interface" loading="lazy" />
+            <span class="arcade-card-title">Echo Chamber<small>Reverb</small></span>
           </a>
           <a class="arcade-card" href="m_rot.exe" download>
             <img src="m_rot_thumbnail.jpeg" alt="Rotary rotary cabinet plugin interface" loading="lazy" />
             <span class="arcade-card-title">Rotary<small>Cabinet</small></span>
           </a>
-          <a class="arcade-card" href="m_reb.exe" download>
-            <img src="m_reb_thumbnail.jpeg" alt="Echo Chamber reverb plugin interface" loading="lazy" />
-            <span class="arcade-card-title">Echo Chamber<small>Reverb</small></span>
+          <a class="arcade-card" href="m_tr.exe" download>
+            <img src="m_tr_thumbnail.jpeg" alt="Pulse tremolo plugin interface" loading="lazy" />
+            <span class="arcade-card-title">Pulse<small>Tremolo</small></span>
+          </a>
+          <a class="arcade-card" href="m_uv.exe" download>
+            <img src="m_uv_thumbnail.jpeg" alt="Uni vibe plugin interface" loading="lazy" />
+            <span class="arcade-card-title">Uni<small>Vibe</small></span>
+          </a>
+          <a class="arcade-card" href="m_vib.exe" download>
+            <img src="m_vib_thumbnail.jpeg" alt="Warble vibrato plugin interface" loading="lazy" />
+            <span class="arcade-card-title">Warble<small>Vibrato</small></span>
           </a>
         </div>
       </article>

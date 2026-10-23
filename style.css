@@ -308,6 +308,28 @@ mjx-container {
   letter-spacing: 0.05em;
 }
 
+/* DSP plugin categories — title-only boxes that open a panel of plugins */
+.dsp-tab {
+  width: 160px;
+}
+
+.dsp-tab .arcade-card-title {
+  text-align: center;
+}
+
+.dsp-tab.active {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.dsp-tab.active .arcade-card-title small {
+  color: #555555;
+}
+
+.dsp-panel[hidden] {
+  display: none;
+}
+
 /* Arcade popup player */
 .arcade-modal {
   display: flex;

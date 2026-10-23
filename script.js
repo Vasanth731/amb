@@ -41,6 +41,27 @@ dropdownTitles.forEach(title => {
   });
 });
 
+// DSP plugin categories — show one panel at a time
+const dspTabs = document.querySelectorAll(".dsp-tab[data-panel]");
+
+dspTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    const opening = !tab.classList.contains("active");
+
+    dspTabs.forEach(other => {
+      other.classList.remove("active");
+      other.setAttribute("aria-expanded", "false");
+      document.getElementById(other.dataset.panel).hidden = true;
+    });
+
+    if (opening) {
+      tab.classList.add("active");
+      tab.setAttribute("aria-expanded", "true");
+      document.getElementById(tab.dataset.panel).hidden = false;
+    }
+  });
+});
+
 // Arcade — RL game popup player
 const arcadeModal = document.getElementById("arcadeModal");
 
